@@ -1,11 +1,17 @@
 import React from 'react'
 import Navbar from './Navbar'
-import JobOpportunities from  './JobOpportunities'
+import Header from './Header'
+import Courses from './Courses'
+import UpcomingCourses from './UpcomingCourses'
+import JobOpportunities from './JobOpportunities'
 
 function Home() {
   return (
     <div>
       <Navbar/>
+      <Header/>
+      <Courses/>
+      <UpcomingCourses/>
       <JobOpportunities/>
     </div>
   )
@@ -13,4 +19,4 @@ function Home() {
   
 }
 
-export default Home
+export default Home;
