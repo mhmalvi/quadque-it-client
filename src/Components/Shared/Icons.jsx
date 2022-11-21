@@ -12,6 +12,12 @@ import { ReactComponent as Youtube } from "../../Asset/Icon/Youtube.svg";
 import { ReactComponent as Instagram } from "../../Asset/Icon/Instagram.svg";
 import { ReactComponent as Location } from "../../Asset/Icon/location.svg";
 import { ReactComponent as Telephone } from "../../Asset/Icon/telephone.svg";
+import { ReactComponent as EBook } from "../../Asset/Icon/Frame6541.svg";
+import { ReactComponent as Learning } from "../../Asset/Icon/Frame6542.svg";
+import { ReactComponent as instructors } from "../../Asset/Icon/Frame6543.svg";
+import { ReactComponent as  Colab } from "../../Asset/Icon/Frame6544.svg";
+import { ReactComponent as  JobOpportunities } from "../../Asset/Icon/Frame6507.svg";
+
 
 
 const Icons = {
@@ -28,7 +34,13 @@ const Icons = {
   Youtube,
   Instagram,
   Location,
-  Telephone
+  Telephone,
+  EBook,
+  Learning,
+  instructors,
+  Colab,
+  JobOpportunities
+  
 };
 
 export default Icons;

@@ -12,6 +12,7 @@ import OurInstructors from './OurInstructors'
 import Partners from './Partners'
 import BrowseCourse from './BrowseCourse'
 import Footer from './Footer'
+import JobOpportunities from './JobOpportunities'
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
       <Header/>
       <Courses/>
       <UpcomingCourses/>
+      <JobOpportunities/>
       <TwoWayCourse/>
       <GraphicDesign/>
       <ProgrammingCourses/>
@@ -31,6 +33,8 @@ function Home() {
       <Footer/>
     </div>
   )
+
+  
 }
 
-export default Home
+export default Home;
