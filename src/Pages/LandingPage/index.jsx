@@ -8,6 +8,10 @@ import GraphicDesign from './GraphicDesign'
 import ProgrammingCourses from './ProgrammingCourses'
 import DigitalMarketing from './DigitalMarketing'
 import OurStudents from './OurStudents'
+import OurInstructors from './OurInstructors'
+import Partners from './Partners'
+import BrowseCourse from './BrowseCourse'
+import Footer from './Footer'
 
 function Home() {
   return (
@@ -21,6 +25,10 @@ function Home() {
       <ProgrammingCourses/>
       <DigitalMarketing/>
       <OurStudents/>
+      <OurInstructors/>
+      <Partners/>
+      <BrowseCourse/>
+      <Footer/>
     </div>
   )
 }

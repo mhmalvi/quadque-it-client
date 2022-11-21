@@ -40,7 +40,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="md:ml-14">
-              <a className="" href="">
+              <a className="" href="/course">
                 Courses
               </a>
             </li>

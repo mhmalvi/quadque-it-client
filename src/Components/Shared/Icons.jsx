@@ -6,6 +6,12 @@ import { ReactComponent as ProblemSol } from "../../Asset/Icon/problem-sol.svg";
 import { ReactComponent as Chat } from "../../Asset/Icon/live-chat.svg";
 import { ReactComponent as People } from "../../Asset/Icon/people.svg";
 import { ReactComponent as Courses } from "../../Asset/Icon/courses.svg";
+import { ReactComponent as Facebook } from "../../Asset/Icon/Facebook.svg";
+import { ReactComponent as Twitter } from "../../Asset/Icon/Twitter.svg";
+import { ReactComponent as Youtube } from "../../Asset/Icon/Youtube.svg";
+import { ReactComponent as Instagram } from "../../Asset/Icon/Instagram.svg";
+import { ReactComponent as Location } from "../../Asset/Icon/location.svg";
+import { ReactComponent as Telephone } from "../../Asset/Icon/telephone.svg";
 
 
 const Icons = {
@@ -16,7 +22,13 @@ const Icons = {
   ProblemSol,
   Chat,
   People,
-  Courses
+  Courses,
+  Facebook,
+  Twitter,
+  Youtube,
+  Instagram,
+  Location,
+  Telephone
 };
 
 export default Icons;
