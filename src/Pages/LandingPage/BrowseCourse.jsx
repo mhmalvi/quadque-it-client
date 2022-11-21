@@ -12,7 +12,7 @@ export default function BrowseCourse() {
           </div>
           <div className="w-1/2 pt-24 pb-24 pr-10">
             <div className="text-4xl font-bold pb-14">Choose your best course your best course Choose Course</div>
-            <div className="bg-[#2F327D] rounded-full text-white w-1/5 px-8 py-4">
+            <div className="w-1/3 bg-[#2F327D] rounded-full text-white text-center px-8 py-4">
                 Browse Courses
               </div>
           </div>
