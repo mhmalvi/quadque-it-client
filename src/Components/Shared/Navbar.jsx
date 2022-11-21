@@ -35,7 +35,7 @@ const Navbar = () => {
           </div>
           <ul className="md:flex md:items-center text-base text-white font-semibold m-0">
             <li className="md:ml-14">
-              <a className="" href="">
+              <a className="" href="/">
                 Home
               </a>
             </li>

@@ -6,19 +6,19 @@ const JobOpportunities = () => {
   return (
     <div className="w-full font-poppins  pb-44">
       <div className="">
-        <div className="font-poppins font-bold text-3xl px-30">
+        <div className="font-poppins font-bold text-3xl px-30 pb-16">
           {" "}
           We Bring The Good Education To Life{" "}
         </div>
         ;
       </div>
-      <div className="flex px-20 relative">
-        <div className="mx-auto">
+      <div className="flex px-30 relative">
+        <div className="">
           <img src={shourav} alt="" className="w-392 h-461 rounded-3xl" />
-        </div>
-        <div className="mx-auto absolute top-56 left-96">
-          {" "}
-          <Icons.JobOpportunities />
+          <div className="mx-auto absolute top-48 left-96">
+            {" "}
+            <Icons.JobOpportunities />
+          </div>
         </div>
         <div className="mx-auto pb-14">
           <div className="font-bold text-4xl px-50 pb-14">

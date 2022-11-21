@@ -11,6 +11,7 @@ export default function DigitalMarketing() {
           Digital Marketing course
         </div>
         <div className="flex text-white pt-13 gap-6">
+          {/* card1 */}
           <div className="flex-col bg-home-color w-1/3 rounded-3xl">
             <div className="flex">
               <img src={Graphics} alt="" className="w-full" />
@@ -30,6 +31,7 @@ export default function DigitalMarketing() {
               </div>
             </div>
           </div>
+          {/* card2 */}
           <div className="flex-col bg-home-color w-1/3 rounded-3xl">
             <div className="flex">
               <img src={Motion} alt="" className="w-full" />
@@ -49,6 +51,7 @@ export default function DigitalMarketing() {
               </div>
             </div>
           </div>
+          {/* card3 */}
           <div className="flex-col bg-home-color w-1/3 rounded-3xl">
             <div className="flex">
               <img src={Uiux} alt="" className="w-full" />

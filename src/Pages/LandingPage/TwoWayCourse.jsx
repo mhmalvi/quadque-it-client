@@ -12,7 +12,7 @@ export default function TwoWayCourse() {
           attend online schools. These schools have something that public school
           districts simply don't and won't have: ad campaigns.
         </div>
-        <div className="flex text-white pt-13 gap-6">
+        <div className="flex justify-center text-white pt-13 gap-6">
           <div className="flex-col bg-home-color rounded-3xl">
             <div className="flex">
               <img src={Graphics} alt="" className="w-full" />
