@@ -5,7 +5,7 @@ import Uiux from "../../Asset/Image/uiux.png";
 
 export default function DigitalMarketing() {
   return (
-    <div className="w-full pb-24">
+    <div className="w-full pb-36">
       <div className="text-center font-poppins mx-10 rounded-3xl px-20">
         <div className="text-black text-4xl font-bold pb-5">
           Digital Marketing course

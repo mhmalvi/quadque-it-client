@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from '../../Components/Shared/Navbar'
 import Header from './Header'
 import Courses from './Courses'
 import UpcomingCourses from './UpcomingCourses'
@@ -21,11 +21,11 @@ function Home() {
       <Header/>
       <Courses/>
       <UpcomingCourses/>
-      <JobOpportunities/>
       <TwoWayCourse/>
       <GraphicDesign/>
       <ProgrammingCourses/>
       <DigitalMarketing/>
+      <JobOpportunities/>
       <OurStudents/>
       <OurInstructors/>
       <Partners/>
