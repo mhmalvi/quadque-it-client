@@ -6,10 +6,11 @@ import Students from "../../Asset/Image/students.png";
 import MobilePic from "../../Asset/Image/mobile-browse.png";
 import Box from "../../Asset/Image/box.png";
 import Icons from "../../Components/Shared/Icons";
+import AboutMaterial from './AboutMaterial'
 
 export default function Header() {
   return (
-    <div className="w-full bg-home-color font-poppins">
+    <div className="w-full bg-home-color font-poppins pb-20">
       <div className="w-full font-poppins">
         <div className="mt-10">
           <div className="w-2/3 flex-col justify-center text-white m-auto pt-32">
@@ -194,6 +195,7 @@ export default function Header() {
               </div>
             </div>
           </div>
+          <AboutMaterial/>
           <div className="w-3/4 bg-white flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-6 m-auto">
             <div className="lg:w-1/2 text-black m-auto">
               <div className="md:text-5xl font-bold pb-5">
