@@ -18,6 +18,7 @@ const JobOpportunities = () => {
           <img src={shourav} alt="" className="w-392 h-461 rounded-3xl" />
           <div className="mx-auto absolute top-48 left-96">
             {" "}
+          
             <Icons.JobOpportunities />
           </div>
         </div>

@@ -21,7 +21,12 @@ import { ReactComponent as  Support } from "../../Asset/Icon/user-friends.svg";
 import { ReactComponent as  Guidance } from "../../Asset/Icon/guidance.svg";
 import { ReactComponent as  Certificate } from "../../Asset/Icon/certificate.svg";
 import { ReactComponent as  Briefcase } from "../../Asset/Icon/briefcase.svg";
-
+import { ReactComponent as  Bank } from "../../Asset/Icon/bank.svg";
+import { ReactComponent as  Supershop } from "../../Asset/Icon/SuperShop.svg";
+import { ReactComponent as  Tourcompanies } from "../../Asset/Icon/TourCompanies.svg";
+import { ReactComponent as  Fashionindustry } from "../../Asset/Icon/FashionIndustry.svg";
+import { ReactComponent as  Itcompanies } from "../../Asset/Icon/ItCompanies.svg";
+import { ReactComponent as  Mediaindustries } from "../../Asset/Icon/MediaIndustries.svg";
 
 
 const Icons = {
@@ -47,7 +52,13 @@ const Icons = {
   Support,
   Guidance,
   Certificate,
-  Briefcase
+  Briefcase,
+  Bank,
+  Supershop,
+  Tourcompanies,
+  Fashionindustry,
+  Itcompanies,
+  Mediaindustries
   
 };
 
