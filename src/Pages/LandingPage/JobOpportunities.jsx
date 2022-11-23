@@ -11,7 +11,6 @@ const JobOpportunities = () => {
           {" "}
           We Bring The Good Education To Life{" "}
         </div>
-        ;
       </div>
       <div className="flex px-30 relative">
         <div className="">
@@ -52,7 +51,6 @@ const JobOpportunities = () => {
             </span>
           </div>
         </div>
-        ;
       </div>
     </div>
   );

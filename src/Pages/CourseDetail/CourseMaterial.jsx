@@ -1,22 +1,25 @@
 import React from "react";
 import Icons from "../../Components/Shared/Icons";
 
-
-
-export default function CourseMaterial() {
+const CourseMaterial = () => {
   return (
     <div>
-      <div className="bg-home-color w-full h-full font-poppins text-white">
-        <div className="w-1/3 pt-30 text-center mx-auto">
-          <span className="px-2"> Curriculam </span>
-          <span className="px-2 "> Software </span>
+      <div className="bg-home-color w-full font-poppins text-white pb-24">
+        <div className="text-center mx-auto">
+          <a href="" className="px-2">
+            {" "}
+            Curriculum{" "}
+          </a>
+          <a href="" className="px-2 ">
+            {" "}
+            Software{" "}
+          </a>
         </div>
-        <div className="w-1/3 pt-2 text-center mx-auto font-semibold text-2xl">
-          You can learn in the course
+        <div className="pt-2 text-center mx-auto font-semibold text-2xl">
+          What you can learn in the course
         </div>
 
-        <div className="w-1/2 pt-5  mx-auto flex justify-center">
-         
+        <div className="w-full flex justify-center pt-5 mx-auto">
           <div className="flex justify-between gap-20">
             <div>
               <ul className="">
@@ -55,16 +58,14 @@ export default function CourseMaterial() {
                   <div className="flex gap-2">
                     {" "}
                     <div className="bg-brand-color  p-1 my-2"></div>
-                    Prowess to research
-                    {" "}
+                    Prowess to research{" "}
                   </div>
                 </li>
                 <li>
                   <div className="flex gap-2">
                     {" "}
                     <div className="bg-brand-color  p-1 my-2"></div>
-                    Website design
-                    {" "}
+                    Website design{" "}
                   </div>
                 </li>
                 <li>
@@ -79,86 +80,83 @@ export default function CourseMaterial() {
                     {" "}
                     <div className="bg-brand-color  p-1 my-2"></div>
                     Animation design
-                    
                   </div>
                 </li>
               </ul>
             </div>
           </div>
-
         </div>
-                 <div className="w-1/3 pt-10 text-center mx-auto font-semibold text-2xl">
-                   Job Opportunities
-                 </div>
-             
-             
-             <div className="flex relative mt-4 justify-center mx-auto h-30 w-11  ">
-                 <div className="bg-slate-900 mr-3 py-4 px-4  border rounded-2xl">
-                 <div className="mx-8">
-                 <Icons.Bank />
-                 </div>
-            <span className="font-poppins  text-sm px-5 py-2">
-              Bank{" "}
-            </span>
-            </div>
+        <div className="pt-10 text-center mx-auto font-semibold text-2xl">
+          Job Opportunities
+        </div>
 
-            <div className="bg-slate-900 mr-3 py-4 px-4 border rounded-2xl">
-            <div className="mx-8">
-            <Icons.Supershop />
+{/* first row */}
+        <div className="flex justify-center pt-8 gap-6">
+          <div className="bg-white bg-opacity-10 w-50 border rounded-2xl p-5">
+            <div className="flex-col">
+              <div>
+                <Icons.Bank className="m-auto" />
+              </div>
+              <div className="font-poppins text-xl text-center py-2">Bank </div>
             </div>
-            <span className="font-poppins  text-sm  py-2">
-            Super Shop{" "}
-            </span>
+          </div>
+          <div className="bg-white bg-opacity-10 w-50 border rounded-2xl p-5">
+            <div className="flex-col">
+              <div>
+                <Icons.Supershop className="m-auto" />
+              </div>
+              <div className="font-poppins text-xl text-center py-2">
+                Super Shop{" "}
+              </div>
             </div>
-
-            <div className="bg-slate-900  py-4 px-4 border rounded-2xl">
-            <div className="mx-8">
-            <Icons.Tourcompanies />
+          </div>
+          <div className="bg-white bg-opacity-10 w-50 border rounded-2xl p-5">
+            <div className="flex-col">
+              <div>
+                <Icons.Tourcompanies className="m-auto" />
+              </div>
+              <div className="font-poppins text-xl text-center py-2">
+                Tour Companies{" "}
+              </div>
             </div>
-            <span className="font-poppins  text-sm py-2">
-            Tour Companies{" "}
-            </span>
+          </div>
+        </div>
+{/* second row */}
+        <div className="flex justify-center pt-8 gap-6">
+          <div className="bg-white bg-opacity-10 w-50 border rounded-2xl p-5">
+            <div className="flex-col">
+              <div>
+                <Icons.Fashionindustry className="m-auto" />
+              </div>
+              <div className="font-poppins text-xl text-center py-2">
+                Fashion Industry{" "}
+              </div>
             </div>
-
-      </div>
-            
-            
-      <div className="flex relative justify-center mt-3 mx-auto h-30 w-11 ">
-                 <div className="bg-slate-900  mr-3 py-4 px-4 border rounded-2xl">
-                  
-                  <div className="mx-8">
-               <Icons.Fashionindustry />
-               
-               </div>
-            <span className="font-poppins justify-center text-sm mx-auto">
-            Fashion Industry {" "}
-            </span>
+          </div>
+          <div className="bg-white bg-opacity-10 w-50 border rounded-2xl p-5">
+            <div className="flex-col">
+              <div>
+                <Icons.Itcompanies className="m-auto" />
+              </div>
+              <div className="font-poppins text-xl text-center py-2">
+                It Companies{" "}
+              </div>
             </div>
-
-            <div className="bg-slate-900 mr-3 py-4 px-4  border rounded-2xl">
-            <div className="mx-8">
-            <Icons.Itcompanies />
+          </div>
+          <div className="bg-white bg-opacity-10 w-50 border rounded-2xl p-5">
+            <div className="flex-col">
+              <div>
+                <Icons.Mediaindustries className="m-auto" />
+              </div>
+              <div className="font-poppins text-xl text-center py-2">
+                Media Industries
+              </div>
             </div>
-            <span className="font-poppins  text-sm  py-2">
-            It Companies  {" "}
-            </span>
-            </div>
-
-            <div className="bg-slate-900 mx-4 py-4 px-4 border rounded-2xl">
-            <div className="mx-8">
-            <Icons.Mediaindustries/>
-            </div>
-            <span className="font-poppins  text-sm py-2">
-            Media Industries{" "}
-            </span>
-            </div>
-
-            </div>
-
-
-
-
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default CourseMaterial;

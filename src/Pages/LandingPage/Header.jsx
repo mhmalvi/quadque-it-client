@@ -6,32 +6,32 @@ export default function Header() {
   return (
     <div className="w-full pt-10 font-poppins pb-20">
       <div className="bg-home-color m-auto mx-10 rounded-3xl pt-24 pb-8 px-20">
-        <div className="flex">
-          <div className="w-1/2 text-white">
-            <div className="text-5xl font-bold pb-5">
+        <div className="flex flex-col-reverse lg:flex lg:flex-row justify-evenly m-auto">
+          <div className="lg:w-1/2 text-white">
+            <div className="md:text-5xl font-bold pb-5">
               <span className="text-[#23BDEE]"> Paragraph </span>is a series
               series sentences
             </div>
-            <div className="text-base pb-13">
+            <div className="md:text-base pb-13">
               Skilline is an interesting platform that will teach you in more an
               interactive way Skilline is an interesting platform that will
               teach you in more an interactive way
             </div>
-            <div className="flex h-16 gap-14 text-white text-xl">
+            <div className="flex h-16 gap-14 text-white text-base lg:text-xl mb-6">
               <div className="bg-brand-color rounded-full text-white px-8 py-4">
                 Browse Courses
               </div>
               <div className="py-4"> Video Content</div>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="lg:first-letter:w-1/2">
             <img src={World} width={433} className="m-auto" alt="QIT logo" />
           </div>
         </div>
         <div className="flex"><Icons.Calender/><span className="text-white text-base px-2">Our new seminar in wordpress 26 June</span></div>
       </div>
 
-      <div className="flex justify-evenly text-black text-lg pt-30 m-auto"> 
+      <div className="lg:flex lg:justify-evenly lg:visible hidden text-black text-lg pt-30 m-auto"> 
         <div className="flex bg-[#5C5BFD1A] px-4 py-2"><Icons.ProblemSol/><span className="px-2 py-2">Problem Solving</span></div>
         <div className="flex bg-[#5C5BFD1A] px-4 py-2"><Icons.Chat/><span className="px-2 py-2">Live Chat</span></div>
         <div className="flex bg-[#5C5BFD1A] px-4 py-2"><Icons.People/><span className="px-2 py-2">Group Reading</span></div>

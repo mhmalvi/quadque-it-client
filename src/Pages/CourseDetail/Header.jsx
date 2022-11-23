@@ -1,10 +1,10 @@
 import React from "react";
-import DetailOverlay from "./DetailOverlay";
 //import Rectangle from "../../Asset/Image/rectangle.png";
 //import RectangleTwo from "../../Asset/Image/rectangle2.png";
 import Rectangle from "../../Asset/Image/graphictools.png";
 import Icons from "../../Components/Shared/Icons";
 import CountUp from "react-countup";
+import CourseMaterial from "./CourseMaterial";
 /* absolute top-64 left-1/4 */
 
 export default function Header() {
@@ -89,10 +89,11 @@ export default function Header() {
                 quick success in the marketplace.
               </div>
             </div>
+            <CourseMaterial/>
             <div className="">
               <div className="text-center text-4xl pb-13">Special services</div>
               <div className="flex text-center bg-home-color gap-6 pb-6">
-                <div className="flex-col bg-[#2F327D10] rounded-lg p-7">
+                <div className="flex-col bg-[#2F327D20] rounded-lg p-7">
                   <div className="">
                     <Icons.Support />
                   </div>
