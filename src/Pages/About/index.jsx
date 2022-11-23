@@ -1,13 +1,14 @@
 import React from 'react'
 import Navbar from '../../Components/Shared/Navbar'
+import AboutMaterial from './AboutMaterial'
 
-
-export default function index() 
-{
+const AboutUs = () => {
   return (
     <div>
         <Navbar/>
-        <Header/>
+        <AboutMaterial/>
     </div>
   )
 }
+
+export default AboutUs
