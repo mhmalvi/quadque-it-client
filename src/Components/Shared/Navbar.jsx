@@ -7,7 +7,6 @@ const Navbar = () => {
     <div className="w-full absolute top-0 bg-transparent">
       <div className="w-2/3 m-auto md:flex items-center justify-between px-4 py-2">
         <div className="font-poppins text-gray-800 font-bold text-2xl coursor-pointer flex items-center">
-          {/*  <span className="text-2xl text-brand-color mr-1 pt-2">SmartCRM</span> */}
         </div>
         <ul className="md:flex md:items-center text-base text-black font-semibold m-0">
           <li className="md:ml-8">
@@ -24,9 +23,9 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="m-auto mx-10 rounded-2xl pt-4">
-        <div className="m-auto md:flex justify-between py-2 px-14">
-          <div className="font-poppins text-gray-800 font-bold text-2xl coursor-pointer flex items-center">
+      <div className="mx-10 rounded-2xl pt-4">
+        <div className="md:flex justify-between py-2 px-14">
+          <div className="font-poppins text-gray-800 font-bold text-2xl md:shrink-0 coursor-pointer flex items-center">
             <img src={Logo} alt="QIT logo" />
           </div>
           <ul className="md:flex md:items-center text-base text-white font-semibold m-0">

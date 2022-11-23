@@ -3,6 +3,7 @@ import Graphics from "../../Asset/Image/graphics.png";
 import Motion from "../../Asset/Image/motion.png";
 import Uiux from "../../Asset/Image/uiux.png";
 
+
 export default function UpcomingCourses() {
   return (
     <div className="w-full pb-24">

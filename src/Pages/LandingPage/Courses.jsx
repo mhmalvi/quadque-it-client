@@ -11,41 +11,38 @@ export default function Courses() {
         <div className="text-lg">
           Skilline is an interesting platform that will teach you in more
         </div>
-        <div className="flex text-white text-2xl pt-13 gap-6">
-          <div className="flex-col bg-home-color w-1/3 m-auto p-4 rounded-2xl">
+        <div className="grid lg:grid-cols-3 grid-cols-1 text-white text-2xl pt-13 gap-6">
+          <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
             <div className="">Graphics & Design</div>
           </div>
-          <div className="flex-col bg-home-color w-1/3 m-auto p-4 rounded-2xl">
+          <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
             <div className="">Graphics & Design</div>
           </div>
-          <div className="flex-col bg-home-color w-1/3 m-auto p-4 rounded-2xl">
+          <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
             <div className="">Graphics & Design</div>
           </div>
-        </div>
-        {/* 2nd row */}
-        <div className="flex text-white text-2xl pt-6 gap-6">
-          <div className="flex-col bg-home-color w-1/3 m-auto p-4 rounded-2xl">
+          <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
             <div className="">Graphics & Design</div>
           </div>
-          <div className="flex-col bg-home-color w-1/3 m-auto p-4 rounded-2xl">
+          <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
             <div className="">Graphics & Design</div>
           </div>
-          <div className="flex-col bg-home-color w-1/3 m-auto p-4 rounded-2xl">
+          <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
