@@ -5,7 +5,6 @@ import AboutUs from "./Pages/About";
 import CoursePage from './Pages/Course';
 import CourseDetail from './Pages/CourseDetail';
 import Home from './Pages/LandingPage';
-import AboutUs from './Pages/About'
 import Contact from "./Pages/Contact";
 
 function App() {

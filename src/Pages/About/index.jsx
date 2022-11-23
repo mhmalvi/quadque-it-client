@@ -7,6 +7,7 @@ const AboutUs = () => {
   return (
     <div>
         <Navbar/>
+        <Header/>
         <AboutMaterial/>
     </div>
   )
