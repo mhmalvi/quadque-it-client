@@ -17,6 +17,10 @@ import { ReactComponent as Learning } from "../../Asset/Icon/Frame6542.svg";
 import { ReactComponent as instructors } from "../../Asset/Icon/Frame6543.svg";
 import { ReactComponent as  Colab } from "../../Asset/Icon/Frame6544.svg";
 import { ReactComponent as  JobOpportunities } from "../../Asset/Icon/Frame6507.svg";
+import { ReactComponent as  Support } from "../../Asset/Icon/user-friends.svg";
+import { ReactComponent as  Guidance } from "../../Asset/Icon/guidance.svg";
+import { ReactComponent as  Certificate } from "../../Asset/Icon/certificate.svg";
+import { ReactComponent as  Briefcase } from "../../Asset/Icon/briefcase.svg";
 
 
 
@@ -39,7 +43,11 @@ const Icons = {
   Learning,
   instructors,
   Colab,
-  JobOpportunities
+  JobOpportunities,
+  Support,
+  Guidance,
+  Certificate,
+  Briefcase
   
 };
 

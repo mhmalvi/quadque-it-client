@@ -22,7 +22,7 @@ const JobOpportunities = () => {
           </div>
         </div>
         <div className="mx-auto pb-14">
-          <div className="font-bold text-4xl px-50 pb-14">
+          <div className="font-bold text-4xl px-50 pb-10">
             {" "}
             Let Your Education <br /> Do The Walking
           </div>

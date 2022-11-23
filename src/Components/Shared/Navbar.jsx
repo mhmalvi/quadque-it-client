@@ -11,20 +11,16 @@ const Navbar = () => {
         </div>
         <ul className="md:flex md:items-center text-base text-black font-semibold m-0">
           <li className="md:ml-8">
-            <a className="" href="">
               <div className="flex">
                 <Icons.Mail />
                 <span className="px-4">info@quadque.tech</span>
               </div>
-            </a>
           </li>
           <li className="md:ml-8">
-            <a className="" href="">
               <div className="flex">
                 <Icons.Phone />
                 <span className="px-4">01765276560</span>
               </div>
-            </a>
           </li>
         </ul>
       </div>
@@ -35,42 +31,37 @@ const Navbar = () => {
           </div>
           <ul className="md:flex md:items-center text-base text-white font-semibold m-0">
             <li className="md:ml-14">
-              <a className="" href="/">
+              <a className=" text-white no-underline" href="/">
                 Home
               </a>
             </li>
             <li className="md:ml-14">
-              <a className="" href="/course">
+              <a className=" text-white no-underline" href="/course">
                 Courses
               </a>
             </li>
             <li className="md:ml-14">
-              <a className="" href="">
+              <a className=" text-white no-underline" href="">
                 About
               </a>
             </li>
             <li className="md:ml-14">
-              <a className="" href="">
+              <a className=" text-white no-underline" href="">
                 More
               </a>
             </li>
             <li className="md:ml-14">
-              <a className="" href="">
+              <a className=" text-white no-underline" href="">
                 Contact Us
               </a>
             </li>
             <li className="md:ml-14">
-              <a className="" href="">
-                Courses
-              </a>
-            </li>
-            <li className="md:ml-14">
-              <a className="" href="">
+              <a className=" text-white no-underline" href="">
                 English
               </a>
             </li>
             <li className="md:ml-14">
-              <a className="bg-brand-color rounded-lg py-2 px-4" href="">
+              <a className="bg-brand-color rounded-lg text-white no-underline py-2 px-4" href="">
                 Login
               </a>
             </li>

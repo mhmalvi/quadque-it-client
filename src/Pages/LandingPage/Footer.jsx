@@ -32,32 +32,32 @@ export default function Footer() {
 
         <div className="w-1/4 flex-col">
           <div className="font-bold">
-            <a href="">
+            <a href="" className="text-white no-underline">
               Links
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
               Home
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
               About
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
               Courses
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
               Story
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
               Contact
             </a>
           </div>
@@ -65,27 +65,27 @@ export default function Footer() {
 
         <div className="w-1/4 flex-col">
           <div className="font-bold">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Courses
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Graphic design
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Programming
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Digital marketing   
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             UI UX design
             </a>
           </div>
@@ -93,27 +93,27 @@ export default function Footer() {
 
         <div className="w-1/4 flex-col">
           <div className="font-bold">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Other
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Blog
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Gallery
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Workshops
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Success stories
             </a>
           </div>
@@ -121,17 +121,17 @@ export default function Footer() {
 
         <div className="w-2/5 flex-col">
           <div className="font-bold mx-4 mb-6">
-            <a href="">
+            <a href="" className="text-white no-underline">
             Stay Connected
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             <div className="flex mb-6"><Icons.Telephone width={30} className="mx-2"/>(+880) 193 336 9702</div>
             </a>
           </div>
           <div className="p-2">
-            <a href="">
+            <a href="" className="text-white no-underline">
             <div className="flex"><Icons.Location width={30} className="mx-2"/>Panthapath, Dhaka</div>
             </a>
           </div>
