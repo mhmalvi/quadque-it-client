@@ -17,7 +17,12 @@ import { ReactComponent as Learning } from "../../Asset/Icon/Frame6542.svg";
 import { ReactComponent as instructors } from "../../Asset/Icon/Frame6543.svg";
 import { ReactComponent as  Colab } from "../../Asset/Icon/Frame6544.svg";
 import { ReactComponent as  JobOpportunities } from "../../Asset/Icon/Frame6507.svg";
-
+import { ReactComponent as  Bank } from "../../Asset/Icon/bank.svg";
+import { ReactComponent as  Supershop } from "../../Asset/Icon/SuperShop.svg";
+import { ReactComponent as  Tourcompanies } from "../../Asset/Icon/TourCompanies.svg";
+import { ReactComponent as  Fashionindustry } from "../../Asset/Icon/FashionIndustry.svg";
+import { ReactComponent as  Itcompanies } from "../../Asset/Icon/ItCompanies.svg";
+import { ReactComponent as  Mediaindustries } from "../../Asset/Icon/MediaIndustries.svg";
 
 
 const Icons = {
@@ -39,7 +44,13 @@ const Icons = {
   Learning,
   instructors,
   Colab,
-  JobOpportunities
+  JobOpportunities,
+  Bank,
+  Supershop,
+  Tourcompanies,
+  Fashionindustry,
+  Itcompanies,
+  Mediaindustries
   
 };
 

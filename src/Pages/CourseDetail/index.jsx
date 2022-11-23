@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../Components/Shared/Navbar'
 import Header from './Header'
+import CourseMaterial from './CourseMaterial'
 
 export default function index() 
 {
@@ -8,6 +9,7 @@ export default function index()
     <div>
         <Navbar/>
         <Header/>
+        <CourseMaterial/>
     </div>
   )
 }
