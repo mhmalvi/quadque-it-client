@@ -40,7 +40,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="md:ml-14">
-              <a className=" text-white no-underline" href="">
+              <a className=" text-white no-underline" href="/about-us">
                 About
               </a>
             </li>
@@ -50,7 +50,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="md:ml-14">
-              <a className=" text-white no-underline" href="">
+              <a className=" text-white no-underline" href="/contact">
                 Contact Us
               </a>
             </li>

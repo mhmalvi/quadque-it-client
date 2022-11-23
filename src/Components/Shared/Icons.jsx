@@ -27,6 +27,10 @@ import { ReactComponent as  Tourcompanies } from "../../Asset/Icon/TourCompanies
 import { ReactComponent as  Fashionindustry } from "../../Asset/Icon/FashionIndustry.svg";
 import { ReactComponent as  Itcompanies } from "../../Asset/Icon/ItCompanies.svg";
 import { ReactComponent as  Mediaindustries } from "../../Asset/Icon/MediaIndustries.svg";
+import { ReactComponent as  Ribbon } from "../../Asset/Icon/ribbon.svg";
+import { ReactComponent as  Bachelor } from "../../Asset/Icon/bachelor.svg";
+import { ReactComponent as  Instructor } from "../../Asset/Icon/instructor.svg";
+import { ReactComponent as  TickBox } from "../../Asset/Icon/tick-box.svg";
 
 
 const Icons = {
@@ -58,8 +62,11 @@ const Icons = {
   Tourcompanies,
   Fashionindustry,
   Itcompanies,
-  Mediaindustries
-  
+  Mediaindustries,
+  Instructor,
+  Bachelor,
+  Ribbon,
+  TickBox
 };
 
 export default Icons;

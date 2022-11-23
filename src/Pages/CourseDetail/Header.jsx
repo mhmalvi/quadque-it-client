@@ -92,10 +92,10 @@ export default function Header() {
             <CourseMaterial/>
             <div className="">
               <div className="text-center text-4xl pb-13">Special services</div>
-              <div className="flex text-center bg-home-color gap-6 pb-6">
+              <div className="flex text-center gap-6 pb-6">
                 <div className="flex-col bg-[#2F327D20] rounded-lg p-7">
                   <div className="">
-                    <Icons.Support />
+                    <Icons.Support className="m-auto"/>
                   </div>
                   <div className="text-xl py-2">Marketplace support</div>
                   <div className="text-base">
@@ -107,7 +107,7 @@ export default function Header() {
                 </div>
                 <div className="flex-col bg-[#2F327D40] rounded-lg p-7">
                   <div>
-                    <Icons.Guidance />
+                    <Icons.Guidance className="m-auto"/>
                   </div>
                   <div className="text-xl py-2">Marketplace support</div>
                   <div className="text-base">
@@ -121,7 +121,7 @@ export default function Header() {
               <div className="flex text-center bg-home-color gap-6">
                 <div className="flex-col bg-[#2F327D60] rounded-lg p-7">
                   <div className="">
-                    <Icons.Certificate />
+                    <Icons.Certificate className="m-auto"/>
                   </div>
                   <div className="text-xl py-2">Marketplace support</div>
                   <div className="text-base">
@@ -133,7 +133,7 @@ export default function Header() {
                 </div>
                 <div className="flex-col bg-[#2F327D80] rounded-lg p-7">
                   <div>
-                    <Icons.Briefcase />
+                    <Icons.Briefcase className="m-auto"/>
                   </div>
                   <div className="text-xl py-2">Marketplace support</div>
                   <div className="text-base">

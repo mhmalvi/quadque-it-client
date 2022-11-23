@@ -1,0 +1,74 @@
+import React from "react";
+import Building from "../../Asset/Image/grant-ritchie.png";
+import GoogleMapReact from "google-map-react";
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+const Contact = () => {
+  const defaultProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627,
+    },
+    zoom: 11,
+  };
+  return (
+    <div className="w-full bg-home-color font-poppins pt-40">
+      <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl m-auto">
+        <div className="lg:w-1/2 text-white m-auto">
+          <div className="md:text-4xl font-bold pb-5">
+            Level -7, 8/C, F.R Tower, Panthapath, Dhaka 1207
+          </div>
+          <div className="flex text-xl pb-10 gap-20">
+            <ul>
+              <li className="p-2">info@quadque.tech</li>
+              <li className="p-2">+61405899496</li>
+              <li className="p-2">+61405899496</li>
+            </ul>
+            <ul>
+              <li className="p-2">During office visits</li>
+              <li className="p-2">Saturday - Friday</li>
+              <li className="p-2">9am to 8pm</li>
+            </ul>
+          </div>
+          <div className="text-white text-base lg:text-xl mb-6">
+            <div className="font-semibold">social channels</div>
+          </div>
+          <div className="flex pb-16">
+            <a className="pr-4" href="">
+              Facebook
+            </a>
+            <a className="pr-4" href="">
+              Youtube
+            </a>
+            <a className="pr-4" href="">
+              Instagram
+            </a>
+            <a className="" href="">
+              Google
+            </a>
+          </div>
+          <div style={{ height: "50vh", width: "90%" }}>
+            <GoogleMapReact
+              bootstrapURLKeys={{ key: "" }}
+              defaultCenter={defaultProps.center}
+              defaultZoom={defaultProps.zoom}
+            >
+              <AnyReactComponent
+                lat={90.3814524909259}
+                lng={23.752583201286946}
+                text="My Marker"
+              />
+            </GoogleMapReact>
+            {/* 23.752583201286946, 90.3814524909259 */}
+          </div>
+        </div>
+        <div className="lg:first-letter:w-1/2">
+          <img src={Building} className="m-auto" alt="QIT logo" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
