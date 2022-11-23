@@ -1,9 +1,10 @@
 import React from "react";
 //import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route } from "react-router-dom"
+import { Route, Routes } from "react-router-dom";
+import AboutUs from "./Pages/About";
+import CoursePage from './Pages/Course';
+import CourseDetail from './Pages/CourseDetail';
 import Home from './Pages/LandingPage';
-import CoursePage from './Pages/Course'
-import CourseDetail from './Pages/CourseDetail'
 import AboutUs from './Pages/About'
 import Contact from "./Pages/Contact";
 
