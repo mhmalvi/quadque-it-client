@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+//import "./Navbar.css";
 import { navItems } from "./NavItems";
 import Dropdown from "./Dropdown";
 import Logo from "../../Asset/Image/Logo.svg";
 import Icons from "../../Components/Shared/Icons";
 
-const Navbar = () => {
+function Navbar() {
   const [dropdown, setDropdown] = useState(false);
-  const [menuStatus, setMenuStatus] = useState(false);
+
   return (
-    <div className="w-full absolute top-0 bg-transparent">
-      <div className="w-2/3 m-auto md:flex items-center justify-between px-4 py-2">
+    <>
+    <div className="w-full absolute top-0 bg-transparent"></div>
+    <div className="w-2/3 m-auto md:flex items-center justify-between px-4 py-2">
         <div className="font-poppins text-gray-800 font-bold text-2xl coursor-pointer flex items-center">
         </div>
-        <ul className="flex items-center text-xs text-black font-semibold m-0">
+        <ul className="md:flex md:items-center text-lg text-black font-semibold m-0">
           <li className="md:ml-8">
               <div className="flex">
                 <Icons.Mail />
@@ -28,20 +30,17 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      {/* ${menuStatus ? '':'-top-[440px]'} `} */}
-      <div className="text-center text-white mx-10 rounded-2xl pt-4 relative">
-        <div className="lg:flex lg:justify-between py-2 px-40">
-          <div className="md:shrink-0 coursor-pointer">
-            <img src={Logo} alt="QIT logo" />
-          </div>
-          <div onClick={()=>setMenuStatus(!menuStatus)} className="absolute float-right cursor-pointer lg:hidden">{menuStatus ? (<Icons.MenuBar className="rotate-90 transition"/>):(<Icons.MenuBar className="transition"/>)}</div>
-          <ul className={`bg-black/90 lg:bg-transparent w-full lg:flex justify-evenly font-semibold text-white lg:my-2 ${menuStatus ? 'top-[440px]':'-top-[440px]'} `}>
+      <nav className="navbar">
+        <Link to="/" className="navbar-logo">
+        <img src={Logo} alt="QIT logo" />
+        </Link>
+        <ul className="nav-items">
           {navItems.map((item) => {
-            if (item.title === "More") {
+            if (item.title === "Services") {
               return (
                 <li
                   key={item.id}
-                  className="py-4"
+                  className={item.cName}
                   onMouseEnter={() => setDropdown(true)}
                   onMouseLeave={() => setDropdown(false)}
                 >
@@ -51,16 +50,16 @@ const Navbar = () => {
               );
             }
             return (
-              <li key={item.id} className="py-4">
+              <li key={item.id} className={item.cName}>
                 <Link to={item.path}>{item.title}</Link>
               </li>
             );
           })}
         </ul>
-        </div>
-      </div>
-    </div>
+      </nav>
+      <div/>
+    </>
   );
-};
+}
 
 export default Navbar;

@@ -82,7 +82,7 @@ module.exports = {
       },
       colors: {
         "brand-color": "#7037FF",
-        "home-color": "#0D0D2B"
+        "home-color": "#040422"
       },
       lineHeight: {
         4.5: "1.125rem",

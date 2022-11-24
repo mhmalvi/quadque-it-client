@@ -5,7 +5,7 @@ import Reading from "../../Asset/Image/reading.png";
 export default function Header() {
   return (
     <div className="w-full font-poppins">
-      <div className="flex bg-black h-[356px] mt-10 pt-44 pb-20">
+      <div className="flex bg-[#040422] h-[356px] mt-10 pt-44 pb-20">
         <div className="w-full absolute">
           <div className="w-1/2 flex m-auto justify-center">
             <div className="">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Graphics from "../../Asset/Image/graphics.png";
 import Motion from "../../Asset/Image/motion.png";
 import Uiux from "../../Asset/Image/uiux.png";
@@ -11,10 +11,13 @@ const BlogGallery = () => {
   const ToogleTab = (index) => {
     console.log(index);
     setToogleTab(index);
-    var BlogDetail = Blog.filter(blog => blog.category === index);
+  };
+  useEffect(() => {
+    var BlogDetail = Blog.filter(blog => blog.category === toogleTab);
     console.log("details", BlogDetail);
     setBlogData(BlogDetail);
-  };
+  },[Blog]);
+
   return (
     <div className="w-full font-poppins text-white">
       <div className="bg-home-color py-13">
@@ -98,25 +101,25 @@ const BlogGallery = () => {
               {/* card1 */}
               {/* Blog?.filter((blog) => blog?.category === toogleTab) */}
               {Blog?.map((details) => (
-                <div className="flex-col bg-home-color rounded-3xl">
-                  <div className="flex">
-                    <img src={Graphics} alt="" className="w-full" />
-                  </div>
-                  <div className="p-5">
-                    <div className="flex-col">
-                      <div className="rounded-2xl py-2 px-4">
-                        {details.date}
+                <div className="flex-col group bg-home-color rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE]">
+                <div className="">
+                  <img src={Graphics} alt="" className="w-full rounded-3xl scale-90 group-hover:scale-100 ease-in duration-500" />
+                </div>
+                <div className="p-5">
+                  <div className="flex-col">
+                    <div className="flex justify-between">
+                      <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full py-2 px-4">
+                      {details.date}
                       </div>
+                      <div className="text-xl py-2">15000 tk</div>
                     </div>
-                    <div className="text-2xl pt-2 left-0">{details.title}</div>
-                    <div className="py-4">{details.para}</div>
-                    <div>
-                      <a className="text-[#23BDEE]" href="">
-                        READ MORE
-                      </a>
-                    </div>
+                  </div>
+                  <div className="text-2xl pt-2 left-0">{details.title}</div>
+                  <div className="py-2">
+                  {details.para}
                   </div>
                 </div>
+              </div>
               ))}
             </div>
           </div>

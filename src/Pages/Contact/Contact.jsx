@@ -13,7 +13,7 @@ const Contact = () => {
     zoom: 11,
   };
   return (
-    <div className="w-full bg-home-color font-poppins pt-40">
+    <div className="w-full bg-home-color font-poppins pt-40 mt-10">
       <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl">
         <div className="lg:w-1/2 pt-20 text-white m-auto">
           <div className="text-2xl lg:text-4xl font-bold pb-5">
