@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../Components/Shared/Navbar'
 import Blog from './Blog'
+import BlogDetail from './BlogDetail'
 
 
 export default function index() 
@@ -9,6 +10,7 @@ export default function index()
     <div>
         <Navbar/>
         <Blog/>
+        <BlogDetail/>
     </div>
   )
 }

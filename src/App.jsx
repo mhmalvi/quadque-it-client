@@ -6,7 +6,8 @@ import CoursePage from './Pages/Course';
 import CourseDetail from './Pages/CourseDetail';
 import Home from './Pages/LandingPage';
 import Contact from "./Pages/Contact";
-import Blog from './Pages/Blog'
+import Blog from './Pages/Blog';
+import BlogDetail from './Pages/Blog/BlogDetail'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/about-us" element={<AboutUs/>}></Route>
         <Route exact path="/contact" element={<Contact/>}></Route>
         <Route exact path="/blog" element={<Blog/>}></Route>
+        <Route exact path="/blog-detail" element={<BlogDetail/>}></Route>
       </Routes>
     </div>
   );
