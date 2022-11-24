@@ -1,26 +1,26 @@
 import React from "react";
-//import Rectangle from "../../Asset/Image/rectangle.png";
-//import RectangleTwo from "../../Asset/Image/rectangle2.png";
 import Classroom from "../../Asset/Image/classroom.png";
 import Students from "../../Asset/Image/students.png";
 import MobilePic from "../../Asset/Image/mobile-browse.png";
 import Box from "../../Asset/Image/box.png";
 import Icons from "../../Components/Shared/Icons";
-import AboutMaterial from './AboutMaterial'
 
-export default function Header() {
+const Blog = () => {
   return (
     <div className="w-full bg-home-color font-poppins pb-20">
       <div className="w-full font-poppins">
         <div className="mt-10">
           <div className="w-2/3 flex-col justify-center text-white m-auto pt-32">
             <div className="text-5xl font-bold text-center leading-snug">
-              Find Content Writing <br /> Services Usa at Shopwebly <br /> the
-              Website to
+              Blog Posts
+            </div>
+            <div className="text-5xl font-bold text-center leading-snug">
+              I think so, this is it.
             </div>
             <div className="w-2/3 text-center text-lg py-5 pb-7 m-auto">
-              Skyrocket your online store conversion rate and improve the
-              customer <br /> journey with smart online visual merchandising.
+              Design begins after I begin to think about how to present an{" "}
+              <br /> experience most successfully, whether a button I put in can
+              solve <br /> a problem. The only point in design is not ui design.
             </div>
             <div className="flex justify-center gap-6 pb-8">
               <div>
@@ -195,7 +195,6 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <AboutMaterial/>
           <div className="w-3/4 bg-white flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-6 m-auto">
             <div className="lg:w-1/2 text-black m-auto">
               <div className="md:text-5xl font-bold pb-5">
@@ -227,4 +226,6 @@ export default function Header() {
       </div>
     </div>
   );
-}
+};
+
+export default Blog;

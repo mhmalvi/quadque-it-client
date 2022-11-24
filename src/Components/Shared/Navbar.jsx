@@ -45,8 +45,8 @@ const Navbar = () => {
               </a>
             </li>
             <li className="md:ml-14">
-              <a className=" text-white no-underline" href="">
-                More
+              <a className=" text-white no-underline" href="/blog">
+                Blog
               </a>
             </li>
             <li className="md:ml-14">

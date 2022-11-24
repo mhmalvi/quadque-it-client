@@ -14,9 +14,9 @@ const Contact = () => {
   };
   return (
     <div className="w-full bg-home-color font-poppins pt-40">
-      <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl m-auto">
-        <div className="lg:w-1/2 text-white m-auto">
-          <div className="md:text-4xl font-bold pb-5">
+      <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl">
+        <div className="lg:w-1/2 pt-20 text-white m-auto">
+          <div className="text-2xl lg:text-4xl font-bold pb-5">
             Level -7, 8/C, F.R Tower, Panthapath, Dhaka 1207
           </div>
           <div className="flex text-xl pb-10 gap-20">
@@ -63,8 +63,8 @@ const Contact = () => {
             {/* 23.752583201286946, 90.3814524909259 */}
           </div>
         </div>
-        <div className="lg:first-letter:w-1/2">
-          <img src={Building} className="m-auto" alt="QIT logo" />
+        <div className="m-auto">
+          <img src={Building} className="" alt="QIT logo" />
         </div>
       </div>
     </div>

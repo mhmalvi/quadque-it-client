@@ -6,6 +6,7 @@ import CoursePage from './Pages/Course';
 import CourseDetail from './Pages/CourseDetail';
 import Home from './Pages/LandingPage';
 import Contact from "./Pages/Contact";
+import Blog from './Pages/Blog'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/course-detail" element={<CourseDetail/>}></Route>
         <Route exact path="/about-us" element={<AboutUs/>}></Route>
         <Route exact path="/contact" element={<Contact/>}></Route>
+        <Route exact path="/blog" element={<Blog/>}></Route>
       </Routes>
     </div>
   );
