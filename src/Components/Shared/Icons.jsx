@@ -15,24 +15,25 @@ import { ReactComponent as Telephone } from "../../Asset/Icon/telephone.svg";
 import { ReactComponent as EBook } from "../../Asset/Icon/Frame6541.svg";
 import { ReactComponent as Learning } from "../../Asset/Icon/Frame6542.svg";
 import { ReactComponent as instructors } from "../../Asset/Icon/Frame6543.svg";
-import { ReactComponent as  Colab } from "../../Asset/Icon/Frame6544.svg";
-import { ReactComponent as  JobOpportunities } from "../../Asset/Icon/Frame6507.svg";
-import { ReactComponent as  Support } from "../../Asset/Icon/user-friends.svg";
-import { ReactComponent as  Guidance } from "../../Asset/Icon/guidance.svg";
-import { ReactComponent as  Certificate } from "../../Asset/Icon/certificate.svg";
-import { ReactComponent as  Briefcase } from "../../Asset/Icon/briefcase.svg";
-import { ReactComponent as  Bank } from "../../Asset/Icon/bank.svg";
-import { ReactComponent as  Supershop } from "../../Asset/Icon/SuperShop.svg";
-import { ReactComponent as  Tourcompanies } from "../../Asset/Icon/TourCompanies.svg";
-import { ReactComponent as  Fashionindustry } from "../../Asset/Icon/FashionIndustry.svg";
-import { ReactComponent as  Itcompanies } from "../../Asset/Icon/ItCompanies.svg";
-import { ReactComponent as  Mediaindustries } from "../../Asset/Icon/MediaIndustries.svg";
-import { ReactComponent as  Ribbon } from "../../Asset/Icon/ribbon.svg";
-import { ReactComponent as  Bachelor } from "../../Asset/Icon/bachelor.svg";
-import { ReactComponent as  Instructor } from "../../Asset/Icon/instructor.svg";
-import { ReactComponent as  TickBox } from "../../Asset/Icon/tick-box.svg";
+import { ReactComponent as Colab } from "../../Asset/Icon/Frame6544.svg";
+import { ReactComponent as JobOpportunities } from "../../Asset/Icon/Frame6507.svg";
+import { ReactComponent as Support } from "../../Asset/Icon/user-friends.svg";
+import { ReactComponent as Guidance } from "../../Asset/Icon/guidance.svg";
+import { ReactComponent as Certificate } from "../../Asset/Icon/certificate.svg";
+import { ReactComponent as Briefcase } from "../../Asset/Icon/briefcase.svg";
+import { ReactComponent as Bank } from "../../Asset/Icon/bank.svg";
+import { ReactComponent as Supershop } from "../../Asset/Icon/SuperShop.svg";
+import { ReactComponent as Tourcompanies } from "../../Asset/Icon/TourCompanies.svg";
+import { ReactComponent as Fashionindustry } from "../../Asset/Icon/FashionIndustry.svg";
+import { ReactComponent as Itcompanies } from "../../Asset/Icon/ItCompanies.svg";
+import { ReactComponent as Mediaindustries } from "../../Asset/Icon/MediaIndustries.svg";
+import { ReactComponent as Ribbon } from "../../Asset/Icon/ribbon.svg";
+import { ReactComponent as Bachelor } from "../../Asset/Icon/bachelor.svg";
+import { ReactComponent as Instructor } from "../../Asset/Icon/instructor.svg";
+import { ReactComponent as TickBox } from "../../Asset/Icon/tick-box.svg";
 import { ReactComponent as  Tick } from "../../Asset/Icon/tick.svg";
-
+import { ReactComponent as MenuBar } from "../../Asset/Icon/menu.svg";
+import { ReactComponent as Cancel } from "../../Asset/Icon/cross.svg";
 
 const Icons = {
   PlayBtn,
@@ -68,8 +69,8 @@ const Icons = {
   Bachelor,
   Ribbon,
   TickBox,
-  Tick
-
+  MenuBar,
+  Cancel
 };
 
 export default Icons;
