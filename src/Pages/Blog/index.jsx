@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../Components/Shared/Navbar'
 import Blog from './Blog'
 import BlogDetail from './BlogDetail'
+import Gallery from './Gallery'
 
 
 export default function index() 
@@ -11,6 +12,7 @@ export default function index()
         <Navbar/>
         <Blog/>
         <BlogDetail/>
+        <Gallery/>
     </div>
   )
 }

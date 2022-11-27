@@ -1,5 +1,6 @@
 import React from 'react'
 import blogdetail from "../../Asset/Image/blogdetail.png";
+import blogdetail2 from "../../Asset/Image/blogdetail2.png";
 
 const BlogDetail = () => {
   return (
@@ -42,7 +43,7 @@ const BlogDetail = () => {
             </div>
 
             <div className="  flex w-1/3 ml-8">
-          <img src={blogdetail} alt="" className="rounded-l" />
+          <img src={blogdetail2} alt="" className="rounded-l" />
        </div>
        </div>
 

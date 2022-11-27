@@ -20,6 +20,7 @@ function App() {
         <Route exact path="/contact" element={<Contact/>}></Route>
         <Route exact path="/blog" element={<Blog/>}></Route>
         <Route exact path="/blog-detail" element={<BlogDetail/>}></Route>
+      
       </Routes>
     </div>
   );
