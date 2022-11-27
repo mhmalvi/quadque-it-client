@@ -31,6 +31,7 @@ import { ReactComponent as Ribbon } from "../../Asset/Icon/ribbon.svg";
 import { ReactComponent as Bachelor } from "../../Asset/Icon/bachelor.svg";
 import { ReactComponent as Instructor } from "../../Asset/Icon/instructor.svg";
 import { ReactComponent as TickBox } from "../../Asset/Icon/tick-box.svg";
+import { ReactComponent as  Tick } from "../../Asset/Icon/tick.svg";
 import { ReactComponent as MenuBar } from "../../Asset/Icon/menu.svg";
 import { ReactComponent as Cancel } from "../../Asset/Icon/cross.svg";
 
