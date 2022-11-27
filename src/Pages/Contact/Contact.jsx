@@ -1,6 +1,8 @@
 import React from "react";
 import Building from "../../Asset/Image/grant-ritchie.png";
 import GoogleMapReact from "google-map-react";
+import GoogleMaps from "./Maps";
+/* 23.752320221204513, 90.38005477684074 */
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -55,13 +57,13 @@ const Contact = () => {
               defaultZoom={defaultProps.zoom}
             >
               <AnyReactComponent
-                lat={90.3814524909259}
-                lng={23.752583201286946}
-                text="My Marker"
+                lat={23.752320221204513}
+                lng={90.38005477684074}
+                text="QIT"
               />
             </GoogleMapReact>
-            {/* 23.752583201286946, 90.3814524909259 */}
           </div>
+          {/* <div><GoogleMaps/></div> */}
         </div>
         <div className="m-auto">
           <img src={Building} className="" alt="QIT logo" />

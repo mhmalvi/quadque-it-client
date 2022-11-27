@@ -4,7 +4,7 @@ import PersonTwo from "../../Asset/Image/person-2.png";
 
 export default function OurStudents() {
   return (
-    <div className="w-full pb-36">
+    <div className="w-full pb-36 lg:visible">
       <div className="flex">
         <div className="text-center font-poppins rounded-3xl mx-9">
           <div className="w-full text-black text-5xl font-bold px-1 mx-12">

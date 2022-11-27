@@ -6,7 +6,7 @@ import Students from "../../Asset/Image/students.png";
 import MobilePic from "../../Asset/Image/mobile-browse.png";
 import Box from "../../Asset/Image/box.png";
 import Icons from "../../Components/Shared/Icons";
-import AboutMaterial from './AboutMaterial'
+import AboutMaterial from "./AboutMaterial";
 
 export default function Header() {
   return (
@@ -98,13 +98,13 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="text-white relative">
           <img
             src={Box}
-            className="rotate-90 absolute float-right -top-40 left-20"
+            className="rotate-90 absolute float-right -bottom-15 right-40"
             alt=""
           />
+        </div>
+        <div className="text-white relative">
           <div className="text-4xl font-bold text-center pt-24">Advantage</div>
           <div className="w-2/3 text-center text-lg py-5 pb-7 m-auto">
             Skyrocket your online store conversion rate and improve the customer{" "}
@@ -195,7 +195,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <AboutMaterial/>
+          <AboutMaterial />
           <div className="w-3/4 bg-white flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-6 m-auto">
             <div className="lg:w-1/2 text-black m-auto">
               <div className="md:text-5xl font-bold pb-5">

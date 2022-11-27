@@ -3,26 +3,31 @@ import Graphics from "../../Asset/Image/graphics.png";
 import Motion from "../../Asset/Image/motion.png";
 import Uiux from "../../Asset/Image/uiux.png";
 import Blog from "./blogs.json";
+//import './card.css'
 
 const BlogGallery = () => {
   const [toogleTab, setToogleTab] = useState(1);
   const [blogData, setBlogData] = useState();
 
   const ToogleTab = (index) => {
-    console.log(index);
     setToogleTab(index);
   };
+
   useEffect(() => {
-    var BlogDetail = Blog.filter(blog => blog.category === toogleTab);
-    console.log("details", BlogDetail);
+    let BlogDetail; 
+    if(toogleTab !== 1){
+    BlogDetail = Blog.filter(blog => blog.category == toogleTab)
+    }else{
+    BlogDetail = Blog.map(blog => blog)
+    }
     setBlogData(BlogDetail);
-  },[Blog]);
+  },[Blog, toogleTab]);
 
   return (
     <div className="w-full font-poppins text-white">
       <div className="bg-home-color py-13">
         <div className="flex-col w-2/3 m-auto">
-          <div className="flex justify-center justify-evenly py-5 leading-10">
+          <div className="flex justify-evenly py-5 leading-10">
             <div
               onClick={() => ToogleTab(1)}
               className={
@@ -99,9 +104,8 @@ const BlogGallery = () => {
             {/* row1 */}
             <div className="grid grid-cols-2 text-white gap-6">
               {/* card1 */}
-              {/* Blog?.filter((blog) => blog?.category === toogleTab) */}
-              {Blog?.map((details) => (
-                <div className="flex-col group bg-home-color rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE]">
+              {blogData?.map((details) => (
+                <div className="flex-col group bg-home-color rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE] transition-ease-out duration-300">
                 <div className="">
                   <img src={Graphics} alt="" className="w-full rounded-3xl scale-90 group-hover:scale-100 ease-in duration-500" />
                 </div>
@@ -125,6 +129,7 @@ const BlogGallery = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

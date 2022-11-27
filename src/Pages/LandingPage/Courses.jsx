@@ -4,7 +4,7 @@ import Course from "../../Asset/Image/image9.png";
 export default function Courses() {
   return (
     <div className="w-full pb-24">
-      <div className="bg-[#5c5bfd] bg-opacity-10 text-center m-auto mx-10 rounded-3xl py-24 px-20">
+      <div className="bg-[#5c5bfd] bg-opacity-10 lg:text-5xl text-center m-auto lg:mx-10 rounded-3xl py-4 lg:py-24 px-4 lg:px-20">
         <div className="text-black text-4xl font-bold pb-5">
           Our Paragraph is a series series sentences
         </div>
@@ -22,31 +22,31 @@ export default function Courses() {
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
-            <div className="">Graphics & Design</div>
+            <div className="">Programming</div>
           </div>
           <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
-            <div className="">Graphics & Design</div>
+            <div className="">Digital marketing</div>
           </div>
           <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
-            <div className="">Graphics & Design</div>
+            <div className="">Writing</div>
           </div>
           <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
-            <div className="">Graphics & Design</div>
+            <div className="">Video & Animation</div>
           </div>
           <div className="w-full flex-col bg-home-color m-auto p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
-            <div className="">Graphics & Design</div>
+            <div className="">Others</div>
           </div>
         </div>
       </div>

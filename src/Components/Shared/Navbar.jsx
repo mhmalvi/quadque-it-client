@@ -28,14 +28,14 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      {/* ${menuStatus ? '':'-top-[440px]'} `} */}
+ 
       <div className="text-center text-white mx-10 rounded-2xl pt-4 relative">
-        <div className="lg:flex lg:justify-between py-2 px-40">
-          <div className="md:shrink-0 coursor-pointer">
-            <img src={Logo} alt="QIT logo" />
+        <div className="lg:w-4/5 lg:flex lg:justify-between py-2 px-10 lg:px-0 mx-auto">
+          <div className="md:shrink-0 coursor-pointer m-auto">
+            <img src={Logo} className="" alt="QIT logo" />
           </div>
-          <div onClick={()=>setMenuStatus(!menuStatus)} className="absolute float-right cursor-pointer lg:hidden">{menuStatus ? (<Icons.MenuBar className="rotate-90 transition"/>):(<Icons.MenuBar className="transition"/>)}</div>
-          <ul className={`bg-black/90 lg:bg-transparent w-full lg:flex justify-evenly font-semibold text-white lg:my-2 ${menuStatus ? 'top-[440px]':'-top-[440px]'} `}>
+          <div onClick={()=>setMenuStatus(!menuStatus)} className="relative float-right -top-8 cursor-pointer lg:hidden">{menuStatus ? (<Icons.MenuBar className="rotate-90 transition duration-500"/>):(<Icons.MenuBar className="transition duration-500"/>)}</div>
+          <ul className={`w-full bg-black/90 lg:bg-transparent lg:flex justify-evenly font-semibold text-white lg:my-2 ${menuStatus ? ("absolute top-[100px]"):("hidden")} `}>
           {navItems.map((item) => {
             if (item.title === "More") {
               return (
