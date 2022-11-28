@@ -3,6 +3,7 @@ import Graphics from "../../Asset/Image/graphics.png";
 import Motion from "../../Asset/Image/motion.png";
 import Uiux from "../../Asset/Image/uiux.png";
 import Blog from "./blogs.json";
+import { NavLink } from "react-router-dom";
 //import './card.css'
 
 const BlogGallery = () => {
@@ -105,23 +106,25 @@ const BlogGallery = () => {
             <div className="grid grid-cols-2 text-white gap-6">
               {/* card1 */}
               {blogData?.map((details) => (
-                <div className="flex-col group bg-home-color rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE] transition-ease-out duration-300">
-                <div className="">
-                  <img src={Graphics} alt="" className="w-full rounded-3xl scale-90 group-hover:scale-100 ease-in duration-500" />
+                <div className="flex-col group rounded-xl">
+                <div className="flex-wrap overflow-hidden rounded-xl">
+                  <img src={Graphics} alt="" className="w-full rounded-xl group-hover:scale-110 ease-in duration-500" />
                 </div>
-                <div className="p-5">
+                <div className="py-5">
                   <div className="flex-col">
-                    <div className="flex justify-between">
-                      <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full py-2 px-4">
+                  <div className="text-[#828282] bg-opacity-50 rounded-full py-2">
                       {details.date}
                       </div>
-                      <div className="text-xl py-2">15000 tk</div>
-                    </div>
                   </div>
                   <div className="text-2xl pt-2 left-0">{details.title}</div>
                   <div className="py-2">
                   {details.para}
                   </div>
+                  <NavLink to={"./blog-detail"}>
+                  <div className="text-[#23BDEE] py-2">
+                  READ MORE
+                  </div>
+                  </NavLink>
                 </div>
               </div>
               ))}

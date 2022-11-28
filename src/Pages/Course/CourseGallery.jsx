@@ -3,8 +3,10 @@ import Graphics from "../../Asset/Image/graphics.png";
 import Motion from "../../Asset/Image/motion.png";
 import Uiux from "../../Asset/Image/uiux.png";
 import Course from "./Course.json"
+import { useNavigate } from "react-router-dom";
 
 export default function CourseGallery() {
+  const navigate = useNavigate();
   const [toogleTab, setToogleTab] = useState(1);
   const [courseData, setCourseData] = useState();
 
@@ -20,6 +22,10 @@ export default function CourseGallery() {
     }
 
   ]
+
+  const navigateToCourseDetails = () => {
+    navigate("./course-detail");
+  }
 
   useEffect(() => {
     let CourseDetail;
@@ -123,7 +129,7 @@ export default function CourseGallery() {
             <div className="grid grid-col-1 lg:grid-cols-2 text-white gap-6 my-6">
               {/* card1 */}
               {courseData?.map((details) => (
-                <div className="flex-col group bg-home-color rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE] transition-ease-out duration-300">
+                <div onClick={navigateToCourseDetails} className="flex-col group bg-home-color rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE] transition-ease-out duration-300">
                   <div className="">
                     <img
                       src={Graphics}

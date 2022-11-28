@@ -45,11 +45,11 @@ export const moreDropdown = [
   {
     id: 2,
     title: "Gallery",
-    path: "./consulting",
+    path: "./gallery",
   },
   {
     id: 3,
     title: "Stories",
-    path: "./design",
+    path: "./stories",
   },
 ];

@@ -55,7 +55,7 @@ export default function OurInstructors() {
             <Slider {...settings}>
               {Instructor?.map((person) => (
                 <div>
-                  <div className="shadow text-center pt-9 px-12 pb-12 mx-3">
+                  <div className="shadow text-center pt-9 px-12 pb-12 mx-3 my-3">
                     <div className="pb-4">
                       <img
                         src={PersonOne}

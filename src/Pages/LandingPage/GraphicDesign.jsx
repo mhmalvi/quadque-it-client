@@ -6,8 +6,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Course from "./JsonData/courses.json";
+import { useNavigate } from "react-router-dom";
 
 export default function GraphicDesign() {
+  const navigate = useNavigate();
   const settings = {
     dots: true,
     infinite: true,
@@ -45,6 +47,10 @@ export default function GraphicDesign() {
       },
     ],
   };
+
+  const navigateToCourseDetails = () => {
+    navigate("./course-detail");
+  };
   return (
     <div className="w-full pb-24">
       <div className="text-center font-poppins rounded-3xl lg:px-20">
@@ -55,7 +61,10 @@ export default function GraphicDesign() {
           <Slider {...settings}>
             {Course?.map((course) => (
               <div>
-                <div className="flex-col group bg-home-color rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE] transition-ease-out duration-300 mx-3">
+                <div
+                  onClick={navigateToCourseDetails}
+                  className="flex-col group shadow-lg rounded-3xl border-2 text-black hover:border-4 hover:bg-black hover:text-white hover:border-[#23BDEE] transition-ease-out duration-300 mx-3 my-3"
+                >
                   <div className="">
                     <img
                       src={Graphics}
@@ -66,16 +75,16 @@ export default function GraphicDesign() {
                   <div className="p-5">
                     <div className="flex-col">
                       <div className="flex justify-between">
-                        <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full py-2 px-4">
+                        <div className="bg-[#23BDEE] text-[#23BDEE] bg-opacity-20 rounded-full py-2 px-4">
                           {course.date}
                         </div>
                         <div className="text-xl py-2">{course.price} tk</div>
                       </div>
                     </div>
-                    <div className="text-2xl font-semibold pt-2 left-0">
+                    <div className="text-2xl text-start font-semibold pt-2 left-0">
                       {course.title}
                     </div>
-                    <div className="py-2">{course.para}</div>
+                    <div className="text-start py-2">{course.para}</div>
                   </div>
                 </div>
               </div>

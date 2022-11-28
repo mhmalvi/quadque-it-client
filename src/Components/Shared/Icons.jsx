@@ -69,6 +69,7 @@ const Icons = {
   Bachelor,
   Ribbon,
   TickBox,
+  Tick,
   MenuBar,
   Cancel
 };
