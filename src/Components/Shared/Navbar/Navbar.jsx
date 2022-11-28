@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { navItems } from "./NavItems";
-import Dropdown from "./Dropdown";
-import Logo from "../../../Asset/Image/Logo.svg"
+import { Link } from "react-router-dom";
+import Logo from "../../../Asset/Image/Logo.svg";
 import Icons from "../Icons";
+import NavLinks from "./NavLinks";
 
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(false);
-  const [menuStatus, setMenuStatus] = useState(false);
+  const [open, setOpen] = useState(false);
+  console.log(open);
   return (
     <div className="w-full absolute top-0 bg-transparent">
-      <div className="w-2/3 m-auto md:flex items-center justify-between px-4 py-2">
+      <div className="w-2/3 m-auto md:flex items-center justify-between px-4 py-2 hidden lg:visible">
         <div className="font-poppins text-gray-800 font-bold text-2xl coursor-pointer flex items-center"></div>
         <ul className="flex items-center text-xs text-black font-semibold m-0">
           <li className="md:ml-8">
@@ -28,49 +27,57 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="text-center text-white mx-10 rounded-2xl pt-4 relative">
-        <div className="flex justify-between py-2 px-10 lg:mx-30 lg:px-0 m-auto">
-          <div className="md:shrink-0 coursor-pointer m-0 lg:m-auto">
-            <img src={Logo} className="" alt="QIT logo" />
+      <nav className="bg-transparent text-white relative">
+        <div className="flex items-center font-medium justify-around">
+          <div className="z-50 p-5 lg:w-auto w-full">
+            <img src={Logo} width={83} alt="QIT" className="cursor-pointer" />
           </div>
-          <div
-            onClick={() => setMenuStatus(!menuStatus)}
-            className="relative float-right top-0 cursor-pointer lg:hidden"
-          >
-            {menuStatus ? (
-              <Icons.MenuBar className="rotate-90 transition duration-500" />
+          <div onClick={() => setOpen(!open)}>
+            {open ? (
+              <Icons.Cancel
+                width={20}
+                className="cursor-pointer mx-5 lg:hidden"
+              />
             ) : (
-              <Icons.MenuBar className="transition duration-500" />
+              <Icons.MenuBar width={40} className="mx-5 lg:hidden" />
             )}
           </div>
+          <ul className="hidden lg:visible lg:flex items-center gap-8">
+            <li>
+              <Link to="/" className="px-7 py-2 inline-block">
+                Home
+              </Link>
+            </li>
+            <NavLinks />
+            <li>
+              <Link to="/" className="px-7 py-2 bg-brand-color rounded-lg inline-block">
+                Login
+              </Link>
+            </li>
+          </ul>
+          {/* Mobile View */}
           <ul
-            className={`w-full bg-black/90 lg:bg-transparent lg:flex justify-end font-semibold text-white lg:my-2 ${
-              menuStatus ? "absolute top-[100px]" : "hidden"
-            } `}
+            className={`lg:hidden absolute w-full h-full top-20 duration-500 ${
+              open ? "left-0" : "left-[100%]"
+            }`}
           >
-            {navItems.map((item) => {
-              if (item.title === "More") {
-                return (
-                  <li
-                    key={item.id}
-                    className="py-4 px-6"
-                    onMouseEnter={() => setDropdown(true)}
-                    onMouseLeave={() => setDropdown(false)}
-                  >
-                    <NavLink to={item.path}>{item.title}</NavLink>
-                    {dropdown && <Dropdown />}
-                  </li>
-                );
-              }
-              return (
-                <li key={item.id} className="py-4 px-6">
-                  <NavLink to={item.path}>{item.title}</NavLink>
-                </li>
-              );
-            })}
+            <li>
+              <Link
+                to="/"
+                className="bg-white text-black text-lg px-7 py-6 w-full inline-block"
+              >
+                Home
+              </Link>
+            </li>
+            <NavLinks />
+            <li>
+              <Link to="/" className="bg-white text-lg text-black w-full inline-block px-7 py-2">
+                Login
+              </Link>
+            </li>
           </ul>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };

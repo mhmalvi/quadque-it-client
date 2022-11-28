@@ -4,8 +4,8 @@ import Icons from "../../Components/Shared/Icons";
 
 export default function Header() {
   return (
-    <div className="w-full pt-10 font-poppins pb-20">
-      <div className="bg-home-color text-center lg:text-start m-auto lg:mx-10 rounded-3xl pt-24 pb-8 px-10 lg:px-20">
+    <div className="w-full lg:mt-10 font-poppins pb-20">
+      <div className="bg-home-color text-center lg:text-start m-auto lg:mx-10 lg:rounded-3xl pt-44 pb-8 px-10 lg:px-20">
         <div className="flex flex-col-reverse lg:flex lg:flex-row justify-evenly m-auto">
           <div className="lg:w-1/2 text-white">
             <div className="text-2xl lg:text-5xl font-bold pb-5">
