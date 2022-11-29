@@ -4,6 +4,7 @@ import Motion from "../../Asset/Image/motion.png";
 import Uiux from "../../Asset/Image/uiux.png";
 import Course from "./Course.json"
 import { useNavigate } from "react-router-dom";
+import CatagoryDropdown from "./Dropdown";
 
 export default function CourseGallery() {
   const navigate = useNavigate();
@@ -40,10 +41,10 @@ export default function CourseGallery() {
   return (
     <div className="w-full font-poppins text-white">
       <div className="bg-home-color py-13 px-30 relative">
-        <div className="flex">
+        <div className="lg:flex">
           <div className="w-1/3">
             <div className="text-xl">Course Category</div>
-            <ul className="py-5 leading-10">
+            <ul className="flex lg:flex-col py-5 leading-10">
               <li onClick={() => ToogleTab(1)}>
                 <div
                   className={
@@ -122,6 +123,8 @@ export default function CourseGallery() {
                 </div>
               </li>
             </ul>
+            <CatagoryDropdown/>
+
           </div>
           <div className="w-full">
             {/* Gallery */}

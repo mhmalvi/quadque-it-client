@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../../Asset/Image/Logo.svg";
 import Icons from "../Icons";
@@ -6,9 +6,23 @@ import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  console.log(open);
+  const [showElement, setShowElement] = useState("");
+  useEffect(() => {
+    setTimeout(function () {
+      if(open === true){
+      setShowElement("visible");
+      console.log("hiddeeen", showElement);
+      }else{
+      setShowElement("hidden");
+      console.log("hiddeeen", showElement);
+      }
+    });
+  }, [open]);
+
+
   return (
     <div className="w-full absolute top-0 bg-transparent">
+      {/* TOPBAR */}
       <div className="w-2/3 m-auto md:flex items-center justify-between px-4 py-2 hidden lg:visible">
         <div className="font-poppins text-gray-800 font-bold text-2xl coursor-pointer flex items-center"></div>
         <ul className="flex items-center text-xs text-black font-semibold m-0">
@@ -36,7 +50,7 @@ const Navbar = () => {
             {open ? (
               <Icons.Cancel
                 width={20}
-                className="cursor-pointer mx-5 lg:hidden"
+                className="cursor-pointer mx-8 lg:hidden"
               />
             ) : (
               <Icons.MenuBar width={40} className="mx-5 lg:hidden" />
@@ -58,8 +72,8 @@ const Navbar = () => {
           {/* Mobile View */}
           <ul
             className={`lg:hidden absolute w-full h-full top-20 duration-500 ${
-              open ? "left-0" : "left-[100%]"
-            }`}
+              open ? "left-0" : "left-[110%] opacity-0"
+            }  ${showElement}`}
           >
             <li>
               <Link
@@ -71,7 +85,7 @@ const Navbar = () => {
             </li>
             <NavLinks />
             <li>
-              <Link to="/" className="bg-white text-lg text-black w-full inline-block px-7 py-2">
+              <Link to="/" className="bg-white text-lg text-black w-full inline-block px-7 py-6">
                 Login
               </Link>
             </li>

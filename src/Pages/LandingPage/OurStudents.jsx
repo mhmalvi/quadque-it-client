@@ -75,7 +75,7 @@ export default function OurStudents() {
                       {person.job}
                     </div>
 
-                    <div className="text-base">“{person.comment}”</div>
+                    <div className="text-base text-start">“{person.comment}”</div>
                   </div>
                 </div>
               ))}

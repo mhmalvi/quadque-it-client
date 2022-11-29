@@ -109,7 +109,7 @@ const Stories = () => {
         </div>
         <div className="m-auto pt-32 pb-18">
           <div className="text-4xl text-center leading-snug pb-12">Art Works</div>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-2">
             <div className="flex-col">
               <div className="flex-wrap overflow-hidden rounded-xl my-2">
                 <img
