@@ -18,13 +18,13 @@ export default function Header() {
               teach you in more an interactive way
             </div>
             <div className="flex justify-center lg:justify-start h-16 gap-14 text-white text-sm lg:text-xl mb-6">
-              <div className="bg-brand-color rounded-full text-white px-8 py-4">
+              <button className="bg-brand-color rounded-full text-white leading-snug px-8">
                 Browse Courses
-              </div>
+              </button>
               <div className="py-4"> Video Content</div>
             </div>
           </div>
-          <div className="lg:first-letter:w-1/2">
+          <div className="lg:w-1/2">
             <img src={World} width={433} className="m-auto" alt="QIT logo" />
           </div>
         </div>

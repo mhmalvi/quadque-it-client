@@ -10,13 +10,13 @@ const Navbar = () => {
   useEffect(() => {
     setTimeout(function () {
       if(open === true){
-      setShowElement("visible");
+      setShowElement("block");
       console.log("hiddeeen", showElement);
       }else{
       setShowElement("hidden");
       console.log("hiddeeen", showElement);
       }
-    });
+    },1000);
   }, [open]);
 
 
@@ -42,7 +42,7 @@ const Navbar = () => {
       </div>
 
       <nav className="bg-transparent text-white relative">
-        <div className="flex items-center font-medium justify-around">
+        <div className="flex items-center font-medium justify-around sm:mx-10">
           <div className="z-50 p-5 lg:w-auto w-full">
             <img src={Logo} width={83} alt="QIT" className="cursor-pointer" />
           </div>
@@ -71,8 +71,8 @@ const Navbar = () => {
           </ul>
           {/* Mobile View */}
           <ul
-            className={`lg:hidden absolute w-full h-full top-20 duration-500 ${
-              open ? "left-0" : "left-[110%] opacity-0"
+            className={`lg:hidden absolute w-full h-full top-20 duration-1000 ${
+              open ? "left-0 opacity-100" : "left-[100%] opacity-0"
             }  ${showElement}`}
           >
             <li>

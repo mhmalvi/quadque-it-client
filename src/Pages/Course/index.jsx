@@ -9,7 +9,6 @@ export default function index()
     <div>
         <Header/>
         <CourseGallery/>
-        <Admission/>
     </div>
   )
 }

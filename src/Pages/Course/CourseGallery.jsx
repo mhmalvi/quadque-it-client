@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import Graphics from "../../Asset/Image/graphics.png";
 import Motion from "../../Asset/Image/motion.png";
 import Uiux from "../../Asset/Image/uiux.png";
-import Course from "./Course.json"
+import Course from "./Course.json";
 import { useNavigate } from "react-router-dom";
-import CatagoryDropdown from "./Dropdown";
+
+import { DownOutlined } from "@ant-design/icons";
+import { Dropdown, Menu, Space } from "antd";
 
 export default function CourseGallery() {
   const navigate = useNavigate();
@@ -15,18 +17,47 @@ export default function CourseGallery() {
     console.log(index);
     setToogleTab(index);
   };
-
-  const Badge = [
-    {
-      id: 2,
-      color: "green",
-    }
-
-  ]
+  const menu = (
+    <Menu
+      onClick={({ key }) => {
+        ToogleTab(key);
+      }}
+      items={[
+        {
+          key: 1,
+          label: <a>All</a>,
+        },
+        {
+          key: 2,
+          label: <a>Content Writing</a>,
+        },
+        {
+          key: 3,
+          label: <a>Advanced Programming</a>,
+        },
+        {
+          key: 4,
+          label: <a>Digital Marketing</a>,
+        },
+        {
+          key: 5,
+          label: <a>Programming</a>,
+        },
+        {
+          key: 6,
+          label: <a>Video & Animation</a>,
+        },
+        {
+          key: 7,
+          label: <a>Graphics & Design</a>,
+        },
+      ]}
+    />
+  );
 
   const navigateToCourseDetails = () => {
     navigate("./course-detail");
-  }
+  };
 
   useEffect(() => {
     let CourseDetail;
@@ -40,11 +71,11 @@ export default function CourseGallery() {
 
   return (
     <div className="w-full font-poppins text-white">
-      <div className="bg-home-color py-13 px-30 relative">
+      <div className="bg-home-color lg:py-13 px-10 lg:px-30 relative">
         <div className="lg:flex">
-          <div className="w-1/3">
+          <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
-            <ul className="flex lg:flex-col py-5 leading-10">
+            <ul className="flex-col py-5 leading-10">
               <li onClick={() => ToogleTab(1)}>
                 <div
                   className={
@@ -123,24 +154,33 @@ export default function CourseGallery() {
                 </div>
               </li>
             </ul>
-            <CatagoryDropdown/>
-
           </div>
+          <Dropdown overlay={menu} className="flex justify-center lg:hidden">
+            <a>
+              <Space className="border py-2 px-4 rounded-full">
+                Course Catagory
+                <DownOutlined />
+              </Space>
+            </a>
+          </Dropdown>
           <div className="w-full">
             {/* Gallery */}
             {/* row1 */}
             <div className="grid grid-col-1 lg:grid-cols-2 text-white gap-6 my-6">
               {/* card1 */}
               {courseData?.map((details) => (
-                <div onClick={navigateToCourseDetails} className="flex-col group bg-home-color border rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE] transition-ease-out duration-300">
-                  <div className="">
+                <div
+                  onClick={navigateToCourseDetails}
+                  className="flex-col group bg-home-color border rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300"
+                >
+                  <div className="flex-wrap overflow-hidden rounded-3xl m-2">
                     <img
-                      src={Graphics}
+                      src={Motion}
                       alt=""
-                      className="w-full rounded-3xl scale-90 group-hover:scale-100 ease-in duration-500"
+                      className="w-full rounded-3xl scale-100 group-hover:scale-125 ease-in duration-700"
                     />
                   </div>
-                  <div className="p-8">
+                  <div className="p-4">
                     <div className="flex-col">
                       <div className="flex justify-between">
                         <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full py-2 px-4">

@@ -7,8 +7,8 @@ const NavLinks = () => {
   return (
     <>
       {links?.map((link) => (
-        <div>
-          <div className="bg-white lg:bg-transparent text-black lg:text-white text-lg lg:text-base text-left cursor-pointer group">
+        <div className="lg:rounded-lg">
+          <div className="group bg-white lg:bg-transparent text-black lg:text-white text-lg lg:text-base text-left cursor-pointer">
             <Link to={link.link}>
               <div
                 onClick={() => {
@@ -22,13 +22,13 @@ const NavLinks = () => {
               </div>
             </Link>
             {link.submenu !== "" && (
-              <div>
+              <div className="opacity-0 absolute top-4 group-hover:opacity-100 group-hover:top-0 duration-1000">
                 <div className="absolute top-16 mx-6 text-start hidden group-hover:lg:block hover:lg:block">
                   <div className="bg-white text-black px-10">
                     {link.submenu?.map((slink) => (
                       <div>
                         <Link to={slink.sublink}>
-                          <div className="py-3">{slink.name}</div>
+                          <div className="w-full hover:text-brand-color py-3">{slink.name}</div>
                         </Link>
                       </div>
                     ))}

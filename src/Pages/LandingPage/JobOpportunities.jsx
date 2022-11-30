@@ -11,8 +11,8 @@ const JobOpportunities = () => {
           We Bring The Good Education To Life{" "}
         </div>
       </div>
-            <div className="lg:w-4/5 lg:flex justify-center m-auto gap-28">
-        <div className="flex">
+      <div className="lg:w-4/5 lg:flex justify-center m-auto lg:gap-28">
+        <div className="flex mx-3">
           <div className="flex-wrap shrink-0 lg:rounded-tr-3xl lg:rounded-tl-3xl lg:rounded-br-[5rem] lg:rounded-bl-3xl overflow-hidden">
             <img
               src={shourav}

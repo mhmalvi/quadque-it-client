@@ -18,8 +18,8 @@ export default function OurInstructors() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 1,
           infinite: true,
           dots: true,
@@ -28,8 +28,8 @@ export default function OurInstructors() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 1,
           dots: false,
         },
@@ -57,7 +57,7 @@ export default function OurInstructors() {
                 <div>
                   <div className="flex-wrap group shadow mx-3 p-3">
                     <img src={Apu} width={348} className="group-hover:opacity-0 group-hover:scale-90 duration-700 m-auto" alt="" />
-                    <div className="w-[350px] opacity-0 absolute -top-10 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 px-12 pb-12 ">
+                    <div className="w-[350px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 px-12 pb-12 ">
                       <div className="pb-4">
                         <img
                           src={Apu}

@@ -5,7 +5,7 @@ export default function Partners() {
   return (
     <div className="w-full pb-30 lg:pb-56">
       <div className="text-center font-poppins rounded-3xl">
-        <div className="text-black text-xl lg:text-4xl font-bold pb-5">
+        <div className="text-black text-2xl md:text-4xl font-bold pb-5">
         Associated Partners 
         </div>
         <div className="w-1/3 hidden lg:visible text-lg m-auto pb-18">

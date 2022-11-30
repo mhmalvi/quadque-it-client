@@ -2,13 +2,13 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Icons from "../../Components/Shared/Icons";
 import CountUp from "react-countup";
-let video = "https://www.youtube.com/embed/4TutF9refYo"
+let video = "https://www.youtube.com/embed/4TutF9refYo";
 
 export default function DetailOverlay() {
   return (
     <div className="w-full font-poppins text-white">
       <div className="mt-10 absolute top-28">
-        <div className="w-1/2 flex-col justify-center m-auto">
+        <div className="w-2/3 flex-col justify-center m-auto">
           <div className="text-5xl font-bold text-center">Graphic Design</div>
           <div className="w-2/3 text-center text-lg py-5 pb-7 m-auto">
             Design begins after I begin to think about how to present an
@@ -27,12 +27,22 @@ export default function DetailOverlay() {
               </button>
             </div>
           </div>
+          {/* Video Section */}
           <div className="ratio ratio-16x9">
-          <iframe width="560" height="315" src={video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src={video}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
-          <div className="flex justify-center gap-6 pt-14 pb-24">
+          {/* CountUp Section */}
+          <div className="grid grid-cols-3 justify-center gap-6 pt-14 pb-24">
             <div className="flex-col text-center">
-              <div className="w-38 h-29 border-2 rounded-lg p-3">
+              <div className="border-2 rounded-lg p-3">
                 <span className="text-5xl font-bold">
                   <CountUp duration={2.75} end={6} />
                 </span>
@@ -42,7 +52,7 @@ export default function DetailOverlay() {
               <div className="pt-5">Course Duration</div>
             </div>
             <div className="flex-col text-center">
-              <div className="w-38 h-29 border-2 rounded-lg p-4">
+              <div className="border-2 rounded-lg p-4">
                 <span className="text-5xl font-bold">
                   <CountUp duration={2.75} end={48} />
                 </span>
@@ -50,7 +60,7 @@ export default function DetailOverlay() {
               <div className="pt-5">Lectures</div>
             </div>
             <div className="flex-col text-center">
-              <div className="w-38 h-29 border-2 rounded-lg p-4">
+              <div className="border-2 rounded-lg p-4">
                 <span className="text-5xl font-bold">
                   <CountUp duration={2.75} end={30} suffix="+" />
                 </span>
@@ -58,6 +68,7 @@ export default function DetailOverlay() {
               <div className="pt-5">Projects</div>
             </div>
           </div>
+          {/* Course Overview Section */}
           <div className="m-auto">
             <div className="text-center text-4xl pb-5">Course Overview</div>
             <div className="text-center pb-18">
@@ -73,6 +84,7 @@ export default function DetailOverlay() {
               marketplace.
             </div>
           </div>
+          {/* Special Service Section */}
           <div className="">
             <div className="text-center text-4xl pb-13">Special services</div>
             <div className="flex text-center gap-6 pb-6">
