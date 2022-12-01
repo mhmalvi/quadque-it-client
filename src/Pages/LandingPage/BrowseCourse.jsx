@@ -7,7 +7,7 @@ export default function BrowseCourse() {
     <div className="w-full font-poppins pb-28 sm:pb-0">
       <div className=" sm:bg-gradient-to-t from-[#000000] to-[#2F327D]">
         <div className="sm:flex sm:justify-center sm:px-6">
-          <div className="w-full inline-block items-center shrink-0 sm:w-1/2 sm:relative sm:-top-20 p-4">
+          <div className="w-full flex justify-center items-center shrink-0 sm:w-1/2 sm:relative sm:-top-20 p-4">
             <img src={Image} width={411} alt="" />
           </div>
           <div className="w-full lg:w-1/3 text-black sm:text-white text-center sm:text-start sm:py-16">

@@ -14,13 +14,15 @@ export default function CourseGallery() {
   const [courseData, setCourseData] = useState();
 
   const ToogleTab = (index) => {
-    console.log(index);
+    console.log("sidemenu", index);
     setToogleTab(index);
   };
+
   const menu = (
     <Menu
       onClick={({ key }) => {
-        ToogleTab(key);
+        console.log("dropdown menu", key);
+        setToogleTab(key);
       }}
       items={[
         {
@@ -71,7 +73,7 @@ export default function CourseGallery() {
 
   return (
     <div className="w-full font-poppins text-white">
-      <div className="bg-home-color lg:py-13 px-10 lg:px-30 relative">
+      <div className="bg-home-color lg:py-13 px-10 py-10 lg:px-30 relative">
         <div className="lg:flex">
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
@@ -163,6 +165,28 @@ export default function CourseGallery() {
               </Space>
             </a>
           </Dropdown>
+          <div className="text-2xl lg:text-4xl py-4">
+              {(() => {
+                switch (toogleTab) {
+                  case 1:
+                    return "All Courses";
+                  case 2:
+                    return "Writing Courses";
+                  case 3:
+                    return "Advanced Programming Courses";
+                  case 4:
+                    return "Digital Marketing Courses";
+                  case 5:
+                    return "Programming Courses";
+                  case 6:
+                    return "Video & Animation Courses";
+                  case 7:
+                    return "Graphics & Design Courses";
+                  default:
+                    return null;
+                }
+              })()}
+            </div>
           <div className="w-full">
             {/* Gallery */}
             {/* row1 */}

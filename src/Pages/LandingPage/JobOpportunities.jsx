@@ -12,7 +12,7 @@ const JobOpportunities = () => {
         </div>
       </div>
       <div className="lg:w-4/5 lg:flex justify-center m-auto lg:gap-20">
-        <div className="flex">
+        <div className="relative">
           <div className="flex-wrap shrink-0 lg:rounded-tr-3xl lg:rounded-tl-3xl lg:rounded-br-[5rem] lg:rounded-bl-3xl overflow-hidden">
             <img
               src={shourav}
@@ -22,7 +22,7 @@ const JobOpportunities = () => {
             />
           </div>
 
-          <Icons.JobOpportunities className="invisible lg:visible m-auto relative right-36 top-15 sm:shrink-0" />
+          <Icons.JobOpportunities className="hidden lg:inline-block m-auto absolute -right-[30%] bottom-0 sm:shrink-0" />
         </div>
         <div className="pt-12 lg:pt-0 px-10 lg:px-0">
           <div className="font-bold text-2xl lg:text-4xl pb-10">

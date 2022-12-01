@@ -49,7 +49,7 @@ export default function ProgrammingCourses() {
   };
 
   const navigateToCourseDetails = () => {
-    navigate("./course-detail");
+    navigate("./course/course-detail");
   };
   return (
     <div className="w-full pb-24">

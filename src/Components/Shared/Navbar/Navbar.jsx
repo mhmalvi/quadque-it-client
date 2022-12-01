@@ -1,25 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Logo from "../../../Asset/Image/Logo.svg";
 import Icons from "../Icons";
 import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [showElement, setShowElement] = useState("");
   const genericHamburgerLine = `h-1 w-7 my-1 rounded-full bg-white transition ease transform duration-500 lg:hidden m-4`;
-
-  useEffect(() => {
-    if (open !== true) {
-      setTimeout(function () {
-        setShowElement("hidden");
-        console.log("show", showElement);
-      }, 600);
-    } else {
-      setShowElement("");
-      console.log("show", showElement);
-    }
-  }, [open]);
 
   return (
     <div className="w-full absolute top-0 bg-transparent">
@@ -69,7 +55,7 @@ const Navbar = () => {
               }`}
             />
           </div>
-          {/* Hamburger Animation */}
+          {/* Hamburger Animation end*/}
           <ul className="hidden lg:visible lg:flex items-center gap-8">
             <NavLinks />
           </ul>
