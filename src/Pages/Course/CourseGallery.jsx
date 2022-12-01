@@ -80,7 +80,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 1
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -91,7 +91,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 2
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -102,7 +102,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 3
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -113,7 +113,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 4
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -124,7 +124,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 5
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -135,7 +135,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 6
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -146,7 +146,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 7
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >

@@ -1,4 +1,5 @@
 export const links = [
+  { name: "Home", link: "/" },
   { name: "Course", link: "/course" },
   { name: "About", link: "/about-us" },
   {
@@ -19,4 +20,5 @@ export const links = [
     ],
   },
   { name: "Contact", link: "/contact" },
+  { name: "Login", link: "/login" },
 ];

@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../../Asset/Image/Logo.svg";
 import Icons from "../Icons";
@@ -7,18 +7,19 @@ import NavLinks from "./NavLinks";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [showElement, setShowElement] = useState("");
-  useEffect(() => {
-    setTimeout(function () {
-      if(open === true){
-      setShowElement("block");
-      console.log("hiddeeen", showElement);
-      }else{
-      setShowElement("hidden");
-      console.log("hiddeeen", showElement);
-      }
-    },1000);
-  }, [open]);
+  const genericHamburgerLine = `h-1 w-7 my-1 rounded-full bg-white transition ease transform duration-500 lg:hidden m-4`;
 
+  useEffect(() => {
+    if (open !== true) {
+      setTimeout(function () {
+        setShowElement("hidden");
+        console.log("show", showElement);
+      }, 600);
+    } else {
+      setShowElement("");
+      console.log("show", showElement);
+    }
+  }, [open]);
 
   return (
     <div className="w-full absolute top-0 bg-transparent">
@@ -47,47 +48,41 @@ const Navbar = () => {
             <img src={Logo} width={83} alt="QIT" className="cursor-pointer" />
           </div>
           <div onClick={() => setOpen(!open)}>
-            {open ? (
-              <Icons.Cancel
-                width={20}
-                className="cursor-pointer mx-8 lg:hidden"
-              />
-            ) : (
-              <Icons.MenuBar width={40} className="mx-5 lg:hidden" />
-            )}
+            {/* Hamburger Animation */}
+            <div
+              className={`${genericHamburgerLine} ${
+                open
+                  ? "rotate-45 translate-y-2 group-hover:opacity-100"
+                  : "opacity-100 group-hover:opacity-100"
+              }`}
+            />
+            <div
+              className={`${genericHamburgerLine} ${
+                open ? "translate-x-10 opacity-0" : "group-hover:opacity-100"
+              }`}
+            />
+            <div
+              className={`${genericHamburgerLine} ${
+                open
+                  ? "-rotate-45 -translate-y-2  group-hover:opacity-100"
+                  : "opacity-100 group-hover:opacity-100"
+              }`}
+            />
           </div>
+          {/* Hamburger Animation */}
           <ul className="hidden lg:visible lg:flex items-center gap-8">
-            <li>
-              <Link to="/" className="px-7 py-2 inline-block">
-                Home
-              </Link>
-            </li>
             <NavLinks />
-            <li>
-              <Link to="/" className="px-7 py-2 bg-brand-color rounded-lg inline-block">
-                Login
-              </Link>
-            </li>
           </ul>
           {/* Mobile View */}
           <ul
-            className={`lg:hidden absolute w-full h-full top-20 duration-1000 ${
-              open ? "left-0 opacity-100" : "left-[100%] opacity-0"
-            }  ${showElement}`}
+            className={`lg:hidden absolute w-full h-full top-20 duration-500 ${
+              open
+                ? "top-0 scale-100 opacity-100"
+                : "-top-[100%] opacity-0 scale-0"
+            }`}
           >
             <li>
-              <Link
-                to="/"
-                className="bg-white text-black text-lg px-7 py-6 w-full inline-block"
-              >
-                Home
-              </Link>
-            </li>
-            <NavLinks />
-            <li>
-              <Link to="/" className="bg-white text-lg text-black w-full inline-block px-7 py-6">
-                Login
-              </Link>
+              <NavLinks />
             </li>
           </ul>
         </div>

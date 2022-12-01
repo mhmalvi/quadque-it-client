@@ -8,12 +8,12 @@ const NavLinks = () => {
     <>
       {links?.map((link) => (
         <div className="lg:rounded-lg">
-          <div className="group bg-white lg:bg-transparent text-black lg:text-white text-lg lg:text-base text-left cursor-pointer">
-            <Link to={link.link}>
+          <div className="group bg-white lg:bg-transparent text-black lg:text-white text-center text-lg lg:text-base text cursor-pointer">
+            <Link to={link?.link}>
               <div
                 onClick={() => {
-                  toogleSubmenu !== link.name
-                    ? setToogleSubmenu(link.name)
+                  toogleSubmenu !== link?.name
+                    ? setToogleSubmenu(link?.name)
                     : setToogleSubmenu("");
                 }}
                 className="px-7 py-6"
@@ -22,7 +22,7 @@ const NavLinks = () => {
               </div>
             </Link>
             {link.submenu !== "" && (
-              <div className="opacity-0 absolute top-4 group-hover:opacity-100 group-hover:top-0 duration-1000">
+              <div className="opacity-0 lg:absolute lg:top-4 group-hover:opacity-100 group-hover:top-0 duration-1000">
                 <div className="absolute top-16 mx-6 text-start hidden group-hover:lg:block hover:lg:block">
                   <div className="bg-white text-black px-10">
                     {link.submenu?.map((slink) => (
@@ -42,7 +42,7 @@ const NavLinks = () => {
                 >
                   {link.submenu?.map((slink) => (
                     <div>
-                      <div>
+                      <div className="">
                         <Link to={slink.sublink}>
                           <div className="py-6 pl-14">{slink.name}</div>
                         </Link>

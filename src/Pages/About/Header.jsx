@@ -5,6 +5,7 @@ import Classroom from "../../Asset/Image/classroom.png";
 import Students from "../../Asset/Image/students.png";
 import MobilePic from "../../Asset/Image/mobile-browse.png";
 import Box from "../../Asset/Image/box.png";
+import Box2 from "../../Asset/Image/box2.png";
 import Icons from "../../Components/Shared/Icons";
 import AboutMaterial from "./AboutMaterial";
 
@@ -62,16 +63,16 @@ export default function Header() {
         <div className="bg-white relative">
           <img
             src={Box}
-            className="invisible lg:visible absolute top-0 left-20"
+            className="invisible lg:visible absolute top-0 left-[10%] w-20"
             alt=""
           />
-          <div className="text-4xl font-bold text-center pt-24">Our Value</div>
+          <div className="text-4xl font-bold text-center pt-13 lg:pt-24">Our Value</div>
           <div className="w-2/3 text-center text-lg py-5 pb-7 m-auto">
             Skyrocket your online store conversion rate and improve the customer{" "}
             <br />
             journey with smart online visual merchandising.
           </div>
-          <div className="flex-col lg:w-3/4 lg:flex lg:flex-row text-center gap-6 pb-30 m-auto">
+          <div className="flex-col lg:w-3/4 lg:flex lg:flex-row text-center gap-6 pb-8 lg:pb-30 m-auto">
             <div className="flex-col p-7">
               <div className="">
                 <Icons.Instructor className="m-auto" />
@@ -104,97 +105,95 @@ export default function Header() {
             </div>
           </div>
           <img
-            src={Box}
-            className="invisible lg:visible rotate-90 absolute float-right -bottom-15 right-40"
+            src={Box2}
+            className="invisible lg:visible absolute float-right -bottom-0 right-[25%] w-60"
             alt=""
           />
         </div>
         <div className="text-white relative">
-          <div className="text-4xl font-bold text-center pt-24">Advantage</div>
-          <div className="w-2/3 text-center text-lg py-5 pb-7 m-auto">
+          <div className="text-4xl font-bold text-center pt-13 lg:pt-36">Advantage</div>
+          <div className="w-2/3 text-center text-lg py-5 m-auto">
             Skyrocket your online store conversion rate and improve the customer{" "}
             <br />
             journey with smart online visual merchandising.
           </div>
-          <div className="lg:w-3/4 flex flex-wrap lg:gap-6 pb-7 m-auto">
+          <div className="lg:w-3/4 flex flex-wrap justify-center m-auto lg:gap-6 pb-7">
             <div className="w-[150px] lg:w-[200px] flex-col p-7">
-              <div className="flex pb-4">
+              <div className="lg:flex pb-4">
                 <Icons.TickBox className="shrink-0 mx-4" />
-                <div className="text-xl font-semibold py-2">Class</div>
+                <div className="text-xl text-center font-semibold py-2">Class</div>
               </div>
-              <div className="invisible lg:visible text-base">
+              <div className="hidden lg:block text-base">
                 Increase online store conversion up to 25% with our online
                 visual merchandising interface.
               </div>
             </div>
             <div className="w-[150px] lg:w-[200px] flex-col p-7">
-              <div className="flex pb-4">
+              <div className="lg:flex pb-4">
                 <Icons.TickBox className="shrink-0 mx-4" />
-                <div className="text-xl font-semibold py-2">Class</div>
+                <div className="text-xl text-center font-semibold py-2">Class</div>
               </div>
-              <div className="invisible lg:visible text-base">
+              <div className="hidden lg:block text-base">
                 Increase online store conversion up to 25% with our online
                 visual merchandising interface.
               </div>
             </div>
             <div className="w-[150px] lg:w-[200px] flex-col p-7">
-              <div className="flex pb-4">
+              <div className="lg:flex pb-4">
                 <Icons.TickBox className="shrink-0 mx-4" />
-                <div className="text-xl font-semibold py-2">Class</div>
+                <div className="text-xl text-center font-semibold py-2">Class</div>
               </div>
-              <div className="invisible lg:visible text-base">
+              <div className="hidden lg:block text-base">
                 Increase online store conversion up to 25% with our online
                 visual merchandising interface.
               </div>
             </div>
             <div className="w-[150px] lg:w-[200px] flex-col p-7">
-              <div className="flex pb-4">
+              <div className="lg:flex pb-4">
                 <Icons.TickBox className="shrink-0 mx-4" />
-                <div className="text-xl font-semibold py-2">Class</div>
+                <div className="text-xl text-center font-semibold py-2">Class</div>
               </div>
-              <div className="invisible lg:visible text-base">
-                Increase online store conversion up to 25% with our online
-                visual merchandising interface.
-              </div>
-            </div>
-
-            {/* <div className="w-3/4 flex gap-6 pb-30 m-auto"> */}
-            <div className="w-[150px] lg:w-[200px] flex-col p-7">
-              <div className="flex pb-4">
-                <Icons.TickBox className="shrink-0 mx-4" />
-                <div className="text-xl font-semibold py-2">Class</div>
-              </div>
-              <div className="invisible lg:visible text-base">
+              <div className="hidden lg:block text-base">
                 Increase online store conversion up to 25% with our online
                 visual merchandising interface.
               </div>
             </div>
             <div className="w-[150px] lg:w-[200px] flex-col p-7">
-              <div className="flex pb-4">
+              <div className="lg:flex pb-4">
                 <Icons.TickBox className="shrink-0 mx-4" />
-                <div className="text-xl font-semibold py-2">Class</div>
+                <div className="text-xl text-center font-semibold py-2">Class</div>
               </div>
-              <div className="invisible lg:visible text-base">
+              <div className="hidden lg:block text-base">
                 Increase online store conversion up to 25% with our online
                 visual merchandising interface.
               </div>
             </div>
             <div className="w-[150px] lg:w-[200px] flex-col p-7">
-              <div className="flex pb-4">
+              <div className="lg:flex pb-4">
                 <Icons.TickBox className="shrink-0 mx-4" />
-                <div className="text-xl font-semibold py-2">Class</div>
+                <div className="text-xl text-center font-semibold py-2">Class</div>
               </div>
-              <div className="invisible lg:visible text-base">
+              <div className="hidden lg:block text-base">
                 Increase online store conversion up to 25% with our online
                 visual merchandising interface.
               </div>
             </div>
             <div className="w-[150px] lg:w-[200px] flex-col p-7">
-              <div className="flex pb-4">
+              <div className="lg:flex pb-4">
                 <Icons.TickBox className="shrink-0 mx-4" />
-                <div className="text-xl font-semibold py-2">Class</div>
+                <div className="text-xl text-center font-semibold py-2">Class</div>
               </div>
-              <div className="invisible lg:visible text-base">
+              <div className="hidden lg:block text-base">
+                Increase online store conversion up to 25% with our online
+                visual merchandising interface.
+              </div>
+            </div>
+            <div className="w-[150px] lg:w-[200px] flex-col p-7">
+              <div className="lg:flex pb-4">
+                <Icons.TickBox className="shrink-0 mx-4" />
+                <div className="text-xl text-center font-semibold py-2">Class</div>
+              </div>
+              <div className="hidden lg:block text-base">
                 Increase online store conversion up to 25% with our online
                 visual merchandising interface.
               </div>
@@ -203,7 +202,7 @@ export default function Header() {
           <AboutMaterial />
           <div className="w-3/4 bg-white flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-6 m-auto">
             <div className="lg:w-1/2 text-black m-auto">
-              <div className="md:text-5xl font-bold pb-5">
+              <div className="text-2xl lg:text-5xl text-center lg:text-start font-bold pb-5">
                 <span className="text-[#23BDEE]"> Paragraph </span>is a series
                 series sentences
               </div>
