@@ -7,7 +7,7 @@ const NavLinks = () => {
   const [toogleSubmenu, setToogleSubmenu] = useState("");
   return (
     <>
-      <div className="lg:flex z-100 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg lg:backdrop-filter-none lg:bg-transparent border border-white border-opacity-30 lg:border-none shadow-2xl shadow-[#ffffff20] lg:shadow-none lg:text-white text-center text-2xl lg:text-base rounded-md cursor-pointer mx-2">
+      <div className="lg:flex z-50 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg lg:backdrop-filter-none lg:bg-transparent border border-white border-opacity-30 lg:border-none shadow-2xl shadow-[#ffffff20] lg:shadow-none lg:text-white text-center text-2xl lg:text-base rounded-md cursor-pointer mx-2">
         {links?.map((link) => (
           <div className="lg:rounded-3xl">
             <div className="group">

@@ -9,7 +9,7 @@ export default function Header() {
         <div className="w-full ">
           <div className="flex m-auto justify-center">
             <div className="hidden lg:block">
-              <img src={Banner} className="absolute bottom-[47%] left-[10%]" alt="" />
+              <img src={Banner} className="absolute bottom-[0%] left-[10%]" alt="" />
             </div>
             <div className="w-1/2 sm:w-1/3 text-white text-center">
               <div className="text-4xl pb-2">Courses</div>

@@ -161,11 +161,23 @@ export default function CourseGallery() {
             <a>
               <Space className="border py-2 px-4 rounded-full">
                 Course Catagory
-                <DownOutlined />
+                <DownOutlined className="pl-4"/>
               </Space>
             </a>
           </Dropdown>
-          <div className="text-2xl lg:text-4xl py-4">
+          <div className="w-full">
+          <div className="flex">
+                <div className="bg-white text-black px-4 rounded-2xl m-2">
+                  All
+                </div>
+                <div className="bg-black text-white px-4 rounded-2xl m-2">
+                  Offline
+                </div>
+                <div className="bg-black text-white px-4 rounded-2xl m-2">
+                  Online
+                </div>
+              </div>
+            <div className="text-2xl lg:text-4xl py-4">
               {(() => {
                 switch (toogleTab) {
                   case 1:
@@ -187,12 +199,11 @@ export default function CourseGallery() {
                 }
               })()}
             </div>
-          <div className="w-full">
             {/* Gallery */}
             {/* row1 */}
             <div className="grid grid-col-1 lg:grid-cols-2 text-white gap-6 my-6">
               {/* card1 */}
-              {courseData?.map((details) => (
+              {courseData?.map((details) => (details? (
                 <div
                   onClick={navigateToCourseDetails}
                   className="flex-col group bg-home-color border rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300"
@@ -217,6 +228,7 @@ export default function CourseGallery() {
                     <div className="py-2">{details.para}</div>
                   </div>
                 </div>
+):("NO DATA")
               ))}
             </div>
           </div>

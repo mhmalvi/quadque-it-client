@@ -66,7 +66,7 @@ const CourseMaterial = () => {
             </div>
             <div className="flex flex-wrap justify-center my-10 gap-24 ">
                 {courseData?.map((data)=>(
-                <div className="py-2"><img src="https://ibb.co/ZMvpHNn" width={40} alt="" />{data.title}</div>
+                <div className="py-2"><img src={data.image} width={40} alt="" />{data.title}</div>
                 ))}
             </div>
           </div>
