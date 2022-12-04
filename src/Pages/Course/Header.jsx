@@ -5,15 +5,15 @@ import Reading from "../../Asset/Image/reading.png";
 export default function Header() {
   return (
     <div className="w-full font-poppins">
-      <div className="flex bg-[#040422] h-[356px] mt-10 pt-44 pb-20">
-        <div className="w-full absolute">
-          <div className="w-1/2 flex m-auto justify-center">
-            <div className="">
-              <img src={Banner} className="absolute top-4 left-80" alt="" />
+      <div className="flex bg-[#040422] lg:mt-10 pt-44 pb-20">
+        <div className="w-full ">
+          <div className="flex m-auto justify-center">
+            <div className="hidden lg:block">
+              <img src={Banner} className="absolute bottom-[0%] left-[10%]" alt="" />
             </div>
-            <div className="w-1/2 text-white text-center relative -top-14">
+            <div className="w-1/2 sm:w-1/3 text-white text-center">
               <div className="text-4xl pb-2">Courses</div>
-              <div className="pb-8">
+              <div className="m-auto pb-8">
                 Skilline is an interesting platform that will teach you in more
                 Skilline is an interesting platform that will teach
               </div>
@@ -29,8 +29,8 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <div className="">
-              <img src={Reading} className="absolute -top-20" alt="" />
+            <div className="hidden lg:block">
+              <img src={Reading} className="absolute right-2" alt="" />
             </div>
           </div>
         </div>

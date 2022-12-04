@@ -5,7 +5,7 @@ const Blog = () => {
   return (
     <div className="w-full bg-home-color font-poppins pb-20">
       <div className="font-poppins">
-        <div className="mt-10">
+        <div className="lg:mt-10">
           <div className="flex-col text-white m-auto pt-32">
             <div className="text-5xl font-bold text-center leading-snug">
               Blog Posts

@@ -19,8 +19,8 @@ export default function OurStudents() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 1,
           infinite: true,
           dots: true,
@@ -29,8 +29,8 @@ export default function OurStudents() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 1,
           dots: false,
         },
@@ -75,7 +75,7 @@ export default function OurStudents() {
                       {person.job}
                     </div>
 
-                    <div className="text-base">“{person.comment}”</div>
+                    <div className="text-base text-start">“{person.comment}”</div>
                   </div>
                 </div>
               ))}

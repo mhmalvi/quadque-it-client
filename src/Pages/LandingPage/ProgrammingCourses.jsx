@@ -21,8 +21,8 @@ export default function ProgrammingCourses() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 1,
           infinite: true,
           dots: true,
@@ -31,10 +31,10 @@ export default function ProgrammingCourses() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 1,
-          dots: false,
+          dots: true,
         },
       },
       {
@@ -49,12 +49,12 @@ export default function ProgrammingCourses() {
   };
 
   const navigateToCourseDetails = () => {
-    navigate("./course-detail");
+    navigate("./course/course-detail");
   };
   return (
     <div className="w-full pb-24">
       <div className="text-center font-poppins rounded-3xl lg:px-20">
-        <div className="text-black text-4xl font-bold pb-5">
+        <div className="text-black text-2xl md:text-4xl font-bold pb-5">
           Programming course
         </div>
         <div className="text-white pt-13 gap-6">
@@ -75,16 +75,20 @@ export default function ProgrammingCourses() {
                   <div className="p-5">
                     <div className="flex-col">
                       <div className="flex justify-between">
-                        <div className="bg-[#23BDEE] text-[#23BDEE] bg-opacity-20 rounded-full py-2 px-4">
+                        <div className="bg-[#23BDEE] text-[#23BDEE] text-sm md:text-base bg-opacity-20 rounded-full py-2 px-4">
                           {course.date}
                         </div>
-                        <div className="text-xl py-2">{course.price} tk</div>
+                        <div className="text-sm md:text-xl py-2">
+                          {course.price} tk
+                        </div>
                       </div>
                     </div>
-                    <div className="text-2xl text-start font-semibold pt-2 left-0">
+                    <div className="text-base md:text-2xl text-start font-semibold pt-2 left-0">
                       {course.title}
                     </div>
-                    <div className="text-start py-2">{course.para}</div>
+                    <div className="text-xs md:text-base text-start py-2">
+                      {course.para}
+                    </div>
                   </div>
                 </div>
               </div>

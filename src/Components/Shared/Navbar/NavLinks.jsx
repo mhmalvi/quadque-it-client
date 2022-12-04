@@ -1,60 +1,65 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./MyLinks";
+//bg-opacity-10 backdrop-filter backdrop-blur-lg
 
 const NavLinks = () => {
   const [toogleSubmenu, setToogleSubmenu] = useState("");
   return (
     <>
-      {links?.map((link) => (
-        <div>
-          <div className="bg-white lg:bg-transparent text-black lg:text-white text-lg lg:text-base text-left cursor-pointer group">
-            <Link to={link.link}>
-              <div
-                onClick={() => {
-                  toogleSubmenu !== link.name
-                    ? setToogleSubmenu(link.name)
-                    : setToogleSubmenu("");
-                }}
-                className="px-7 py-6"
-              >
-                {link.name}
-              </div>
-            </Link>
-            {link.submenu !== "" && (
-              <div>
-                <div className="absolute top-16 mx-6 text-start hidden group-hover:lg:block hover:lg:block">
-                  <div className="bg-white text-black px-10">
+      <div className="lg:flex z-50 bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg lg:backdrop-filter-none lg:bg-transparent border border-white border-opacity-30 lg:border-none shadow-2xl shadow-[#ffffff20] lg:shadow-none lg:text-white text-center text-2xl lg:text-base rounded-md cursor-pointer mx-2">
+        {links?.map((link) => (
+          <div className="lg:rounded-3xl">
+            <div className="group">
+              <Link to={link?.link}>
+                <div
+                  onClick={() => {
+                    toogleSubmenu !== link?.name
+                      ? setToogleSubmenu(link?.name)
+                      : setToogleSubmenu("");
+                  }}
+                  className="px-7 py-6"
+                >
+                  {link.name}
+                </div>
+              </Link>
+              {link.submenu !== "" && (
+                <div className="opacity-0 lg:absolute lg:top-4 group-hover:opacity-100 group-hover:top-0 duration-1000">
+                  <div className="absolute top-16 mx-6 text-start hidden group-hover:lg:block hover:lg:block">
+                    <div className="bg-white text-black px-10">
+                      {link.submenu?.map((slink) => (
+                        <div>
+                          <Link to={slink.sublink}>
+                            <div className="w-full hover:text-brand-color py-3">
+                              {slink.name}
+                            </div>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  {/* Mobile Submenu */}
+                  <div
+                    className={`${
+                      toogleSubmenu === link.name ? "lg:hidden" : "hidden"
+                    }`}
+                  >
                     {link.submenu?.map((slink) => (
                       <div>
-                        <Link to={slink.sublink}>
-                          <div className="py-3">{slink.name}</div>
-                        </Link>
+                        <div className="">
+                          <Link to={slink.sublink}>
+                            <div className="py-6 pl-14">{slink.name}</div>
+                          </Link>
+                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
-                {/* Mobile Submenu */}
-                <div
-                  className={`${
-                    toogleSubmenu === link.name ? "lg:hidden" : "hidden"
-                  }`}
-                >
-                  {link.submenu?.map((slink) => (
-                    <div>
-                      <div>
-                        <Link to={slink.sublink}>
-                          <div className="py-6 pl-14">{slink.name}</div>
-                        </Link>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 };
