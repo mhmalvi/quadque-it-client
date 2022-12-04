@@ -25,10 +25,21 @@ const Gallery = () => {
           </div>
           <div className="flex-col lg:justify-start m-auto">
             <div className="text-2xl font-semibold pb-5">Our institute</div>
-            <div className="pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </div>
-            <div className="flex flex-wrap justify-center lg:justify-start"><Icons.Tick width={20}/>Flexible Time</div>
-            <div className="flex flex-wrap justify-center lg:justify-start"><Icons.Tick width={20}/>Perfect Work</div>
-            <div className="flex flex-wrap justify-center lg:justify-start"><Icons.Tick width={20}/> Client Priority</div>
+            <div className="pb-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Ut
+              elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
+            </div>
+            <div className="flex flex-wrap justify-center lg:justify-start">
+              <Icons.Tick width={20} />
+              Flexible Time
+            </div>
+            <div className="flex flex-wrap justify-center lg:justify-start">
+              <Icons.Tick width={20} />
+              Perfect Work
+            </div>
+            <div className="flex flex-wrap justify-center lg:justify-start">
+              <Icons.Tick width={20} /> Client Priority
+            </div>
           </div>
         </div>
         <div className="flex justify-evenly py-5 leading-10 lg:px-30">
