@@ -73,7 +73,7 @@ export default function CourseGallery() {
 
   return (
     <div className="w-full font-poppins text-white">
-      <div className="bg-home-color lg:py-13 px-10 py-10 lg:px-30 relative">
+      <div className="bg-home-color lg:py-13 px-10 py-10 lg:px-30 lg:relative">
         <div className="lg:flex">
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>

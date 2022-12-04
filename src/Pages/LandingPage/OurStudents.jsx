@@ -12,6 +12,7 @@ export default function OurStudents() {
     dots: true,
     infinite: false,
     speed: 600,
+    arrows: false,
     slidesToShow: 2,
     slidesToScroll: 2,
     initialSlide: 0,

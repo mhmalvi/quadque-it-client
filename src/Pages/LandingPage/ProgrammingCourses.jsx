@@ -14,6 +14,7 @@ export default function ProgrammingCourses() {
     dots: true,
     infinite: true,
     speed: 600,
+    arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,

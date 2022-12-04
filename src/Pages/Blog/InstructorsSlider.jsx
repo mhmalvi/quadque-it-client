@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,53 +6,15 @@ import hallway from "../../Asset/Image/hallway.png";
 import RightArrow from "../../Asset/Image/arrow-right.png";
 import LeftArrow from "../../Asset/Image/arrow-left.png";
 
-function SampleNextArrow(props) {
-  const { style, onClick } = props;
-  return (
-    <div
-      style={{
-        ...style,
-        display: "block",
-        display: "flex",
-        flex: "end",
-        justifyContent: "center",
-      }}
-      onClick={onClick}
-    >
-      <div>
-        <img src={RightArrow} alt="" />
-      </div>
-    </div>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { style, onClick } = props;
-  return (
-    <div
-      style={{
-        ...style,
-        display: "block",
-        display: "flex",
-        justifyContent: "center",
-      }}
-      onClick={onClick}
-    >
-      <div>
-        <img src={LeftArrow} alt="" />
-      </div>
-    </div>
-  );
-}
 
 const InstructorsSlider = () => {
+    const sliderRef = useRef(null);
+    console.log(sliderRef.current);
   const settings = {
     focusOnSelect: true,
-    dots: true,
     infinite: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
     speed: 600,
+    arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
@@ -64,7 +26,6 @@ const InstructorsSlider = () => {
           slidesToScroll: 2,
           initialSlide: 1,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -73,7 +34,6 @@ const InstructorsSlider = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 1,
-          dots: true,
         },
       },
       {
@@ -81,14 +41,13 @@ const InstructorsSlider = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: false,
         },
       },
     ],
   };
   return (
     <>
-      <Slider {...settings}>
+      <Slider ref={sliderRef} {...settings} className="">
         {/*     {Course?.map((course) => ( */}
         <div>
           <div className="flex-col lg:max-w-xs bg-transparent lg:rounded-2xl">
@@ -203,6 +162,10 @@ const InstructorsSlider = () => {
 
         {/*     ))} */}
       </Slider>
+      <div className="flex justify-center gap-5">
+      <img src={LeftArrow} alt="" onClick={()=>sliderRef.current.slickNext()} />
+          <img src={RightArrow} alt="" onClick={()=>sliderRef.current.slickPrev()} />
+    </div>
     </>
   );
 };

@@ -8,7 +8,6 @@ import stories6 from "../../Asset/Image/stories6.png";
 import meeting from "../../Asset/Image/meeting.png";
 import hallway from "../../Asset/Image/hallway.png";
 import InstructorsSlider from "./InstructorsSlider";
-import CustomArrows from "./newSlicer";
 
 const Stories = () => {
   return (
