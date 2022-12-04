@@ -8,10 +8,11 @@ import stories6 from "../../Asset/Image/stories6.png";
 import meeting from "../../Asset/Image/meeting.png";
 import hallway from "../../Asset/Image/hallway.png";
 import InstructorsSlider from "./InstructorsSlider";
+import CustomArrows from "./newSlicer";
 
 const Stories = () => {
   return (
-    <div className="w-full bg-home-color font-poppins pt-32 pb-20 lg:px-30 lg:mt-10">
+    <div className="w-full bg-home-color font-poppins pt-32 lg:pb-20 lg:px-30 lg:mt-10">
       <div className="font-poppins text-white">
         <div className="flex-col m-auto pb-18">
           <div className="text-3xl lg:text-5xl font-bold text-center leading-snug">
@@ -97,7 +98,8 @@ const Stories = () => {
             </div>
           </div>
         </div>
-        <div className="lg:hidden">
+
+        <div className="lg:hidden mb-12">
           <InstructorsSlider />
         </div>
         <div className="w-full lg:flex justify-evenly px-3">
@@ -121,7 +123,7 @@ const Stories = () => {
             </div>
           </div>
         </div>
-        <div className="m-auto pt-10 lg:pt-32 pb-18">
+        <div className="m-auto pt-10 lg:pt-32 lg:pb-18">
           <div className="text-4xl text-center leading-snug pb-12">
             Art Works
           </div>

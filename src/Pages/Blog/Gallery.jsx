@@ -18,16 +18,16 @@ const Gallery = () => {
   };
   return (
     <>
-      <div className="bg-home-color text-white pt-36 mt-10 m-auto">
+      <div className="bg-home-color text-white pt-36 lg:mt-10 m-auto">
         <div className="lg:w-3/4 lg:flex lg:justify-center m-auto">
-          <div className="w-full m-auto">
+          <div className="w-full flex justify-center m-auto">
             <img
               src={video}
               alt=""
               className="lg:rounded-xl lg:px-4 md:shrink-0 "
             />
           </div>
-          <div className="flex-col px-5 lg:justify-start m-auto">
+          <div className="sm:w-2/3 lg:w-full flex-col px-5 lg:justify-start m-auto">
             <div className="text-start text-2xl font-semibold pb-2">
               Our institute
             </div>
@@ -35,21 +35,22 @@ const Gallery = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
               tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
             </div>
-
-            <div className="flex flex-wrap justify-start">
+            <div className="flex flex-wrap lg:flex-col">
+            <div className="flex flex-wrap justify-start pr-10">
               <Icons.Tick width={20} />
               Flexible Time
             </div>
-            <div className="flex flex-wrap justify-start">
+            <div className="flex flex-wrap justify-start pr-10">
               <Icons.Tick width={20} />
               Perfect Work
             </div>
-            <div className="flex flex-wrap justify-start">
+            <div className="flex flex-wrap justify-start pr-10">
               <Icons.Tick width={20} /> Client Priority
+            </div>
             </div>
           </div>
         </div>
-        <div className="flex justify-evenly py-5 leading-10 lg:px-30">
+        <div className="flex justify-evenly items-start py-5 leading-10 lg:px-30">
           <div
             onClick={() => ToogleTab(1)}
             className={
