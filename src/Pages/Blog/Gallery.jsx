@@ -36,27 +36,27 @@ const Gallery = () => {
               tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
             </div>
             <div className="flex flex-wrap lg:flex-col">
-            <div className="flex flex-wrap justify-start pr-10">
-              <Icons.Tick width={20} />
-              Flexible Time
-            </div>
-            <div className="flex flex-wrap justify-start pr-10">
-              <Icons.Tick width={20} />
-              Perfect Work
-            </div>
-            <div className="flex flex-wrap justify-start pr-10">
-              <Icons.Tick width={20} /> Client Priority
-            </div>
+              <div className="flex flex-wrap justify-start pr-10">
+                <Icons.Tick width={20} />
+                Flexible Time
+              </div>
+              <div className="flex flex-wrap justify-start pr-10">
+                <Icons.Tick width={20} />
+                Perfect Work
+              </div>
+              <div className="flex flex-wrap justify-start pr-10">
+                <Icons.Tick width={20} /> Client Priority
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex justify-evenly items-start py-5 leading-10 lg:px-30">
+        <div className="flex flex-wrap justify-evenly items-start py-5 leading-10 px-4 lg:px-30">
           <div
             onClick={() => ToogleTab(1)}
             className={
               toogleTab === 1
-                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
-                : "cursor-pointer"
+                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 px-2 cursor-pointer"
+                : "cursor-pointer  px-2"
             }
           >
             All
@@ -65,8 +65,8 @@ const Gallery = () => {
             onClick={() => ToogleTab(2)}
             className={
               toogleTab === 2
-                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
-                : "cursor-pointer"
+                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 px-2 cursor-pointer"
+                : "cursor-pointer  px-2"
             }
           >
             UI Design
@@ -75,8 +75,8 @@ const Gallery = () => {
             onClick={() => ToogleTab(3)}
             className={
               toogleTab === 3
-                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
-                : "cursor-pointer"
+                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 px-2 cursor-pointer"
+                : "cursor-pointer  px-2"
             }
           >
             UX Design
@@ -85,8 +85,8 @@ const Gallery = () => {
             onClick={() => ToogleTab(4)}
             className={
               toogleTab === 4
-                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
-                : "cursor-pointer"
+                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 px-2 cursor-pointer"
+                : "cursor-pointer  px-2"
             }
           >
             Product Design
@@ -95,8 +95,8 @@ const Gallery = () => {
             onClick={() => ToogleTab(5)}
             className={
               toogleTab === 5
-                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
-                : "cursor-pointer"
+                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 px-2 cursor-pointer"
+                : "cursor-pointer px-2"
             }
           >
             Articles
@@ -105,8 +105,8 @@ const Gallery = () => {
             onClick={() => ToogleTab(6)}
             className={
               toogleTab === 6
-                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
-                : "cursor-pointer"
+                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 px-2 cursor-pointer"
+                : "cursor-pointer px-2"
             }
           >
             Tutorials
@@ -115,8 +115,8 @@ const Gallery = () => {
             onClick={() => ToogleTab(7)}
             className={
               toogleTab === 7
-                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer"
-                : "cursor-pointer"
+                ? "text-[#23BDEE] border-[#23BDEE] border-b-2 px-2 cursor-pointer"
+                : "cursor-pointer px-2"
             }
           >
             News
