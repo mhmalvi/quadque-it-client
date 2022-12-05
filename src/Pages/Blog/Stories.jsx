@@ -15,15 +15,14 @@ const Stories = () => {
       <div className="font-poppins text-white">
         <div className="flex-col m-auto pb-18">
           <div className="text-3xl lg:text-5xl font-bold text-center leading-snug">
-            Success
+            Our Success Stories
           </div>
           <div className="text-2xl lg:text-4xl font-bold text-center leading-snug">
-            I think so, this is it.
+            Some of our stories that inspire all of us.
           </div>
           <div className="lg:w-2/3 text-center lg:text-lg py-5 pb-7 m-auto px-10 lg:px-0">
-            Design begins after I begin to think about how to present an{" "}
-            experience most successfully, whether a button I put in can solve a
-            problem. The only point in design is not ui design.
+            Meet some of our students who have greatly benefited from our
+            courses. We feel proud to help these individuals reach their dreams.
           </div>
         </div>
         <div className="hidden lg:block">
@@ -112,15 +111,18 @@ const Stories = () => {
           </div>
           <div className="flex-col lg:justify-start text-start m-auto pt-10 lg:pt-0 lg:px-10">
             <div className="text-2xl lg:text-4xl font-semibold pb-5">
-              Students Work
+              Some Works from Our Students
             </div>
             <div className="lg:text-xl font-semibold pb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
+              It’s a matter of great honour for us to say that a large number of
+              our students are making a huge contribution to the digital
+              marketing and IT industry.{" "}
             </div>
             <div className="lg:text-xl font-light pb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
+              Our students are reputed to have amazing skills and a great work
+              ethic. It’s a huge opportunity for us to showcase some of their
+              works. These works show their creativity and talent. We are
+              extremely happy to guide them throughout their journey.{" "}
             </div>
           </div>
         </div>

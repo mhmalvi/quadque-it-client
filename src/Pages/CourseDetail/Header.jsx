@@ -97,34 +97,36 @@ export default function Header() {
                 quick success in the marketplace.
               </div>
             </div>
-            {/* tools and job opportunity */} 
+            {/* tools and job opportunity */}
             <CourseMaterial />
             {/* Special Services */}
             <div className="">
-              <div className="text-center text-2xl lg:text-4xl pb-13">Special services</div>
+              <div className="text-center text-2xl lg:text-4xl pb-13">
+                Special services
+              </div>
               <div className="flex-col lg:flex lg:flex-row text-center gap-6 lg:pb-6">
                 <div className="lg:w-1/2 flex-col bg-[#2F327D20] lg:rounded-lg p-7">
                   <div className="">
                     <Icons.Support className="m-auto" />
                   </div>
-                  <div className="lg:text-xl font-semibold py-2">Marketplace support</div>
+                  <div className="lg:text-xl font-semibold py-2">
+                    Recognised Certification
+                  </div>
                   <div className="text-xs lg:text-base">
-                    Our new seminar in wordpress 26 Our new seminar in wordpress
-                    26 June Our new wordpress 26 JuneJune Our new wordpress 26
-                    June Our new seminar in wordpress 26 June Our new wordpress
-                    26 June
+                    You will obtain an Accredited Australian Certificate after
+                    completing the course. Career Guidance
                   </div>
                 </div>
                 <div className="lg:w-1/2 flex-col bg-[#2F327D40] lg:rounded-lg p-7">
                   <div>
                     <Icons.Guidance className="m-auto" />
                   </div>
-                  <div className="lg:text-xl font-semibold py-2">Marketplace support</div>
+                  <div className="lg:text-xl font-semibold py-2">
+                    Career Guidance
+                  </div>
                   <div className="text-xs lg:text-base">
-                    Our new seminar in wordpress 26 Our new seminar in wordpress
-                    26 June Our new wordpress 26 JuneJune Our new wordpress 26
-                    June Our new seminar in wordpress 26 June Our new wordpress
-                    26 June
+                    We will provide you with exclusive guidance to help you make
+                    the best decisions for your career.
                   </div>
                 </div>
               </div>
@@ -133,24 +135,24 @@ export default function Header() {
                   <div className="">
                     <Icons.Certificate className="m-auto" />
                   </div>
-                  <div className="lg:text-xl font-semibold py-2">Marketplace support</div>
+                  <div className="lg:text-xl font-semibold py-2">
+                    Post Course Support
+                  </div>
                   <div className="text-xs lg:text-base">
-                    Our new seminar in wordpress 26 Our new seminar in wordpress
-                    26 June Our new wordpress 26 JuneJune Our new wordpress 26
-                    June Our new seminar in wordpress 26 June Our new wordpress
-                    26 June
+                    Our team will provide you with the necessary support after
+                    you’ve completed the course.
                   </div>
                 </div>
                 <div className="lg:w-1/2 flex-col bg-[#2F327D80] lg:rounded-lg p-7">
                   <div>
                     <Icons.Briefcase className="m-auto" />
                   </div>
-                  <div className="lg:text-xl font-semibold py-2">Marketplace support</div>
+                  <div className="lg:text-xl font-semibold py-2">
+                    Recommendation
+                  </div>
                   <div className="text-xs lg:text-base">
-                    Our new seminar in wordpress 26 Our new seminar in wordpress
-                    26 June Our new wordpress 26 JuneJune Our new wordpress 26
-                    June Our new seminar in wordpress 26 June Our new wordpress
-                    26 June
+                    You will have our recommendation once we have assessed you
+                    and provided you with your certification.
                   </div>
                 </div>
               </div>
