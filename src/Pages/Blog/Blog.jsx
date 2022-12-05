@@ -8,17 +8,16 @@ const Blog = () => {
         <div className="lg:mt-10">
           <div className="flex-col text-white m-auto pt-32">
             <div className="text-5xl font-bold text-center leading-snug">
-              Blog Posts
+              Blog Articles
             </div>
-            <div className="text-4xl font-bold text-center leading-snug">
-              I think so, this is it.
+            <div className="text-4xl font-semibold text-center leading-snug">
+              The latest in digital marketing and IT.
             </div>
-            <div className="w-2/3 text-center text-lg py-5 pb-7 m-auto">
-              Design begins after I begin to think about how to present an{" "}
-              <br /> experience most successfully, whether a button I put in can
-              solve <br /> a problem. The only point in design is not ui design.
+            <div className="w-2/3 text-center font-thin text-lg py-5 pb-7 m-auto">
+              Learn more about the newest IT tools, digital strategies and
+              upcoming trends <br /> from our informative articles.
             </div>
-            <BlogGallery/>
+            <BlogGallery />
           </div>
         </div>
       </div>

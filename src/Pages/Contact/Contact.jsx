@@ -17,9 +17,10 @@ const Contact = () => {
   return (
     <div className="w-full bg-home-color font-poppins pt-40 mt-10">
       <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl">
-        <div className="lg:w-1/2 pt-20 text-white m-auto">
+        <div className="lg:w-1/2 text-white m-auto pt-20 lg:pt-0">
           <div className="text-2xl lg:text-4xl font-bold pb-5">
-            Level -7, 8/C, F.R Tower, Panthapath, Dhaka 1207
+            Level -7, 8/C, F.R Tower, Sukrabad, Panthapath, Dhaka 1207,
+            Bangladesh
           </div>
           <div className="flex text-xl pb-10 gap-20">
             <ul>
@@ -28,26 +29,26 @@ const Contact = () => {
               <li className="p-2">+61405899496</li>
             </ul>
             <ul>
-              <li className="p-2">During office visits</li>
-              <li className="p-2">Saturday - Friday</li>
-              <li className="p-2">9am to 8pm</li>
+              <li className="text-[#ffffff70] p-2">Office Hours</li>
+              <li className="p-2">Sunday - Thursday</li>
+              <li className="p-2">8:00 am - 5:30 pm</li>
             </ul>
           </div>
           <div className="text-white text-base lg:text-xl mb-6">
             <div className="font-semibold">social channels</div>
           </div>
-          <div className="flex pb-16">
-            <a className="pr-4" href="">
+          <div className="flex text-sm font-thin pb-16">
+            <a className="pr-4" href="https://www.facebook.com/quadquetech/">
               Facebook
             </a>
-            <a className="pr-4" href="">
+            <a className="pr-4" href="https://www.youtube.com/channel/UCXbnZTYKk6q82Hbux3ffILA">
               Youtube
             </a>
-            <a className="pr-4" href="">
+            <a className="pr-4" href="https://www.instagram.com/quadquetech/">
               Instagram
             </a>
-            <a className="" href="">
-              Google
+            <a className="" href="https://bd.linkedin.com/company/quadque-technologies-ltd">
+              LinkedIn
             </a>
           </div>
           <div style={{ height: "50vh", width: "90%" }}>
@@ -65,7 +66,7 @@ const Contact = () => {
           </div>
           {/* <div><GoogleMaps/></div> */}
         </div>
-        <div className="m-auto">
+        <div className="flex justify-center">
           <img src={Building} className="" alt="QIT logo" />
         </div>
       </div>

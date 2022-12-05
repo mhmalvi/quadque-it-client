@@ -10,7 +10,7 @@
     },
     {
       "id": "2",
-      "category" : "7",
+      "category" : "3",
       "date": "20-20-20",
       "price": "12000",
       "title": "Adobe Illustrator",
@@ -18,7 +18,7 @@
     },
     {
       "id": "3",
-      "category" : "7",
+      "category" : "3",
       "date": "20-20-20",
       "price": "12000",
       "title": "Adobe Photoshop",
@@ -58,7 +58,7 @@
     },
     {
       "id": "8",
-      "category" : "3",
+      "category" : "7",
       "date": "20-20-20",
       "price": "12000",
       "title": "Advanced .NET",
@@ -130,7 +130,7 @@
     },
     {
       "id": "17",
-      "category" : "3",
+      "category" : "7",
       "date": "20-20-20",
       "price": "12000",
       "title": "Advanced DevOps",

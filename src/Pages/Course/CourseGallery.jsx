@@ -31,11 +31,11 @@ export default function CourseGallery() {
         },
         {
           key: 2,
-          label: <a>Content Writing</a>,
+          label: <a>Content Writing and Development</a>,
         },
         {
           key: 3,
-          label: <a>Advanced Programming</a>,
+          label: <a>Graphics Design</a>,
         },
         {
           key: 4,
@@ -51,7 +51,7 @@ export default function CourseGallery() {
         },
         {
           key: 7,
-          label: <a>Graphics & Design</a>,
+          label: <a>Others</a>,
         },
       ]}
     />
@@ -77,7 +77,7 @@ export default function CourseGallery() {
         <div className="lg:flex">
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
-            <ul className="flex-col py-5 leading-10">
+            <ul className="flex-col py-5 font-thin leading-10">
               <li onClick={() => ToogleTab(1)}>
                 <div
                   className={
@@ -97,7 +97,7 @@ export default function CourseGallery() {
                       : "cursor-pointer"
                   }
                 >
-                  Content Writing
+                  Content Writing and Development 
                 </div>
               </li>
               <li onClick={() => ToogleTab(3)}>
@@ -108,7 +108,7 @@ export default function CourseGallery() {
                       : "cursor-pointer"
                   }
                 >
-                  Advanced Programming
+                  Graphics & Design
                 </div>
               </li>
               <li onClick={() => ToogleTab(4)}>
@@ -152,7 +152,7 @@ export default function CourseGallery() {
                       : "cursor-pointer"
                   }
                 >
-                  Graphics & Design
+                  Others
                 </div>
               </li>
             </ul>
@@ -166,26 +166,15 @@ export default function CourseGallery() {
             </a>
           </Dropdown>
           <div className="w-full">
-            {/*           <div className="flex">
-                <div className="bg-white text-black px-4 rounded-2xl m-2">
-                  All
-                </div>
-                <div className="bg-black text-white px-4 rounded-2xl m-2">
-                  Offline
-                </div>
-                <div className="bg-black text-white px-4 rounded-2xl m-2">
-                  Online
-                </div>
-              </div> */}
             <div className="text-2xl lg:text-4xl py-4">
               {(() => {
                 switch (toogleTab) {
                   case 1:
                     return "All Courses";
                   case 2:
-                    return "Writing Courses";
+                    return "Content Writing and Development Courses";
                   case 3:
-                    return "Advanced Programming Courses";
+                    return "Graphics Design Courses";
                   case 4:
                     return "Digital Marketing Courses";
                   case 5:
@@ -193,7 +182,7 @@ export default function CourseGallery() {
                   case 6:
                     return "Video & Animation Courses";
                   case 7:
-                    return "Graphics & Design Courses";
+                    return "Other Courses";
                   default:
                     return null;
                 }

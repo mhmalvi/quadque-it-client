@@ -17,12 +17,11 @@ export default function Header() {
         <div className="lg:mt-10">
           <div className="lg:w-3/4 flex-col justify-center m-auto pt-32">
             <div className="text-2xl lg:text-5xl font-bold text-center">
-              Graphic Design
+              Motion Graphics
             </div>
             <div className="lg:w-2/3 text-center lg:text-lg py-5 pb-7 m-auto px-5 lg:px-0">
-              Design begins after I begin to think about how to present an
-              experience most successfully, whether a button I put in can solve
-              a problem. The only point in design is not ui design.
+              Learn how to use Adobe After Effects, Illustrator and Photoshop
+              effectively to create visually stunning motion graphics.
             </div>
             <div className="flex justify-center gap-6 pb-8">
               <div>
@@ -53,8 +52,8 @@ export default function Header() {
             {/* countup section */}
             <div className="flex justify-center gap-6 pt-14 pb-8 lg:pb-24">
               <div className="flex-col flex-wrap text-center">
-                <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-3">
-                  <span className="text-24 lg:text-5xl font-bold m-auto">
+                <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 m-auto">
+                  <span className="text-2xl lg:text-5xl font-bold">
                     <CountUp duration={2.75} end={6} />
                   </span>
                   <br />
@@ -64,7 +63,7 @@ export default function Header() {
               </div>
               <div className="flex-col flex-wrap text-center">
                 <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4">
-                  <span className="text-24 lg:text-5xl font-bold m-auto">
+                  <span className="text-2xl lg:text-5xl font-bold">
                     <CountUp duration={2.75} end={48} />
                   </span>
                 </div>
@@ -72,7 +71,7 @@ export default function Header() {
               </div>
               <div className="flex-col flex-wrap text-center">
                 <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4">
-                  <span className="text-24 lg:text-5xl font-bold m-auto">
+                  <span className="text-2xl lg:text-5xl font-bold">
                     <CountUp duration={2.75} end={30} suffix="+" />
                   </span>
                 </div>
@@ -80,34 +79,32 @@ export default function Header() {
               </div>
             </div>
             {/* Overview sectioon */}
-            <div className="m-auto px-6">
+            <div className="lg:w-2/3 m-auto px-6">
               <div className="text-center text-2xl lg:text-4xl pb-5">
                 Course Overview
               </div>
               <div className="text-center pb-18">
-                To be a successful graphic designer you need to have training in
-                quality curriculum as well as project based work experience and
-                a good idea about the marketplace. So none of these have been
-                included together in our course module. From the graphic design
-                course you will learn to design any ad, banner, t-shirt design,
-                product using Adobe Photoshop and Adobe Illustrator. In
-                addition, you get the opportunity to use modern labs for
-                project-based work. By completing the course in this way, you
-                will have real work experience, which will help you achieve
-                quick success in the marketplace.
+                Become a well-rounded graphic designer by learning about the
+                core concepts of motion graphic design. We will teach you how to
+                apply the most useful effects and presets using different tools
+                from the Adobe Creative Cloud.
               </div>
             </div>
-            {/* tools and job opportunity */} 
+            {/* tools and Career outcomes */}
             <CourseMaterial />
             {/* Special Services */}
             <div className="">
-              <div className="text-center text-2xl lg:text-4xl pb-13">Special services</div>
+              <div className="text-center text-2xl lg:text-4xl pb-13">
+                Special services
+              </div>
               <div className="flex-col lg:flex lg:flex-row text-center gap-6 lg:pb-6">
                 <div className="lg:w-1/2 flex-col bg-[#2F327D20] lg:rounded-lg p-7">
                   <div className="">
                     <Icons.Support className="m-auto" />
                   </div>
-                  <div className="lg:text-xl font-semibold py-2">Marketplace support</div>
+                  <div className="lg:text-xl font-semibold py-2">
+                    Marketplace support
+                  </div>
                   <div className="text-xs lg:text-base">
                     Our new seminar in wordpress 26 Our new seminar in wordpress
                     26 June Our new wordpress 26 JuneJune Our new wordpress 26
@@ -119,7 +116,9 @@ export default function Header() {
                   <div>
                     <Icons.Guidance className="m-auto" />
                   </div>
-                  <div className="lg:text-xl font-semibold py-2">Marketplace support</div>
+                  <div className="lg:text-xl font-semibold py-2">
+                    Marketplace support
+                  </div>
                   <div className="text-xs lg:text-base">
                     Our new seminar in wordpress 26 Our new seminar in wordpress
                     26 June Our new wordpress 26 JuneJune Our new wordpress 26
@@ -133,7 +132,9 @@ export default function Header() {
                   <div className="">
                     <Icons.Certificate className="m-auto" />
                   </div>
-                  <div className="lg:text-xl font-semibold py-2">Marketplace support</div>
+                  <div className="lg:text-xl font-semibold py-2">
+                    Marketplace support
+                  </div>
                   <div className="text-xs lg:text-base">
                     Our new seminar in wordpress 26 Our new seminar in wordpress
                     26 June Our new wordpress 26 JuneJune Our new wordpress 26
@@ -145,7 +146,9 @@ export default function Header() {
                   <div>
                     <Icons.Briefcase className="m-auto" />
                   </div>
-                  <div className="lg:text-xl font-semibold py-2">Marketplace support</div>
+                  <div className="lg:text-xl font-semibold py-2">
+                    Marketplace support
+                  </div>
                   <div className="text-xs lg:text-base">
                     Our new seminar in wordpress 26 Our new seminar in wordpress
                     26 June Our new wordpress 26 JuneJune Our new wordpress 26

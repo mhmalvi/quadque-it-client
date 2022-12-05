@@ -72,7 +72,7 @@ const BlogGallery = () => {
                 onClick={() => ToogleTab(1)}
                 className={
                   toogleTab === 1
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer duration-150"
                     : "cursor-pointer"
                 }
               >
@@ -82,47 +82,47 @@ const BlogGallery = () => {
                 onClick={() => ToogleTab(2)}
                 className={
                   toogleTab === 2
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer duration-150"
                     : "cursor-pointer"
                 }
               >
-                UI Design
+                Graphics Design   
               </div>
               <div
                 onClick={() => ToogleTab(3)}
                 className={
                   toogleTab === 3
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer duration-150"
                     : "cursor-pointer"
                 }
               >
-                UX Design
+                Programming
               </div>
               <div
                 onClick={() => ToogleTab(4)}
                 className={
                   toogleTab === 4
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer duration-150"
                     : "cursor-pointer"
                 }
               >
-                Product Design
+                Digital Marketing   
               </div>
               <div
                 onClick={() => ToogleTab(5)}
                 className={
                   toogleTab === 5
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer duration-150"
                     : "cursor-pointer"
                 }
               >
-                Articles
+                Content
               </div>
               <div
                 onClick={() => ToogleTab(6)}
                 className={
                   toogleTab === 6
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer duration-150"
                     : "cursor-pointer"
                 }
               >
@@ -132,11 +132,21 @@ const BlogGallery = () => {
                 onClick={() => ToogleTab(7)}
                 className={
                   toogleTab === 7
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer duration-150"
                     : "cursor-pointer"
                 }
               >
                 News
+              </div>
+              <div
+                onClick={() => ToogleTab(8)}
+                className={
+                  toogleTab === 8
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer duration-150 "
+                    : "cursor-pointer"
+                }
+              >
+                Others
               </div>
             </div>
           </div>
