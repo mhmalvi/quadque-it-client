@@ -161,12 +161,12 @@ export default function CourseGallery() {
             <a>
               <Space className="border py-2 px-4 rounded-full">
                 Course Catagory
-                <DownOutlined className="pl-4"/>
+                <DownOutlined className="pl-4" />
               </Space>
             </a>
           </Dropdown>
           <div className="w-full">
-          <div className="flex">
+            {/*           <div className="flex">
                 <div className="bg-white text-black px-4 rounded-2xl m-2">
                   All
                 </div>
@@ -176,7 +176,7 @@ export default function CourseGallery() {
                 <div className="bg-black text-white px-4 rounded-2xl m-2">
                   Online
                 </div>
-              </div>
+              </div> */}
             <div className="text-2xl lg:text-4xl py-4">
               {(() => {
                 switch (toogleTab) {
@@ -203,33 +203,38 @@ export default function CourseGallery() {
             {/* row1 */}
             <div className="grid grid-col-1 lg:grid-cols-2 text-white gap-6 my-6">
               {/* card1 */}
-              {courseData?.map((details) => (details? (
-                <div
-                  onClick={navigateToCourseDetails}
-                  className="flex-col group bg-home-color border rounded-3xl hover:border-4 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300"
-                >
-                  <div className="flex-wrap overflow-hidden rounded-3xl m-2">
-                    <img
-                      src={Motion}
-                      alt=""
-                      className="w-full rounded-3xl scale-100 group-hover:scale-125 ease-in duration-700"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <div className="flex-col">
-                      <div className="flex justify-between">
-                        <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full py-2 px-4">
-                          {details.date}
-                        </div>
-                        <div className="text-xl py-2">{details.price} tk</div>
-                      </div>
+              {courseData?.map((details) =>
+                details ? (
+                  <div
+                    onClick={navigateToCourseDetails}
+                    className="flex-col group bg-home-color border border-white border-opacity-30 rounded-3xl hover:border-2 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300"
+                  >
+                    <div className="flex-wrap overflow-hidden rounded-3xl m-2">
+                      <img
+                        src={Motion}
+                        alt=""
+                        className="w-full rounded-3xl scale-100 group-hover:scale-125 ease-in duration-700"
+                      />
                     </div>
-                    <div className="text-2xl pt-2 left-0">{details.title}</div>
-                    <div className="py-2">{details.para}</div>
+                    <div className="p-4">
+                      <div className="flex-col">
+                        <div className="flex justify-between">
+                          <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full py-2 px-4">
+                            {details.date}
+                          </div>
+                          <div className="text-xl py-2">{details.price} tk</div>
+                        </div>
+                      </div>
+                      <div className="text-2xl pt-2 left-0">
+                        {details.title}
+                      </div>
+                      <div className="py-2">{details.para}</div>
+                    </div>
                   </div>
-                </div>
-):("NO DATA")
-              ))}
+                ) : (
+                  "NO DATA"
+                )
+              )}
             </div>
           </div>
         </div>

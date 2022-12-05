@@ -3,7 +3,7 @@ import Businesses from "../../Asset/Image/partners.png";
 
 export default function Partners() {
   return (
-    <div className="w-full pb-30 lg:pb-56">
+    <div className="w-full pb-18 lg:pb-56">
       <div className="text-center font-poppins rounded-3xl">
         <div className="text-black text-2xl md:text-4xl font-bold pb-5">
         Associated Partners 

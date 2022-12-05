@@ -4,9 +4,9 @@ import Icons from "../../Components/Shared/Icons";
 
 const JobOpportunities = () => {
   return (
-    <div className="w-full font-poppins pb-44">
+    <div className="w-full font-poppins pb-18 lg:pb-44">
       <div className="">
-        <div className="w-4/5 font-poppins font-bold text-3xl lg:text-4xl text-center lg:text-start m-auto pb-16">
+        <div className="w-4/5 font-poppins font-bold text-3xl lg:text-4xl text-center lg:text-start m-auto pb-8 lg:pb-16">
           {" "}
           We Bring The Good Education To Life{" "}
         </div>

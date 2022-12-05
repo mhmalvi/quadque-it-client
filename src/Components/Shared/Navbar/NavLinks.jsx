@@ -18,7 +18,7 @@ const NavLinks = () => {
                       ? setToogleSubmenu(link?.name)
                       : setToogleSubmenu("");
                   }}
-                  className="px-7 py-6"
+                  className="px-7 py-10"
                 >
                   {link.name}
                 </div>

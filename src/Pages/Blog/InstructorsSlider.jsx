@@ -2,16 +2,14 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import hallway from "../../Asset/Image/hallway.png";
+import Pranto from "../../Asset/Image/pranto.png";
 import RightArrow from "../../Asset/Image/arrow-right.png";
 import LeftArrow from "../../Asset/Image/arrow-left.png";
 
-
 const InstructorsSlider = () => {
-    const sliderRef = useRef(null);
-    console.log(sliderRef.current);
+  const sliderRef = useRef(null);
+  console.log(sliderRef.current);
   const settings = {
-    focusOnSelect: true,
     infinite: true,
     speed: 600,
     arrows: false,
@@ -50,19 +48,19 @@ const InstructorsSlider = () => {
       <Slider ref={sliderRef} {...settings} className="">
         {/*     {Course?.map((course) => ( */}
         <div>
-          <div className="flex-col lg:max-w-xs bg-transparent lg:rounded-2xl">
-            <div className="bg-black">
-              <img src={hallway} className="w-full" alt="" />
+          <div className="flex-col bg-transparent rounded-2xl">
+            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+              <img src={Pranto} className="w-full" alt="" />
             </div>
-            <div className="flex-col lg:justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold">
+            <div className="flex-col justify-start m-auto px-6 py-7">
+              <div className="text-2xl lg:text-4xl font-semibold pb-1">
                 Pranto Islam
               </div>
-              <div className="text-sm font-semibold">UX UI Designer</div>
+              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                 Quadque
               </div>
-              <div className="font-thin pb-2">
+              <div className="font-thin pb-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
                 dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
@@ -72,19 +70,19 @@ const InstructorsSlider = () => {
           </div>
         </div>
         <div>
-          <div className="flex-col lg:max-w-xs bg-transparent lg:rounded-2xl">
-            <div className="bg-black">
-              <img src={hallway} className="w-full" alt="" />
+          <div className="flex-col bg-transparent rounded-2xl">
+            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+              <img src={Pranto} className="w-full" alt="" />
             </div>
-            <div className="flex-col lg:justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold">
+            <div className="flex-col justify-start m-auto px-6 py-7">
+              <div className="text-2xl lg:text-4xl font-semibold pb-1">
                 Pranto Islam
               </div>
-              <div className="text-sm font-semibold">UX UI Designer</div>
+              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                 Quadque
               </div>
-              <div className="font-thin pb-2">
+              <div className="font-thin pb-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
                 dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
@@ -94,19 +92,19 @@ const InstructorsSlider = () => {
           </div>
         </div>
         <div>
-          <div className="flex-col lg:max-w-xs bg-transparent lg:rounded-2xl">
-            <div className="bg-black">
-              <img src={hallway} className="w-full" alt="" />
+          <div className="flex-col bg-transparent rounded-2xl">
+            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+              <img src={Pranto} className="w-full" alt="" />
             </div>
-            <div className="flex-col lg:justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold">
+            <div className="flex-col justify-start m-auto px-6 py-7">
+              <div className="text-2xl lg:text-4xl font-semibold pb-1">
                 Pranto Islam
               </div>
-              <div className="text-sm font-semibold">UX UI Designer</div>
+              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                 Quadque
               </div>
-              <div className="font-thin pb-2">
+              <div className="font-thin pb-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
                 dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
@@ -116,19 +114,19 @@ const InstructorsSlider = () => {
           </div>
         </div>
         <div>
-          <div className="flex-col lg:max-w-xs bg-transparent lg:rounded-2xl">
-            <div className="bg-black">
-              <img src={hallway} className="w-full" alt="" />
+          <div className="flex-col bg-transparent rounded-2xl">
+            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+              <img src={Pranto} className="w-full" alt="" />
             </div>
-            <div className="flex-col lg:justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold">
+            <div className="flex-col justify-start m-auto px-6 py-7">
+              <div className="text-2xl lg:text-4xl font-semibold pb-1">
                 Pranto Islam
               </div>
-              <div className="text-sm font-semibold">UX UI Designer</div>
+              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                 Quadque
               </div>
-              <div className="font-thin pb-2">
+              <div className="font-thin pb-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
                 dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
@@ -138,19 +136,19 @@ const InstructorsSlider = () => {
           </div>
         </div>
         <div>
-          <div className="flex-col lg:max-w-xs bg-transparent lg:rounded-2xl">
-            <div className="bg-black">
-              <img src={hallway} className="w-full" alt="" />
+          <div className="flex-col bg-transparent rounded-2xl">
+            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+              <img src={Pranto} className="w-full" alt="" />
             </div>
-            <div className="flex-col lg:justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold">
+            <div className="flex-col justify-start m-auto px-6 py-7">
+              <div className="text-2xl lg:text-4xl font-semibold pb-1">
                 Pranto Islam
               </div>
-              <div className="text-sm font-semibold">UX UI Designer</div>
+              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                 Quadque
               </div>
-              <div className="font-thin pb-2">
+              <div className="font-thin pb-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
                 dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
@@ -163,9 +161,17 @@ const InstructorsSlider = () => {
         {/*     ))} */}
       </Slider>
       <div className="flex justify-center gap-5">
-      <img src={LeftArrow} alt="" onClick={()=>sliderRef.current.slickNext()} />
-          <img src={RightArrow} alt="" onClick={()=>sliderRef.current.slickPrev()} />
-    </div>
+        <img
+          src={LeftArrow}
+          alt=""
+          onClick={() => sliderRef.current.slickNext()}
+        />
+        <img
+          src={RightArrow}
+          alt=""
+          onClick={() => sliderRef.current.slickPrev()}
+        />
+      </div>
     </>
   );
 };

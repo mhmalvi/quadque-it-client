@@ -6,7 +6,7 @@ import stories4 from "../../Asset/Image/stories4.png";
 import stories5 from "../../Asset/Image/stories5.png";
 import stories6 from "../../Asset/Image/stories6.png";
 import meeting from "../../Asset/Image/meeting.png";
-import hallway from "../../Asset/Image/hallway.png";
+import Pranto from "../../Asset/Image/pranto.png";
 import InstructorsSlider from "./InstructorsSlider";
 
 const Stories = () => {
@@ -33,7 +33,7 @@ const Stories = () => {
               <div className="lg:flex bg-white rounded-2xl mb-6">
                 <div>
                   <img
-                    src={hallway}
+                    src={Pranto}
                     className="w-full h-full rounded-tl-2xl rounded-bl-2xl"
                     alt=""
                   />
@@ -69,7 +69,7 @@ const Stories = () => {
                 </div>
                 <div>
                   <img
-                    src={hallway}
+                    src={Pranto}
                     className="w-full h-full rounded-tr-2xl rounded-br-2xl"
                     alt=""
                   />
@@ -78,8 +78,8 @@ const Stories = () => {
             </div>
             {/* card */}
             <div className="flex-col lg:max-w-xs bg-white rounded-2xl">
-              <div>
-                <img src={hallway} className="w-full rounded-2xl" alt="" />
+              <div className="h-60 flex-wrap overflow-hidden">
+                <img src={Pranto} className="w-full rounded-2xl" alt="" />
               </div>
               <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
                 <div className="text-4xl font-semibold">Pranto Islam</div>
@@ -101,8 +101,8 @@ const Stories = () => {
         <div className="lg:hidden mb-12">
           <InstructorsSlider />
         </div>
-        <div className="w-full lg:flex justify-evenly px-3">
-          <div className="m-auto shrinkk-0">
+        <div className="lg:flex justify-evenly px-3">
+          <div className="w-full m-auto shrinkk-0">
             <img
               src={meeting}
               alt=""
@@ -111,14 +111,16 @@ const Stories = () => {
             />
           </div>
           <div className="flex-col lg:justify-start text-start m-auto pt-10 lg:pt-0 lg:px-10">
-            <div className="text-2xl lg:text-4xl font-semibold pb-5">Students Work</div>
+            <div className="text-2xl lg:text-4xl font-semibold pb-5">
+              Students Work
+            </div>
             <div className="lg:text-xl font-semibold pb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Ut
-              elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
             </div>
             <div className="lg:text-xl font-light pb-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Ut
-              elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
             </div>
           </div>
         </div>

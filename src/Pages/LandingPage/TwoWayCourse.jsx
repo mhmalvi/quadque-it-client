@@ -4,7 +4,7 @@ import Motion from "../../Asset/Image/image5.png";
 
 export default function TwoWayCourse() {
   return (
-    <div className="w-full pb-40">
+    <div className="w-full pb-13 lg:pb-40">
       <div className="bg-home-color text-white text-center font-poppins lg:mx-10 rounded-3xl pb-16 px-4 lg:px-20">
         <div className="text-4xl font-semibold pt-8 pb-5">Two-way courses</div>
         <div className="lg:w-1/2 text-base lg:text-2xl m-auto">
