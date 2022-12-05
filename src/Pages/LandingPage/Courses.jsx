@@ -6,14 +6,17 @@ export default function Courses() {
     <div className="w-full pb-18 lg:pb-24">
       <div className="lg:bg-[#5c5bfd10] lg:text-5xl text-center m-auto lg:mx-10 rounded-3xl py-4 lg:py-24 px-4 lg:px-20">
         <div className="text-black text-2xl md:text-4xl font-bold pb-5">
-          Our Paragraph is a series series sentences
+          Effective courses to develop in-demand skills
+        </div>
+        <div className="text-black text-sm md:text-base font-thin pb-5">
+          Check out the different categories of courses that we are offering
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 text-black md:text-white text-xs md:text-2xl lg:pt-13 gap-6">
           <div className="w-full shadow-lg flex-col bg-white md:bg-home-color hover:lg:bg-brand-color duration-500 p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
-            <div className="">Graphics & Design</div>
+            <div className="">Graphics Design </div>
           </div>
           <div className="w-full shadow-lg flex-col bg-white md:bg-home-color hover:lg:bg-brand-color duration-500 p-4 rounded-2xl">
             <div className="flex justify-center">
@@ -25,19 +28,19 @@ export default function Courses() {
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
-            <div className="">Digital marketing</div>
+            <div className="">Digital Marketing </div>
           </div>
           <div className="w-full shadow-lg flex-col bg-white md:bg-home-color hover:lg:bg-brand-color duration-500 p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
-            <div className="">Writing</div>
+            <div className="">Content Writing and Development</div>
           </div>
           <div className="w-full shadow-lg flex-col bg-white md:bg-home-color hover:lg:bg-brand-color duration-500 p-4 rounded-2xl">
             <div className="flex justify-center">
               <img src={Course} alt="" width={200} />
             </div>
-            <div className="">Video & Animation</div>
+            <div className="">Video and Animation </div>
           </div>
           <div className="w-full shadow-lg flex-col bg-white md:bg-home-color hover:lg:bg-brand-color duration-500 p-4 rounded-2xl">
             <div className="flex justify-center">

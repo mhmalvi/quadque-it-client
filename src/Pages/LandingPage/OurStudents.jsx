@@ -48,7 +48,7 @@ export default function OurStudents() {
   return (
     <div className="w-full pb-13 lg:pb-36 lg:visible">
       <div className="lg:flex">
-        <div className="text-center font-poppins rounded-3xl mx-9">
+        <div className="text-center lg:text-start font-poppins rounded-3xl mx-9">
           <div className="w-full text-black text-3xl lg:text-5xl font-bold lg:mx-12 pb-18">
             What our <span className="text-brand-color">Students</span> say <br />
             about us

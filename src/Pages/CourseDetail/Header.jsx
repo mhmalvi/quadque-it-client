@@ -103,13 +103,11 @@ export default function Header() {
                     <Icons.Support className="m-auto" />
                   </div>
                   <div className="lg:text-xl font-semibold py-2">
-                    Marketplace support
+                    Recognised Certification
                   </div>
                   <div className="text-xs lg:text-base">
-                    Our new seminar in wordpress 26 Our new seminar in wordpress
-                    26 June Our new wordpress 26 JuneJune Our new wordpress 26
-                    June Our new seminar in wordpress 26 June Our new wordpress
-                    26 June
+                    You will obtain an Accredited Australian Certificate after
+                    completing the course. Career Guidance
                   </div>
                 </div>
                 <div className="lg:w-1/2 flex-col bg-[#2F327D40] lg:rounded-lg p-7">
@@ -117,13 +115,11 @@ export default function Header() {
                     <Icons.Guidance className="m-auto" />
                   </div>
                   <div className="lg:text-xl font-semibold py-2">
-                    Marketplace support
+                    Career Guidance
                   </div>
                   <div className="text-xs lg:text-base">
-                    Our new seminar in wordpress 26 Our new seminar in wordpress
-                    26 June Our new wordpress 26 JuneJune Our new wordpress 26
-                    June Our new seminar in wordpress 26 June Our new wordpress
-                    26 June
+                    We will provide you with exclusive guidance to help you make
+                    the best decisions for your career.
                   </div>
                 </div>
               </div>
@@ -133,13 +129,11 @@ export default function Header() {
                     <Icons.Certificate className="m-auto" />
                   </div>
                   <div className="lg:text-xl font-semibold py-2">
-                    Marketplace support
+                    Post Course Support
                   </div>
                   <div className="text-xs lg:text-base">
-                    Our new seminar in wordpress 26 Our new seminar in wordpress
-                    26 June Our new wordpress 26 JuneJune Our new wordpress 26
-                    June Our new seminar in wordpress 26 June Our new wordpress
-                    26 June
+                    Our team will provide you with the necessary support after
+                    you’ve completed the course.
                   </div>
                 </div>
                 <div className="lg:w-1/2 flex-col bg-[#2F327D80] lg:rounded-lg p-7">
@@ -147,13 +141,11 @@ export default function Header() {
                     <Icons.Briefcase className="m-auto" />
                   </div>
                   <div className="lg:text-xl font-semibold py-2">
-                    Marketplace support
+                    Recommendation
                   </div>
                   <div className="text-xs lg:text-base">
-                    Our new seminar in wordpress 26 Our new seminar in wordpress
-                    26 June Our new wordpress 26 JuneJune Our new wordpress 26
-                    June Our new seminar in wordpress 26 June Our new wordpress
-                    26 June
+                    You will have our recommendation once we have assessed you
+                    and provided you with your certification.
                   </div>
                 </div>
               </div>

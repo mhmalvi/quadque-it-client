@@ -8,37 +8,36 @@ const JobOpportunities = () => {
       <div className="">
         <div className="w-4/5 font-poppins font-bold text-3xl lg:text-4xl text-center lg:text-start m-auto pb-8 lg:pb-16">
           {" "}
-          We Bring The Good Education To Life{" "}
+          Quality Training to Improve Your Career{" "}
         </div>
       </div>
       <div className="lg:w-4/5 lg:flex justify-center m-auto lg:gap-20">
-        <div className="relative">
-          <div className="flex-wrap shrink-0 lg:rounded-tr-3xl lg:rounded-tl-3xl lg:rounded-br-[5rem] lg:rounded-bl-3xl overflow-hidden">
+        <div className="lg:w-1/2 relative">
+          <div className="w-full min-w-[500px] flex-wrap shrink-0 lg:rounded-tr-3xl lg:rounded-tl-3xl lg:rounded-br-[5rem] lg:rounded-bl-3xl overflow-hidden">
             <img
               src={shourav}
               alt=""
-
               className="w-full lg:rounded-tr-3xl lg:rounded-tl-3xl lg:rounded-br-[5rem] lg:rounded-bl-3xl hover:scale-110 duration-1000"
             />
           </div>
 
-          <Icons.JobOpportunities className="hidden lg:inline-block m-auto absolute -right-[30%] bottom-0 sm:shrink-0" />
+          <Icons.JobOpportunities className="hidden lg:inline-block m-auto absolute -right-[25%] bottom-[10%] sm:shrink-0" />
         </div>
-        <div className="pt-12 lg:pt-0 px-10 lg:px-0">
-          <div className="font-bold text-2xl lg:text-4xl pb-10">
+        <div className="lg:w-1/2 pt-12 lg:pt-0 px-10 lg:px-0">
+          <div className="font-bold text-2xl lg:text-5xl pb-5">
             {" "}
-            Let Your Education Do The Walking
+            Develop Your Expertise through Our Amazing Facilities
           </div>
           <div className="flex py-4">
-            <div>
+            <div className="my-auto">
               <Icons.EBook />
             </div>
             <span className="font-poppins font-semibold text-base md:text-lg lg:text-xl pl-5 py-2">
-              Free E-book, videos and kits{" "}
+              Get free E-books, videos and kits{" "}
             </span>
           </div>
           <div className="flex py-4">
-            <div>
+            <div className="my-auto">
               <Icons.Learning />
             </div>
             <span className="font-poppins font-semibold text-base md:text-lg lg:text-xl pl-5 py-2">
@@ -46,19 +45,19 @@ const JobOpportunities = () => {
             </span>
           </div>
           <div className="flex py-4">
-            <div>
+            <div className="my-auto">
               <Icons.Colab />
             </div>
             <span className="font-poppins font-semibold text-base md:text-lg lg:text-xl pl-5 py-2">
-              Collaborate with different learners around{" "}
+              Collaborate with different learners from all over the world{" "}
             </span>
           </div>
           <div className="flex py-4">
-            <div>
+            <div className="my-auto">
               <Icons.instructors />
             </div>
             <span className="font-poppins font-semibold text-base md:text-lg lg:text-xl pl-5 py-2">
-              Top Instructors around the globe{" "}
+              Learn from our expert trainers with years of industry experience{" "}
             </span>
           </div>
         </div>

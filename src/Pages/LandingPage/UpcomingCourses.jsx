@@ -55,11 +55,11 @@ export default function UpcomingCourses() {
     <div className="pb-18 lg:pb-24">
       <div className="text-center font-poppins rounded-3xl lg:px-20">
         <div className="text-black text-2xl md:text-4xl font-bold pb-5">
-          Our Upcoming course
+          Our Upcoming Courses
         </div>
         <div className="text-lg">
-          Skilline is an interesting platform that will teach you in more
-          Skilline is an interesting platform that will teach you
+          Catch a glimpse of the awesome courses that will soon be available at
+          QIT.
         </div>
         <div className="text-white lg:pt-13">
           <Slider {...settings} ref={sliderRef}>

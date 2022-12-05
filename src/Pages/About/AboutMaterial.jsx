@@ -5,7 +5,7 @@ const AboutMaterial = () => {
   return (
     <div className="bg-home-color w-full font-poppins py-13 lg:py-36 text-white">
       <div className="md:w-3/4 m-auto flex-col md:flex lg:flex-row gap-6">
-        <div className="flex justify-center m-auto pb-5 px-3">
+        <div className="flex justify-center m-auto pb-5 lg:pb-0 px-3 lg:px-0">
           <img src={Robot} alt="" className="shrink-0 rounded-3xl" />
         </div>
         <div className="lg:w-1/2 text-center lg:text-start my-auto">

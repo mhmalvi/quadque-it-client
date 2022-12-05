@@ -16,7 +16,7 @@ import { ReactComponent as EBook } from "../../Asset/Icon/Frame6541.svg";
 import { ReactComponent as Learning } from "../../Asset/Icon/Frame6542.svg";
 import { ReactComponent as instructors } from "../../Asset/Icon/Frame6543.svg";
 import { ReactComponent as Colab } from "../../Asset/Icon/Frame6544.svg";
-import { ReactComponent as JobOpportunities } from "../../Asset/Icon/Frame6507.svg";
+import { ReactComponent as JobOpportunities } from "../../Asset/Icon/jobopp.svg";
 import { ReactComponent as Support } from "../../Asset/Icon/user-friends.svg";
 import { ReactComponent as Guidance } from "../../Asset/Icon/guidance.svg";
 import { ReactComponent as Certificate } from "../../Asset/Icon/certificate.svg";
@@ -31,7 +31,7 @@ import { ReactComponent as Ribbon } from "../../Asset/Icon/ribbon.svg";
 import { ReactComponent as Bachelor } from "../../Asset/Icon/bachelor.svg";
 import { ReactComponent as Instructor } from "../../Asset/Icon/instructor.svg";
 import { ReactComponent as TickBox } from "../../Asset/Icon/tick-box.svg";
-import { ReactComponent as  Tick } from "../../Asset/Icon/tick.svg";
+import { ReactComponent as Tick } from "../../Asset/Icon/tick.svg";
 import { ReactComponent as MenuBar } from "../../Asset/Icon/menu.svg";
 import { ReactComponent as Cancel } from "../../Asset/Icon/cross.svg";
 
@@ -71,7 +71,7 @@ const Icons = {
   TickBox,
   Tick,
   MenuBar,
-  Cancel
+  Cancel,
 };
 
 export default Icons;

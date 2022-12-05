@@ -29,23 +29,25 @@ const Gallery = () => {
           </div>
           <div className="sm:w-2/3 lg:w-full flex-col px-5 lg:justify-start m-auto">
             <div className="text-start text-2xl font-semibold pb-2">
-              Our institute
+              Our Institute
             </div>
             <div className="mx-2 text-sm font-thin text-start lg:w-2/3 pb-4 lg:px-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
+              We have a diverse team of dedicated individuals with years of
+              experience in digital marketing and IT. We want to deliver the
+              most effective classes while maintaining the following core
+              values:{" "}
             </div>
             <div className="flex flex-wrap lg:flex-col">
               <div className="flex flex-wrap justify-start pr-10">
                 <Icons.Tick width={20} />
-                Flexible Time
+                Effective Lessons
               </div>
               <div className="flex flex-wrap justify-start pr-10">
                 <Icons.Tick width={20} />
-                Perfect Work
+                Personalised Training
               </div>
               <div className="flex flex-wrap justify-start pr-10">
-                <Icons.Tick width={20} /> Client Priority
+                <Icons.Tick width={20} /> High-Quality Courses
               </div>
             </div>
           </div>
