@@ -8,19 +8,40 @@ import Box from "../../Asset/Image/box.png";
 import Box2 from "../../Asset/Image/box2.png";
 import Icons from "../../Components/Shared/Icons";
 import AboutMaterial from "./AboutMaterial";
+import AnimatedText from "react-animated-text-content";
 
 export default function Header() {
   return (
-    <div className="w-full bg-home-color font-poppins pb-20">
+    <div className="w-full bg-home-color font-poppins">
       <div className="w-full font-poppins">
         <div className="lg:mt-10">
           <div className="lg:w-2/3 flex-col justify-center text-white m-auto pt-32">
             <div className="lg:text-5xl text-2xl font-bold text-center leading-snug">
-              Delve into the World of Digital Marketing and IT with QIT.
+              <AnimatedText
+                type="chars"
+                interval={0.03}
+                duration={0.45}
+                animation={{
+                  ease: "ease-in-out",
+                  scale: 0,
+                }}
+              >
+                Delve into the World of Digital Marketing and IT with QIT.
+              </AnimatedText>
             </div>
             <div className="w-2/3 lg:text-base text-xs text-center py-5 pb-7 m-auto">
+              <AnimatedText
+                type="chars"
+                interval={0.02}
+                duration={0.1}
+                animation={{
+                  ease: "ease-in-out",
+                  scale: 0,
+                }}
+              >
               Let Us Help You to Develop the Skills You Need to Stand Out in the
               Fast-Paced World of Digital Marketing and IT.
+              </AnimatedText>
             </div>
             <div className="flex justify-center gap-2 lg:gap-6 pb-8">
               <div>
@@ -231,31 +252,6 @@ export default function Header() {
             </div>
           </div>
           <AboutMaterial />
-          <div className="w-3/4 bg-white flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-6 m-auto">
-            <div className="lg:w-1/2 text-black m-auto">
-              <div className="text-2xl lg:text-5xl text-center lg:text-start font-bold pb-7 pt-8">
-                Get a Free Trial Today!
-              </div>
-              <div className="flex justify-center lg:justify-start h-16 gap-14 text-white text-base lg:text-xl mb-6">
-                <div className="bg-[#2F327D] hover:bg-[#3f42a3] rounded-full text-white text-center cursor-pointer px-8 py-4">
-                  Browse Courses
-                </div>
-              </div>
-              <div className="md:text-base pb-8">
-                Check out our diverse courses specialising in graphics design,
-                programming, digital marketing, content development and other
-                disciplines.
-              </div>
-            </div>
-            <div className="lg:first-letter:w-1/2">
-              <img
-                src={MobilePic}
-                width={433}
-                className="m-auto"
-                alt="QIT logo"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>

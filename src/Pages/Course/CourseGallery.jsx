@@ -14,15 +14,15 @@ export default function CourseGallery() {
   const [courseData, setCourseData] = useState();
 
   const ToogleTab = (index) => {
-    console.log("sidemenu", index);
     setToogleTab(index);
+    console.log("toogleTab", toogleTab);
   };
 
   const menu = (
     <Menu
       onClick={({ key }) => {
-        console.log("dropdown menu", key);
         setToogleTab(key);
+        console.log("toogleTab", toogleTab);
       }}
       items={[
         {
@@ -97,7 +97,7 @@ export default function CourseGallery() {
                       : "cursor-pointer"
                   }
                 >
-                  Content Writing and Development 
+                  Content Writing and Development
                 </div>
               </li>
               <li onClick={() => ToogleTab(3)}>
@@ -169,22 +169,22 @@ export default function CourseGallery() {
             <div className="text-2xl lg:text-4xl py-4">
               {(() => {
                 switch (toogleTab) {
-                  case 1:
+                  case '1':
                     return "All Courses";
-                  case 2:
+                  case '2':
                     return "Content Writing and Development Courses";
-                  case 3:
+                  case '3':
                     return "Graphics Design Courses";
-                  case 4:
+                  case '4':
                     return "Digital Marketing Courses";
-                  case 5:
+                  case '5':
                     return "Programming Courses";
-                  case 6:
+                  case '6':
                     return "Video & Animation Courses";
-                  case 7:
+                  case '7':
                     return "Other Courses";
                   default:
-                    return null;
+                    return "No course selected";
                 }
               })()}
             </div>

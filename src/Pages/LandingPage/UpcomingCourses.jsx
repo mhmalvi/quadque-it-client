@@ -57,7 +57,7 @@ export default function UpcomingCourses() {
         <div className="text-black text-2xl md:text-4xl font-bold pb-5">
           Our Upcoming Courses
         </div>
-        <div className="text-lg">
+        <div className="text-lg px-5 lg:px-0">
           Catch a glimpse of the awesome courses that will soon be available at
           QIT.
         </div>

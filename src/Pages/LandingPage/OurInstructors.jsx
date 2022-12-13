@@ -47,7 +47,7 @@ export default function OurInstructors() {
   return (
     <div className="w-full pb-13 lg:pb-24">
       <div className="flex justify-between lg:px-10">
-        <div className="text-black text-3xl font-semibold text-center lg:text-start ml-12 pb-16">
+        <div className="text-black text-3xl font-semibold text-center lg:text-start ml-3 lg:ml-12 pb-16">
           Meet our instructors
         </div>
         <div className="hidden lg:block">

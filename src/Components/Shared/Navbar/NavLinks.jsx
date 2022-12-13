@@ -18,15 +18,15 @@ const NavLinks = () => {
                       ? setToogleSubmenu(link?.name)
                       : setToogleSubmenu("");
                   }}
-                  className="px-7 py-10"
+                  className="hover:-translate-y-2 duration-300 px-7 py-10"
                 >
                   {link.name}
                 </div>
               </Link>
               {link.submenu !== "" && (
                 <div className="opacity-0 lg:absolute lg:top-4 group-hover:opacity-100 group-hover:top-0 duration-1000">
-                  <div className="absolute top-16 mx-6 text-start hidden group-hover:lg:block hover:lg:block">
-                    <div className="bg-white text-black px-10">
+                  <div className="absolute top-20 mx-6 text-center hidden group-hover:lg:block hover:lg:block w-50">
+                    <div className="backdrop-filter backdrop-blur-sm bg-white bg-opacity-80 text-black rounded-sm px-10">
                       {link.submenu?.map((slink) => (
                         <div>
                           <Link to={slink.sublink}>
