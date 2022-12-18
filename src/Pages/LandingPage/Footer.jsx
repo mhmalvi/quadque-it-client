@@ -4,7 +4,7 @@ import Logo from "../../Asset/Image/Logo.svg";
 
 export default function Footer() {
   return (
-    <div className="w-full font-poppins text-white">
+    <div className="w-full text-white">
       <div className="md:flex bg-black pt-20 px-10 md:px-20 pb-13 gap-8">
         <div className="md:w-2/5 pb-4">
           <div className="py-4">

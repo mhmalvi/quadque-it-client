@@ -4,7 +4,7 @@ import MobilePic from "../../Asset/Image/mobile-browse.png";
 
 const AboutMaterial = () => {
   return (
-    <div className="bg-home-color w-full font-poppins py-13 lg:py-36 text-white">
+    <div className="bg-home-color w-full py-13 lg:py-36 text-white">
       <div className="md:w-3/4 m-auto flex-col md:flex lg:flex-row gap-6 pb-13 lg:pb-36">
         <div className="flex justify-center m-auto pb-5 lg:pb-0 px-3 lg:px-0">
           <img src={Robot} alt="" className="shrink-0 rounded-3xl" />
@@ -14,7 +14,7 @@ const AboutMaterial = () => {
             {" "}
             Exclusive Training Solutions to Boost Your Career
           </div>
-          <div className="flex font-poppins lg:px-0 font-thin px-10 leading-5">
+          <div className="flex lg:px-0 font-thin px-10 leading-5">
             This is your opportunity to make your mark in the world of digital
             marketing and IT. <br />
             <br />

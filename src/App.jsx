@@ -1,3 +1,4 @@
+import './index.css';
 import React from "react";
 import Navbar from "./Components/Shared/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";

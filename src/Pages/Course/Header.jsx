@@ -5,7 +5,7 @@ import AnimatedText from "react-animated-text-content";
 
 export default function Header() {
   return (
-    <div className="w-full font-poppins">
+    <div className="w-full">
       <div className="flex bg-[#040422] lg:mt-10 pt-44 lg:pb-20">
         <div className="w-full ">
           <div className="flex m-auto justify-center">

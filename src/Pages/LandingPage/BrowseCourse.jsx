@@ -4,7 +4,7 @@ import Image from "../../Asset/Image/image44.png";
 
 export default function BrowseCourse() {
   return (
-    <div className="w-full font-poppins mb-18 lg:mb-0 sm:pb-0">
+    <div className="w-full mb-18 lg:mb-0 sm:pb-0">
       <div className=" sm:bg-gradient-to-t from-[#000000] to-[#2F327D]">
         <div className="sm:flex sm:justify-center sm:px-6">
           <div className="w-full flex justify-center items-center shrink-0 sm:w-1/2 sm:relative sm:-top-20 p-4">

@@ -4,7 +4,7 @@ import blogdetail2 from "../../Asset/Image/blogdetail2.png";
 
 const BlogDetail = () => {
   return (
-    <div className="font-poppins text-white bg-home-color lg:mt-10 pt-32 pb-20">
+    <div className="text-white bg-home-color lg:mt-10 pt-32 pb-20">
       <div className="lg:w-2/3 m-auto px-5 lg:px-0">
       <div className="flex justify-center">
         <img src={blogdetail} alt="" className="rounded-xl" />

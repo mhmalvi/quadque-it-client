@@ -12,36 +12,16 @@ import AnimatedText from "react-animated-text-content";
 
 export default function Header() {
   return (
-    <div className="w-full bg-home-color font-poppins">
-      <div className="w-full font-poppins">
+    <div className="w-full bg-home-color">
+      <div className="w-full">
         <div className="lg:mt-10">
           <div className="lg:w-2/3 flex-col justify-center text-white m-auto pt-32">
             <div className="lg:text-5xl text-2xl font-bold text-center leading-snug">
-              <AnimatedText
-                type="chars"
-                interval={0.03}
-                duration={0.45}
-                animation={{
-                  ease: "ease-in-out",
-                  scale: 0,
-                }}
-              >
                 Delve into the World of Digital Marketing and IT with QIT.
-              </AnimatedText>
             </div>
             <div className="w-2/3 lg:text-base text-xs text-center py-5 pb-7 m-auto">
-              <AnimatedText
-                type="chars"
-                interval={0.02}
-                duration={0.1}
-                animation={{
-                  ease: "ease-in-out",
-                  scale: 0,
-                }}
-              >
               Let Us Help You to Develop the Skills You Need to Stand Out in the
               Fast-Paced World of Digital Marketing and IT.
-              </AnimatedText>
             </div>
             <div className="flex justify-center gap-2 lg:gap-6 pb-8">
               <div>

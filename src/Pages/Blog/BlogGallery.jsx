@@ -63,7 +63,7 @@ const BlogGallery = () => {
   }, [Blog, toogleTab]);
 
   return (
-    <div className="w-full font-poppins text-white">
+    <div className="w-full text-white">
       <div className="bg-home-color py-13">
         <div className="flex-col lg:w-2/3 m-auto px-5">
           <div className="hidden lg:block">

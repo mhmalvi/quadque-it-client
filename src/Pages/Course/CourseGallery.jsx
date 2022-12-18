@@ -82,7 +82,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 1
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -93,7 +93,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 2
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -104,7 +104,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 3
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -115,7 +115,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 4
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -126,7 +126,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 5
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -137,7 +137,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 6
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -148,7 +148,7 @@ export default function CourseGallery() {
                 <div
                   className={
                     toogleTab === 7
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 cursor-pointer"
+                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -166,7 +166,7 @@ export default function CourseGallery() {
             </a>
           </Dropdown>
           <div className="w-full">
-            <div className="text-2xl lg:text-4xl py-4">
+            {/* <div className="text-2xl lg:text-4xl py-4">
               {(() => {
                 switch (toogleTab) {
                   case '1':
@@ -187,11 +187,10 @@ export default function CourseGallery() {
                     return "No course selected";
                 }
               })()}
-            </div>
-            {/* Gallery */}
-            {/* row1 */}
+            </div> */}
+            {/* COURSE Gallery */}
             <div className="grid grid-col-1 lg:grid-cols-2 text-white gap-6 my-6">
-              {/* card1 */}
+              {/* cards */}
               {courseData?.map((details) =>
                 details ? (
                   <div

@@ -45,7 +45,7 @@ const InstructorsSlider = () => {
   };
   return (
     <>
-      <Slider ref={sliderRef} {...settings} className="">
+      <Slider ref={sliderRef} {...settings} className="z-10">
         {/*     {Course?.map((course) => ( */}
         <div>
           <div className="flex-col bg-transparent rounded-2xl">

@@ -5,32 +5,13 @@ import AnimatedText from "react-animated-text-content";
 
 export default function Header() {
   return (
-    <div className="w-full lg:mt-10 font-poppins pb-14 lg:pb-20">
+    <div className="w-full lg:mt-10 pb-14 lg:pb-20">
       <div className="bg-home-color text-center lg:text-start m-auto lg:mx-10 lg:rounded-3xl pt-44 pb-8 px-10 lg:px-20">
         <div className="flex flex-col-reverse lg:flex lg:flex-row justify-evenly m-auto">
           <div className="lg:w-1/2 text-white pt-13 lg:pt-0">
-            <div className="flex text-2xl lg:text-5xl font-bold pb-5">
+            <div className="z-0 text-2xl lg:text-5xl font-bold pb-5">
               Welcome to 
-              <span className="text-[#23BDEE]">
-                <AnimatedText
-                  type="words" // animate words or chars
-                  animation={{
-                    x: "200px",
-                    y: "-20px",
-                    scale: 1.1,
-                    ease: "ease-in-out",
-                  }}
-                  animationType="lights"
-                  interval={0.06}
-                  duration={0.8}
-                  tag="p"
-                  className="animated-paragraph"
-                  includeWhiteSpaces
-                  threshold={0.1}
-                  rootMargin="20%"
-                >
-                 &nbsp;QIT
-                </AnimatedText>
+              <span className="text-[#23BDEE] z-0">&nbsp;QIT
               </span>
             </div>
             <div className="md:text-base pb-13">
@@ -38,9 +19,11 @@ export default function Header() {
               digital marketing and IT skills with the help of our courses.
             </div>
             <div className="flex justify-center lg:justify-start h-16 gap-14 text-white text-sm lg:text-xl mb-6">
-              <button className="bg-brand-color rounded-full text-white leading-snug px-8">
+              <a href="/course">
+                <button className="bg-brand-color h-full rounded-full text-white leading-snug px-8">
                 Browse Courses
-              </button>
+                </button>
+              </a>
               <div className="py-4"> Video Content</div>
             </div>
           </div>

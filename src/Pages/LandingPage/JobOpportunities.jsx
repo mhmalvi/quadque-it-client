@@ -5,9 +5,9 @@ import Icons from "../../Components/Shared/Icons";
 
 const JobOpportunities = () => {
   return (
-    <div className="w-full font-poppins pb-18 lg:pb-44">
+    <div className="w-full pb-18 lg:pb-44">
       <div className="">
-        <div className="w-4/5 font-poppins font-bold text-2xl lg:text-4xl text-center lg:text-start m-auto pb-8 lg:pb-16">
+        <div className="w-4/5 font-bold text-2xl lg:text-4xl text-center lg:text-start m-auto pb-8 lg:pb-16">
           {" "}
           Quality Training to Improve Your Career{" "}
         </div>
@@ -22,7 +22,7 @@ const JobOpportunities = () => {
             {" "}
             Develop Your Expertise through Our Amazing Facilities
           </div>
-          <div className="flex-col lg:text-xl font-poppins lg:px-0 font-semibold px-10 leading-5">
+          <div className="flex-col lg:text-xl lg:px-0 font-semibold px-10 leading-5">
             <div className="flex gap-4 py-4">
               <div><Icons.EBook /></div>
               <span className="my-auto">Get free E-books, videos and kits</span>

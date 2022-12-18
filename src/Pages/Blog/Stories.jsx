@@ -11,8 +11,8 @@ import InstructorsSlider from "./InstructorsSlider";
 
 const Stories = () => {
   return (
-    <div className="w-full bg-home-color font-poppins pt-32 lg:pb-20 lg:px-30 lg:mt-10">
-      <div className="font-poppins text-white">
+    <div className="w-full bg-home-color pt-32 lg:pb-20 lg:px-30 lg:mt-10">
+      <div className="text-white">
         <div className="flex-col m-auto pb-18">
           <div className="text-3xl lg:text-5xl font-bold text-center leading-snug">
             Our Success Stories
@@ -101,7 +101,7 @@ const Stories = () => {
           <InstructorsSlider />
         </div>
         <div className="lg:flex justify-evenly px-3">
-          <div className="w-full m-auto shrinkk-0">
+          <div className="w-full lg:w-1/2 m-auto shrinkk-0">
             <img
               src={meeting}
               alt=""
@@ -109,7 +109,7 @@ const Stories = () => {
               className="rounded-xl shrink-0 lg:pl-20"
             />
           </div>
-          <div className="flex-col lg:justify-start text-start m-auto pt-10 lg:pt-0 lg:px-10">
+          <div className="w-full lg:w-1/2 flex-col lg:justify-start text-start m-auto pt-10 lg:pt-0 lg:px-10">
             <div className="text-2xl lg:text-4xl font-semibold pb-5">
               Some Works from Our Students
             </div>

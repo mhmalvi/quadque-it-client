@@ -53,7 +53,7 @@ export default function DigitalMarketing() {
   };
   return (
     <div className="w-full pb-18 lg:pb-36">
-      <div className="text-center font-poppins rounded-3xl lg:px-20">
+      <div className="text-center rounded-3xl lg:px-20">
         <div className="text-black text-2xl md:text-4xl font-bold pb-5">
           Digital Marketing course
         </div>

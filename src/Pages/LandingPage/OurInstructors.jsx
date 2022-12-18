@@ -68,7 +68,7 @@ export default function OurInstructors() {
         </div>
       </div>
       <div className="">
-        <div className="text-start font-poppins rounded-3xl lg:px-9">
+        <div className="text-start rounded-3xl lg:px-9">
           <div className="text-black lg:px-10 gap-8">
             <Slider ref={sliderRef} {...settings}>
               {Instructor?.map((person) => (
