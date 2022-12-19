@@ -45,7 +45,7 @@ const InstructorsSlider = () => {
   };
   return (
     <>
-      <Slider ref={sliderRef} {...settings} className="z-10">
+      <Slider ref={sliderRef} {...settings} className="">
         {/*     {Course?.map((course) => ( */}
         <div>
           <div className="flex-col bg-transparent rounded-2xl">
@@ -54,7 +54,7 @@ const InstructorsSlider = () => {
             </div>
             <div className="flex-col justify-start m-auto px-6 py-7">
               <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam
+                Pranto Islam1
               </div>
               <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">
@@ -76,7 +76,7 @@ const InstructorsSlider = () => {
             </div>
             <div className="flex-col justify-start m-auto px-6 py-7">
               <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam
+                Pranto Islam2
               </div>
               <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">
@@ -98,7 +98,7 @@ const InstructorsSlider = () => {
             </div>
             <div className="flex-col justify-start m-auto px-6 py-7">
               <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam
+                Pranto Islam3
               </div>
               <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">
@@ -120,7 +120,7 @@ const InstructorsSlider = () => {
             </div>
             <div className="flex-col justify-start m-auto px-6 py-7">
               <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam
+                Pranto Islam4
               </div>
               <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">
@@ -142,7 +142,7 @@ const InstructorsSlider = () => {
             </div>
             <div className="flex-col justify-start m-auto px-6 py-7">
               <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam
+                Pranto Islam5
               </div>
               <div className="text-sm font-semibold pb-3">UX UI Designer</div>
               <div className="text-xl text-[#23BDEE] font-semibold pb-5">

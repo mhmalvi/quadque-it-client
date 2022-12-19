@@ -27,7 +27,7 @@ const CourseMaterial = () => {
                 onClick={() => ToogleTab(1)}
                 className={
                   toogleTab === 1
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer scale-110 duration-150"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer scale-110 duration-200"
                     : "cursor-pointer"
                 }
               >
@@ -37,7 +37,7 @@ const CourseMaterial = () => {
                 onClick={() => ToogleTab(2)}
                 className={
                   toogleTab === 2
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer scale-110 duration-150"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer scale-110 duration-200"
                     : "cursor-pointer"
                 }
               >
@@ -47,7 +47,7 @@ const CourseMaterial = () => {
                 onClick={() => ToogleTab(3)}
                 className={
                   toogleTab === 3
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer scale-110 duration-150"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer scale-110 duration-200"
                     : "cursor-pointer"
                 }
               >
@@ -57,19 +57,19 @@ const CourseMaterial = () => {
                 onClick={() => ToogleTab(4)}
                 className={
                   toogleTab === 4
-                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer scale-110 duration-150"
+                    ? "text-[#23BDEE] border-[#23BDEE] border-b-2 cursor-pointer scale-110 duration-200"
                     : "cursor-pointer"
                 }
               >
                 Course Module
               </div>
             </div>
-            <div className="flex flex-wrap justify-center my-10 gap-24 ">
+            <div className="flex flex-wrap justify-start my-10 mx-10 gap-5">
               {courseData?.map((data) => (
-                <div className="py-2">
+                <span className="flex py-2">
                   <img src={data.image} width={40} alt="" />
-                  {data.title}
-                </div>
+                  <span className="m-auto pl-2">{data.title}</span>
+                </span>
               ))}
             </div>
           </div>
@@ -82,7 +82,7 @@ const CourseMaterial = () => {
       {/* job opportunity section */}
       <div className="w-full lg:bg-gradient-to-r from-transparent to-[#ffffff10] rounded-3xl font-poppins text-white lg:py-12 mb-24">
         <div className="lg:flex justify-evenly">
-          <div className="w-2/3 lg:w-1/2 flex flex-wrap justify-center gap-12 m-auto pb-16 lg:py-8">
+          <div className="w-2/3 lg:w-1/2 flex flex-wrap justify-center mx-auto gap-12 pb-16 lg:py-8">
             <div className="">
               <div>
                 <Icons.Bank className="lg:w-full m-auto pb-2" />

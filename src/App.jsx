@@ -11,11 +11,12 @@ import Blog from './Pages/Blog';
 import BlogDetail from './Pages/Blog/BlogDetail';
 import Gallery from "./Pages/Blog/Gallery";
 import Stories from "./Pages/Blog/Stories";
+import Login from "./Pages/Authentication/Login/Login";
 
 function App() {
   return (
     <div>   
-      <Navbar/>
+      {/* <Navbar/> */}
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route exact path="/course" element={<Course/>}></Route>
@@ -25,7 +26,8 @@ function App() {
         <Route exact path="/blog" element={<Blog/>}></Route>
         <Route exact path="/blog/blog-detail" element={<BlogDetail/>}></Route>
         <Route exact path="/gallery" element={<Gallery/>}></Route>   
-        <Route exact path="/stories" element={<Stories/>}></Route>     
+        <Route exact path="/stories" element={<Stories/>}></Route>  
+        <Route exact path="/login" element={<Login/>}></Route>       
       </Routes>
     </div>
   );

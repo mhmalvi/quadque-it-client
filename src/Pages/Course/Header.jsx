@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Banner from "../../Asset/Image/banner.png";
 import Reading from "../../Asset/Image/reading.png";
 import AnimatedText from "react-animated-text-content";
 
 export default function Header() {
+  const [toogleTab, setToogleTab] = useState(0);
+
+  const ToogleTab = (index) => {
+  setToogleTab(index);
+  console.log(toogleTab);
+  };
+  
   return (
     <div className="w-full">
       <div className="flex bg-[#040422] lg:mt-10 pt-44 lg:pb-20">
@@ -25,13 +32,13 @@ export default function Header() {
                   one that fits your experience level and goals.
               </div>
               <div className="flex justify-center">
-                <div className="bg-white text-black px-4 rounded-2xl m-2">
+                <div onClick={() => ToogleTab(0)} className={`cursor-pointer ${toogleTab === 0 ? "bg-white text-black px-4 rounded-2xl m-2":"bg-black text-white px-4 rounded-2xl m-2"}`}>
                   All
                 </div>
-                <div className="bg-black text-white px-4 rounded-2xl m-2">
+                <div onClick={() => ToogleTab(1)} className={`cursor-pointer ${toogleTab === 1 ? "bg-white text-black px-4 rounded-2xl m-2":"bg-black text-white px-4 rounded-2xl m-2"}`}>
                   Offline
                 </div>
-                <div className="bg-black text-white px-4 rounded-2xl m-2">
+                <div onClick={() => ToogleTab(2)} className={`cursor-pointer ${toogleTab === 2 ? "bg-white text-black px-4 rounded-2xl m-2":"bg-black text-white px-4 rounded-2xl m-2"}`}>
                   Online
                 </div>
               </div>

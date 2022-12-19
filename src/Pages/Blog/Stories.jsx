@@ -26,7 +26,7 @@ const Stories = () => {
           </div>
         </div>
         <div className="hidden lg:block">
-          <div className="lg:flex justify-between pb-72">
+          <div className="lg:flex justify-between gap-5 pb-72">
             <div className="flex-col m-auto gap-6">
               {/* card */}
               <div className="lg:flex bg-white rounded-2xl mb-6">
@@ -38,7 +38,7 @@ const Stories = () => {
                   />
                 </div>
                 <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
-                  <div className="text-4xl font-semibold">Pranto Islam</div>
+                  <div className="text-4xl font-semibold">Pranto Islam 1</div>
                   <div className="text-sm font-semibold">UX UI Designer</div>
                   <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                     Quadque
@@ -54,7 +54,7 @@ const Stories = () => {
               {/* card */}
               <div className="flex flex-col-reverse lg:flex lg:flex-row bg-white rounded-2xl mt-6">
                 <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
-                  <div className="text-4xl font-semibold">Pranto Islam</div>
+                  <div className="text-4xl font-semibold">Pranto Islam 2</div>
                   <div className="text-sm font-semibold">UX UI Designer</div>
                   <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                     Quadque
@@ -81,7 +81,7 @@ const Stories = () => {
                 <img src={Pranto} className="w-full rounded-2xl" alt="" />
               </div>
               <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
-                <div className="text-4xl font-semibold">Pranto Islam</div>
+                <div className="text-4xl font-semibold">Pranto Islam 3</div>
                 <div className="text-sm font-semibold">UX UI Designer</div>
                 <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                   Quadque
@@ -97,9 +97,11 @@ const Stories = () => {
           </div>
         </div>
 
+        {/* instructor MOBILE SLIDER */}
         <div className="lg:hidden mb-12">
           <InstructorsSlider />
         </div>
+
         <div className="lg:flex justify-evenly px-3">
           <div className="w-full lg:w-1/2 m-auto shrinkk-0">
             <img

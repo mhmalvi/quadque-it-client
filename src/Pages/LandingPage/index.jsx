@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../../Components/Shared/Navbar/Navbar';
 import Header from './Header'
 import Courses from './Courses'
 import UpcomingCourses from './UpcomingCourses'
@@ -13,9 +14,10 @@ import BrowseCourse from './BrowseCourse'
 import Footer from './Footer'
 import JobOpportunities from './JobOpportunities'
 
-function Home() {
+function LandingPage() {
   return (
     <div>
+      <Navbar/>
       <Header/>
       <Courses/>
       <UpcomingCourses/>
@@ -35,4 +37,4 @@ function Home() {
   
 }
 
-export default Home;
+export default LandingPage;

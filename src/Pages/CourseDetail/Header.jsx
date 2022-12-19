@@ -10,10 +10,10 @@ import CourseMaterial from "./CourseMaterial";
 export default function Header() {
   return (
     <div className="w-full bg-home-color font-poppins text-white">
-      {/*       <div className="mt-10">
+            <div className="lg:mt-10">
         <img src={Rectangle} className="w-full" alt="" />
-      </div> */}
-      <div className="w-full font-poppins text-white lg:pb-32">
+      </div>
+      <div className="w-full font-poppins text-white lg:pb-32 -mt-64 lg:-mt-[850px]">
         <div className="lg:mt-10">
           <div className="lg:w-3/4 flex-col justify-center m-auto pt-32">
             <div className="text-2xl lg:text-5xl font-bold text-center">
@@ -37,7 +37,7 @@ export default function Header() {
             </div>
             {/* Video Section */}
             <div className="flex flex-wrap justify-center">
-              <div className="w-full ratio-16x9">
+              <div className="w-full ratio-16x9 rounded-lg lg:border-4 mx-3 lg:mx-0">
                 <iframe
                   width="100%"
                   height="429"

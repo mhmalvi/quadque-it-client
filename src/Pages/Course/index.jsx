@@ -7,7 +7,7 @@ export default function index()
 {
   return (
     <div>
-        <Header/>
+        {/* <Header/> */}
         <CourseGallery/>
     </div>
   )

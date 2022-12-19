@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../../Asset/Image/Logo.svg";
 import Icons from "../Icons";
 import NavLinks from "./NavLinks";
@@ -31,7 +32,9 @@ const Navbar = () => {
       <nav className="bg-transparent text-white relative">
         <div className="flex items-center font-medium justify-around sm:mx-10">
           <div className="z-50 p-5 lg:w-auto w-full">
-            <img src={Logo} width={83} alt="QIT" className="cursor-pointer" />
+            <Link to="/">
+              <img src={Logo} width={83} alt="QIT" className="cursor-pointer"/>
+            </Link>
           </div>
           <div onClick={() => setOpen(!open)}>
             {/* Hamburger Animation */}

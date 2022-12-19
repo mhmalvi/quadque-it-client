@@ -2,15 +2,16 @@
     {
       "id": "1",
       "category" : "5",
+      "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
       "title": "Jquery",
-      "bg": "#27e35f",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "2",
       "category" : "3",
+      "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
       "title": "Adobe Illustrator",
@@ -19,6 +20,7 @@
     {
       "id": "3",
       "category" : "3",
+      "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
       "title": "Adobe Photoshop",
@@ -27,30 +29,34 @@
     {
       "id": "4",
       "category" : "6",
+      "platform" : "online",
       "date": "20-20-20",
       "price": "12000",
-      "title": "Sculpting with Blender",
+      "title": "Sculpting with Blender (Online)",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "5",
       "category" : "5",
+      "platform" : "online",
       "price": "12000",
       "date": "20-20-20",
-      "title": "Android Development",
+      "title": "Android Development (Online)",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "6",
       "category" : "5",
+      "platform" : "online",
       "date": "20-20-20",
       "price": "10000",
-      "title": "Python Programming",
+      "title": "Python Programming (Online)",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "7",
       "category" : "4",
+      "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
       "title": "Digital Marketing Research Strategy",
@@ -59,22 +65,25 @@
     {
       "id": "8",
       "category" : "7",
+      "platform" : "online",
       "date": "20-20-20",
       "price": "12000",
-      "title": "Advanced .NET",
+      "title": "Advanced .NET (Online)",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "9",
       "category" : "2",
+      "platform" : "online",
       "price": "12000",
       "date": "20-20-20",
-      "title": "Grammar",
+      "title": "Grammar (Online)",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "10",
       "category" : "6",
+      "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
       "title": "Rhyno (Architecture)",
@@ -83,6 +92,7 @@
     {
       "id": "11",
       "category" : "2",
+      "platform" : "online",
       "date": "20-20-20",
       "price": "17000",
       "title": "Writing (Online)",
@@ -91,14 +101,16 @@
     {
       "id": "12",
       "category" : "2",
+      "platform" : "online",
       "date": "20-20-20",
       "price": "14000",
-      "title": "Writing (Offline)",
+      "title": "Writing (Online)",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "13",
       "category" : "2",
+      "platform" : "offline",
       "date": "20-20-20",
       "price": "11000",
       "title": "Writing Strategy",
@@ -107,6 +119,7 @@
     {
       "id": "14",
       "category" : "5",
+      "platform" : "offline",
       "date": "20-20-20",
       "price": "14000",
       "title": ".NET Development",
@@ -115,33 +128,37 @@
     {
       "id": "15",
       "category" : "5",
+      "platform" : "online",
       "date": "20-20-20",
       "price": "18000",
-      "title": "DevOps",
+      "title": "DevOps (Online)",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "16",
       "category" : "5",
+      "platform" : "offline",
       "date": "20-20-20",
       "price": "15000",
-      "title": "JavaScript (React)",
+      "title": "JavaScript React",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "17",
       "category" : "7",
+      "platform" : "online",
       "date": "20-20-20",
       "price": "12000",
-      "title": "Advanced DevOps",
+      "title": "Advanced DevOps (Online)",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     },
     {
       "id": "18",
       "category" : "4",
+      "platform" : "offline",
       "date": "20-20-20",
       "price": "13000",
-      "title": "Digital Marketing (Online)",
+      "title": "Digital Marketing",
       "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
     }
   ]

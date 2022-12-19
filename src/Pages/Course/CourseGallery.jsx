@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Graphics from "../../Asset/Image/graphics.png";
 import Motion from "../../Asset/Image/motion.png";
 import Uiux from "../../Asset/Image/uiux.png";
+import Banner from "../../Asset/Image/banner.png";
+import Reading from "../../Asset/Image/reading.png";
 import Course from "./Course.json";
 import { useNavigate } from "react-router-dom";
 
@@ -10,12 +12,18 @@ import { Dropdown, Menu, Space } from "antd";
 
 export default function CourseGallery() {
   const navigate = useNavigate();
-  const [toogleTab, setToogleTab] = useState(1);
+  const [toogleTab, setToogleTab] = useState(2);
+  const [toogleMediumTab, setToogleMediumTab] = useState("all");
   const [courseData, setCourseData] = useState();
 
-  const ToogleTab = (index) => {
+  const ToogleCategory = (index) => {
     setToogleTab(index);
     console.log("toogleTab", toogleTab);
+  };
+
+  const ToogleMedium = (index) => {
+    setToogleMediumTab(index);
+    console.log("medium", toogleMediumTab);
   };
 
   const menu = (
@@ -63,92 +71,156 @@ export default function CourseGallery() {
 
   useEffect(() => {
     let CourseDetail;
-    if (toogleTab !== 1) {
-      CourseDetail = Course.filter((cor) => cor.category == toogleTab);
-    } else {
-      CourseDetail = Course.map((cor) => cor);
+    if (toogleTab !== 0) {
+      if (toogleMediumTab !== "all") {
+        CourseDetail = Course.filter(
+          (cor) => cor.category == toogleTab && cor.platform == toogleMediumTab
+        );
+      } else {
+        CourseDetail = Course.filter((cor) => cor.category == toogleTab);
+        /* CourseDetail = Course.map((cor) => cor); */
+      }
+      setCourseData(CourseDetail);
     }
-    setCourseData(CourseDetail);
-  }, [Course, toogleTab]);
+  }, [Course, toogleTab, toogleMediumTab]);
 
   return (
-    <div className="w-full font-poppins text-white">
-      <div className="bg-home-color lg:py-13 px-10 py-10 lg:px-30 lg:relative">
+    <div className="w-full h-screen font-poppins text-white">
+      <div className="flex bg-[#040422] lg:mt-10 pt-44 lg:pb-20">
+        <div className="w-full ">
+          <div className="flex m-auto justify-center">
+            <div className="hidden lg:block">
+              <img
+                src={Banner}
+                className="absolute top-[44%] left-[10%]"
+                alt=""
+              />
+            </div>
+            <div className="w-2/3 sm:w-1/2 lg:w-1/3 text-white text-center">
+              <div className="text-4xl pb-2">Courses</div>
+              <div className="m-auto pb-8">
+                Browse through our extensive collection of courses to choose one
+                that fits your experience level and goals.
+              </div>
+              <div className="flex justify-center">
+                <div
+                  onClick={() => ToogleMedium("all")}
+                  className={`cursor-pointer ${
+                    toogleMediumTab === "all"
+                      ? "bg-white text-black px-4 rounded-2xl m-2"
+                      : "bg-black text-white px-4 rounded-2xl m-2"
+                  }`}
+                >
+                  All
+                </div>
+                <div
+                  onClick={() => ToogleMedium("offline")}
+                  className={`cursor-pointer ${
+                    toogleMediumTab === "offline"
+                      ? "bg-white text-black px-4 rounded-2xl m-2"
+                      : "bg-black text-white px-4 rounded-2xl m-2"
+                  }`}
+                >
+                  Offline
+                </div>
+                <div
+                  onClick={() => ToogleMedium("online")}
+                  className={`cursor-pointer ${
+                    toogleMediumTab === "online"
+                      ? "bg-white text-black px-4 rounded-2xl m-2"
+                      : "bg-black text-white px-4 rounded-2xl m-2"
+                  }`}
+                >
+                  Online
+                </div>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <img
+                src={Reading}
+                className="absolute right-[6%] top-[31%]"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-home-color lg:py-13 px-5 py-10 lg:px-30 lg:relative">
         <div className="lg:flex">
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
             <ul className="flex-col py-5 font-thin leading-10">
-              <li onClick={() => ToogleTab(1)}>
+              {/* <li onClick={() => ToogleCategory(1)}>
                 <div
                   className={
                     toogleTab === 1
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
+                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
                   All
                 </div>
-              </li>
-              <li onClick={() => ToogleTab(2)}>
+              </li> */}
+              <li onClick={() => ToogleCategory(2)}>
                 <div
                   className={
                     toogleTab === 2
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
+                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
                   Content Writing and Development
                 </div>
               </li>
-              <li onClick={() => ToogleTab(3)}>
+              <li onClick={() => ToogleCategory(3)}>
                 <div
                   className={
                     toogleTab === 3
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
+                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
                   Graphics & Design
                 </div>
               </li>
-              <li onClick={() => ToogleTab(4)}>
+              <li onClick={() => ToogleCategory(4)}>
                 <div
                   className={
                     toogleTab === 4
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
+                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
                   Digital Marketing
                 </div>
               </li>
-              <li onClick={() => ToogleTab(5)}>
+              <li onClick={() => ToogleCategory(5)}>
                 <div
                   className={
                     toogleTab === 5
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
+                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
                   Programming
                 </div>
               </li>
-              <li onClick={() => ToogleTab(6)}>
+              <li onClick={() => ToogleCategory(6)}>
                 <div
                   className={
                     toogleTab === 6
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
+                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
                   Video & Animation
                 </div>
               </li>
-              <li onClick={() => ToogleTab(7)}>
+              <li onClick={() => ToogleCategory(7)}>
                 <div
                   className={
                     toogleTab === 7
-                      ? "w-1/2 text-[#23BDEE] border-[#23BDEE] border-b-2 scale-110 duration-200 cursor-pointer"
+                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
@@ -166,30 +238,8 @@ export default function CourseGallery() {
             </a>
           </Dropdown>
           <div className="w-full">
-            {/* <div className="text-2xl lg:text-4xl py-4">
-              {(() => {
-                switch (toogleTab) {
-                  case '1':
-                    return "All Courses";
-                  case '2':
-                    return "Content Writing and Development Courses";
-                  case '3':
-                    return "Graphics Design Courses";
-                  case '4':
-                    return "Digital Marketing Courses";
-                  case '5':
-                    return "Programming Courses";
-                  case '6':
-                    return "Video & Animation Courses";
-                  case '7':
-                    return "Other Courses";
-                  default:
-                    return "No course selected";
-                }
-              })()}
-            </div> */}
             {/* COURSE Gallery */}
-            <div className="grid grid-col-1 lg:grid-cols-2 text-white gap-6 my-6">
+            <div className="grid grid-col-1 lg:grid-cols-2 text-white gap-6 lg:mx-18 my-6">
               {/* cards */}
               {courseData?.map((details) =>
                 details ? (
@@ -220,7 +270,7 @@ export default function CourseGallery() {
                     </div>
                   </div>
                 ) : (
-                  "NO DATA"
+                  "No Course found!"
                 )
               )}
             </div>
