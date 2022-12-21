@@ -14,10 +14,10 @@ import BrowseCourse from './BrowseCourse'
 import Footer from './Footer'
 import JobOpportunities from './JobOpportunities'
 
-function LandingPage() {
+function LandingPageSections() {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Header/>
       <Courses/>
       <UpcomingCourses/>
@@ -37,4 +37,4 @@ function LandingPage() {
   
 }
 
-export default LandingPage;
+export default LandingPageSections;

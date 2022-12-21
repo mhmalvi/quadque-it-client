@@ -1,8 +1,8 @@
 import './index.css';
 import React from "react";
 import Navbar from "./Components/Shared/Navbar/Navbar";
+import LandingPage from "./Pages/LandingPage";
 import { Route, Routes } from "react-router-dom";
-import Home from './Pages/LandingPage';
 import AboutUs from "./Pages/About";
 import Course from './Pages/Course';
 import CourseDetail from './Pages/CourseDetail';
@@ -16,9 +16,9 @@ import Login from "./Pages/Authentication/Login/Login";
 function App() {
   return (
     <div>   
-      {/* <Navbar/> */}
+      <Navbar/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<LandingPage/>}/>
         <Route exact path="/course" element={<Course/>}></Route>
         <Route exact path="/course/course-detail" element={<CourseDetail/>}></Route>
         <Route exact path="/about-us" element={<AboutUs/>}></Route>

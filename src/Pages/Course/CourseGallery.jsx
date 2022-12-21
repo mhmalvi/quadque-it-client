@@ -10,11 +10,14 @@ import { useNavigate } from "react-router-dom";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Menu, Space } from "antd";
 
+import { handleFetchCourseCategories } from "../../Components/Services/company";
+
 export default function CourseGallery() {
   const navigate = useNavigate();
-  const [toogleTab, setToogleTab] = useState(2);
+  const [toogleTab, setToogleTab] = useState(1);
   const [toogleMediumTab, setToogleMediumTab] = useState("all");
   const [courseData, setCourseData] = useState();
+  const [categoryData, setCategoryData] = useState();
 
   const ToogleCategory = (index) => {
     setToogleTab(index);
@@ -69,7 +72,7 @@ export default function CourseGallery() {
     navigate("./course-detail");
   };
 
-  useEffect(() => {
+/*   useEffect(() => {
     let CourseDetail;
     if (toogleTab !== 0) {
       if (toogleMediumTab !== "all") {
@@ -78,11 +81,20 @@ export default function CourseGallery() {
         );
       } else {
         CourseDetail = Course.filter((cor) => cor.category == toogleTab);
-        /* CourseDetail = Course.map((cor) => cor); */
       }
       setCourseData(CourseDetail);
     }
-  }, [Course, toogleTab, toogleMediumTab]);
+  }, [Course, toogleTab, toogleMediumTab]); */
+
+    useEffect(() => {
+    (async () => {
+      const fetchCourseCategories = await handleFetchCourseCategories();
+        setCategoryData(fetchCourseCategories);
+        console.log("category data", categoryData);
+    })();
+  }, []);
+
+  console.log("wtd", categoryData);
 
   return (
     <div className="w-full h-screen font-poppins text-white">
@@ -149,84 +161,20 @@ export default function CourseGallery() {
         <div className="lg:flex">
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
-            <ul className="flex-col py-5 font-thin leading-10">
-              {/* <li onClick={() => ToogleCategory(1)}>
+            <ul className="flex-col py-5 text-sm font-thin leading-10">
+              {categoryData?.map((category) => (
+              <li key={category.id} onClick={() => ToogleCategory(category.id)}>
                 <div
                   className={
-                    toogleTab === 1
+                    toogleTab === category.id
                       ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
                       : "cursor-pointer"
                   }
                 >
-                  All
-                </div>
-              </li> */}
-              <li onClick={() => ToogleCategory(2)}>
-                <div
-                  className={
-                    toogleTab === 2
-                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                      : "cursor-pointer"
-                  }
-                >
-                  Content Writing and Development
+                  {category.name}
                 </div>
               </li>
-              <li onClick={() => ToogleCategory(3)}>
-                <div
-                  className={
-                    toogleTab === 3
-                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                      : "cursor-pointer"
-                  }
-                >
-                  Graphics & Design
-                </div>
-              </li>
-              <li onClick={() => ToogleCategory(4)}>
-                <div
-                  className={
-                    toogleTab === 4
-                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                      : "cursor-pointer"
-                  }
-                >
-                  Digital Marketing
-                </div>
-              </li>
-              <li onClick={() => ToogleCategory(5)}>
-                <div
-                  className={
-                    toogleTab === 5
-                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                      : "cursor-pointer"
-                  }
-                >
-                  Programming
-                </div>
-              </li>
-              <li onClick={() => ToogleCategory(6)}>
-                <div
-                  className={
-                    toogleTab === 6
-                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                      : "cursor-pointer"
-                  }
-                >
-                  Video & Animation
-                </div>
-              </li>
-              <li onClick={() => ToogleCategory(7)}>
-                <div
-                  className={
-                    toogleTab === 7
-                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                      : "cursor-pointer"
-                  }
-                >
-                  Others
-                </div>
-              </li>
+              ))}
             </ul>
           </div>
           <Dropdown overlay={menu} className="flex justify-center lg:hidden">
