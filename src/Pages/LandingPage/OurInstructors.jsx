@@ -47,7 +47,7 @@ export default function OurInstructors() {
   return (
     <div className="w-full pb-13 lg:pb-24">
       <div className="flex justify-between lg:px-10">
-        <div className="text-black text-3xl font-semibold text-center lg:text-start ml-3 lg:ml-12 pb-16">
+        <div className="text-black text-3xl font-semibold text-center lg:text-start ml-3 lg:ml-12 pb-16 text-shadow">
           Meet our instructors
         </div>
         <div className="hidden lg:block">
@@ -80,7 +80,7 @@ export default function OurInstructors() {
                       className="group-hover:opacity-0 group-hover:scale-80 duration-700 m-auto"
                       alt=""
                     />
-                    <div className="w-[350px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 px-12 pb-12 ">
+                    <div className="w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 px-12 pb-12 ">
                       <div className="pb-4">
                         <img src={Apu} alt="" className="m-auto" width={110} />
                       </div>

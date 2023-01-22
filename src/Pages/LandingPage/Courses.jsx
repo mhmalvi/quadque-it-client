@@ -5,7 +5,7 @@ export default function Courses() {
   return (
     <div className="w-full pb-18 lg:pb-24">
       <div className="lg:bg-[#5c5bfd10] lg:text-5xl text-center m-auto lg:mx-10 rounded-3xl py-4 lg:py-24 px-4 lg:px-20">
-        <div className="text-black text-2xl md:text-4xl font-bold pb-5">
+        <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
           Effective courses to develop in-demand skills
         </div>
         <div className="text-black text-sm md:text-base font-thin pb-5">

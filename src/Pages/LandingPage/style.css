@@ -1,0 +1,7 @@
+.text-shadow {
+    text-shadow: 7px 7px 5px rgba(5, 19, 73, 0.4);
+}
+
+.text-shadow-white {
+    text-shadow: 7px 7px 5px rgba(68, 68, 68, 0.5);
+}

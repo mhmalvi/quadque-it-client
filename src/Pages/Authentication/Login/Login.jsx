@@ -8,12 +8,14 @@ import Psychic from "../../../Asset/Gif/psychic.gif";
 import Logo from "../../../Asset/Image/logo-black.svg";
 import RightArrow from "../../../Asset/Image/left-arrow-black.png";
 import LeftArrow from "../../../Asset/Image/right-arrow-black.png";
+import { useLocation } from "react-router-dom";
 //import Loading from "../../../Components/Shared/Loader";
 //import { Storage } from "../../../Components/Shared/utils/store";
 //import { addUserDetails, setLoader } from "../../../features/user/userSlice";
 //import ForgotPassword from "./ForgotModal";
 
 const Login = () => {
+  const location = useLocation();
   const [tooglePasswordForget, setTooglePasswordForget] = useState(false);
   const [boxLeft, setboxLeft] = useState(true);
   const [data, setData] = useState({
@@ -146,8 +148,16 @@ const Login = () => {
   const toogleSignupLogin = () => {
     setboxLeft(!boxLeft);
   };
+
+  useEffect(() => {
+    console.log(location);
+    if(location.pathname === '/auth'){
+      document.getElementById("Navbar").style.display="none";
+    }
+  }, [])
+  
   return (
-    <div className="sm:flex justify-center items-center h-screen">
+    <div className="sm:flex justify-center items-center h-screen ">
       <div
         className={`absolute z-50 container sm:max-w-sm h-[85%] sm:rounded-tl-lg sm:rounded-bl-lg p-3 bg-[#0D0D2B] shadow-lg ${
           boxLeft
@@ -162,6 +172,7 @@ const Login = () => {
           <Icons.Instagram />
           <Icons.Youtube />
         </div>
+        <div className="text-white text-center py-8"><a href="/">Back to Home</a></div>
       </div>
 
       {/* SIGNUP FORM */}

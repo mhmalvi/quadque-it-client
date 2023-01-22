@@ -7,7 +7,7 @@ const JobOpportunities = () => {
   return (
     <div className="w-full pb-18 lg:pb-44">
       <div className="">
-        <div className="w-4/5 font-bold text-2xl lg:text-4xl text-center lg:text-start m-auto pb-8 lg:pb-16">
+        <div className="w-4/5 font-bold text-2xl lg:text-4xl text-center lg:text-start m-auto pb-8 lg:pb-16 text-shadow">
           {" "}
           Quality Training to Improve Your Career{" "}
         </div>

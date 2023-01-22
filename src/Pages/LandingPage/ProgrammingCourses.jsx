@@ -54,7 +54,7 @@ export default function ProgrammingCourses() {
   return (
     <div className="w-full pb-13 lg:pb-24">
       <div className="text-center rounded-3xl lg:px-20">
-        <div className="text-black text-2xl md:text-4xl font-bold pb-5">
+        <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
           Programming course
         </div>
         <div className="text-white lg:pt-13 gap-6">

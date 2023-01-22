@@ -74,24 +74,24 @@ const ResetPassword = () => {
             <img src={picture} alt="" />
           </div>
           <div>
-            <p className="text-gray-500 pt-2 font-poppins font-semibold m-0">
+            <p className="text-gray-500 pt-2  font-semibold m-0">
               Jahid Hasan
             </p>
-            <span className="text-gray-500 text-sm font-poppins">
+            <span className="text-gray-500 text-sm ">
               jahid@quadque.digital
             </span>
           </div>
         </div>
 
         <div className="m-6">
-          <h1 className="text-center text-2xl font-semibold text-gray-700 font-poppins">
+          <h1 className="text-center text-2xl font-semibold text-gray-700 ">
             Reset your password
           </h1>
-          <p className="text-gray-500 pt-2 font-poppins text-xs">
+          <p className="text-gray-500 pt-2  text-xs">
             Strong passwords include numbers, letters, and punctuation marks.
           </p>
           <form className="mb-4">
-            <div className="mb-4 font-poppins">
+            <div className="mb-4 ">
               <div className="flex justify-between mb-2">
                 <label htmlFor="password" className="text-sm text-gray-600">
                   New password
@@ -122,7 +122,7 @@ const ResetPassword = () => {
             )}
             {/* Password matching dialogue END*/}
 
-            <div className="mb-4 font-poppins">
+            <div className="mb-4 ">
               <div className="flex justify-between mb-2">
                 <label htmlFor="password" className="text-sm text-gray-600">
                   Confirm new password
@@ -146,7 +146,7 @@ const ResetPassword = () => {
               <div className="mb-6">
                 <button
                   type="submit"
-                  className="w-full p-3 text-white font-medium bg-brand-color bg-opacity-80 hover:bg-primary-800 rounded-md focus:outline-none font-poppins"
+                  className="w-full p-3 text-white font-medium bg-brand-color bg-opacity-80 hover:bg-primary-800 rounded-md focus:outline-none "
                 >
                   Reset
                 </button>
@@ -156,7 +156,7 @@ const ResetPassword = () => {
                 <button
                   disabled
                   type="submit"
-                  className="w-full p-3 text-white font-medium bg-brand-color bg-opacity-40 hover:bg-primary-800 rounded-md focus:outline-none font-poppins"
+                  className="w-full p-3 text-white font-medium bg-brand-color bg-opacity-40 hover:bg-primary-800 rounded-md focus:outline-none "
                 >
                   Reset
                 </button>

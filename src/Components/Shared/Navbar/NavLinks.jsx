@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./MyLinks";
-//bg-opacity-10 backdrop-filter backdrop-blur-lg
 
 const NavLinks = () => {
   const [toogleSubmenu, setToogleSubmenu] = useState("");

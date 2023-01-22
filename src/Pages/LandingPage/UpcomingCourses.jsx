@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import "./style.css";
 import Graphics from "../../Asset/Image/graphics.png";
 import Motion from "../../Asset/Image/motion.png";
 import Uiux from "../../Asset/Image/uiux.png";
@@ -54,7 +55,7 @@ export default function UpcomingCourses() {
   return (
     <div className="pb-18 lg:pb-24">
       <div className="text-center rounded-3xl lg:px-20">
-        <div className="text-black text-2xl md:text-4xl font-bold pb-5">
+        <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
           Our Upcoming Courses
         </div>
         <div className="text-lg px-5 lg:px-0">

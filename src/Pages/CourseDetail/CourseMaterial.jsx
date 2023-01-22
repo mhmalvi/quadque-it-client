@@ -19,7 +19,7 @@ const CourseMaterial = () => {
   return (
     <div>
       {/* tools section */}
-      <div className="w-full lg:bg-gradient-to-l from-transparent to-[#ffffff10] rounded-3xl font-poppins text-white lg:py-12 lg:px-12 mb-18">
+      <div className="w-full lg:bg-gradient-to-l from-transparent to-[#ffffff10] rounded-3xl text-white lg:py-12 lg:px-12 mb-18">
         <div className="lg:flex justify-evenly  gap-10">
           <div className="w-full lg:w-2/3 flex-col justify-evenly">
             <div className="flex justify-around text-lg lg:text-xl">
@@ -80,7 +80,7 @@ const CourseMaterial = () => {
       </div>
 
       {/* job opportunity section */}
-      <div className="w-full lg:bg-gradient-to-r from-transparent to-[#ffffff10] rounded-3xl font-poppins text-white lg:py-12 mb-24">
+      <div className="w-full lg:bg-gradient-to-r from-transparent to-[#ffffff10] rounded-3xl text-white lg:py-12 mb-24">
         <div className="lg:flex justify-evenly">
           <div className="w-2/3 lg:w-1/2 flex flex-wrap justify-center mx-auto gap-12 pb-16 lg:py-8">
             <div className="">

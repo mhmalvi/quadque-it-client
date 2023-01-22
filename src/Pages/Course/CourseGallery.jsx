@@ -6,18 +6,19 @@ import Banner from "../../Asset/Image/banner.png";
 import Reading from "../../Asset/Image/reading.png";
 import Course from "./Course.json";
 import { useNavigate } from "react-router-dom";
-
-import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, Menu, Space } from "antd";
+import { Select } from "antd";
 
 import { handleFetchCourseCategories } from "../../Components/Services/company";
+import useCategory from "../../Components/Shared/Hooks/useCategory";
 
 export default function CourseGallery() {
+  const [Category] = useCategory();
   const navigate = useNavigate();
   const [toogleTab, setToogleTab] = useState(1);
   const [toogleMediumTab, setToogleMediumTab] = useState("all");
-  const [courseData, setCourseData] = useState();
   const [categoryData, setCategoryData] = useState();
+  const [categoryItems, setCategoryItems] = useState([]);
+  const [courseData, setCourseData] = useState();
 
   const ToogleCategory = (index) => {
     setToogleTab(index);
@@ -29,76 +30,43 @@ export default function CourseGallery() {
     console.log("medium", toogleMediumTab);
   };
 
-  const menu = (
-    <Menu
-      onClick={({ key }) => {
-        setToogleTab(key);
-        console.log("toogleTab", toogleTab);
-      }}
-      items={[
-        {
-          key: 1,
-          label: <a>All</a>,
-        },
-        {
-          key: 2,
-          label: <a>Content Writing and Development</a>,
-        },
-        {
-          key: 3,
-          label: <a>Graphics Design</a>,
-        },
-        {
-          key: 4,
-          label: <a>Digital Marketing</a>,
-        },
-        {
-          key: 5,
-          label: <a>Programming</a>,
-        },
-        {
-          key: 6,
-          label: <a>Video & Animation</a>,
-        },
-        {
-          key: 7,
-          label: <a>Others</a>,
-        },
-      ]}
-    />
-  );
-
   const navigateToCourseDetails = () => {
     navigate("./course-detail");
   };
 
-/*   useEffect(() => {
+  useEffect(() => {
     let CourseDetail;
     if (toogleTab !== 0) {
       if (toogleMediumTab !== "all") {
         CourseDetail = Course.filter(
-          (cor) => cor.category == toogleTab && cor.platform == toogleMediumTab
+          (cor) => cor.category === toogleTab && cor.platform == toogleMediumTab
         );
       } else {
         CourseDetail = Course.filter((cor) => cor.category == toogleTab);
       }
       setCourseData(CourseDetail);
     }
-  }, [Course, toogleTab, toogleMediumTab]); */
+  }, [Course, toogleTab, toogleMediumTab]);
 
-    useEffect(() => {
+  useEffect(() => {
+    const items = [];
+
     (async () => {
-      const fetchCourseCategories = await handleFetchCourseCategories();
-        setCategoryData(fetchCourseCategories);
-        console.log("category data", categoryData);
+      Category.forEach((category) => {
+        items.push({
+          label: `${category?.name}`,
+          value: `${category?.id}`,
+        });
+      });
+      setCategoryItems(items);
+      console.log("category data", categoryData);
     })();
-  }, []);
-
-  console.log("wtd", categoryData);
+  }, [Category]);
+  console.log("items,", categoryItems);
 
   return (
-    <div className="w-full h-screen font-poppins text-white">
-      <div className="flex bg-[#040422] lg:mt-10 pt-44 lg:pb-20">
+    <div className="w-full bg-[#040422] h-screen text-white">
+      <div className="flex lg:mt-10 pt-44 lg:pb-20">
         <div className="w-full ">
           <div className="flex m-auto justify-center">
             <div className="hidden lg:block">
@@ -109,7 +77,7 @@ export default function CourseGallery() {
               />
             </div>
             <div className="w-2/3 sm:w-1/2 lg:w-1/3 text-white text-center">
-              <div className="text-4xl pb-2">Courses</div>
+              <div className="text-4xl pb-2 text-shadow-white">Courses</div>
               <div className="m-auto pb-8">
                 Browse through our extensive collection of courses to choose one
                 that fits your experience level and goals.
@@ -117,30 +85,30 @@ export default function CourseGallery() {
               <div className="flex justify-center">
                 <div
                   onClick={() => ToogleMedium("all")}
-                  className={`cursor-pointer ${
+                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
                     toogleMediumTab === "all"
-                      ? "bg-white text-black px-4 rounded-2xl m-2"
-                      : "bg-black text-white px-4 rounded-2xl m-2"
+                      ? "bg-white text-black duration-500"
+                      : "bg-black text-white duration-500"
                   }`}
                 >
                   All
                 </div>
                 <div
                   onClick={() => ToogleMedium("offline")}
-                  className={`cursor-pointer ${
+                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
                     toogleMediumTab === "offline"
-                      ? "bg-white text-black px-4 rounded-2xl m-2"
-                      : "bg-black text-white px-4 rounded-2xl m-2"
+                      ? "bg-white text-black duration-500"
+                      : "bg-black text-white duration-500"
                   }`}
                 >
                   Offline
                 </div>
                 <div
                   onClick={() => ToogleMedium("online")}
-                  className={`cursor-pointer ${
+                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
                     toogleMediumTab === "online"
-                      ? "bg-white text-black px-4 rounded-2xl m-2"
-                      : "bg-black text-white px-4 rounded-2xl m-2"
+                      ? "bg-white text-black duration-500"
+                      : "bg-black text-white duration-500"
                   }`}
                 >
                   Online
@@ -162,30 +130,37 @@ export default function CourseGallery() {
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
             <ul className="flex-col py-5 text-sm font-thin leading-10">
-              {categoryData?.map((category) => (
-              <li key={category.id} onClick={() => ToogleCategory(category.id)}>
-                <div
-                  className={
-                    toogleTab === category.id
-                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                      : "cursor-pointer"
-                  }
+              {Category?.map((category) => (
+                <li
+                  key={category.id}
+                  onClick={() => ToogleCategory(category.id)}
                 >
-                  {category.name}
-                </div>
-              </li>
+                  <div
+                    className={
+                      toogleTab === category.id
+                        ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
+                        : "cursor-pointer"
+                    }
+                  >
+                    {category.name}
+                  </div>
+                </li>
               ))}
             </ul>
           </div>
-          <Dropdown overlay={menu} className="flex justify-center lg:hidden">
-            <a>
-              <Space className="border py-2 px-4 rounded-full">
-                Course Catagory
-                <DownOutlined className="pl-4" />
-              </Space>
-            </a>
-          </Dropdown>
-          <div className="w-full">
+
+          <div className="lg:hidden flex justify-center">
+            <Select
+              style={{
+                width: '60%',
+              }}
+              placeholder="select Category"
+              onChange={ToogleCategory}
+              options={categoryItems}
+            />
+          </div>
+
+          <div className="w-full bg-[#040422]">
             {/* COURSE Gallery */}
             <div className="grid grid-col-1 lg:grid-cols-2 text-white gap-6 lg:mx-18 my-6">
               {/* cards */}

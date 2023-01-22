@@ -36,3 +36,87 @@
     transform: rotate(360deg);
   }
 }
+
+/* Overriding antd modal */
+
+.ant-modal,
+.ant-modal-content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  backdrop-filter: blur(10px);
+}
+
+.ant-modal-body {
+  height: 100vh;
+}
+
+.ant-modal-content {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  color: #ffffff !important;
+}
+
+.ant-modal-title {
+  background-color: white !important;
+  border-radius: 0 !important;
+  color: #ffffff !important;
+}
+
+.ant-modal-close-x {
+  display: block;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  color: rgb(255, 255, 255) !important;
+  line-height: 22px;
+  text-align: center;
+  text-transform: none;
+  text-rendering: auto;
+}
+
+.cross_btn>.ant-modal-content>.ant-modal-close {
+  position: absolute;
+  top: 3.5rem !important;
+  margin-right: 0.7rem !important;
+  inset-inline-end: 17px;
+  z-index: 1010;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  background: transparent;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -100,7 +100,7 @@
     },
     {
       "id": "12",
-      "category" : "2",
+      "category" : "1",
       "platform" : "online",
       "date": "20-20-20",
       "price": "14000",
@@ -109,7 +109,7 @@
     },
     {
       "id": "13",
-      "category" : "2",
+      "category" : "1",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "11000",

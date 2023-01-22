@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="py-4">
             <img src={Logo} width={120} alt="" />
           </div>
-          <div className="text-xl md:text-lg pb-8">
+          <div className="text-sm text-justify md:text-lg pb-8">
             This is your opportunity to learn the most demandable IT and digital
             marketing skills from some of the best experts in the industry.{" "}
             <br />
@@ -34,53 +34,43 @@ export default function Footer() {
         </div>
         <div className="md:flex justify-between gap-6">
           <div className="md:w-1/3 flex md:flex-none gap-10">
-            <div className=" flex-col text-2xl md:text-lg py-4 lg:py-0">
+            <div className=" flex-col text-xl md:text-lg py-4 lg:py-0">
               <div className="p-2">
-                <a href="" className="no-underline">
+                <a href="/" className="no-underline">
                   Home
                 </a>
               </div>
               <div className="p-2">
-                <a href="" className="no-underline">
+                <a href="/about-us" className="no-underline">
                   About
                 </a>
               </div>
               <div className="p-2">
-                <a href="" className="no-underline">
+                <a href="/course" className="no-underline">
                   Courses
                 </a>
               </div>
               <div className="p-2">
-                <a href="" className="no-underline">
-                  Story
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="" className="no-underline">
+                <a href="/contact" className="no-underline">
                   Contact
                 </a>
               </div>
             </div>
 
-            <div className="flex-col text-2xl md:text-lg py-4 lg:py-0">
+            <div className="flex-col text-xl md:text-lg py-4 lg:py-0">
               <div className="p-2">
-                <a href="" className="text-white no-underline">
+                <a href="/blog" className="text-white no-underline">
                   Blog
                 </a>
               </div>
               <div className="p-2">
-                <a href="" className="text-white no-underline">
+                <a href="/gallery" className="text-white no-underline">
                   Gallery
                 </a>
               </div>
               <div className="p-2">
-                <a href="" className="text-white no-underline">
-                  Workshops
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="" className="text-white no-underline">
-                  Success stories
+                <a href="/stories" className="no-underline">
+                  Story
                 </a>
               </div>
             </div>
@@ -109,7 +99,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:w-1/3 flex-col text-2xl md:text-lg py-4 md:py-0">
+          <div className="md:w-1/3 flex-col text-lg py-4 md:py-0">
             <div className="font-bold mx-4 mb-6">
               <a href="" className="text-white">
                 Stay Connected

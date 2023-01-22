@@ -15,14 +15,14 @@ const Contact = () => {
     zoom: 11,
   };
   return (
-    <div className="w-full bg-home-color font-poppins pt-40 mt-10">
+    <div className="w-full bg-home-color pt-40 lg:mt-10">
       <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl">
         <div className="lg:w-1/2 text-white m-auto pt-20 lg:pt-0">
-          <div className="text-2xl lg:text-4xl font-bold pb-5">
+          <div className="text-2xl lg:text-4xl font-bold pb-5 px-6 lg:px-0">
             Level -7, 8/C, F.R Tower, Sukrabad, Panthapath, Dhaka 1207,
             Bangladesh
           </div>
-          <div className="flex text-xl pb-10 gap-20">
+          <div className="w-2/3 flex lg:flex-row flex-col justify-between text-xl pb-10 px-6 lg:px-0">
             <ul>
               <li className="p-2">info@quadque.tech</li>
               <li className="p-2">+61405899496</li>
@@ -34,10 +34,10 @@ const Contact = () => {
               <li className="p-2">8:00 am - 5:30 pm</li>
             </ul>
           </div>
-          <div className="text-white text-base lg:text-xl mb-6">
+          <div className="text-white text-base lg:text-xl mb-6 px-6 lg:px-0">
             <div className="font-semibold">social channels</div>
           </div>
-          <div className="flex text-sm font-thin pb-16">
+          <div className="flex text-sm font-thin pb-16 px-6 lg:px-0">
             <a className="pr-4" href="https://www.facebook.com/quadquetech/">
               Facebook
             </a>
@@ -51,7 +51,7 @@ const Contact = () => {
               LinkedIn
             </a>
           </div>
-          <div style={{ height: "50vh", width: "90%" }}>
+          <div style={{ height: "50vh", width: "100%", margin: "auto" }}>
             <GoogleMapReact
               bootstrapURLKeys={{ key: "" }}
               defaultCenter={defaultProps.center}

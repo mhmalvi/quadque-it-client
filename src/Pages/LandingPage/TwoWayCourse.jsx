@@ -6,7 +6,7 @@ export default function TwoWayCourse() {
   return (
     <div className="w-full pb-13 lg:pb-40">
       <div className="bg-home-color text-white text-center lg:mx-10 rounded-3xl py-12 px-4 lg:px-20">
-        <div className="text-4xl font-semibold pb-5">
+        <div className="text-4xl font-semibold pb-5 text-shadow-white">
           Available Study Options{" "}
         </div>
         <div className="lg:w-1/2 text-base font-thin m-auto">

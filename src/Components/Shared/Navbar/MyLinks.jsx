@@ -20,5 +20,5 @@ export const links = [
     ],
   },
   { name: "Contact", link: "/contact" },
-  { name: "Login", link: "/login" },
+  { name: "Login", link: "/auth" },
 ];

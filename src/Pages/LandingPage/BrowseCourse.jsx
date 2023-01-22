@@ -11,7 +11,7 @@ export default function BrowseCourse() {
             <img src={Image} width={411} alt="" />
           </div>
           <div className="w-full lg:w-1/3 text-black sm:text-white text-center sm:text-start sm:py-16">
-            <div className="text-base sm:text-xl md:text-2xl font-bold pb-5 px-4">
+            <div className="text-base sm:text-xl md:text-2xl font-bold pb-5 px-4 text-shadow">
               Choose a Course Suited to Your Career Goals{" "}
             </div>
             <button className="bg-[#2F327D] hover:bg-[#484cc5] rounded-full text-sm sm:text-base lg:text-xl text-white text-center m-auto leading-tight sm:m-0 px-8 py-3">
