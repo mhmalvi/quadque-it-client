@@ -21,6 +21,7 @@ const AdminCourse = () => {
   const [categoryItems, setCategoryItems] = useState([]);
   const [courseData, setCourseData] = useState();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [deleteCategory, setDeleteCategory] = useState();
 
   const ToogleCategory = (index) => {
     setToogleTab(index);
@@ -60,7 +61,7 @@ const AdminCourse = () => {
     })();
   }, [Category]);
 
-  const confirmDeleteModal = (id) => {
+  const confirmDeleteModal = () => {
     setIsModalOpen(true);
   };
   const handleDeleteCategory = () => {
@@ -90,7 +91,7 @@ const AdminCourse = () => {
                 <div className="">{category.name}</div>
                 <Icons.Delete
                   className="w-4 text-red-700 cursor-pointer"
-                  onClick={confirmDeleteModal(category.id)}
+                  
                 />
                 {/* <Icons.Edit className="text-blue-600"/> */}
               </div>
