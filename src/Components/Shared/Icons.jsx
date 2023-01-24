@@ -34,6 +34,9 @@ import { ReactComponent as TickBox } from "../../Asset/Icon/tick-box.svg";
 import { ReactComponent as Tick } from "../../Asset/Icon/tick.svg";
 import { ReactComponent as MenuBar } from "../../Asset/Icon/menu.svg";
 import { ReactComponent as Cancel } from "../../Asset/Icon/cross.svg";
+import { ReactComponent as Logout } from "../../Asset/Icon/logout.svg";
+import { ReactComponent as Delete } from "../../Asset/Icon/bin.svg";
+import { ReactComponent as Edit } from "../../Asset/Icon/edit.svg";
 
 const Icons = {
   PlayBtn,
@@ -72,6 +75,9 @@ const Icons = {
   Tick,
   MenuBar,
   Cancel,
+  Logout,
+  Delete,
+  Edit,
 };
 
 export default Icons;

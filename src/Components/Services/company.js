@@ -11,3 +11,15 @@ export const handleFetchCourseCategories = async () => {
     return error.response;
   }
 };
+
+export const handleDeleteCourseCategory = async (id) => {
+  try {
+    const result = await axios.delete(
+      `http://127.0.0.1:8000/api/course-category/${id}`
+    );
+    return result.data;
+  } catch (error) {
+    console.log(error);
+    return error.response;
+  }
+};

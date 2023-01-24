@@ -1,17 +1,18 @@
 import './index.css';
 import React from "react";
-import Navbar from "./Components/Shared/Navbar/Navbar";
-import LandingPage from "./Pages/LandingPage";
 import { Route, Routes } from "react-router-dom";
-import AboutUs from "./Pages/About";
-import Course from './Pages/Course';
-import CourseDetail from './Pages/CourseDetail';
-import Contact from "./Pages/Contact";
-import Blog from './Pages/Blog';
-import BlogDetail from './Pages/Blog/BlogDetail';
-import Gallery from "./Pages/Blog/Gallery";
-import Stories from "./Pages/Blog/Stories";
-import Login from "./Pages/Authentication/Login/Login";
+import Navbar from "./Components/Shared/Navbar/Navbar";
+import LandingPage from "./Pages/UserLayouts/LandingPage";
+import AboutUs from "./Pages/UserLayouts/About";
+import Course from './Pages/UserLayouts/Course';
+import CourseDetail from './Pages/UserLayouts/CourseDetail';
+import Contact from "./Pages/UserLayouts/Contact";
+import Blog from './Pages/UserLayouts/Blog';
+import BlogDetail from './Pages/UserLayouts/Blog/BlogDetail';
+import Gallery from "./Pages/UserLayouts/Blog/Gallery";
+import Stories from "./Pages/UserLayouts/Blog/Stories";
+import Login from "./Pages/UserLayouts/Authentication/Login/Login";
+import AdminLayout from "./Pages/AdminLayouts/AdminPanel"
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
         <Route exact path="/blog/blog-detail" element={<BlogDetail/>}></Route>
         <Route exact path="/gallery" element={<Gallery/>}></Route>   
         <Route exact path="/stories" element={<Stories/>}></Route>  
-        <Route exact path="/auth" element={<Login/>}></Route>       
+        <Route exact path="/auth" element={<Login/>}></Route>   
+        <Route exact path="/admin-panel" element={<AdminLayout/>}></Route>    
       </Routes>
     </div>
   );

@@ -22,7 +22,7 @@ const NavLinks = () => {
                   {link.name}
                 </div>
               </Link>
-              {link.submenu !== "" && (
+              {link?.submenu !== "" && (
                 <div className="opacity-0 lg:absolute lg:top-4 group-hover:opacity-100 group-hover:top-0 duration-1000">
                   <div className="absolute top-20 mx-6 text-center hidden group-hover:lg:block hover:lg:block w-50">
                     <div className="backdrop-filter backdrop-blur-sm bg-white  text-black rounded-sm px-10">

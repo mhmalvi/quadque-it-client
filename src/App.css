@@ -39,7 +39,7 @@
 
 /* Overriding antd modal */
 
-.ant-modal,
+#Navbar .ant-modal,
 .ant-modal-content {
   height: 100%;
   width: 100%;
@@ -48,23 +48,23 @@
   backdrop-filter: blur(10px);
 }
 
-.ant-modal-body {
+#Navbar .ant-modal-body {
   height: 100vh;
 }
 
-.ant-modal-content {
+#Navbar .ant-modal-content {
   background-color: transparent !important;
   border-radius: 0 !important;
   color: #ffffff !important;
 }
 
-.ant-modal-title {
+#Navbar .ant-modal-title {
   background-color: white !important;
   border-radius: 0 !important;
   color: #ffffff !important;
 }
 
-.ant-modal-close-x {
+#Navbar .ant-modal-close-x {
   display: block;
   font-size: 24px !important;
   font-weight: 800 !important;
@@ -75,7 +75,7 @@
   text-rendering: auto;
 }
 
-.cross_btn>.ant-modal-content>.ant-modal-close {
+#Navbar .cross_btn>.ant-modal-content>.ant-modal-close {
   position: absolute;
   top: 3.5rem !important;
   margin-right: 0.7rem !important;
@@ -93,7 +93,6 @@
   border: 0;
   outline: 0;
   cursor: pointer;
-  transition: color 0.2s, background-color 0.2s;
 }
 
 .lds-dual-ring {
@@ -119,4 +118,8 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+#adminCourseGallery::-webkit-scrollbar {
+  display: none;
 }
