@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "category" : "5",
+      "category" : "Content Writing and Development",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
@@ -10,7 +10,7 @@
     },
     {
       "id": "2",
-      "category" : "3",
+      "category" : "Programming",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
@@ -19,7 +19,7 @@
     },
     {
       "id": "3",
-      "category" : "3",
+      "category" : "Programming",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
@@ -28,7 +28,7 @@
     },
     {
       "id": "4",
-      "category" : "6",
+      "category" : "Others",
       "platform" : "online",
       "date": "20-20-20",
       "price": "12000",
@@ -37,7 +37,7 @@
     },
     {
       "id": "5",
-      "category" : "5",
+      "category" : "Content Writing and Development",
       "platform" : "online",
       "price": "12000",
       "date": "20-20-20",
@@ -46,7 +46,7 @@
     },
     {
       "id": "6",
-      "category" : "5",
+      "category" : "Content Writing and Development",
       "platform" : "online",
       "date": "20-20-20",
       "price": "10000",
@@ -55,7 +55,7 @@
     },
     {
       "id": "7",
-      "category" : "4",
+      "category" : "Video & Animation",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
@@ -64,7 +64,7 @@
     },
     {
       "id": "8",
-      "category" : "7",
+      "category" : "Others",
       "platform" : "online",
       "date": "20-20-20",
       "price": "12000",
@@ -73,7 +73,7 @@
     },
     {
       "id": "9",
-      "category" : "2",
+      "category" : "Digital Marketing",
       "platform" : "online",
       "price": "12000",
       "date": "20-20-20",
@@ -82,7 +82,7 @@
     },
     {
       "id": "10",
-      "category" : "6",
+      "category" : "Others",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "12000",
@@ -91,7 +91,7 @@
     },
     {
       "id": "11",
-      "category" : "2",
+      "category" : "Digital Marketing",
       "platform" : "online",
       "date": "20-20-20",
       "price": "17000",
@@ -100,7 +100,7 @@
     },
     {
       "id": "12",
-      "category" : "1",
+      "category" : "Graphics & Design",
       "platform" : "online",
       "date": "20-20-20",
       "price": "14000",
@@ -109,7 +109,7 @@
     },
     {
       "id": "13",
-      "category" : "1",
+      "category" : "Graphics & Design",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "11000",
@@ -118,7 +118,7 @@
     },
     {
       "id": "14",
-      "category" : "5",
+      "category" : "Content Writing and Development",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "14000",
@@ -127,7 +127,7 @@
     },
     {
       "id": "15",
-      "category" : "5",
+      "category" : "Content Writing and Development",
       "platform" : "online",
       "date": "20-20-20",
       "price": "18000",
@@ -136,7 +136,7 @@
     },
     {
       "id": "16",
-      "category" : "5",
+      "category" : "Content Writing and Development",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "15000",
@@ -145,7 +145,7 @@
     },
     {
       "id": "17",
-      "category" : "7",
+      "category" : "Others",
       "platform" : "online",
       "date": "20-20-20",
       "price": "12000",
@@ -154,7 +154,7 @@
     },
     {
       "id": "18",
-      "category" : "4",
+      "category" : "Video & Animation",
       "platform" : "offline",
       "date": "20-20-20",
       "price": "13000",

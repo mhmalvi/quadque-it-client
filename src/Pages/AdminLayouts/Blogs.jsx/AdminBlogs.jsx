@@ -3,15 +3,20 @@ import Graphics from "../../../Asset/Image/graphics.png";
 import Motion from "../../../Asset/Image/motion.png";
 import Uiux from "../../../Asset/Image/uiux.png";
 import Blog from "../../UserLayouts/Blog/blogs.json";
+import BlogCategories from "../../UserLayouts/Blog/blogCategory.json";
 import { Link } from "react-router-dom";
 import Icons from "../../../Components/Shared/Icons";
+import { Select, Modal } from "antd";
 
 const AdminBlogs = () => {
-  const [toogleTab, setToogleTab] = useState(1);
+  const [toogleTab, setToogleTab] = useState();
   const [blogData, setBlogData] = useState();
+  const [categoryItems, setCategoryItems] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const ToogleTab = (index) => {
+  const ToogleCategory = (index) => {
     setToogleTab(index);
+    console.log("toogleTab", toogleTab);
   };
 
   useEffect(() => {
@@ -24,12 +29,46 @@ const AdminBlogs = () => {
     setBlogData(BlogDetail);
   }, [Blog, toogleTab]);
 
+    useEffect(() => {
+      const items = [];
+
+      (async () => {
+        BlogCategories.forEach((category) => {
+          items.push({
+            label: `${category?.name}`,
+            value: `${category?.id}`,
+          });
+        });
+        setCategoryItems(items);
+      })();
+    }, [BlogCategories]);
+
+    const confirmDeleteModal = () => {
+      setIsModalOpen(true);
+    };
+    const handleDeleteCategory = () => {
+      setIsModalOpen(false);
+    };
+    const handleCancel = () => {
+      setIsModalOpen(false);
+    };
+
   return (
     <div className="w-full h-[100vh] overflow-y-auto">
       <div className="py-13">
         <div className="flex-col m-auto px-5">
           <div className="">
-            <div className="lg:w-2/3 flex flex-col lg:flex-row justify-evenly py-5 leading-10">
+            <div className="flex gap-10">
+              <div className="flex text-xl items-center">
+                Blog Categories List
+              </div>
+              <div className="flex bg-blue-600 hover:bg-blue-700 duration-150 shadow-lg text-white rounded-full px-4 py-2">
+                <span className="pr-2">Add Category</span>{" "}
+                <Icons.Cancel className="w-3 rotate-45" />
+              </div>
+            </div>
+
+            {/* <div className="lg:w-2/3 flex flex-col lg:flex-row justify-evenly py-5 leading-10">
               <div
                 onClick={() => ToogleTab(1)}
                 className={
@@ -110,6 +149,64 @@ const AdminBlogs = () => {
               >
                 Others
               </div>
+            </div> */}
+
+            <div className="flex py-5 text-sm font-thin leading-10">
+              {BlogCategories?.map((category) => (
+                <div
+                  className="flex flex-wrap gap-4 border px-2 mx-2 rounded-lg shadow"
+                  key={category.id}
+                >
+                  <div className="">{category.name}</div>
+                  <Icons.Delete
+                    className="w-4 text-red-700 cursor-pointer"
+                    onClick={confirmDeleteModal}
+                  />
+                  {/* <Icons.Edit className="text-blue-600"/> */}
+                </div>
+              ))}
+            </div>
+
+            <Modal
+              title="Confirm Deletion"
+              open={isModalOpen}
+              footer={false}
+              onCancel={handleCancel}
+            >
+              <p>Are you sure you want to delete this category?</p>
+              <div className="flex justify-end">
+                <div
+                  onClick={handleDeleteCategory}
+                  className="mx-2 p-2 shadow rounded-lg cursor-pointer hover:shadow-md"
+                >
+                  Cancel
+                </div>
+                <div
+                  onClick={handleCancel}
+                  className="bg-red-500 hover:bg-red-600 shadow rounded-lg text-white p-2 mx-2 cursor-pointer"
+                >
+                  Delete
+                </div>
+              </div>
+            </Modal>
+
+            <div className="flex gap-10 py-5">
+              <div className="flex text-xl items-center">Blogs List</div>
+              <div className="flex bg-blue-600 hover:bg-blue-700 duration-150 shadow-lg text-white rounded-full px-4 py-2">
+                <span className="pr-2">Add Blog</span>
+                <Icons.Cancel className="w-3 rotate-45" />
+              </div>
+            </div>
+
+            <div className="flex justify-start pb-5">
+              <Select
+                style={{
+                  width: "30%",
+                }}
+                placeholder="select Category"
+                onChange={ToogleCategory}
+                options={categoryItems}
+              />
             </div>
           </div>
 
@@ -135,11 +232,7 @@ const AdminBlogs = () => {
                     </div>
                   </div>
                   <div className="flex-wrap overflow-hidden rounded-xl">
-                    <img
-                      src={Uiux}
-                      alt=""
-                      className="w-full rounded-xl"
-                    />
+                    <img src={Uiux} alt="" className="w-full rounded-xl" />
                   </div>
                   <div className="py-5">
                     <div className="flex-col">

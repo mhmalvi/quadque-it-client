@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2",
+    "name" : "Graphics Design"
+  },
+  {
+    "id": "3",
+    "name" : "Programming"
+  },
+  {
+    "id": "4",
+    "name" : "Digital Marketing"
+  },
+  {
+    "id": "5",
+    "name" : "Content"
+  },
+  {
+    "id": "6",
+    "name" : "Tutorials"
+  },
+  {
+    "id": "7",
+    "name" : "Others"
+  }
+]

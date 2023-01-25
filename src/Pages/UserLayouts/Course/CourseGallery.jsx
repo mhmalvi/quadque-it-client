@@ -13,8 +13,8 @@ import useCategory from "../../../Components/Shared/Hooks/useCategory";
 export default function CourseGallery() {
   const [Category] = useCategory();
   const navigate = useNavigate();
-  const [toogleTab, setToogleTab] = useState(1);
-  const [toogleMediumTab, setToogleMediumTab] = useState("all");
+  const [toogleTab, setToogleTab] = useState("Graphics & Design");
+  const [toogleMediumTab, setToogleMediumTab] = useState("both");
   const [categoryData, setCategoryData] = useState();
   const [categoryItems, setCategoryItems] = useState([]);
   const [courseData, setCourseData] = useState();
@@ -35,10 +35,10 @@ export default function CourseGallery() {
 
   useEffect(() => {
     let CourseDetail;
-    if (toogleTab !== 0) {
-      if (toogleMediumTab !== "all") {
+    if (toogleTab !== "") {
+      if (toogleMediumTab !== "both") {
         CourseDetail = Course.filter(
-          (cor) => cor.category === toogleTab && cor.platform == toogleMediumTab
+          (cor) => cor.category == toogleTab && cor.platform == toogleMediumTab
         );
       } else {
         CourseDetail = Course.filter((cor) => cor.category == toogleTab);
@@ -53,8 +53,8 @@ export default function CourseGallery() {
     (async () => {
       Category.forEach((category) => {
         items.push({
-          label: `${category?.name}`,
-          value: `${category?.id}`,
+          id: `${category?.id}`,
+          value: `${category?.name}`,
         });
       });
       setCategoryItems(items);
@@ -83,16 +83,6 @@ export default function CourseGallery() {
               </div>
               <div className="flex justify-center">
                 <div
-                  onClick={() => ToogleMedium("all")}
-                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
-                    toogleMediumTab === "all"
-                      ? "bg-white text-black duration-500"
-                      : "bg-black text-white duration-500"
-                  }`}
-                >
-                  All
-                </div>
-                <div
                   onClick={() => ToogleMedium("offline")}
                   className={`px-4 rounded-2xl m-2 cursor-pointer ${
                     toogleMediumTab === "offline"
@@ -111,6 +101,16 @@ export default function CourseGallery() {
                   }`}
                 >
                   Online
+                </div>
+                <div
+                  onClick={() => ToogleMedium("both")}
+                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
+                    toogleMediumTab === "both"
+                      ? "bg-white text-black duration-500"
+                      : "bg-black text-white duration-500"
+                  }`}
+                >
+                  Both
                 </div>
               </div>
             </div>
@@ -132,11 +132,11 @@ export default function CourseGallery() {
               {Category?.map((category) => (
                 <li
                   key={category.id}
-                  onClick={() => ToogleCategory(category.id)}
+                  onClick={() => ToogleCategory(category.name)}
                 >
                   <div
                     className={
-                      toogleTab === category.id
+                      toogleTab === category.name
                         ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
                         : "cursor-pointer"
                     }
@@ -151,7 +151,7 @@ export default function CourseGallery() {
           <div className="lg:hidden flex justify-center">
             <Select
               style={{
-                width: '60%',
+                width: "60%",
               }}
               placeholder="select Category"
               onChange={ToogleCategory}
@@ -185,9 +185,7 @@ export default function CourseGallery() {
                           <div className="py-2">{details.price} tk</div>
                         </div>
                       </div>
-                      <div className="text-xl pt-2 left-0">
-                        {details.title}
-                      </div>
+                      <div className="text-xl pt-2 left-0">{details.title}</div>
                       <div className="py-2">{details.para}</div>
                     </div>
                   </div>

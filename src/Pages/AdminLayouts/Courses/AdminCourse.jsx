@@ -6,18 +6,17 @@ import Banner from "../../../Asset/Image/banner.png";
 import Reading from "../../../Asset/Image/reading.png";
 import Course from "../../UserLayouts/Course/Course.json";
 import { useNavigate } from "react-router-dom";
-import { Select } from "antd";
+import { Select, Modal } from "antd";
 import Icons from "../../../Components/Shared/Icons";
-import { Modal } from "antd";
 
 import useCategory from "../../../Components/Shared/Hooks/useCategory";
 import { handleDeleteCourseCategory } from "../../../Components/Services/company";
 
 const AdminCourse = () => {
-  const [Category] = useCategory();
+  const [Category, setUseCategory] = useCategory();
   const navigate = useNavigate();
-  const [toogleTab, setToogleTab] = useState(1);
-  const [toogleMediumTab, setToogleMediumTab] = useState("all");
+  const [toogleTab, setToogleTab] = useState();
+  const [toogleMediumTab, setToogleMediumTab] = useState("both");
   const [categoryItems, setCategoryItems] = useState([]);
   const [courseData, setCourseData] = useState();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,10 +34,10 @@ const AdminCourse = () => {
 
   useEffect(() => {
     let CourseDetail;
-    if (toogleTab !== 0) {
-      if (toogleMediumTab !== "all") {
+    if (toogleTab !== "") {
+      if (toogleMediumTab !== "both") {
         CourseDetail = Course.filter(
-          (cor) => cor.category === toogleTab && cor.platform == toogleMediumTab
+          (cor) => cor.category == toogleTab && cor.platform == toogleMediumTab
         );
       } else {
         CourseDetail = Course.filter((cor) => cor.category == toogleTab);
@@ -53,20 +52,37 @@ const AdminCourse = () => {
     (async () => {
       Category.forEach((category) => {
         items.push({
-          label: `${category?.name}`,
-          value: `${category?.id}`,
+          id: `${category?.id}`,
+          value: `${category?.name}`,
         });
       });
       setCategoryItems(items);
+      console.log("category data", categoryItems);
     })();
   }, [Category]);
 
-  const confirmDeleteModal = () => {
+  const confirmDeleteModal = (id) => {
+    setDeleteCategory(id);
+    //console.log(deleteCategory);
     setIsModalOpen(true);
   };
+
   const handleDeleteCategory = () => {
-    setIsModalOpen(false);
+    console.log(deleteCategory);
+    (async () => {
+      const response = await handleDeleteCourseCategory(deleteCategory);
+      console.log("res", response);
+      if (response.message) {
+        setIsModalOpen(false);
+        alert("Deleted");
+        setUseCategory(Category.filter(cat => cat.id !== deleteCategory))
+      } else {
+        setIsModalOpen(false);
+        alert("Deletion Unsuccessful");
+      }
+    })();
   };
+  
   const handleCancel = () => {
     setIsModalOpen(false);
   };
@@ -86,12 +102,12 @@ const AdminCourse = () => {
             {Category?.map((category) => (
               <div
                 className="flex flex-wrap gap-4 border px-2 mx-2 rounded-lg shadow"
-                key={category.id}
+                key={category?.id}
               >
-                <div className="">{category.name}</div>
+                <div className="">{category?.name}</div>
                 <Icons.Delete
                   className="w-4 text-red-700 cursor-pointer"
-                  
+                  onClick={() => confirmDeleteModal(category?.id)}
                 />
                 {/* <Icons.Edit className="text-blue-600"/> */}
               </div>
@@ -107,13 +123,13 @@ const AdminCourse = () => {
             <p>Are you sure you want to delete this category?</p>
             <div className="flex justify-end">
               <div
-                onClick={handleDeleteCategory}
+                onClick={handleCancel}
                 className="mx-2 p-2 shadow rounded-lg cursor-pointer hover:shadow-md"
               >
                 Cancel
               </div>
               <div
-                onClick={handleCancel}
+                onClick={handleDeleteCategory}
                 className="bg-red-500 hover:bg-red-600 shadow rounded-lg text-white p-2 mx-2 cursor-pointer"
               >
                 Delete
@@ -130,17 +146,7 @@ const AdminCourse = () => {
                   <Icons.Cancel className="w-3 rotate-45" />
                 </div>
               </div>
-              <div className="flex justify-center">
-                <div
-                  onClick={() => ToogleMedium("all")}
-                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
-                    toogleMediumTab === "all"
-                      ? " text-[#23BDEE] duration-500"
-                      : " text-black duration-500"
-                  }`}
-                >
-                  All
-                </div>
+              <div className="flex justify-start">
                 <div
                   onClick={() => ToogleMedium("offline")}
                   className={`px-4 rounded-2xl m-2 cursor-pointer ${
@@ -161,12 +167,23 @@ const AdminCourse = () => {
                 >
                   Online
                 </div>
+                <div
+                  onClick={() => ToogleMedium("both")}
+                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
+                    toogleMediumTab === "both"
+                      ? " text-[#23BDEE] duration-500"
+                      : " text-black duration-500"
+                  }`}
+                >
+                  Both
+                </div>
               </div>
               <div className="flex justify-center">
                 <Select
                   style={{
                     width: "100%",
                   }}
+                  defaultValue={categoryItems[0]?.value}
                   placeholder="select Category"
                   onChange={ToogleCategory}
                   options={categoryItems}
