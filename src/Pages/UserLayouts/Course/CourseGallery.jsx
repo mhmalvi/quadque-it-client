@@ -10,12 +10,11 @@ import { Select } from "antd";
 
 import useCategory from "../../../Components/Shared/Hooks/useCategory";
 
-export default function CourseGallery() {
+const CourseGallery = () => {
   const [Category] = useCategory();
   const navigate = useNavigate();
-  const [toogleTab, setToogleTab] = useState("Graphics & Design");
+  const [toogleTab, setToogleTab] = useState("All");
   const [toogleMediumTab, setToogleMediumTab] = useState("both");
-  const [categoryData, setCategoryData] = useState();
   const [categoryItems, setCategoryItems] = useState([]);
   const [courseData, setCourseData] = useState();
 
@@ -35,20 +34,28 @@ export default function CourseGallery() {
 
   useEffect(() => {
     let CourseDetail;
-    if (toogleTab !== "") {
+    if (toogleTab !== "All") {
       if (toogleMediumTab !== "both") {
         CourseDetail = Course.filter(
-          (cor) => cor.category == toogleTab && cor.platform == toogleMediumTab
+          (cor) =>
+            cor.category === toogleTab && cor.platform === toogleMediumTab
         );
       } else {
-        CourseDetail = Course.filter((cor) => cor.category == toogleTab);
+        CourseDetail = Course.filter((cor) => cor.category === toogleTab);
       }
       setCourseData(CourseDetail);
+    } else {
+      setCourseData(Course);
     }
-  }, [Course, toogleTab, toogleMediumTab]);
+  }, [toogleTab, toogleMediumTab]);
 
   useEffect(() => {
-    const items = [];
+    const items = [
+      {
+        id: "0",
+        value: "All",
+      },
+    ];
 
     (async () => {
       Category.forEach((category) => {
@@ -58,7 +65,6 @@ export default function CourseGallery() {
         });
       });
       setCategoryItems(items);
-      console.log("category data", categoryData);
     })();
   }, [Category]);
   console.log("items,", categoryItems);
@@ -129,6 +135,17 @@ export default function CourseGallery() {
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
             <ul className="flex-col py-5 text-sm font-thin leading-10">
+              <li key={0} onClick={() => ToogleCategory("All")}>
+                <div
+                  className={
+                    toogleTab === "All"
+                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
+                      : "cursor-pointer"
+                  }
+                >
+                  All
+                </div>
+              </li>
               {Category?.map((category) => (
                 <li
                   key={category.id}
@@ -153,7 +170,7 @@ export default function CourseGallery() {
               style={{
                 width: "60%",
               }}
-              placeholder="select Category"
+              placeholder={categoryItems[0]?.value}
               onChange={ToogleCategory}
               options={categoryItems}
             />
@@ -200,3 +217,4 @@ export default function CourseGallery() {
     </div>
   );
 }
+export default CourseGallery;

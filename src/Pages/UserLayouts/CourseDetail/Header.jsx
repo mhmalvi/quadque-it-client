@@ -7,7 +7,7 @@ import CountUp from "react-countup";
 import CourseMaterial from "./CourseMaterial";
 /* absolute top-64 left-1/4 */
 
-export default function Header() {
+const Header = () => {
   return (
     <div className="w-full bg-home-color text-white">
             <div className="lg:mt-10">
@@ -156,3 +156,4 @@ export default function Header() {
     </div>
   );
 }
+export default Header;

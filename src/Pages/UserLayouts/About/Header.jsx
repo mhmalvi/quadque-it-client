@@ -10,13 +10,13 @@ import Icons from "../../../Components/Shared/Icons";
 import AboutMaterial from "./AboutMaterial";
 import AnimatedText from "react-animated-text-content";
 
-export default function Header() {
+const Header = () => {
   return (
     <div className="w-full bg-home-color">
       <div className="w-full">
         <div className="lg:mt-10">
           <div className="lg:w-2/3 flex-col justify-center text-white m-auto pt-32">
-            <div className="lg:text-5xl text-2xl font-bold text-center leading-snug">
+            <div className="lg:text-4xl text-2xl font-bold text-center leading-12">
                 Delve into the World of Digital Marketing and IT with QIT.
             </div>
             <div className="w-2/3 lg:text-base text-xs text-center py-5 pb-7 m-auto">
@@ -237,3 +237,4 @@ export default function Header() {
     </div>
   );
 }
+export default Header

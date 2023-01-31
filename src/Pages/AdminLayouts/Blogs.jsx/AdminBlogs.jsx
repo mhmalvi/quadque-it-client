@@ -9,7 +9,7 @@ import Icons from "../../../Components/Shared/Icons";
 import { Select, Modal } from "antd";
 
 const AdminBlogs = () => {
-  const [toogleTab, setToogleTab] = useState();
+  const [toogleTab, setToogleTab] = useState("All");
   const [blogData, setBlogData] = useState();
   const [categoryItems, setCategoryItems] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,22 +21,27 @@ const AdminBlogs = () => {
 
   useEffect(() => {
     let BlogDetail;
-    if (toogleTab !== 1) {
+    if (toogleTab !== "All") {
       BlogDetail = Blog.filter((blog) => blog.category == toogleTab);
+      setBlogData(BlogDetail);
     } else {
-      BlogDetail = Blog.map((blog) => blog);
+      setBlogData(Blog);
     }
-    setBlogData(BlogDetail);
-  }, [Blog, toogleTab]);
+  }, [toogleTab]);
 
     useEffect(() => {
-      const items = [];
+      const items = [
+        {
+          id: "0",
+          value: "All",
+        },
+      ];
 
       (async () => {
         BlogCategories.forEach((category) => {
           items.push({
-            label: `${category?.name}`,
-            value: `${category?.id}`,
+            id: `${category?.id}`,
+            value: `${category?.name}`,
           });
         });
         setCategoryItems(items);
@@ -54,7 +59,7 @@ const AdminBlogs = () => {
     };
 
   return (
-    <div className="w-full h-[100vh] overflow-y-auto">
+    <div id="adminBlog" className="w-full h-[100vh] overflow-y-auto">
       <div className="py-13">
         <div className="flex-col m-auto px-5">
           <div className="">
@@ -63,8 +68,8 @@ const AdminBlogs = () => {
                 Blog Categories List
               </div>
               <div className="flex bg-blue-600 hover:bg-blue-700 duration-150 shadow-lg text-white rounded-full px-4 py-2">
-                <span className="pr-2">Add Category</span>{" "}
-                <Icons.Cancel className="w-3 rotate-45" />
+                <span className="pr-2 cursor-pointer">Add Category</span>{" "}
+                <Icons.Cancel className="w-3 rotate-45 cursor-pointer" />
               </div>
             </div>
 
@@ -150,22 +155,21 @@ const AdminBlogs = () => {
                 Others
               </div>
             </div> */}
-
-            <div className="flex py-5 text-sm font-thin leading-10">
-              {BlogCategories?.map((category) => (
-                <div
-                  className="flex flex-wrap gap-4 border px-2 mx-2 rounded-lg shadow"
-                  key={category.id}
-                >
-                  <div className="">{category.name}</div>
-                  <Icons.Delete
-                    className="w-4 text-red-700 cursor-pointer"
-                    onClick={confirmDeleteModal}
-                  />
-                  {/* <Icons.Edit className="text-blue-600"/> */}
+                <div className="flex text-sm font-thin leading-10 py-4">
+                  {BlogCategories?.map((category) => (
+                    <div
+                      className="flex flex-wrap gap-4 border px-2 mx-2 rounded-lg shadow"
+                      key={category.id}
+                    >
+                      <div className="">{category.name}</div>
+                      <Icons.Delete
+                        className="w-4 text-red-700 cursor-pointer"
+                        onClick={confirmDeleteModal}
+                      />
+                      {/* <Icons.Edit className="text-blue-600"/> */}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
 
             <Modal
               title="Confirm Deletion"
@@ -193,8 +197,8 @@ const AdminBlogs = () => {
             <div className="flex gap-10 py-5">
               <div className="flex text-xl items-center">Blogs List</div>
               <div className="flex bg-blue-600 hover:bg-blue-700 duration-150 shadow-lg text-white rounded-full px-4 py-2">
-                <span className="pr-2">Add Blog</span>
-                <Icons.Cancel className="w-3 rotate-45" />
+                <span className="pr-2 cursor-pointer">Add Blog</span>
+                <Icons.Cancel className="w-3 rotate-45 cursor-pointer" />
               </div>
             </div>
 
@@ -203,7 +207,7 @@ const AdminBlogs = () => {
                 style={{
                   width: "30%",
                 }}
-                placeholder="select Category"
+                placeholder="All"
                 onChange={ToogleCategory}
                 options={categoryItems}
               />

@@ -1,7 +1,7 @@
 import React from "react";
 import Businesses from "../../../Asset/Image/partners.png";
 
-export default function Partners() {
+const Partners = () => {
   return (
     <div className="w-full pb-18 lg:pb-56">
       <div className="text-center rounded-3xl">
@@ -20,3 +20,4 @@ export default function Partners() {
     </div>
   );
 }
+export default Partners

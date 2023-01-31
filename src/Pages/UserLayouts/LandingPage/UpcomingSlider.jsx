@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 import Graphics from "../../Asset/Image/graphics.png";
 
-export default function MultipleItems(){
+const MultipleItems = () => {
     const settings = {
       dots: true,
       infinite: true,
@@ -245,3 +245,4 @@ export default function MultipleItems(){
       </div>
     );
 }
+export default MultipleItems

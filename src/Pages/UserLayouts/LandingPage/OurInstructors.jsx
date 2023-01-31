@@ -8,7 +8,7 @@ import Instructor from "./JsonData/student.json";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
 
-export default function OurInstructors() {
+const OurInstructors = () => {
   const sliderRef = useRef(null);
   const settings = {
     infinite: true,
@@ -119,3 +119,4 @@ export default function OurInstructors() {
     </div>
   );
 }
+export default OurInstructors

@@ -2,7 +2,7 @@ import React from "react";
 import Graphics from "../../../Asset/Image/image4.png";
 import Motion from "../../../Asset/Image/image5.png";
 
-export default function TwoWayCourse() {
+const TwoWayCourse = () => {
   return (
     <div className="w-full pb-13 lg:pb-40">
       <div className="bg-home-color text-white text-center lg:mx-10 rounded-3xl py-12 px-4 lg:px-20">
@@ -46,3 +46,4 @@ export default function TwoWayCourse() {
     </div>
   );
 }
+export default TwoWayCourse

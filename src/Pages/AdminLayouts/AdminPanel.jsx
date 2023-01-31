@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
-import Sidebar from "../../Components/Shared/Sidebar";
 import { useLocation } from "react-router-dom";
-import AdminCourse from "./Courses/AdminCourse";
+import Sidebar from "../../Components/Shared/Sidebar";
+import AdminDashboard from "./Dashboard/AdminDashboard";
 import AdminBlogs from "./Blogs.jsx/AdminBlogs";
+import AdminCourse from "./CoursesAdmin";
+import AdminStudent from "./Student";
+import AdminTeacher from "./Teacher";
+import CoursesStudent from "./CoursesStudent";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 const AdminPanel = () => {
   const location = useLocation();
-  const [active, setActive] = useState("courses");
+  const [active, setActive] = useState("dashboard");
 
   const ToogleTab = (tabname) => {
     setActive(tabname);
@@ -26,8 +30,20 @@ const AdminPanel = () => {
         <Sidebar active={active} ToogleTab={ToogleTab} />
       </div>
 
+      {/* {active === "dashboard" ? <AdminDashboard /> : null}
       {active === "courses" ? <AdminCourse /> : null}
-      {active === "blogs" ? <AdminBlogs /> : null}
+      {active === "student-courses" ? <CoursesStudent /> : null}
+      {active === "students" ? <AdminStudent /> : null}
+      {active === "teachers" ? <AdminTeacher /> : null}
+      {active === "blogs" ? <AdminBlogs /> : null} */}
+      <Routes>
+        <Route path="/dashboard" element={<AdminDashboard />} />
+        <Route path={"/courses"} element={<AdminCourse />} />
+        <Route path={"/student-courses"} element={<CoursesStudent />} />
+        <Route path={"/students"} element={<AdminStudent />} />
+        <Route path="/teachers" element={<AdminTeacher />} />
+        <Route path={"/blogs"} element={<AdminBlogs />} />
+      </Routes>
     </div>
   );
 };

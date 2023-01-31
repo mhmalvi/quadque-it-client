@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Logo from "../../Asset/Image/Logo.svg";
 import Icons from "./Icons";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({active, ToogleTab}) => {
 /*   const [active, setActive] = useState("dashboard");
@@ -15,21 +16,22 @@ const Sidebar = ({active, ToogleTab}) => {
       <div>
         <img src={Logo} alt="" className="m-auto py-10" />
       </div>
-
-      <div
-        className={` ${
-          active === "dashboard"
-            ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
-            : ""
-        }`}
-      >
+      <Link to={"/dashboard"}>
         <div
-          onClick={() => ToogleTab("dashboard")}
-          className="flex items-center text-base cursor-pointer py-3 ml-10"
+          className={` ${
+            active === "dashboard"
+              ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
+              : ""
+          }`}
         >
-          <span className="font-thin">Dashboard</span>
+          <div
+            onClick={() => ToogleTab("dashboard")}
+            className="flex items-center text-base cursor-pointer py-3 ml-10"
+          >
+            <span className="font-thin">Dashboard</span>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <div
         className={` ${
@@ -48,6 +50,21 @@ const Sidebar = ({active, ToogleTab}) => {
 
       <div
         className={` ${
+          active === "student-courses"
+            ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
+            : ""
+        }`}
+      >
+        <div
+          onClick={() => ToogleTab("student-courses")}
+          className="flex items-center text-base cursor-pointer py-3 ml-10"
+        >
+          <span className="font-thin">My Courses</span>
+        </div>
+      </div>
+
+      <div
+        className={` ${
           active === "students"
             ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
             : ""
@@ -58,6 +75,21 @@ const Sidebar = ({active, ToogleTab}) => {
           className="flex items-center text-base cursor-pointer py-3 ml-10"
         >
           <span className="font-thin">Students</span>
+        </div>
+      </div>
+
+      <div
+        className={` ${
+          active === "teachers"
+            ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
+            : ""
+        }`}
+      >
+        <div
+          onClick={() => ToogleTab("teachers")}
+          className="flex items-center text-base cursor-pointer py-3 ml-10"
+        >
+          <span className="font-thin">Teachers</span>
         </div>
       </div>
 

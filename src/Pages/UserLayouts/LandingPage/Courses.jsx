@@ -2,7 +2,7 @@ import React from "react";
 import Course from "../../../Asset/Image/image9.png";
 import useCategory from "../../../Components/Shared/Hooks/useCategory";
 
-export default function Courses() {
+const Courses = () => {
   const [Category] = useCategory();
   return (
     <div className="w-full pb-18 lg:pb-24">
@@ -27,3 +27,4 @@ export default function Courses() {
     </div>
   );
 }
+export default  Courses

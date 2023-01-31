@@ -2,7 +2,7 @@ import React from "react";
 import Giphy from "../../../Asset/Image/giphy.png";
 import Image from "../../../Asset/Image/image44.png";
 
-export default function BrowseCourse() {
+const BrowseCourse = () => {
   return (
     <div className="w-full mb-18 lg:mb-0 sm:pb-0">
       <div className=" sm:bg-gradient-to-t from-[#000000] to-[#2F327D]">
@@ -23,3 +23,4 @@ export default function BrowseCourse() {
     </div>
   );
 }
+export default BrowseCourse;

@@ -2,7 +2,7 @@ import React from 'react'
 import Contact from './Contact'
 
 
-export default function index() 
+const index = () =>
 {
   return (
     <div>
@@ -10,3 +10,4 @@ export default function index()
     </div>
   )
 }
+export default index;

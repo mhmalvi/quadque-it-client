@@ -1,12 +1,12 @@
-import React from 'react'
-import Header from './Header'
-import CourseMaterial from './CourseMaterial'
+import React from "react";
+import Header from "./Header";
+import CourseMaterial from "./CourseMaterial";
 
-export default function index() 
-{
+const index = () => {
   return (
     <div>
-        <Header/>
+      <Header />
     </div>
-  )
-}
+  );
+};
+export default index;

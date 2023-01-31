@@ -2,7 +2,7 @@ import React from "react";
 import Icons from "../../../Components/Shared/Icons";
 import Logo from "../../../Asset/Image/Logo.svg";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <div className="w-full text-white">
       <div className="md:flex bg-black pt-20 px-10 md:px-20 pb-13 gap-8">
@@ -135,3 +135,4 @@ export default function Footer() {
     </div>
   );
 }
+export default Footer;

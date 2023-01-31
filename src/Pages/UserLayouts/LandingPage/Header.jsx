@@ -3,7 +3,7 @@ import World from "../../../Asset/Image/world.png";
 import Icons from "../../../Components/Shared/Icons";
 import AnimatedText from "react-animated-text-content";
 
-export default function Header() {
+const Header = () => {
   return (
     <div className="w-full lg:mt-10 pb-14 lg:pb-20">
       <div className="bg-home-color text-center lg:text-start m-auto lg:mx-10 lg:rounded-3xl pt-44 pb-8 px-10 lg:px-20">
@@ -60,3 +60,4 @@ export default function Header() {
     </div>
   );
 }
+export default Header

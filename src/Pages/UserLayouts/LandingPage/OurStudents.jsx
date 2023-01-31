@@ -9,7 +9,7 @@ import RightArrow from "../../../Asset/Image/purple-right-arrow.png";
 import LeftArrow from "../../../Asset/Image/purple-left-arrow.png";
 
 
-export default function OurStudents() {
+const OurStudents = ()=> {
   const sliderRef = useRef(null);
   const settings = {
     infinite: true,
@@ -100,3 +100,4 @@ export default function OurStudents() {
     </div>
   );
 }
+export default OurStudents

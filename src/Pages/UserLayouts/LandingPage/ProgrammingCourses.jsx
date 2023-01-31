@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
 
-export default function ProgrammingCourses() {
+const ProgrammingCourses = () => {
   const sliderRef = useRef(null);
   const navigate = useNavigate();
   const settings = {
@@ -111,3 +111,4 @@ export default function ProgrammingCourses() {
     </div>
   );
 }
+export default ProgrammingCourses

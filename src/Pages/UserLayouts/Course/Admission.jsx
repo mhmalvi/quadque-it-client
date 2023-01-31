@@ -2,7 +2,7 @@ import React from 'react'
 import unsplash from '../../../Asset/Image/unsplash.png';
 
 
-export default function Admission() {
+const Admission = () => {
     return (
         <div className='bg-slate-900'>
         <div className="flex w-2/3 m-auto py-40">
@@ -43,4 +43,4 @@ export default function Admission() {
         </div>
     )
   }
- 
+ export default Admission;
