@@ -6,7 +6,7 @@ import AdminBlogs from "./Blogs.jsx/AdminBlogs";
 import AdminCourse from "./CoursesAdmin";
 import AdminStudent from "./Student";
 import AdminTeacher from "./Teacher";
-import CoursesStudent from "./CoursesStudent";
+import StudentEnrolment from "./StudentEnrolment";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
 const AdminPanel = () => {
@@ -17,12 +17,12 @@ const AdminPanel = () => {
     setActive(tabname);
   };
 
-  useEffect(() => {
+/*   useEffect(() => {
     console.log(location);
     if (location.pathname === "/admin-panel") {
       document.getElementById("Navbar").style.display = "none";
     }
-  }, []);
+  }, []); */
 
   return (
     <div className="flex flex-row">
@@ -32,17 +32,17 @@ const AdminPanel = () => {
 
       {/* {active === "dashboard" ? <AdminDashboard /> : null}
       {active === "courses" ? <AdminCourse /> : null}
-      {active === "student-courses" ? <CoursesStudent /> : null}
+      {active === "enrolment" ? <StudentEnrolment /> : null}
       {active === "students" ? <AdminStudent /> : null}
       {active === "teachers" ? <AdminTeacher /> : null}
       {active === "blogs" ? <AdminBlogs /> : null} */}
       <Routes>
-        <Route path="/dashboard" element={<AdminDashboard />} />
-        <Route path={"/courses"} element={<AdminCourse />} />
-        <Route path={"/student-courses"} element={<CoursesStudent />} />
-        <Route path={"/students"} element={<AdminStudent />} />
-        <Route path="/teachers" element={<AdminTeacher />} />
-        <Route path={"/blogs"} element={<AdminBlogs />} />
+        <Route path="dashboard" element={<AdminDashboard />} />
+        <Route path={"courses"} element={<AdminCourse />} />
+        <Route path={"enrolment"} element={<StudentEnrolment />} />
+        <Route path={"students"} element={<AdminStudent />} />
+        <Route path="teachers" element={<AdminTeacher />} />
+        <Route path={"blogs"} element={<AdminBlogs />} />
       </Routes>
     </div>
   );

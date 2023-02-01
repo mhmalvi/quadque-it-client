@@ -2,17 +2,12 @@ import React from "react";
 import Icons from "../../../Components/Shared/Icons";
 import { useNavigate } from "react-router-dom";
 
-const CoursesStudent = () => {
-  const navigate = useNavigate();
-  const navigateToCourseDetails = () => {
-    navigate("/course-detail-panel");
-  }
+const StudentEnrolment = () => {
   return (
     <div className="w-full h-auto text-black my-5 mx-5">
       <div className="text-lg py-2 px-5">Enrolled Course</div>
       <div className="grid grid-col-1 lg:grid-cols-3 2xl:grid-cols-5 gap-6 xl:gap-4 my-3">
         <div
-          onClick={navigateToCourseDetails}
           className="relative flex-col group border border-black border-opacity-30 rounded-xl ease-in duration-300 shadow-lg"
         >
           <div className="flex-col justify-end absolute right-4 top-6"></div>
@@ -74,4 +69,4 @@ const CoursesStudent = () => {
   );
 };
 
-export default CoursesStudent;
+export default StudentEnrolment;

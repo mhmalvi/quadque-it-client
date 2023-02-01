@@ -149,12 +149,12 @@ const Login = () => {
     setboxLeft(!boxLeft);
   };
 
-  useEffect(() => {
+/*   useEffect(() => {
     console.log(location);
     if(location.pathname === '/auth'){
       document.getElementById("Navbar").style.display="none";
     }
-  }, [])
+  }, []) */
   
   return (
     <div className="sm:flex justify-center items-center h-screen ">

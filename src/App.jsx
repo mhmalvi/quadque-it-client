@@ -12,41 +12,115 @@ import BlogDetail from './Pages/UserLayouts/Blog/BlogDetail';
 import Gallery from "./Pages/UserLayouts/Blog/Gallery";
 import Stories from "./Pages/UserLayouts/Blog/Stories";
 import Login from "./Pages/UserLayouts/Authentication/Login/Login";
-import AdminLayout from "./Pages/AdminLayouts/AdminPanel";
+import AdminPanel from "./Pages/AdminLayouts/AdminPanel";
 import AdminDashboard from './Pages/AdminLayouts/Dashboard/AdminDashboard';
 import AdminBlogs from './Pages/AdminLayouts/Blogs.jsx/AdminBlogs';
 import AdminCourse from './Pages/AdminLayouts/CoursesAdmin';
 import AdminStudent from "./Pages/AdminLayouts/Student"
 import AdminTeacher from "./Pages/AdminLayouts/Teacher"
-import CoursesStudent from './Pages/AdminLayouts/CoursesStudent';
+import CoursesStudent from './Pages/AdminLayouts/StudentEnrolment';
 
 function App() {
   return (
     <div>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route exact path="/course" element={<Course />}></Route>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <LandingPage />{" "}
+            </>
+          }
+        />
+        <Route
+          exact
+          path="course"
+          element={
+            <>
+              <Navbar />
+              <Course />
+            </>
+          }
+        ></Route>
         <Route
           exact
           path="/course/course-detail"
-          element={<CourseDetail />}
+          element={
+            <>
+              <Navbar />
+              <CourseDetail />
+            </>
+          }
         ></Route>
-        <Route exact path="/about-us" element={<AboutUs />}></Route>
-        <Route exact path="/contact" element={<Contact />}></Route>
-        <Route exact path="/blog" element={<Blog />}></Route>
-        <Route exact path="/blog/blog-detail" element={<BlogDetail />}></Route>
-        <Route exact path="/gallery" element={<Gallery />}></Route>
-        <Route exact path="/stories" element={<Stories />}></Route>
-        <Route exact path="/auth" element={<Login />}></Route>
-        
-        <Route exact path="/admin-panel" element={<AdminLayout />}>
-{/*           <Route path="/dashboard" element={<AdminDashboard />} />
-          <Route path={"/courses"} element={<AdminCourse />} />
-          <Route path={"/student-courses"} element={<CoursesStudent />} />
-          <Route path={"/students"} element={<AdminStudent />} />
-          <Route path="/teachers" element={<AdminTeacher />} />
-          <Route path={"/blogs"} element={<AdminBlogs />} /> */}
+        <Route
+          exact
+          path="about-us"
+          element={
+            <>
+              <Navbar />
+              <AboutUs />
+            </>
+          }
+        ></Route>
+        <Route
+          exact
+          path="contact"
+          element={
+            <>
+              <Navbar />
+              <Contact />
+            </>
+          }
+        ></Route>
+        <Route
+          exact
+          path="blog"
+          element={
+            <>
+              <Navbar />
+              <Blog />
+            </>
+          }
+        ></Route>
+        <Route
+          exact
+          path="blog/blog-detail"
+          element={
+            <>
+              <Navbar />
+              <BlogDetail />
+            </>
+          }
+        ></Route>
+        <Route
+          exact
+          path="gallery"
+          element={
+            <>
+              <Navbar />
+              <Gallery />
+            </>
+          }
+        ></Route>
+        <Route
+          exact
+          path="stories"
+          element={
+            <>
+              <Navbar />
+              <Stories />
+            </>
+          }
+        ></Route>
+        <Route exact path="auth" element={<Login />}></Route>
+        <Route exact path="user" element={<AdminPanel />}>
+          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path={"courses"} element={<AdminCourse />} />
+          <Route path={"enrolment"} element={<CoursesStudent />} />
+          <Route path={"students"} element={<AdminStudent />} />
+          <Route path="teachers" element={<AdminTeacher />} />
+          <Route path={"blogs"} element={<AdminBlogs />} />
         </Route>
         <Route
           exact

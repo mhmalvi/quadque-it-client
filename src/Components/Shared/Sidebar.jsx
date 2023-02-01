@@ -16,7 +16,7 @@ const Sidebar = ({active, ToogleTab}) => {
       <div>
         <img src={Logo} alt="" className="m-auto py-10" />
       </div>
-      <Link to={"/dashboard"}>
+      <Link to={"dashboard"}>
         <div
           className={` ${
             active === "dashboard"
@@ -33,82 +33,92 @@ const Sidebar = ({active, ToogleTab}) => {
         </div>
       </Link>
 
-      <div
-        className={` ${
-          active === "courses"
-            ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
-            : ""
-        }`}
-      >
+      <Link to={"courses"}>
         <div
-          onClick={() => ToogleTab("courses")}
-          className="flex items-center text-base cursor-pointer py-3 ml-10"
+          className={` ${
+            active === "courses"
+              ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
+              : ""
+          }`}
         >
-          <span className="font-thin">Courses</span>
+          <div
+            onClick={() => ToogleTab("courses")}
+            className="flex items-center text-base cursor-pointer py-3 ml-10"
+          >
+            <span className="font-thin">Courses</span>
+          </div>
         </div>
-      </div>
+      </Link>
 
-      <div
-        className={` ${
-          active === "student-courses"
-            ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
-            : ""
-        }`}
-      >
+      <Link to={"enrolment"}>
         <div
-          onClick={() => ToogleTab("student-courses")}
-          className="flex items-center text-base cursor-pointer py-3 ml-10"
+          className={` ${
+            active === "enrolment"
+              ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
+              : ""
+          }`}
         >
-          <span className="font-thin">My Courses</span>
+          <div
+            onClick={() => ToogleTab("enrolment")}
+            className="flex items-center text-base cursor-pointer py-3 ml-10"
+          >
+            <span className="font-thin">Enrolments</span>
+          </div>
         </div>
-      </div>
+      </Link>
 
-      <div
-        className={` ${
-          active === "students"
-            ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
-            : ""
-        }`}
-      >
+      <Link to={"students"}>
         <div
-          onClick={() => ToogleTab("students")}
-          className="flex items-center text-base cursor-pointer py-3 ml-10"
+          className={` ${
+            active === "students"
+              ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
+              : ""
+          }`}
         >
-          <span className="font-thin">Students</span>
+          <div
+            onClick={() => ToogleTab("students")}
+            className="flex items-center text-base cursor-pointer py-3 ml-10"
+          >
+            <span className="font-thin">Students</span>
+          </div>
         </div>
-      </div>
+      </Link>
 
-      <div
-        className={` ${
-          active === "teachers"
-            ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
-            : ""
-        }`}
-      >
+      <Link to={"teachers"}>
         <div
-          onClick={() => ToogleTab("teachers")}
-          className="flex items-center text-base cursor-pointer py-3 ml-10"
+          className={` ${
+            active === "teachers"
+              ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
+              : ""
+          }`}
         >
-          <span className="font-thin">Teachers</span>
+          <div
+            onClick={() => ToogleTab("teachers")}
+            className="flex items-center text-base cursor-pointer py-3 ml-10"
+          >
+            <span className="font-thin">Teachers</span>
+          </div>
         </div>
-      </div>
+      </Link>
 
-      <div
-        className={` ${
-          active === "blogs"
-            ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
-            : ""
-        }`}
-      >
+      <Link to={"blogs"}>
         <div
-          onClick={() => ToogleTab("blogs")}
-          className="flex items-center text-base cursor-pointer py-3 ml-10"
+          className={` ${
+            active === "blogs"
+              ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
+              : ""
+          }`}
         >
-          <span className="font-thin">Blogs</span>
+          <div
+            onClick={() => ToogleTab("blogs")}
+            className="flex items-center text-base cursor-pointer py-3 ml-10"
+          >
+            <span className="font-thin">Blogs</span>
+          </div>
         </div>
-      </div>
+      </Link>
 
-      <div
+      {/* <div
         className={` ${
           active === "gallery"
             ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
@@ -136,7 +146,7 @@ const Sidebar = ({active, ToogleTab}) => {
         >
           <span className="font-thin">Success Stories</span>
         </div>
-      </div>
+      </div> */}
 
       <div className="">
         <div className="flex items-center text-base cursor-pointer py-4 ml-10">
