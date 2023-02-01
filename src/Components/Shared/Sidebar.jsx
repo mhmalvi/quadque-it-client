@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import Logo from "../../Asset/Image/Logo.svg";
 import Icons from "./Icons";
 import { Link } from "react-router-dom";
@@ -50,19 +49,19 @@ const Sidebar = ({active, ToogleTab}) => {
         </div>
       </Link>
 
-      <Link to={"enrolment"}>
+      <Link to={"enrollment"}>
         <div
           className={` ${
-            active === "enrolment"
+            active === "enrollment"
               ? "bg-gradient-to-r from-indigo-800 to-indigo-200"
               : ""
           }`}
         >
           <div
-            onClick={() => ToogleTab("enrolment")}
+            onClick={() => ToogleTab("enrollment")}
             className="flex items-center text-base cursor-pointer py-3 ml-10"
           >
-            <span className="font-thin">Enrolments</span>
+            <span className="font-thin">Enrollments</span>
           </div>
         </div>
       </Link>

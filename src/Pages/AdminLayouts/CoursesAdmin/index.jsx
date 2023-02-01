@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { Select, Modal } from "antd";
 import Icons from "../../../Components/Shared/Icons";
 import AddCourse from "./AddCourse";
+import EditCourse from "./EditCourse";
 
 import useCategory from "../../../Components/Shared/Hooks/useCategory";
 import { handleDeleteCourseCategory } from "../../../Components/Services/company";
@@ -23,6 +24,9 @@ const AdminCourse = () => {
   const [categoryDelModal, setCategoryDelModal] = useState(false);
   const [categoryAddModal, setCategoryAddModal] = useState(false);
   const [deleteCategory, setDeleteCategory] = useState();
+  const [editCourseModal, setEditCourseModal] = useState(false);
+  const [deleteCourseModal, setDeleteCourseModal] = useState(false);
+  const [editCourseId, setEditCourseId] = useState();
 
   const ToogleCategory = (index) => {
     setToogleTab(index);
@@ -70,7 +74,7 @@ const AdminCourse = () => {
     })();
   }, [Category]);
 
-  const confirmDeleteModal = (id) => {
+  const confirmCategoryDeleteModal = (id) => {
     setDeleteCategory(id);
     //console.log(deleteCategory);
     setCategoryDelModal(true);
@@ -92,13 +96,26 @@ const AdminCourse = () => {
     })();
   };
 
+  const confirmCourseDeleteModal = (id) => {
+    //setDeleteCourse(id);
+    //console.log(deleteCategory);
+    setDeleteCourseModal(true);
+  };
+
   const handleCancel = () => {
     setCategoryDelModal(false);
     setCategoryAddModal(false);
+    setEditCourseModal(false);
+    setDeleteCourseModal(false);
   };
 
   const handleAddCategory = () => {
     setCategoryAddModal(true);
+  };
+
+  const handleEditCourseModal = (id) => {
+    setEditCourseId(id);
+    setEditCourseModal(true);
   };
 
   return (
@@ -128,7 +145,7 @@ const AdminCourse = () => {
                   <div className="">{category?.name}</div>
                   <Icons.Delete
                     className="w-4 text-red-700 cursor-pointer"
-                    onClick={() => confirmDeleteModal(category?.id)}
+                    onClick={() => confirmCategoryDeleteModal(category?.id)}
                   />
                   {/* <Icons.Edit className="text-blue-600"/> */}
                 </div>
@@ -138,8 +155,10 @@ const AdminCourse = () => {
             <div className="flex justify-between">
               <div className="w-full">
                 <div className="flex gap-10">
-                  <div className="flex text-xl items-center whitespace-nowrap">Courses List</div>
-                  <AddCourse/>
+                  <div className="flex text-xl items-center whitespace-nowrap">
+                    Courses List
+                  </div>
+                  <AddCourse />
                 </div>
 
                 <div className="flex justify-start">
@@ -221,12 +240,14 @@ const AdminCourse = () => {
                   >
                     <div className="flex-col justify-end absolute right-4 top-6">
                       <div
+                        onClick={() => handleEditCourseModal(details?.id)}
                         title="Edit"
                         className="bg-white rounded-lg p-2 border mb-2 cursor-pointer"
                       >
                         <Icons.Edit className="w-5 text-black m-auto" />
                       </div>
                       <div
+                        onClick={confirmCourseDeleteModal}
                         title="Delete"
                         className="bg-white rounded-lg p-2 border cursor-pointer"
                       >
@@ -237,13 +258,15 @@ const AdminCourse = () => {
                       <img src={Motion} alt="" className="w-full rounded-3xl" />
                     </div>
                     <div className="p-4">
-                          <div className="bg-[#1483a4] text-black text-sm bg-opacity-50 rounded-full py-2 px-2 my-1 overflow-hidden">
-                            {details?.category}
-                          </div>
-                          <div className="py-2 whitespace-nowrap">
-                            {details?.price} tk
-                          </div>
-                      <div className="text-xl pt-2 left-0">{details?.title}</div>
+                      <div className="bg-[#1483a4] text-black text-sm bg-opacity-50 rounded-full py-2 px-2 my-1 overflow-hidden">
+                        {details?.category}
+                      </div>
+                      <div className="py-2 whitespace-nowrap">
+                        {details?.price} tk
+                      </div>
+                      <div className="text-xl pt-2 left-0">
+                        {details?.title}
+                      </div>
                       <p className="text-sm py-2">{details?.para}</p>
                     </div>
                   </div>
@@ -255,6 +278,15 @@ const AdminCourse = () => {
           </div>
         </div>
       </div>
+
+      {editCourseModal && (
+        <EditCourse
+          editCourseModal={editCourseModal}
+          handleCancel={handleCancel}
+          editCourseId={editCourseId}
+        />
+      )}
+
       <Modal
         title="Confirm Deletion"
         open={categoryDelModal}
@@ -284,13 +316,13 @@ const AdminCourse = () => {
         footer={false}
         onCancel={handleCancel}
       >
-          <input
-            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-            type="text"
-            name="Name"
-            placeholder="Name"
-            id="Name"
-          />
+        <input
+          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+          type="text"
+          name="Name"
+          placeholder="Name"
+          id="Name"
+        />
         <div className="flex justify-end">
           <div
             onClick={handleCancel}
@@ -303,6 +335,118 @@ const AdminCourse = () => {
             className="bg-green-500 hover:bg-green-600 shadow rounded-lg text-white px-4 py-2 mx-2 cursor-pointer"
           >
             Save
+          </div>
+        </div>
+      </Modal>
+
+      {/* <Modal
+        title="Add Category"
+        open={editCourseModal}
+        footer={false}
+        onCancel={handleCancel}
+        width="50%"
+        className="h-full"
+      >
+        <input
+          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+          type="text"
+          name="Name"
+          placeholder="Name"
+          id="Name"
+        />
+        <textarea
+          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+          type="text"
+          name="Description"
+          placeholder="Description"
+          id="Description"
+        />
+        <div className="flex gap-5">
+          <input
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+            type="text"
+            name="Duration"
+            placeholder="Duration"
+            id="Duration"
+          />
+          <input
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+            type="text"
+            name="Lectures"
+            placeholder="Lectures"
+            id="Lectures"
+          />
+        </div>
+        <textarea
+          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+          type="text"
+          name="Overview"
+          placeholder="Overview"
+          id="Overview"
+        />
+        <textarea
+          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+          type="text"
+          name="Tools"
+          placeholder="Tools"
+          id="Tools"
+        />
+        <textarea
+          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+          type="text"
+          name="Plugins"
+          placeholder="Plugins"
+          id="Plugins"
+        />
+        <textarea
+          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+          type="text"
+          name="Prerequisite"
+          placeholder="Pre-requisites"
+          id="Prerequisite"
+        />
+        <textarea
+          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
+          type="text"
+          name="Modules"
+          placeholder="Course Modules"
+          id="Modules"
+        />
+        <div className="flex justify-end">
+          <div
+            onClick={handleCancel}
+            className="mx-2 p-2 shadow rounded-lg cursor-pointer hover:shadow-md"
+          >
+            Cancel
+          </div>
+          <div
+            onClick={handleDeleteCategory}
+            className="bg-green-500 hover:bg-green-600 shadow rounded-lg text-white px-4 py-2 mx-2 cursor-pointer"
+          >
+            Save
+          </div>
+        </div>
+      </Modal> */}
+
+      <Modal
+        title="Confirm Deletion"
+        open={deleteCourseModal}
+        footer={false}
+        onCancel={handleCancel}
+      >
+        <p>Are you sure you want to delete this Course?</p>
+        <div className="flex justify-end">
+          <div
+            onClick={handleCancel}
+            className="mx-2 p-2 shadow rounded-lg cursor-pointer hover:shadow-md"
+          >
+            Cancel
+          </div>
+          <div
+            onClick={handleDeleteCategory}
+            className="bg-red-500 hover:bg-red-600 shadow rounded-lg text-white p-2 mx-2 cursor-pointer"
+          >
+            Delete
           </div>
         </div>
       </Modal>
