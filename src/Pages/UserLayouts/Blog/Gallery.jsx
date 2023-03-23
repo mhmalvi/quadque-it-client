@@ -9,12 +9,28 @@ import meeting from "../../../Asset/Image/meeting.png";
 import hallway from "../../../Asset/Image/hallway.png";
 import librarytop from "../../../Asset/Image/librarytop.png";
 import confarence from "../../../Asset/Image/confarence.png";
+import Footer from "../LandingPage/Footer";
+import { Modal } from "antd";
+import "./gallery.css";
 
 const Gallery = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [toogleTab, setToogleTab] = useState(1);
+  const [selectedImg, setSelectedImg] = useState();
 
   const ToogleTab = (index) => {
     setToogleTab(index);
+  };
+
+  const showModal = (id) => {
+    const imageSelected = images?.find(i => i.id === id);
+    setSelectedImg(imageSelected); 
+    setIsModalOpen(true);
+    console.log(selectedImg);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
   };
   return (
     <>
@@ -24,11 +40,11 @@ const Gallery = () => {
             <img
               src={video}
               alt=""
-              className="lg:rounded-xl lg:px-4 md:shrink-0 "
+              className="lg:rounded-xl md:shrink-0 px-4 lg:px-0"
             />
           </div>
           <div className="sm:w-2/3 lg:w-full flex-col px-5 lg:justify-start m-auto">
-            <div className="text-start text-2xl font-semibold pb-2">
+            <div className="text-start text-2xl font-semibold pb-2 pt-8 lg:pt-0">
               Our Institute
             </div>
             <div className="mx-2 text-sm font-thin text-start lg:w-2/3 pb-4 lg:px-0">
@@ -52,7 +68,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap justify-evenly items-start py-5 leading-10 px-4 lg:px-30">
+        <div className="2xl:w-10/12 flex flex-wrap justify-evenly items-start py-14 leading-10 px-4 lg:px-30 mx-auto">
           <div
             onClick={() => ToogleTab(1)}
             className={
@@ -124,10 +140,29 @@ const Gallery = () => {
             News
           </div>
         </div>
-        <div className="flex justify-center">
-          <div className="grid lg:grid-cols-12 pt-10 gap-2 lg:gap-6 m-auto">
-            <div className="col-span-12 lg:col-span-5">
+        <div className="flex justify-center pb-10">
+          {/* <div className="grid lg:grid-cols-12 gap-2 lg:gap-6 m-auto"> */}
+          <div className="flex flex-wrap gap-2 lg:gap-6 m-auto justify-center">
+            {/* <div className="col-span-12 lg:col-span-5"> */}
+            {images?.map((img) => (
+              <div
+                key={img?.id}
+                className="w-1/4 flex justify-center items-center"
+              >
+                <img
+                  onClick={() => {
+                    showModal(img?.id);
+                  }}
+                  src={img?.image}
+                  alt=""
+                  className="w-full m-auto lg:rounded-xl"
+                />
+              </div>
+            ))}
+
+            {/* <div className="col-span-12 lg:col-span-5">
               <img
+                onClick={showModal}
                 src={classroom2}
                 alt=""
                 className="w-full lg:h-67 lg:rounded-xl"
@@ -135,6 +170,7 @@ const Gallery = () => {
             </div>
             <div className="col-span-12 lg:col-span-7">
               <img
+                onClick={showModal}
                 src={library}
                 alt=""
                 className="w-full lg:h-67 lg:rounded-xl"
@@ -143,6 +179,7 @@ const Gallery = () => {
 
             <div className="col-span-12 lg:col-span-4">
               <img
+                onClick={showModal}
                 src={collegeroom}
                 alt=""
                 className="w-full lg:h-67 lg:rounded-xl"
@@ -151,6 +188,7 @@ const Gallery = () => {
 
             <div className="col-span-12 lg:col-span-4">
               <img
+                onClick={showModal}
                 src={projection}
                 alt=""
                 className="w-full lg:h-67 lg:rounded-xl"
@@ -159,6 +197,7 @@ const Gallery = () => {
 
             <div className="col-span-12 lg:col-span-4">
               <img
+                onClick={showModal}
                 src={meeting}
                 alt=""
                 className="w-full lg:h-67 lg:rounded-xl"
@@ -167,6 +206,7 @@ const Gallery = () => {
 
             <div className="col-span-12 lg:col-span-3">
               <img
+                onClick={showModal}
                 src={hallway}
                 alt=""
                 className="w-full lg:h-67 lg:rounded-xl"
@@ -175,6 +215,7 @@ const Gallery = () => {
 
             <div className="col-span-12 lg:col-span-4">
               <img
+                onClick={showModal}
                 src={librarytop}
                 alt=""
                 className="w-full lg:h-67 lg:rounded-xl"
@@ -183,16 +224,42 @@ const Gallery = () => {
 
             <div className="col-span-12 lg:col-span-5">
               <img
+                onClick={showModal}
                 src={confarence}
                 alt=""
                 className="w-full lg:h-67 lg:rounded-xl"
               />
-            </div>
+            </div> */}
           </div>
         </div>
+        <Modal
+          title={false}
+          open={isModalOpen}
+          /* onOk={false} */
+          onCancel={handleCancel}
+          footer={false}
+          width="80%"
+          className="galleryImgPopup h-auto"
+        >
+          <div className="my-10">
+          <img src={selectedImg?.image} alt="" className="w-full lg:w-2/3 m-auto"/>
+          </div>
+        </Modal>
+        <Footer />
       </div>
     </>
   );
 };
 
 export default Gallery;
+
+const images = [
+  { id: 1, image: classroom2 },
+  { id: 2, image: library },
+  { id: 3, image: collegeroom },
+  { id: 4, image: projection },
+  { id: 5, image: meeting },
+  { id: 6, image: hallway },
+  { id: 7, image: librarytop },
+  { id: 8, image: confarence },
+];

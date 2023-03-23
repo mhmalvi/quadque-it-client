@@ -11,6 +11,7 @@ import Blog from './Pages/UserLayouts/Blog';
 import BlogDetail from './Pages/UserLayouts/Blog/BlogDetail';
 import Gallery from "./Pages/UserLayouts/Blog/Gallery";
 import Stories from "./Pages/UserLayouts/Blog/Stories";
+import StoriesDetail from './Pages/UserLayouts/Blog/StoriesDetails';
 import Login from "./Pages/UserLayouts/Authentication/Login/Login";
 import AdminPanel from "./Pages/AdminLayouts/AdminPanel";
 import AdminDashboard from './Pages/AdminLayouts/Dashboard/AdminDashboard';
@@ -19,6 +20,8 @@ import AdminCourse from './Pages/AdminLayouts/CoursesAdmin';
 import AdminStudent from "./Pages/AdminLayouts/Student"
 import AdminTeacher from "./Pages/AdminLayouts/Teacher"
 import StudentEnrollment from './Pages/AdminLayouts/StudentEnrollment';
+import Admission from './Pages/UserLayouts/Course/Admission';
+import "./App.css";
 
 function App() {
   return (
@@ -33,10 +36,12 @@ function App() {
         <Route exact path="blog/blog-detail" element={<><Navbar /><BlogDetail /></>}></Route>
         <Route exact path="gallery" element={<><Navbar /><Gallery /></>}></Route>
         <Route exact path="stories" element={<><Navbar /><Stories /></>}></Route>
+        <Route exact path="stories-detail" element={<><Navbar /><StoriesDetail /></>}></Route>
+        <Route exact path="admission" element={<><Navbar /><Admission /></>}></Route>
         <Route exact path="auth" element={<Login />}></Route>
 
         <Route exact path="user" element={<AdminPanel />}>
-          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path={"dashboard"} element={<AdminDashboard />} />
           <Route path={"courses"} element={<AdminCourse />} />
           <Route path={"enrollment"} element={<StudentEnrollment />} />
           <Route path={"students"} element={<AdminStudent />} />

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../../Asset/Image/Logo.svg";
 import Icons from "../Icons";
 import NavLinks from "./NavLinks";
-import { Button, Modal } from "antd";
+import { Modal } from "antd";
 import "../../../App.css";
+import "./Navbar.css";
 import { links } from "./MyLinks";
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
   return (
     <div id="Navbar" className="w-full absolute top-0 bg-transparent">
       {/* TOPBAR */}
-      <div className="w-2/3 m-auto md:flex items-center justify-between px-4 py-2 hidden lg:visible">
+      <div className="m-auto lg:flex items-center justify-between px-4 py-2 hidden lg:visible">
         <div className="text-gray-800 font-bold text-2xl coursor-pointer flex items-center"></div>
         <ul className="flex items-center text-xs text-black font-semibold m-0">
           <li className="md:ml-8">
@@ -45,7 +46,7 @@ const Navbar = () => {
             <div
               className={`${genericHamburgerLine} ${
                 open
-                  ? "rotate-45 translate-y-2 group-hover:opacity-100"
+                  ? "-translate-y-2 group-hover:opacity-100"
                   : "opacity-100 group-hover:opacity-100"
               }`}
             />
@@ -57,7 +58,7 @@ const Navbar = () => {
             <div
               className={`${genericHamburgerLine} ${
                 open
-                  ? "-rotate-45 -translate-y-2  group-hover:opacity-100"
+                  ? "translate-y-2  group-hover:opacity-100"
                   : "opacity-100 group-hover:opacity-100"
               }`}
             />
@@ -68,7 +69,7 @@ const Navbar = () => {
           </ul>
           {/* Mobile View */}
           <Modal
-            className="cross_btn"
+            className="NavbarModal cross_btn"
             title={false}
             centered
             open={open}
@@ -97,7 +98,10 @@ const Navbar = () => {
                         }`}
                       >
                         {link.submenu?.map((slink) => (
-                          <Link to={slink.sublink}>
+                          <Link
+                            to={slink.sublink}
+                            onClick={() => {setOpen(false); setToogleSubmenu("")}}
+                          >
                             <div className="py-6 pl-10">{slink.name}</div>
                           </Link>
                         ))}

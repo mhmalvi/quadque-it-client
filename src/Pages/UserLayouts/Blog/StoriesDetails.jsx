@@ -3,7 +3,7 @@ import blogdetail from "../../../Asset/Image/blogdetail.png";
 import blogdetail2 from "../../../Asset/Image/blogdetail2.png";
 import Footer from "../LandingPage/Footer";
 
-const BlogDetail = () => {
+const StoriesDetail = () => {
   return (
     <>
       <div className="text-white bg-home-color lg:mt-10 pt-32 pb-20">
@@ -12,7 +12,7 @@ const BlogDetail = () => {
             <img src={blogdetail} alt="" className="rounded-xl" />
           </div>
 
-          <div className="mt-8 text-4xl">BLOG DETAILS</div>
+          <div className="mt-8 text-4xl">STORY DETAIL</div>
 
           <div className="mt-8 font-semibold text-lg">
             Just like graphic design and web development, UX design trends come
@@ -23,7 +23,7 @@ const BlogDetail = () => {
             UX skills.
           </div>
 
-          <div className="mt-8 text-2xl">BLOG DETAILS</div>
+          <div className="mt-8 text-2xl">STORY DETAIL</div>
 
           <div className="lg:flex justify-evenly mt-8">
             <div className="lg:w-2/3 lg:pr-3 pb-2">
@@ -58,7 +58,7 @@ const BlogDetail = () => {
             yourUX skills.
           </div>
 
-          <div className="mt-8 text-2xl">BLOG DETAILS</div>
+          <div className="mt-8 text-2xl">STORY DETAIL</div>
 
           <div className="mt-4">
             Just like graphic design and web development, UX design trends come
@@ -86,9 +86,9 @@ const BlogDetail = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 };
 
-export default BlogDetail;
+export default StoriesDetail;

@@ -155,10 +155,10 @@ const StudentEnrolment = () => {
                 onScroll={onScroll}
               >
                 {(item) => (
-                  <List.Item key={item.email}>
+                  <List.Item key={item?.email}>
                     <List.Item.Meta
                       /* avatar={<Avatar src={item.picture.large} />} */
-                      title={<a href="https://ant.design">{item.name.last}</a>}
+                      title={<a href="https://ant.design">{item?.name?.last}</a>}
                       /* description={item.email} */
                     />
                     <a className="px-2">Download</a>

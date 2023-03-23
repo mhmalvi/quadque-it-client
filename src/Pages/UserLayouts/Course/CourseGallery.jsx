@@ -7,14 +7,16 @@ import Reading from "../../../Asset/Image/reading.png";
 import Course from "./Course.json";
 import { useNavigate } from "react-router-dom";
 import { Select } from "antd";
+import Testimonial from "../ReusableComponents/Testimonial";
+import Footer from "../LandingPage/Footer";
 
-import useCategory from "../../../Components/Shared/Hooks/useCategory";
+//import useCategory from "../../../Components/Shared/Hooks/useCategory";
 
 const CourseGallery = () => {
-  const [Category] = useCategory();
+  //const [Category] = useCategory();
   const navigate = useNavigate();
   const [toogleTab, setToogleTab] = useState("All");
-  const [toogleMediumTab, setToogleMediumTab] = useState("both");
+  const [toogleMediumTab, setToogleMediumTab] = useState("all");
   const [categoryItems, setCategoryItems] = useState([]);
   const [courseData, setCourseData] = useState();
 
@@ -35,7 +37,7 @@ const CourseGallery = () => {
   useEffect(() => {
     let CourseDetail;
     if (toogleTab !== "All") {
-      if (toogleMediumTab !== "both") {
+      if (toogleMediumTab !== "all") {
         CourseDetail = Course.filter(
           (cor) =>
             cor.category === toogleTab && cor.platform === toogleMediumTab
@@ -49,7 +51,7 @@ const CourseGallery = () => {
     }
   }, [toogleTab, toogleMediumTab]);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const items = [
       {
         id: "0",
@@ -67,27 +69,37 @@ const CourseGallery = () => {
       setCategoryItems(items);
     })();
   }, [Category]);
-  console.log("items,", categoryItems);
+  console.log("items,", categoryItems); */
 
   return (
     <div className="w-full bg-[#040422] h-screen text-white">
       <div className="flex lg:mt-10 pt-44 lg:pb-20">
         <div className="w-full ">
-          <div className="flex m-auto justify-center">
-            <div className="hidden lg:block">
+          <div className="flex m-auto justify-between items-center">
+            <div className="hidden lg:block -mb-48 ml-20">
               <img
                 src={Banner}
-                className="absolute top-[44%] left-[10%]"
+                className="w-full"
                 alt=""
               />
             </div>
-            <div className="w-2/3 sm:w-1/2 lg:w-1/3 text-white text-center">
+            <div className="w-2/3 sm:w-1/2 lg:w-1/3 text-white text-center mx-auto">
               <div className="text-4xl pb-2 text-shadow-white">Courses</div>
               <div className="m-auto pb-8">
                 Browse through our extensive collection of courses to choose one
                 that fits your experience level and goals.
               </div>
               <div className="flex justify-center">
+                <div
+                  onClick={() => ToogleMedium("all")}
+                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
+                    toogleMediumTab === "all"
+                      ? "bg-white text-black duration-500"
+                      : "bg-black text-white duration-500"
+                  }`}
+                >
+                  All
+                </div>
                 <div
                   onClick={() => ToogleMedium("offline")}
                   className={`px-4 rounded-2xl m-2 cursor-pointer ${
@@ -108,28 +120,19 @@ const CourseGallery = () => {
                 >
                   Online
                 </div>
-                <div
-                  onClick={() => ToogleMedium("both")}
-                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
-                    toogleMediumTab === "both"
-                      ? "bg-white text-black duration-500"
-                      : "bg-black text-white duration-500"
-                  }`}
-                >
-                  Both
-                </div>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden lg:block -mb-[150px] mr-20">
               <img
                 src={Reading}
-                className="absolute right-[6%] top-[31%]"
+                className="w-full"
                 alt=""
               />
             </div>
           </div>
         </div>
       </div>
+
       <div className="bg-home-color lg:py-13 px-5 py-10 lg:px-30 lg:relative">
         <div className="lg:flex">
           <div className="w-1/3 hidden lg:block">
@@ -146,22 +149,22 @@ const CourseGallery = () => {
                   All
                 </div>
               </li>
-              {Category?.map((category) => (
+              {/* {Category?.map((category) => (
                 <li
-                  key={category.id}
-                  onClick={() => ToogleCategory(category.name)}
+                key={category.id}
+                onClick={() => ToogleCategory(category.name)}
                 >
-                  <div
-                    className={
-                      toogleTab === category.name
-                        ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                        : "cursor-pointer"
-                    }
-                  >
-                    {category.name}
+                <div
+                className={
+                  toogleTab === category.name
+                  ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
+                  : "cursor-pointer"
+                }
+                >
+                {category.name}
                   </div>
                 </li>
-              ))}
+              ))} */}
             </ul>
           </div>
 
@@ -178,7 +181,7 @@ const CourseGallery = () => {
 
           <div className="w-full bg-[#040422]">
             {/* COURSE Gallery */}
-            <div className="grid grid-col-1 lg:grid-cols-2 text-white gap-6 lg:mx-18 my-6">
+            <div className="grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 text-white gap-6 lg:mx-18 my-6">
               {/* cards */}
               {courseData?.map((details) =>
                 details ? (
@@ -197,24 +200,28 @@ const CourseGallery = () => {
                       <div className="flex-col">
                         <div className="flex justify-between">
                           <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full py-2 px-4">
-                            {details.date}
+                            {details?.date}
                           </div>
-                          <div className="py-2">{details.price} tk</div>
+                          <div className="py-2">{details?.price} tk</div>
                         </div>
                       </div>
-                      <div className="text-xl pt-2 left-0">{details.title}</div>
-                      <div className="py-2">{details.para}</div>
+                      <div className="text-xl pt-2 left-0">
+                        {details?.title}
+                      </div>
+                      <div className="py-2">{details?.para}</div>
                     </div>
                   </div>
                 ) : (
-                  "No Course found!"
+                  "No Courses to show."
                 )
               )}
             </div>
           </div>
         </div>
+        <Testimonial />
       </div>
+      <Footer />
     </div>
   );
-}
+};
 export default CourseGallery;

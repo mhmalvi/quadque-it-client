@@ -9,6 +9,8 @@ import Box2 from "../../../Asset/Image/box2.png";
 import Icons from "../../../Components/Shared/Icons";
 import AboutMaterial from "./AboutMaterial";
 import AnimatedText from "react-animated-text-content";
+import Instructors from "../ReusableComponents/Instructors";
+import Footer from "../LandingPage/Footer";
 
 const Header = () => {
   return (
@@ -17,13 +19,13 @@ const Header = () => {
         <div className="lg:mt-10">
           <div className="lg:w-2/3 flex-col justify-center text-white m-auto pt-32">
             <div className="lg:text-4xl text-2xl font-bold text-center leading-12">
-                Delve into the World of Digital Marketing and IT with QIT.
+              Delve into the World of Digital Marketing and IT with QIT.
             </div>
             <div className="w-2/3 lg:text-base text-xs text-center py-5 pb-7 m-auto">
               Let Us Help You to Develop the Skills You Need to Stand Out in the
               Fast-Paced World of Digital Marketing and IT.
             </div>
-            <div className="flex justify-center gap-2 lg:gap-6 pb-8">
+            {/* <div className="flex justify-center gap-2 lg:gap-6 pb-8">
               <div>
                 <button className="bg-[#2F327D] text-xs lg:text-sm rounded-lg py-2 px-6">
                   Online Courses
@@ -34,7 +36,7 @@ const Header = () => {
                   Offline Courses
                 </button>
               </div>
-            </div>
+            </div> */}
             <div className="">
               <img src={Classroom} className="m-auto px-4 lg:px-0" alt="" />
             </div>
@@ -61,11 +63,11 @@ const Header = () => {
           </div>
         </div>
         <div className="bg-white relative">
-          <img
+          {/* <img
             src={Box}
             className="invisible lg:visible absolute top-0 left-[10%] w-20"
             alt=""
-          />
+          /> */}
           <div className="text-4xl font-bold text-center pt-13 lg:pt-24">
             Our Core Values
           </div>
@@ -115,24 +117,24 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <img
+          {/* <img
             src={Box2}
             className="invisible lg:visible absolute float-right -bottom-0 right-[25%] w-60"
             alt=""
-          />
+          /> */}
         </div>
         <div className="text-white relative">
           <div className="text-4xl font-bold text-center pt-13 lg:pt-36">
             Why Choose Us
           </div>
-          <div className="w-2/3 text-center text-lg font-thin py-5 m-auto">
+          <div className="w-2/3 text-center text-lg font-thin pt-5 pb-16 m-auto">
             We have collaborated with some of the most reputed names in the
             digital marketing and IT scene. Therefore, we have a good idea of
             what works and what doesn’t. Take a look at some of the main reasons
             you should enrol in one of our courses.
           </div>
-          <div className="lg:w-4/5 flex flex-wrap justify-center m-auto pb-7">
-            <div className="w-38 sm:w-66 flex-col p-5">
+          <div className="lg:w-8/12 flex flex-wrap justify-center m-auto pb-7 gap-10">
+            <div className="w-44 sm:w-66 flex-col p-5">
               <div className="sm:flex pb-4">
                 <Icons.TickBox className="w-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
@@ -144,7 +146,7 @@ const Header = () => {
                 assistance of our qualified instructors.
               </div>
             </div>
-            <div className="w-38 sm:w-66 flex-col p-5">
+            <div className="w-44 sm:w-66 flex-col p-5">
               <div className="sm:flex pb-4">
                 <Icons.TickBox className="w-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
@@ -157,7 +159,7 @@ const Header = () => {
                 levels of difficulty.
               </div>
             </div>
-            <div className="w-38 sm:w-66 flex-col p-5">
+            <div className="w-44 sm:w-66 flex-col p-5">
               <div className="sm:flex pb-4">
                 <Icons.TickBox className="w-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
@@ -169,7 +171,7 @@ const Header = () => {
                 take your portfolio to another level.
               </div>
             </div>
-            <div className="w-38 sm:w-66 flex-col p-5">
+            <div className="w-44 sm:w-66 flex-col p-5">
               <div className="sm:flex pb-4">
                 <Icons.TickBox className="w-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
@@ -181,7 +183,7 @@ const Header = () => {
                 the most valuable skills for the competitive job market.
               </div>
             </div>
-            <div className="w-38 sm:w-66 flex-col p-5">
+            <div className="w-44 sm:w-66 flex-col p-5">
               <div className="sm:flex pb-4">
                 <Icons.TickBox className="w-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
@@ -193,7 +195,7 @@ const Header = () => {
                 know how to use them effectively and efficiently.
               </div>
             </div>
-            <div className="w-38 sm:w-66 flex-col p-5">
+            <div className="w-44 sm:w-66 flex-col p-5">
               <div className="sm:flex pb-4">
                 <Icons.TickBox className="w-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
@@ -205,7 +207,7 @@ const Header = () => {
                 results and an enjoyable training experience.
               </div>
             </div>
-            <div className="w-38 sm:w-66 flex-col p-5">
+            <div className="w-44 sm:w-66 flex-col p-5">
               <div className="sm:flex pb-4">
                 <Icons.TickBox className="w-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
@@ -217,7 +219,7 @@ const Header = () => {
                 studies to get a solid idea of industry standards and trends.
               </div>
             </div>
-            <div className="w-38 sm:w-66 flex-col p-5">
+            <div className="w-44 sm:w-66 flex-col p-5">
               <div className="sm:flex pb-4">
                 <Icons.TickBox className="w-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
@@ -232,6 +234,8 @@ const Header = () => {
             </div>
           </div>
           <AboutMaterial />
+          <Instructors/>
+          <Footer />
         </div>
       </div>
     </div>

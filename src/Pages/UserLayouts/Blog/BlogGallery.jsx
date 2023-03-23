@@ -6,6 +6,7 @@ import Blog from "./blogs.json";
 import { Link } from "react-router-dom";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Menu, Space } from "antd";
+import Footer from "../LandingPage/Footer";
 
 const BlogGallery = () => {
   const [toogleTab, setToogleTab] = useState(1);
@@ -55,15 +56,15 @@ const BlogGallery = () => {
   useEffect(() => {
     let BlogDetail;
     if (toogleTab !== 1) {
-      BlogDetail = Blog.filter((blog) => blog.category == toogleTab);
+      BlogDetail = Blog?.filter((blog) => blog.category == toogleTab);
     } else {
-      BlogDetail = Blog.map((blog) => blog);
+      BlogDetail = Blog?.map((blog) => blog);
     }
     setBlogData(BlogDetail);
   }, [Blog, toogleTab]);
 
   return (
-    <div className="w-full text-white">
+    <div className="w-full h-screen text-white">
       <div className="bg-home-color py-13">
         <div className="flex-col lg:w-2/3 m-auto px-5">
           <div className="hidden lg:block">
@@ -86,7 +87,7 @@ const BlogGallery = () => {
                     : "cursor-pointer"
                 }
               >
-                Graphics Design   
+                Graphics Design
               </div>
               <div
                 onClick={() => ToogleTab(3)}
@@ -106,7 +107,7 @@ const BlogGallery = () => {
                     : "cursor-pointer"
                 }
               >
-                Digital Marketing   
+                Digital Marketing
               </div>
               <div
                 onClick={() => ToogleTab(5)}
@@ -161,39 +162,42 @@ const BlogGallery = () => {
           <div className="w-full pt-8 lg:pt-2">
             {/* Gallery */}
             {/* row1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 text-white lg:gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 text-white lg:gap-6">
               {/* card1 */}
               {blogData?.map((details) => (
-                <div className="flex-col group rounded-xl">
-                  <div className="flex-wrap overflow-hidden rounded-xl">
-                    <img
-                      src={Uiux}
-                      alt=""
-                      className="w-full rounded-xl group-hover:scale-110 ease-in duration-500"
-                    />
-                  </div>
-                  <div className="py-5">
-                    <div className="flex-col">
-                      <div className="text-[#828282] bg-opacity-50 rounded-full py-2">
-                        {details.date}
+                <Link to={"./blog-detail"}>
+                  <div className="flex-col group rounded-xl">
+                    <div className="flex-wrap overflow-hidden rounded-xl">
+                      <img
+                        src={Uiux}
+                        alt=""
+                        className="w-full rounded-xl group-hover:scale-110 ease-in duration-500"
+                      />
+                    </div>
+                    <div className="py-5">
+                      <div className="flex-col">
+                        <div className="text-[#828282] bg-opacity-50 rounded-full py-2">
+                          {details?.date}
+                        </div>
                       </div>
-                    </div>
-                    <div className="text-2xl pt-2 left-0">{details.title}</div>
-                    <div className="max-h-20 overflow-hidden py-2">
-                      {details.para}
-                    </div>
-                    <Link to={"./blog-detail"}>
-                      <button className="text-[#23BDEE] hover:text-[#50d5fd] font-semibold py-2">
+                      <div className="text-2xl pt-2 left-0">
+                        {details?.title}
+                      </div>
+                      <div className="max-h-20 overflow-hidden py-2">
+                        {details?.para}
+                      </div>
+                      {/* <button className="text-[#23BDEE] hover:text-[#50d5fd] font-semibold py-2">
                         READ MORE
-                      </button>
-                    </Link>
+                      </button>      */}        
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

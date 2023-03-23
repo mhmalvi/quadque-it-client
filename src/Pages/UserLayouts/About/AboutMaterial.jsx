@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Robot from "../../../Asset/Image/Robot.png";
 import MobilePic from "../../../Asset/Image/mobile-browse.png";
+import { Link } from "react-router-dom";
 
 const AboutMaterial = () => {
   return (
@@ -34,9 +35,11 @@ const AboutMaterial = () => {
             Get a Free Trial Today!
           </div>
           <div className="flex justify-center lg:justify-start h-16 gap-14 text-white text-base lg:text-xl mb-6">
+            <Link to="../course">
             <div className="bg-[#2F327D] hover:bg-[#3f42a3] rounded-full text-white text-center cursor-pointer px-8 py-4">
               Browse Courses
             </div>
+            </Link>
           </div>
           <div className="md:text-base pb-8">
             Check out our diverse courses specialising in graphics design,

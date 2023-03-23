@@ -5,15 +5,18 @@ import Rectangle from "../../../Asset/Image/graphictools.png";
 import Icons from "../../../Components/Shared/Icons";
 import CountUp from "react-countup";
 import CourseMaterial from "./CourseMaterial";
+import { Link } from "react-router-dom";
+import Hiring from "../../../Asset/pdf/hiring.pdf"
 /* absolute top-64 left-1/4 */
 
 const Header = () => {
   return (
-    <div className="w-full bg-home-color text-white">
-            <div className="lg:mt-10">
+    <div className="w-full min-h-screen bg-home-color text-white lg:mt-10">
+      <div className="">
         <img src={Rectangle} className="w-full" alt="" />
       </div>
-      <div className="w-full text-white lg:pb-32 -mt-64 lg:-mt-[850px]">
+
+      <div className="w-full text-white lg:pb-32 -mt-[30vh] lg:-mt-[100vh] xl:-mt-[100vh] 2xl:-mt-[115vh]">
         <div className="lg:mt-10">
           <div className="lg:w-3/4 flex-col justify-center m-auto pt-32">
             <div className="text-2xl lg:text-5xl font-bold text-center">
@@ -23,21 +26,25 @@ const Header = () => {
               Learn how to use Adobe After Effects, Illustrator and Photoshop
               effectively to create visually stunning motion graphics.
             </div>
-            <div className="flex justify-center gap-6 pb-8">
+            <div className="flex justify-center gap-6 pb-14">
               <div>
-                <button className="bg-[#2F327D] text-xl rounded-xl py-2 px-6">
-                  Admission
-                </button>
+                <Link to="../admission">
+                  <div className="bg-[#2F327D] text-xl rounded-xl py-2 px-6">
+                    Admission
+                  </div>
+                </Link>
               </div>
               <div>
-                <button className="bg-white bg-opacity-20 text-xl rounded-xl py-2 px-6">
-                  Brochure
-                </button>
+                <a href={Hiring} download>
+                  <div className="bg-white bg-opacity-20 text-xl rounded-xl py-2 px-6">
+                    Brochure
+                  </div>
+                </a>
               </div>
             </div>
             {/* Video Section */}
-            <div className="flex flex-wrap justify-center">
-              <div className="w-full ratio-16x9 rounded-lg lg:border-4 mx-3 lg:mx-0">
+            <div className="flex flex-wrap justify-center pb-14">
+              <div className="w-10/12 ratio-16x9 rounded-lg lg:border-4 mx-3 lg:mx-0">
                 <iframe
                   width="100%"
                   height="429"
@@ -50,19 +57,17 @@ const Header = () => {
               </div>
             </div>
             {/* countup section */}
-            <div className="flex justify-center gap-6 pt-14 pb-8 lg:pb-24">
+            <div className="flex flex-wrap justify-center gap-6 pb-8 lg:pb-24 mx-10 lg:mx-0">
               <div className="flex-col flex-wrap text-center">
-                <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 m-auto">
+                <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 flex justify-center items-center">
                   <span className="text-2xl lg:text-5xl font-bold">
                     <CountUp duration={2.75} end={6} />
                   </span>
-                  <br />
-                  Months
                 </div>
-                <div className="pt-5">Duration</div>
+                <div className="pt-5">Duration (months)</div>
               </div>
               <div className="flex-col flex-wrap text-center">
-                <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4">
+                <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 flex justify-center items-center">
                   <span className="text-2xl lg:text-5xl font-bold">
                     <CountUp duration={2.75} end={48} />
                   </span>
@@ -70,7 +75,7 @@ const Header = () => {
                 <div className="pt-5">Lectures</div>
               </div>
               <div className="flex-col flex-wrap text-center">
-                <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4">
+                <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 flex justify-center items-center">
                   <span className="text-2xl lg:text-5xl font-bold">
                     <CountUp duration={2.75} end={30} suffix="+" />
                   </span>

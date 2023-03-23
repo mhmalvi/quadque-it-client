@@ -7,6 +7,7 @@ import BlogCategories from "../../UserLayouts/Blog/blogCategory.json";
 import { Link } from "react-router-dom";
 import Icons from "../../../Components/Shared/Icons";
 import { Select, Modal } from "antd";
+import AddBlog from "./AddBlog";
 
 const AdminBlogs = () => {
   const [toogleTab, setToogleTab] = useState("All");
@@ -38,7 +39,7 @@ const AdminBlogs = () => {
       ];
 
       (async () => {
-        BlogCategories.forEach((category) => {
+        BlogCategories?.forEach((category) => {
           items.push({
             id: `${category?.id}`,
             value: `${category?.name}`,
@@ -155,21 +156,21 @@ const AdminBlogs = () => {
                 Others
               </div>
             </div> */}
-                <div className="flex text-sm font-thin leading-10 py-4">
-                  {BlogCategories?.map((category) => (
-                    <div
-                      className="flex flex-wrap gap-4 border px-2 mx-2 rounded-lg shadow"
-                      key={category.id}
-                    >
-                      <div className="">{category.name}</div>
-                      <Icons.Delete
-                        className="w-4 text-red-700 cursor-pointer"
-                        onClick={confirmDeleteModal}
-                      />
-                      {/* <Icons.Edit className="text-blue-600"/> */}
-                    </div>
-                  ))}
+            <div className="flex text-sm font-thin leading-10 py-4">
+              {BlogCategories?.map((category) => (
+                <div
+                  className="flex flex-wrap gap-4 border px-2 mx-2 rounded-lg shadow"
+                  key={category?.id}
+                >
+                  <div className="">{category?.name}</div>
+                  <Icons.Delete
+                    className="w-4 text-red-700 cursor-pointer"
+                    onClick={confirmDeleteModal}
+                  />
+                  {/* <Icons.Edit className="text-blue-600"/> */}
                 </div>
+              ))}
+            </div>
 
             <Modal
               title="Confirm Deletion"
@@ -195,11 +196,8 @@ const AdminBlogs = () => {
             </Modal>
 
             <div className="flex gap-10 py-5">
-              <div className="flex text-xl items-center">Blogs List</div>
-              <div className="flex bg-blue-600 hover:bg-blue-700 duration-150 shadow-lg text-white rounded-full px-4 py-2">
-                <span className="pr-2 cursor-pointer">Add Blog</span>
-                <Icons.Cancel className="w-3 rotate-45 cursor-pointer" />
-              </div>
+              <div className="flex text-xl items-center whitespace-nowrap">Blogs List</div>
+              <AddBlog />
             </div>
 
             <div className="flex justify-start pb-5">
@@ -241,12 +239,12 @@ const AdminBlogs = () => {
                   <div className="py-5">
                     <div className="flex-col">
                       <div className="text-[#828282] bg-opacity-50 rounded-full py-2">
-                        {details.date}
+                        {details?.date}
                       </div>
                     </div>
-                    <div className="text-2xl pt-2 left-0">{details.title}</div>
+                    <div className="text-2xl pt-2 left-0">{details?.title}</div>
                     <div className="max-h-20 overflow-hidden py-2">
-                      {details.para}
+                      {details?.para}
                     </div>
                     <Link to={"./blog-detail"}>
                       <button className="text-[#23BDEE] hover:text-[#50d5fd] font-semibold py-2">

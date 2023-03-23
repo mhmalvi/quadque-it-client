@@ -73,7 +73,7 @@ const OurStudents = ()=> {
           <Slider ref={sliderRef} {...settings}>
               {Instructor?.map((person) => (
                 <div>
-                  <div className="max-w-[480px] shadow text-center pt-9 px-12 pb-12 mx-3 my-3">
+                  <div className="max-w-[480px] shadow-md text-center pt-9 px-12 pb-12 mx-3 my-3">
                     <div className="pb-4">
                       <img
                         src={PersonOne}
@@ -83,13 +83,13 @@ const OurStudents = ()=> {
                       />
                     </div>
                     <div className="text-xl font-semibold pb-1">
-                      {person.name}
+                      {person?.name}
                     </div>
                     <div className="text-brand-color text-base font-semibold pb-9">
-                      {person.job}
+                      {person?.job}
                     </div>
 
-                    <div className="text-base text-start">“{person.comment}”</div>
+                    <div className="text-base text-start">“{person?.comment}”</div>
                   </div>
                 </div>
               ))}

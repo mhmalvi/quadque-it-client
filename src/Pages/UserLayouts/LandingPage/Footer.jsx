@@ -5,12 +5,12 @@ import Logo from "../../../Asset/Image/Logo.svg";
 const Footer = () => {
   return (
     <div className="w-full text-white">
-      <div className="md:flex bg-black pt-20 px-10 md:px-20 pb-13 gap-8">
-        <div className="md:w-2/5 pb-4">
+      <div className="md:flex justify-evenly items-center bg-black pt-20 px-10 md:px-20 pb-13">
+        <div className="md:w-3/12 pb-4">
           <div className="py-4">
             <img src={Logo} width={120} alt="" />
           </div>
-          <div className="text-sm text-justify md:text-lg pb-8">
+          <div className="text-sm text-justify pb-8">
             This is your opportunity to learn the most demandable IT and digital
             marketing skills from some of the best experts in the industry.{" "}
             <br />
@@ -32,74 +32,71 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="md:flex justify-between gap-6">
-          <div className="md:w-1/3 flex md:flex-none gap-10">
-            <div className=" flex-col text-xl md:text-lg py-4 lg:py-0">
-              <div className="p-2">
-                <a href="/" className="no-underline">
-                  Home
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="/about-us" className="no-underline">
-                  About
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="/course" className="no-underline">
-                  Courses
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="/contact" className="no-underline">
-                  Contact
-                </a>
-              </div>
+        <div className="flex flex-wrap md:flex-row justify-evenly gap-10">
+          <div className="flex-col text-sm py-4 lg:py-0">
+            <div className="p-2">
+              <a href="/" className="no-underline">
+                Home
+              </a>
             </div>
-
-            <div className="flex-col text-xl md:text-lg py-4 lg:py-0">
-              <div className="p-2">
-                <a href="/blog" className="text-white no-underline">
-                  Blog
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="/gallery" className="text-white no-underline">
-                  Gallery
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="/stories" className="no-underline">
-                  Story
-                </a>
-              </div>
+            <div className="p-2">
+              <a href="/about-us" className="no-underline">
+                About
+              </a>
             </div>
-
-            <div className="flex-col text-2xl md:text-lg hidden lg:inline-block py-4 lg:py-0">
-              <div className="p-2">
-                <a href="" className="text-white no-underline">
-                  Graphic design
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="" className="text-white no-underline">
-                  Programming
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="" className="text-white no-underline">
-                  Digital marketing
-                </a>
-              </div>
-              <div className="p-2">
-                <a href="" className="text-white no-underline">
-                  UI UX design
-                </a>
-              </div>
+            <div className="p-2">
+              <a href="/course" className="no-underline">
+                Courses
+              </a>
+            </div>
+            <div className="p-2">
+              <a href="/contact" className="no-underline">
+                Contact
+              </a>
             </div>
           </div>
 
-          <div className="md:w-1/3 flex-col text-lg py-4 md:py-0">
+          <div className="flex-col text-sm py-4 lg:py-0">
+            <div className="p-2">
+              <a href="/blog" className="text-white no-underline">
+                Blogs
+              </a>
+            </div>
+            <div className="p-2">
+              <a href="/gallery" className="text-white no-underline">
+                Gallery
+              </a>
+            </div>
+            <div className="p-2">
+              <a href="/stories" className="no-underline">
+                Stories
+              </a>
+            </div>
+          </div>
+
+          <div className="flex-col hidden text-sm lg:inline-block py-4 lg:py-0">
+            <div className="p-2">
+              <a href="" className="text-white no-underline">
+                Graphic design
+              </a>
+            </div>
+            <div className="p-2">
+              <a href="" className="text-white no-underline">
+                Programming
+              </a>
+            </div>
+            <div className="p-2">
+              <a href="" className="text-white no-underline">
+                Digital marketing
+              </a>
+            </div>
+            <div className="p-2">
+              <a href="" className="text-white no-underline">
+                UI UX design
+              </a>
+            </div>
+          </div>
+          <div className="flex-col text-sm py-4 md:py-0">
             <div className="font-bold mx-4 mb-6">
               <a href="" className="text-white">
                 Stay Connected
@@ -124,8 +121,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap bg-black justify-center text-sm border-t py-5">
-        <div className="md :w-1/4">© 2022 Quadque Tech</div>
+      <div className="flex flex-wrap bg-black justify-center text-xs border-t py-5">
+        <div className="md:w-1/4">© 2023 Quadque Technologies Pvt Ltd</div>
         <div className="flex gap-24">
           <div>Privacy</div>
           <div>Security</div>
@@ -134,5 +131,5 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 export default Footer;

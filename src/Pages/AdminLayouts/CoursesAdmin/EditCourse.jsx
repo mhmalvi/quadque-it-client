@@ -1,6 +1,9 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from "react";
 import { InboxOutlined } from "@ant-design/icons";
-import { Modal, message, Upload } from "antd";
+import { Modal, message, Upload, Select } from "antd";
+//import useCategory from "../../../Components/Shared/Hooks/useCategory";
+import Categories from "../../UserLayouts/LandingPage/JsonData/categories.json";
+
 const { Dragger } = Upload;
 const props = {
   name: "file",
@@ -22,21 +25,54 @@ const props = {
   },
 };
 
-const EditCourse = ({ editCourseModal, handleCancel, editCourseId }) => {
+const EditCourse = ({ open, handleCancel, editCourseId }) => {
+  //const [Category, setUseCategory] = useCategory();
+  const [categoryItems, setCategoryItems] = useState([]);
+  const [toogleTab, setToogleTab] = useState();
+
+  useEffect(() => {
+    const items = [];
+
+    (async () => {
+      Categories.forEach((category) => {
+        items.push({
+          id: `${category?.id}`,
+          value: `${category?.name}`,
+        });
+      });
+      setCategoryItems(items);
+      console.log("category data", categoryItems);
+    })();
+  }, [Categories]);
+
+  const ToogleCategory = (index) => {
+    setToogleTab(index);
+    console.log("toogleTab", toogleTab);
+  };
+
   const handleEditCourse = () => {
     alert("Deleted");
   };
   return (
     <div>
       <Modal
-        title="Edit Course"
-        open={editCourseModal}
+        open={open}
         footer={false}
         onCancel={handleCancel}
         width="50%"
         className="h-full"
       >
-        <div className="h-[90vh] overflow-y-auto">
+        <div className="text-xl font-bold">Edit Course Details</div>
+        <div className="h-[90vh] overflow-y-auto mt-4">
+          <Select
+            style={{
+              width: "50%",
+            }}
+            /* defaultValue={categoryItems[0]?.value} */
+            placeholder="category name"
+            onChange={ToogleCategory}
+            options={categoryItems}
+          />
           <input
             className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
             type="text"
@@ -50,6 +86,13 @@ const EditCourse = ({ editCourseModal, handleCancel, editCourseId }) => {
             name="Description"
             placeholder="Description"
             id="Description"
+          />
+          <input
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
+            type="text"
+            name="Price"
+            placeholder="Price"
+            id="Price"
           />
           <div className="flex gap-5">
             <input
@@ -67,11 +110,12 @@ const EditCourse = ({ editCourseModal, handleCancel, editCourseId }) => {
               id="Lectures"
             />
           </div>
+          <div className="text-lg pt-4">Course Overview</div>
           <textarea
             className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
             type="text"
             name="Overview"
-            placeholder="Overview"
+            placeholder="Overview text"
             id="Overview"
           />
           <textarea
@@ -102,35 +146,163 @@ const EditCourse = ({ editCourseModal, handleCancel, editCourseId }) => {
             placeholder="Course Modules"
             id="Modules"
           />
-          <div>Course Overview image</div>
-          <Dragger {...props}>
-            <p className="ant-upload-drag-icon">
-              <InboxOutlined />
-            </p>
-            <p className="ant-upload-text">
-              Click or drag file to this area to upload
-            </p>
-            <p className="ant-upload-hint">
+          <div className="text-zinc-400 pl-2">Course Overview image</div>
+          <div>
+            <Dragger {...props}>
+              <p className="ant-upload-drag-icon">
+                <InboxOutlined />
+              </p>
+              <p className="ant-upload-text">
+                Click or drag file to this area to upload
+              </p>
+              {/* <p className="ant-upload-hint">
               Support for a single or bulk upload. Strictly prohibit from
               uploading company data or other band files
-            </p>
-          </Dragger>
+            </p> */}
+            </Dragger>
+          </div>
+          <div className="text-lg pt-4">Career Outcome</div>
           <textarea
             className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
             type="text"
             name="Outcome"
-            placeholder="Course Outcome"
+            placeholder="Career Outcome"
             id="Outcome"
+          />
+          <div className="text-zinc-400 pl-2">Career Outcome Areas</div>
+          <div>
+            <Dragger {...props}>
+              <p className="ant-upload-drag-icon">
+                <InboxOutlined />
+              </p>
+              <p className="ant-upload-text">
+                Click or drag file to this area to upload
+              </p>
+              {/* <p className="ant-upload-hint">
+              Support for a single or bulk upload. Strictly prohibit from
+              uploading company data or other band files
+            </p> */}
+            </Dragger>
+          </div>
+          <div className="text-lg pt-4">Special Services</div>
+          <div className="text-zinc-400 pl-2 pt-4">Special Service 1</div>
+          <input
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
+            type="text"
+            name="ServiceTitle1"
+            placeholder="Service Title"
+            id="ServiceTitle1"
           />
           <textarea
             className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
             type="text"
-            name="OutcomeAreas"
-            placeholder="Course Outcome Areas"
-            id="OutcomeAreas"
+            name="ServiceDesc1"
+            placeholder="Description"
+            id="ServiceDesc1"
           />
+          <div>
+            <Dragger {...props}>
+              <p className="ant-upload-drag-icon">
+                <InboxOutlined />
+              </p>
+              <p className="ant-upload-text">
+                Click or drag file to this area to upload
+              </p>
+              {/* <p className="ant-upload-hint">
+              Support for a single or bulk upload. Strictly prohibit from
+              uploading company data or other band files
+            </p> */}
+            </Dragger>
+          </div>
+          <div className="text-zinc-400 pl-2 pt-4">Special Service 2</div>
+          <input
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
+            type="text"
+            name="ServiceTitle2"
+            placeholder="Service Title"
+            id="ServiceTitle2"
+          />
+          <textarea
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
+            type="text"
+            name="ServiceDesc2"
+            placeholder="Description"
+            id="ServiceDesc2"
+          />
+          <div>
+            <Dragger {...props}>
+              <p className="ant-upload-drag-icon">
+                <InboxOutlined />
+              </p>
+              <p className="ant-upload-text">
+                Click or drag file to this area to upload
+              </p>
+              {/* <p className="ant-upload-hint">
+              Support for a single or bulk upload. Strictly prohibit from
+              uploading company data or other band files
+            </p> */}
+            </Dragger>
+          </div>
+          <div className="text-zinc-400 pl-2 pt-4">Special Service 3</div>
+          <input
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
+            type="text"
+            name="ServiceTitle3"
+            placeholder="Service Title"
+            id="ServiceTitle3"
+          />
+          <textarea
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
+            type="text"
+            name="ServiceDesc3"
+            placeholder="Description"
+            id="ServiceDesc3"
+          />
+          <div>
+            <Dragger {...props}>
+              <p className="ant-upload-drag-icon">
+                <InboxOutlined />
+              </p>
+              <p className="ant-upload-text">
+                Click or drag file to this area to upload
+              </p>
+              {/* <p className="ant-upload-hint">
+              Support for a single or bulk upload. Strictly prohibit from
+              uploading company data or other band files
+            </p> */}
+            </Dragger>
+          </div>
+          <div className="text-zinc-400 pl-2 pt-4">Special Service 4</div>
+          <input
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
+            type="text"
+            name="ServiceTitle4"
+            placeholder="Service Title"
+            id="ServiceTitle4"
+          />
+          <textarea
+            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full rounded-md"
+            type="text"
+            name="ServiceDesc4"
+            placeholder="Description"
+            id="ServiceDesc4"
+          />
+          <div>
+            <Dragger {...props}>
+              <p className="ant-upload-drag-icon">
+                <InboxOutlined />
+              </p>
+              <p className="ant-upload-text">
+                Click or drag file to this area to upload
+              </p>
+              {/* <p className="ant-upload-hint">
+              Support for a single or bulk upload. Strictly prohibit from
+              uploading company data or other band files
+            </p> */}
+            </Dragger>
+          </div>
 
-          <div className="flex justify-end">
+          <div className="flex justify-end py-4">
             <div
               onClick={handleCancel}
               className="mx-2 p-2 shadow rounded-lg cursor-pointer hover:shadow-md"
@@ -150,4 +322,4 @@ const EditCourse = ({ editCourseModal, handleCancel, editCourseId }) => {
   );
 };
 
-export default EditCourse
+export default EditCourse;

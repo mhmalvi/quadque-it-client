@@ -30,7 +30,7 @@ const NavLinks = () => {
                         <div>
                           <Link to={slink.sublink}>
                             <div className="w-4 h-4 absolute -top-1 left-1 bg-white rotate-45"></div>
-                            <div className="w-full hover:text-brand-color py-3">
+                            <div className="w-full hover:text-brand-color py-3 text-start">
                               {slink.name}
                             </div>
                           </Link>

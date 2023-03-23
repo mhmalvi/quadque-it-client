@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Pranto from "../../../Asset/Image/pranto.png";
 import RightArrow from "../../../Asset/Image/arrow-right.png";
 import LeftArrow from "../../../Asset/Image/arrow-left.png";
+import { Link } from "react-router-dom";
 
 const InstructorsSlider = () => {
   const sliderRef = useRef(null);
@@ -47,116 +48,126 @@ const InstructorsSlider = () => {
     <>
       <Slider ref={sliderRef} {...settings} className="">
         {/*     {Course?.map((course) => ( */}
-        <div>
-          <div className="flex-col bg-transparent rounded-2xl">
-            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-              <img src={Pranto} className="w-full" alt="" />
-            </div>
-            <div className="flex-col justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam1
+        <Link to="../stories-detail">
+          <div>
+            <div className="flex-col bg-transparent rounded-2xl px-2">
+              <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+                <img src={Pranto} className="w-full" alt="" />
               </div>
-              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
-              <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                Quadque
+              <div className="flex-col justify-start m-auto px-6 py-7">
+                <div className="text-2xl lg:text-4xl font-semibold pb-1">
+                  Pranto Islam1
+                </div>
+                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
+                <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                  Quadque
+                </div>
+                <div className="font-thin pb-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                  dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
+                </div>
+                <div className="font-bold">Read More</div>
               </div>
-              <div className="font-thin pb-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
-              </div>
-              <div className="font-bold">Read More</div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="flex-col bg-transparent rounded-2xl">
-            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-              <img src={Pranto} className="w-full" alt="" />
-            </div>
-            <div className="flex-col justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam2
-              </div>
-              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
-              <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                Quadque
-              </div>
-              <div className="font-thin pb-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
-              </div>
-              <div className="font-bold">Read More</div>
             </div>
           </div>
-        </div>
-        <div>
-          <div className="flex-col bg-transparent rounded-2xl">
-            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-              <img src={Pranto} className="w-full" alt="" />
-            </div>
-            <div className="flex-col justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam3
+        </Link>
+        <Link to="../stories-detail">
+          <div>
+            <div className="flex-col bg-transparent rounded-2xl px-2">
+              <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+                <img src={Pranto} className="w-full" alt="" />
               </div>
-              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
-              <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                Quadque
+              <div className="flex-col justify-start m-auto px-6 py-7">
+                <div className="text-2xl lg:text-4xl font-semibold pb-1">
+                  Pranto Islam2
+                </div>
+                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
+                <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                  Quadque
+                </div>
+                <div className="font-thin pb-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                  dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
+                </div>
+                <div className="font-bold">Read More</div>
               </div>
-              <div className="font-thin pb-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
-              </div>
-              <div className="font-bold">Read More</div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="flex-col bg-transparent rounded-2xl">
-            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-              <img src={Pranto} className="w-full" alt="" />
-            </div>
-            <div className="flex-col justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam4
-              </div>
-              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
-              <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                Quadque
-              </div>
-              <div className="font-thin pb-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
-              </div>
-              <div className="font-bold">Read More</div>
             </div>
           </div>
-        </div>
-        <div>
-          <div className="flex-col bg-transparent rounded-2xl">
-            <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-              <img src={Pranto} className="w-full" alt="" />
-            </div>
-            <div className="flex-col justify-start m-auto px-6 py-7">
-              <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                Pranto Islam5
+        </Link>
+        <Link to="../stories-detail">
+          <div>
+            <div className="flex-col bg-transparent rounded-2xl px-2">
+              <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+                <img src={Pranto} className="w-full" alt="" />
               </div>
-              <div className="text-sm font-semibold pb-3">UX UI Designer</div>
-              <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                Quadque
+              <div className="flex-col justify-start m-auto px-6 py-7">
+                <div className="text-2xl lg:text-4xl font-semibold pb-1">
+                  Pranto Islam3
+                </div>
+                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
+                <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                  Quadque
+                </div>
+                <div className="font-thin pb-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                  dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
+                </div>
+                <div className="font-bold">Read More</div>
               </div>
-              <div className="font-thin pb-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
-              </div>
-              <div className="font-bold">Read More</div>
             </div>
           </div>
-        </div>
+        </Link>
+        <Link to="../stories-detail">
+          <div>
+            <div className="flex-col bg-transparent rounded-2xl px-2">
+              <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+                <img src={Pranto} className="w-full" alt="" />
+              </div>
+              <div className="flex-col justify-start m-auto px-6 py-7">
+                <div className="text-2xl lg:text-4xl font-semibold pb-1">
+                  Pranto Islam4
+                </div>
+                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
+                <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                  Quadque
+                </div>
+                <div className="font-thin pb-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                  dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
+                </div>
+                <div className="font-bold">Read More</div>
+              </div>
+            </div>
+          </div>
+        </Link>
+        <Link to="../stories-detail">
+          <div>
+            <div className="flex-col bg-transparent rounded-2xl px-2">
+              <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
+                <img src={Pranto} className="w-full" alt="" />
+              </div>
+              <div className="flex-col justify-start m-auto px-6 py-7">
+                <div className="text-2xl lg:text-4xl font-semibold pb-1">
+                  Pranto Islam5
+                </div>
+                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
+                <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                  Quadque
+                </div>
+                <div className="font-thin pb-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+                  dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
+                </div>
+                <div className="font-bold">Read More</div>
+              </div>
+            </div>
+          </div>
+        </Link>
 
         {/*     ))} */}
       </Slider>

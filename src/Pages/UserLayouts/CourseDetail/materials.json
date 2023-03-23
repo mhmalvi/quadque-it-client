@@ -24,29 +24,29 @@
       "id": "4",
       "category" : "3",
       "icon": "20-20-20",
-      "title": "Adobe Premier Pro",
-      "image": "https://i.ibb.co/4MNR5n7/logos-adobe-photoshop.png"
+      "title": "Graphics Design 101",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"
     },
     {
       "id": "5",
       "category" : "3",
       "icon": "20-20-20",
-      "title": "Adobe Media Encoder",
-      "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
+      "title": "Sculpting 101",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"
     },
     {
       "id": "6",
       "category" : "4",
       "icon": "20-20-20",
-      "title": "Adobe Media Encoder",
-      "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
+      "title": "Adobe Illustrator - Vector Graphics - A2Z, Branding, Stationary, Banner, Flyer etc. Design",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"
     },
     {
       "id": "7",
       "category" : "4",
       "icon": "20-20-20",
-      "title": "Adobe Premier",
-      "image": "https://i.ibb.co/4MNR5n7/logos-adobe-photoshop.png"
+      "title": "Short Video Advertisement",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"
     },
     {
       "id": "8",
@@ -103,6 +103,13 @@
       "icon": "20-20-20",
       "title": "Adobe Figma",
       "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
+    },
+    {
+      "id": "16",
+      "category" : "4",
+      "icon": "20-20-20",
+      "title": " Lower Third animation based",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"
     }
   ]
   

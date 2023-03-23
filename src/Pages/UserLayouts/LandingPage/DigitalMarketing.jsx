@@ -76,15 +76,15 @@ const DigitalMarketing = () => {
                     <div className="flex-col">
                       <div className="flex justify-between">
                         <div className="bg-[#23BDEE] text-[#23BDEE] text-sm md:text-base bg-opacity-20 rounded-full py-2 px-4">
-                          {course.date}
+                          {course?.date}
                         </div>
-                        <div className="text-sm md:text-xl py-2">{course.price} tk</div>
+                        <div className="text-sm md:text-xl py-2">{course?.price} tk</div>
                       </div>
                     </div>
                     <div className="text-base md:text-2xl text-start font-semibold pt-2 left-0">
-                      {course.title}
+                      {course?.title}
                     </div>
-                    <div className="text-xs md:text-base text-start py-2">{course.para}</div>
+                    <div className="text-xs md:text-base text-start py-2">{course?.para}</div>
                   </div>
                 </div>
               </div>

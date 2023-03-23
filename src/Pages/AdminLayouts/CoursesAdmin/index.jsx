@@ -11,11 +11,11 @@ import Icons from "../../../Components/Shared/Icons";
 import AddCourse from "./AddCourse";
 import EditCourse from "./EditCourse";
 
-import useCategory from "../../../Components/Shared/Hooks/useCategory";
-import { handleDeleteCourseCategory } from "../../../Components/Services/company";
+//import useCategory from "../../../Components/Shared/Hooks/useCategory";
+//import { handleDeleteCourseCategory } from "../../../Components/Services/company";
 
 const AdminCourse = () => {
-  const [Category, setUseCategory] = useCategory();
+  //const [Category, setUseCategory] = useCategory();
   const navigate = useNavigate();
   const [toogleTab, setToogleTab] = useState("All");
   const [toogleMediumTab, setToogleMediumTab] = useState("all");
@@ -24,7 +24,7 @@ const AdminCourse = () => {
   const [categoryDelModal, setCategoryDelModal] = useState(false);
   const [categoryAddModal, setCategoryAddModal] = useState(false);
   const [deleteCategory, setDeleteCategory] = useState();
-  const [editCourseModal, setEditCourseModal] = useState(false);
+  const [openEditCourseModal, setOpenEditCourseModal] = useState(false);
   const [deleteCourseModal, setDeleteCourseModal] = useState(false);
   const [editCourseId, setEditCourseId] = useState();
 
@@ -54,7 +54,7 @@ const AdminCourse = () => {
     }
   }, [toogleTab, toogleMediumTab]);
 
-  useEffect(() => {
+/*   useEffect(() => {
     const items = [
       {
         id: "0",
@@ -72,15 +72,15 @@ const AdminCourse = () => {
       setCategoryItems(items);
       console.log("category data", categoryItems);
     })();
-  }, [Category]);
+  }, [Category]); */
 
-  const confirmCategoryDeleteModal = (id) => {
+/*   const confirmCategoryDeleteModal = (id) => {
     setDeleteCategory(id);
     //console.log(deleteCategory);
     setCategoryDelModal(true);
-  };
+  }; */
 
-  const handleDeleteCategory = () => {
+/*   const handleDeleteCategory = () => {
     console.log(deleteCategory);
     (async () => {
       const response = await handleDeleteCourseCategory(deleteCategory);
@@ -94,7 +94,7 @@ const AdminCourse = () => {
         alert("Failed to Delete");
       }
     })();
-  };
+  }; */
 
   const confirmCourseDeleteModal = (id) => {
     //setDeleteCourse(id);
@@ -105,7 +105,7 @@ const AdminCourse = () => {
   const handleCancel = () => {
     setCategoryDelModal(false);
     setCategoryAddModal(false);
-    setEditCourseModal(false);
+    setOpenEditCourseModal(false);
     setDeleteCourseModal(false);
   };
 
@@ -115,7 +115,7 @@ const AdminCourse = () => {
 
   const handleEditCourseModal = (id) => {
     setEditCourseId(id);
-    setEditCourseModal(true);
+    setOpenEditCourseModal(true);
   };
 
   return (
@@ -137,7 +137,7 @@ const AdminCourse = () => {
               id="adminCourseCategory"
               className="w-full flex flex-wrap py-3 text-sm font-thin leading-10"
             >
-              {Category?.map((category) => (
+              {/* {Category?.map((category) => (
                 <div
                   className="h-10 flex justify-between flex-wrap gap-4 border px-2 mx-2 my-2 rounded-lg shadow"
                   key={category?.id}
@@ -147,9 +147,8 @@ const AdminCourse = () => {
                     className="w-4 text-red-700 cursor-pointer"
                     onClick={() => confirmCategoryDeleteModal(category?.id)}
                   />
-                  {/* <Icons.Edit className="text-blue-600"/> */}
                 </div>
-              ))}
+              ))} */}
             </div>
 
             <div className="flex justify-between">
@@ -279,9 +278,9 @@ const AdminCourse = () => {
         </div>
       </div>
 
-      {editCourseModal && (
+      {openEditCourseModal && (
         <EditCourse
-          editCourseModal={editCourseModal}
+          open={openEditCourseModal}
           handleCancel={handleCancel}
           editCourseId={editCourseId}
         />
@@ -302,7 +301,7 @@ const AdminCourse = () => {
             Cancel
           </div>
           <div
-            onClick={handleDeleteCategory}
+            /* onClick={handleDeleteCategory} */
             className="bg-red-500 hover:bg-red-600 shadow rounded-lg text-white p-2 mx-2 cursor-pointer"
           >
             Delete
@@ -331,102 +330,13 @@ const AdminCourse = () => {
             Cancel
           </div>
           <div
-            onClick={handleDeleteCategory}
+            /* onClick={handleDeleteCategory} */
             className="bg-green-500 hover:bg-green-600 shadow rounded-lg text-white px-4 py-2 mx-2 cursor-pointer"
           >
             Save
           </div>
         </div>
       </Modal>
-
-      {/* <Modal
-        title="Add Category"
-        open={editCourseModal}
-        footer={false}
-        onCancel={handleCancel}
-        width="50%"
-        className="h-full"
-      >
-        <input
-          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-          type="text"
-          name="Name"
-          placeholder="Name"
-          id="Name"
-        />
-        <textarea
-          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-          type="text"
-          name="Description"
-          placeholder="Description"
-          id="Description"
-        />
-        <div className="flex gap-5">
-          <input
-            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-            type="text"
-            name="Duration"
-            placeholder="Duration"
-            id="Duration"
-          />
-          <input
-            className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-            type="text"
-            name="Lectures"
-            placeholder="Lectures"
-            id="Lectures"
-          />
-        </div>
-        <textarea
-          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-          type="text"
-          name="Overview"
-          placeholder="Overview"
-          id="Overview"
-        />
-        <textarea
-          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-          type="text"
-          name="Tools"
-          placeholder="Tools"
-          id="Tools"
-        />
-        <textarea
-          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-          type="text"
-          name="Plugins"
-          placeholder="Plugins"
-          id="Plugins"
-        />
-        <textarea
-          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-          type="text"
-          name="Prerequisite"
-          placeholder="Pre-requisites"
-          id="Prerequisite"
-        />
-        <textarea
-          className="bg-zinc-100 outline-none border-none bg-transparent px-2 py-2 my-2 w-full"
-          type="text"
-          name="Modules"
-          placeholder="Course Modules"
-          id="Modules"
-        />
-        <div className="flex justify-end">
-          <div
-            onClick={handleCancel}
-            className="mx-2 p-2 shadow rounded-lg cursor-pointer hover:shadow-md"
-          >
-            Cancel
-          </div>
-          <div
-            onClick={handleDeleteCategory}
-            className="bg-green-500 hover:bg-green-600 shadow rounded-lg text-white px-4 py-2 mx-2 cursor-pointer"
-          >
-            Save
-          </div>
-        </div>
-      </Modal> */}
 
       <Modal
         title="Confirm Deletion"
@@ -443,7 +353,7 @@ const AdminCourse = () => {
             Cancel
           </div>
           <div
-            onClick={handleDeleteCategory}
+            /* onClick={handleDeleteCategory} */
             className="bg-red-500 hover:bg-red-600 shadow rounded-lg text-white p-2 mx-2 cursor-pointer"
           >
             Delete

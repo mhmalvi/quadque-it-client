@@ -12,7 +12,7 @@ const CourseMaterial = () => {
   };
   useEffect(() => {
     let CourseDetail;
-    CourseDetail = Materials.filter((cor) => cor.category == toogleTab);
+    CourseDetail = Materials?.filter((cor) => cor.category == toogleTab);
     setCourseData(CourseDetail);
   }, [Materials, toogleTab]);
 
@@ -66,9 +66,9 @@ const CourseMaterial = () => {
             </div>
             <div className="flex flex-wrap justify-start my-10 mx-10 gap-5">
               {courseData?.map((data) => (
-                <span className="flex py-2">
-                  <img src={data.image} width={40} alt="" />
-                  <span className="m-auto pl-2">{data.title}</span>
+                <span className="flex py-1">
+                  <img src={data?.image} width={40} alt="" className={`${(toogleTab === 4 || toogleTab === 3) && "w-4 h-4"}`}/>
+                  <span className="m-auto pl-2">{data?.title}</span>
                 </span>
               ))}
             </div>

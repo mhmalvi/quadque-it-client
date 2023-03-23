@@ -84,12 +84,12 @@ const deleteStudent = () => {
 
 const AdminDashboard = () => {
   return (
-    <div className="w-full flex h-[100vh] overflow-y-auto px-5 gap-2">
-      <div className="w-2/3 my-4">
+    <div className="w-full h-[100vh] overflow-y-auto px-10 gap-2">
+      <div className="w-full my-4">
         <div className="text-xl py-4">Class Schedule</div>
         <ReactBigCalendar />
       </div>
-      <div className="w-1/3 my-4">
+      <div className="w-full my-4">
         <div className="text-xl py-4">All Events list</div>
         <Table 
         className="border"

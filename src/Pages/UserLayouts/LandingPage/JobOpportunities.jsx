@@ -14,7 +14,7 @@ const JobOpportunities = () => {
       </div>
       <div className="relative md:w-3/4 m-auto flex-col md:flex lg:flex-row gap-16">
         <div className="flex justify-center m-auto pb-5 lg:pb-0 lg:px-0 lg:rounded-t-3xl lg:rounded-bt-3xl lg:rounded-br-[5rem] overflow-hidden">
-          <img src={shourav} alt="" className="shrink-0 lg:rounded-t-3xl lg:rounded-bt-3xl lg:rounded-br-[5rem] hover:scale-110 duration-500" />
+          <img src={shourav} alt="" className="shrink-0 lg:rounded-t-3xl lg:rounded-bt-3xl lg:rounded-br-[5rem] lg:hover:scale-110 duration-500" />
           <img src={JobIcon} alt="" className="absolute hidden lg:block left-[25%] top-40"/>
         </div>
         <div className="lg:w-1/2 text-start my-auto">
