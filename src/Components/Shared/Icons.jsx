@@ -37,6 +37,14 @@ import { ReactComponent as Cancel } from "../../Asset/Icon/cross.svg";
 import { ReactComponent as Logout } from "../../Asset/Icon/logout.svg";
 import { ReactComponent as Delete } from "../../Asset/Icon/bin.svg";
 import { ReactComponent as Edit } from "../../Asset/Icon/edit.svg";
+import { ReactComponent as ACertificate } from "../../Asset/Icon/about/certificate.svg";
+import { ReactComponent as AInstructor } from "../../Asset/Icon/about/instructor.svg";
+import { ReactComponent as ABook } from "../../Asset/Icon/about/book.svg";
+import { ReactComponent as ACareer } from "../../Asset/Icon/about/career.svg";
+import { ReactComponent as AEarth } from "../../Asset/Icon/about/earth.svg";
+import { ReactComponent as ASupport } from "../../Asset/Icon/about/support.svg";
+import { ReactComponent as ATechnology } from "../../Asset/Icon/about/technology.svg";
+import { ReactComponent as ATraining } from "../../Asset/Icon/about/training.svg";
 
 const Icons = {
   PlayBtn,
@@ -78,6 +86,14 @@ const Icons = {
   Logout,
   Delete,
   Edit,
+  ACertificate,
+  AInstructor,
+  ABook,
+  ACareer,
+  AEarth,
+  ASupport,
+  ATechnology,
+  ATraining,
 };
 
 export default Icons;

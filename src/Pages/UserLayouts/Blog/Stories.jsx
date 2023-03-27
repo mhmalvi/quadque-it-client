@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import stories1 from "../../../Asset/Image/stories1.png";
 import stories2 from "../../../Asset/Image/stories2.png";
 import stories3 from "../../../Asset/Image/stories3.png";
@@ -12,6 +12,11 @@ import { Link } from "react-router-dom";
 import Footer from "../LandingPage/Footer";
 
 const Stories = () => {
+  useEffect(() => {
+    let height = document.getElementById("twinCard")?.clientHeight;
+    console.log(height);
+    document.getElementById("soloCard").style.height = height + "px";
+  }, [document.getElementById("twinCard")?.clientHeight]);
   return (
     <>
       <div className="w-full bg-home-color pt-32 lg:pb-20 lg:px-30 lg:mt-10">
@@ -30,21 +35,84 @@ const Stories = () => {
             </div>
           </div>
           <div className="hidden lg:block">
-            <div className="lg:flex justify-center gap-5 pb-72">
-              <div className="flex-col gap-6">
+            <div className="lg:flex justify-center items-stretch gap-5 pb-72">
+              <div id="twinCard" className="flex-col gap-6">
                 {/* card */}
-                <Link to="../stories-detail">
-                  <div className="lg:flex bg-white rounded-2xl mb-6">
-                    <div>
-                      <img
-                        src={Pranto}
-                        className="w-full h-full rounded-tl-2xl rounded-bl-2xl"
-                        alt=""
-                      />
+                <div>
+                  <Link to="../stories-detail">
+                    <div className="lg:flex bg-white rounded-2xl mb-6 h-76">
+                      <div>
+                        <img
+                          src={Pranto}
+                          className="w-full h-full rounded-tl-2xl rounded-bl-2xl"
+                          alt=""
+                        />
+                      </div>
+                      <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
+                        <div className="text-4xl font-semibold">
+                          Pranto Islam 1
+                        </div>
+                        <div className="text-sm font-semibold">
+                          UX UI Designer
+                        </div>
+                        <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                          Quadque
+                        </div>
+                        <div className="text-sm pb-2">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. <br /> Ut elit tellus, luctus nec ullamcorper
+                          mattis, pulvinar dapibus leo.{" "}
+                        </div>
+                        <div className="font-bold">Read More</div>
+                      </div>
                     </div>
-                    <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
+                  </Link>
+                </div>
+                {/* card */}
+                <div>
+                  <Link to="../stories-detail">
+                    <div className="flex flex-col-reverse lg:flex lg:flex-row bg-white rounded-2xl mt-6 h-76">
+                      <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
+                        <div className="text-4xl font-semibold">
+                          Pranto Islam 2
+                        </div>
+                        <div className="text-sm font-semibold">
+                          UX UI Designer
+                        </div>
+                        <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                          Quadque
+                        </div>
+                        <div className="text-sm pb-2">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. <br /> Ut elit tellus, luctus nec ullamcorper
+                          mattis, pulvinar dapibus leo.{" "}
+                        </div>
+                        <div className="font-bold">Read More</div>
+                      </div>
+                      <div>
+                        <img
+                          src={Pranto}
+                          className="w-full h-full rounded-tr-2xl rounded-br-2xl"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              {/* card */}
+              <div>
+                <Link to="../stories-detail">
+                  <div
+                    id="soloCard"
+                    className="flex-col lg:max-w-xs bg-white rounded-2xl"
+                  >
+                    <div className="h-72 flex-wrap overflow-hidden">
+                      <img src={Pranto} className="w-full rounded-2xl" alt="" />
+                    </div>
+                    <div className="flex-col lg:justify-start text-black m-auto px-6 py-8">
                       <div className="text-4xl font-semibold">
-                        Pranto Islam 1
+                        Pranto Islam 3
                       </div>
                       <div className="text-sm font-semibold">
                         UX UI Designer
@@ -52,7 +120,7 @@ const Stories = () => {
                       <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                         Quadque
                       </div>
-                      <div className="pb-2">
+                      <div className="text-sm pb-2">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
                         <br /> Ut elit tellus, luctus nec ullamcorper mattis,
                         pulvinar dapibus leo.{" "}
@@ -61,48 +129,6 @@ const Stories = () => {
                     </div>
                   </div>
                 </Link>
-                {/* card */}
-                <div className="flex flex-col-reverse lg:flex lg:flex-row bg-white rounded-2xl mt-6">
-                  <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
-                    <div className="text-4xl font-semibold">Pranto Islam 2</div>
-                    <div className="text-sm font-semibold">UX UI Designer</div>
-                    <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                      Quadque
-                    </div>
-                    <div className="pb-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                      <br /> Ut elit tellus, luctus nec ullamcorper mattis,
-                      pulvinar dapibus leo.{" "}
-                    </div>
-                    <div className="font-bold">Read More</div>
-                  </div>
-                  <div>
-                    <img
-                      src={Pranto}
-                      className="w-full h-full rounded-tr-2xl rounded-br-2xl"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              {/* card */}
-              <div className="flex-col lg:max-w-xs bg-white rounded-2xl">
-                <div className="h-60 flex-wrap overflow-hidden">
-                  <img src={Pranto} className="w-full rounded-2xl" alt="" />
-                </div>
-                <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
-                  <div className="text-4xl font-semibold">Pranto Islam 3</div>
-                  <div className="text-sm font-semibold">UX UI Designer</div>
-                  <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                    Quadque
-                  </div>
-                  <div className="pb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                    <br /> Ut elit tellus, luctus nec ullamcorper mattis,
-                    pulvinar dapibus leo.{" "}
-                  </div>
-                  <div className="font-bold">Read More</div>
-                </div>
               </div>
             </div>
           </div>
@@ -113,17 +139,17 @@ const Stories = () => {
           </div>
 
           <div className="lg:flex justify-evenly px-3">
-            <div className="w-full lg:w-1/2 m-auto shrinkk-0">
+            <div className="w-full lg:w-1/2 m-auto">
               <img
                 src={meeting}
                 alt=""
-                width={498}
-                className="rounded-xl shrink-0 lg:pl-20"
+                width={598}
+                className="rounded-xl shrink-0 lg:pl-20 m-auto"
               />
             </div>
             <div className="w-full lg:w-1/2 flex-col lg:justify-start text-start m-auto pt-10 lg:pt-0 lg:px-10">
               <div className="text-2xl lg:text-4xl font-semibold pb-5">
-                Some Works from Our Students
+                Some work of our students
               </div>
               <div className="lg:text-xl font-semibold pb-5">
                 It’s a matter of great honour for us to say that a large number

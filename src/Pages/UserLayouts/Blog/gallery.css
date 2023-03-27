@@ -1,0 +1,28 @@
+.galleryImgPopup .ant-modal,
+.ant-modal-content {
+    background: transparent;
+    backdrop-filter: blur(2px);
+}
+
+.galleryImgPopup .ant-modal-content {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    color: #ffffff !important;
+}
+
+.galleryImgPopup .ant-modal-title {
+    background-color: white !important;
+    border-radius: 0 !important;
+    color: #ffffff !important;
+}
+
+.galleryImgPopup .ant-modal-close-x {
+    display: block;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    color: rgb(255, 255, 255) !important;
+    line-height: 22px;
+    text-align: center;
+    text-transform: none;
+    text-rendering: auto;
+}

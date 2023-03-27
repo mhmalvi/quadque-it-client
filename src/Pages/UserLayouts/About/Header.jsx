@@ -45,11 +45,11 @@ const Header = () => {
                 <div className="lg:text-3xl text-2xl text-center lg:text-start pb-5">
                   We are a digital marketing and IT training provider.
                 </div>
-                <div className="pb-4 text-center lg:text-start font-thin">
+                <div className="pb-4 text-center lg:text-start ">
                   We are here to mentor you and help you grow a sustainable and
                   solid career in the digital marketing and IT industry.
                 </div>
-                <div className="text-center lg:text-start pb-10 font-thin">
+                <div className="text-center lg:text-start pb-10 ">
                   Our training courses combine the most innovative technological
                   methods and a personalised approach to deliver in-demand
                   skills for your portfolio.
@@ -127,106 +127,106 @@ const Header = () => {
           <div className="text-4xl font-bold text-center pt-13 lg:pt-36">
             Why Choose Us
           </div>
-          <div className="w-2/3 text-center text-lg font-thin pt-5 pb-16 m-auto">
+          <div className="w-2/3 text-center text-lg pt-5 pb-16 m-auto">
             We have collaborated with some of the most reputed names in the
             digital marketing and IT scene. Therefore, we have a good idea of
             what works and what doesn’t. Take a look at some of the main reasons
             you should enrol in one of our courses.
           </div>
-          <div className="lg:w-8/12 flex flex-wrap justify-center m-auto pb-7 gap-10">
-            <div className="w-44 sm:w-66 flex-col p-5">
-              <div className="sm:flex pb-4">
-                <Icons.TickBox className="w-12 shrink-0 mr-4" />
+          <div className="w-11/12 lg:w-8/12 flex flex-wrap justify-center m-auto pb-7 gap-10">
+            <div className="w-full sm:w-66 flex-col p-5">
+              <div className="flex pb-4">
+                <Icons.AInstructor className="w-12 h-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
                   Expert Instructors
                 </div>
               </div>
-              <div className="hidden sm:block text-base font-thin">
+              <div className="">
                 Build a vast array of digital marketing and IT skills with the
                 assistance of our qualified instructors.
               </div>
             </div>
-            <div className="w-44 sm:w-66 flex-col p-5">
-              <div className="sm:flex pb-4">
-                <Icons.TickBox className="w-12 shrink-0 mr-4" />
+            <div className="w-full sm:w-66 flex-col p-5">
+              <div className="flex pb-4">
+                <Icons.ABook className="w-12 h-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
                   Learn from Scratch
                 </div>
               </div>
-              <div className="hidden sm:block text-base font-thin">
+              <div className="">
                 It doesn’t matter if you’re a beginner or have a more advanced
                 industry knowledge. Our courses are designed for different
                 levels of difficulty.
               </div>
             </div>
-            <div className="w-44 sm:w-66 flex-col p-5">
-              <div className="sm:flex pb-4">
-                <Icons.TickBox className="w-12 shrink-0 mr-4" />
+            <div className="w-full sm:w-66 flex-col p-5">
+              <div className="flex pb-4">
+                <Icons.ACertificate className="w-12 h-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
                   Recognised Certification
                 </div>
               </div>
-              <div className="hidden sm:block text-base font-thin">
+              <div className="">
                 Obtain a recognised and Accredited Australian Certificate to
                 take your portfolio to another level.
               </div>
             </div>
-            <div className="w-44 sm:w-66 flex-col p-5">
-              <div className="sm:flex pb-4">
-                <Icons.TickBox className="w-12 shrink-0 mr-4" />
+            <div className="w-full sm:w-66 flex-col p-5">
+              <div className="flex pb-4">
+                <Icons.ACareer className="w-12 h-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
                   Amazing Career Prospects
                 </div>
               </div>
-              <div className="hidden sm:block text-base font-thin">
+              <div className="">
                 Grow your career and find exciting opportunities by developing
                 the most valuable skills for the competitive job market.
               </div>
             </div>
-            <div className="w-44 sm:w-66 flex-col p-5">
-              <div className="sm:flex pb-4">
-                <Icons.TickBox className="w-12 shrink-0 mr-4" />
+            <div className="w-full sm:w-66 flex-col p-5">
+              <div className="flex pb-4">
+                <Icons.ATechnology className="w-12 h-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
                   Advanced Technological Applications
                 </div>
               </div>
-              <div className="hidden sm:block text-base font-thin">
+              <div className="">
                 Get to learn deeply about the most trending applications and
                 know how to use them effectively and efficiently.
               </div>
             </div>
-            <div className="w-44 sm:w-66 flex-col p-5">
-              <div className="sm:flex pb-4">
-                <Icons.TickBox className="w-12 shrink-0 mr-4" />
+            <div className="w-full sm:w-66 flex-col p-5">
+              <div className="flex pb-4">
+                <Icons.ATraining className="w-12 h-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
                   Customised Training
                 </div>
               </div>
-              <div className="hidden sm:block text-base font-thin">
+              <div className="">
                 Our classes are customised for every student to ensure fantastic
                 results and an enjoyable training experience.
               </div>
             </div>
-            <div className="w-44 sm:w-66 flex-col p-5">
-              <div className="sm:flex pb-4">
-                <Icons.TickBox className="w-12 shrink-0 mr-4" />
+            <div className="w-full sm:w-66 flex-col p-5">
+              <div className="flex pb-4">
+                <Icons.AEarth className="w-12 h-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
                   Real-life Applications
                 </div>
               </div>
-              <div className="hidden sm:block text-base font-thin">
+              <div className="">
                 Learn from actual examples, special freelancing classes and case
                 studies to get a solid idea of industry standards and trends.
               </div>
             </div>
-            <div className="w-44 sm:w-66 flex-col p-5">
-              <div className="sm:flex pb-4">
-                <Icons.TickBox className="w-12 shrink-0 mr-4" />
+            <div className="w-full sm:w-66 flex-col p-5">
+              <div className="flex pb-4">
+                <Icons.ASupport className="w-12 h-12 shrink-0 mr-4" />
                 <div className="text-lg text-start font-semibold my-auto">
                   24/7 Support
                 </div>
               </div>
-              <div className="hidden sm:block text-base font-thin">
+              <div className="">
                 Our dedicated team will support you at all times during the
                 course and after its completion. We also provide free
                 consultancy support for everyone.
@@ -234,7 +234,7 @@ const Header = () => {
             </div>
           </div>
           <AboutMaterial />
-          <Instructors/>
+          <Instructors />
           <Footer />
         </div>
       </div>

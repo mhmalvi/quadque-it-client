@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const InstructorsSlider = () => {
   const sliderRef = useRef(null);
-  console.log(sliderRef.current);
+  // console.log(sliderRef.current);
   const settings = {
     infinite: true,
     speed: 600,

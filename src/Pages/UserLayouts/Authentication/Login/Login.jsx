@@ -165,10 +165,10 @@ const Login = () => {
   
   return (
     <>
-      <div className="md:flex justify-evenly items-center h-screen bg-home-color">
-        <div className="sm:rounded-tl-lg sm:rounded-bl-lg p-3 shadow-lg">
-          <img src={Psychic} alt="" className="hidden sm:block m-auto" />
-          <div className="flex justify-center gap-5 mt-10">
+      <div className="md:flex justify-evenly items-center h-auto lg:h-screen bg-home-color">
+        <div>
+          <img src={Psychic} alt="" className="m-auto" />
+          <div className="flex justify-center gap-5 pt-10">
             <Icons.Facebook className="cursor-pointer" />
             <Icons.Twitter className="cursor-pointer" />
             <Icons.Instagram className="cursor-pointer" />
@@ -212,16 +212,16 @@ const Login = () => {
               ? "sm:max-w-sm h-[60%] scale-0 sm:scale-100 opacity-0 duration-700 border border-gray-200 rounded-tl-lg rounded-bl-lg p-3 bg-white shadow-lg"
               : "absolute top-[20%] sm:static sm:max-w-sm h-[60%] duration-700 border border-gray-200 sm:rounded-tl-lg sm:rounded-bl-lg p-3 bg-white shadow-lg"
           }`} */
-          className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow ${
+          className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow mt-20 ${
             boxLeft
               ? "hidden"
-              : "sm:max-w-sm h-[70%] md:h-[60%] duration-700 p-3 shadow-lg m-auto md:m-0 rounded-md"
+              : "sm:max-w-sm duration-700 p-3 shadow-lg m-auto md:m-0 rounded-md"
           }`}
         >
           <div className="flex justify-end">
             <div
               onClick={toogleSignupLogin}
-              className="flex justify-end duration-200 text-center cursor-pointer px-3"
+              className="flex justify-end text-center cursor-pointer px-3"
             >
               <span className="text-sm text-white my-auto px-2">Login</span>
               <img src={LeftArrow} alt="" />
@@ -234,7 +234,7 @@ const Login = () => {
           </div>
           <div className="text-center my-6">
             <h1 className="text-2xl font-semibold text-white">Signup</h1>
-            <p className="text-white pt-2">Signup to get your account</p>
+            <p className="text-sm text-white pt-2">Signup to get your account</p>
           </div>
 
           <div className="m-6">
@@ -332,18 +332,20 @@ const Login = () => {
               ? "absolute top-[20%] sm:static sm:max-w-sm h-[60%] duration-700 border border-gray-200  sm:rounded-tr-lg sm:rounded-br-lg p-3 bg-white shadow-lg"
               : "scale-0 sm:scale-100 sm:max-w-sm h-[60%] opacity-0 duration-700 border border-gray-200  rounded-tr-lg rounded-br-lg p-3 bg-white shadow-lg"
           }`} */
-          className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow ${
+          className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow mt-20 ${
             boxLeft
-              ? "sm:max-w-sm h-[70%] md:h-[60%] duration-700 p-3 shadow-lg m-auto md:m-0 rounded-md"
+              ? "sm:max-w-sm duration-700 p-3 shadow-lg m-auto md:m-0 rounded-md"
               : "hidden"
           }`}
         >
-          <div
-            onClick={toogleSignupLogin}
-            className="flex duration-200 cursor-pointer px-3"
-          >
-            <img src={RightArrow} alt="" />
-            <span className="text-sm text-white my-auto px-2">Signup</span>
+          <div className="flex justify-start">
+            <div
+              onClick={toogleSignupLogin}
+              className="flex justify-start cursor-pointer px-3"
+              >
+              <img src={RightArrow} alt="" />
+              <span className="text-sm text-white my-auto px-2">Signup</span>
+            </div>
           </div>
           <div className="pt-8">
             <div className="flex flex-col items-center">
@@ -352,7 +354,7 @@ const Login = () => {
           </div>
           <div className="text-center my-6">
             <h1 className="text-2xl font-semibold text-white">Login</h1>
-            <p className="pt-2 pb-4 text-white">Login to access your account</p>
+            <p className="pt-2 pb-4 text-white text-sm">Login to access your account</p>
           </div>
 
           <div className="m-6">
