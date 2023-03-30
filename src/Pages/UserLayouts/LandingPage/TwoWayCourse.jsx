@@ -1,6 +1,6 @@
 import React from "react";
-import Graphics from "../../../Asset/Image/image4.png";
-import Motion from "../../../Asset/Image/image5.png";
+import Online from "../../../Asset/Image/online-course2.png";
+import Offline from "../../../Asset/Image/offline-course2.png";
 
 const TwoWayCourse = () => {
   return (
@@ -17,7 +17,7 @@ const TwoWayCourse = () => {
         <div className="flex-col lg:flex lg:flex-row justify-center text-white pt-13 gap-6">
           <div className="lg:w-1/2 flex-col bg-home-color rounded-3xl">
             <div className="flex">
-              <img src={Graphics} alt="" className="w-full md:shrink-0" />
+              <img src={Online} alt="" className="w-[400px] h-[400px] md:shrink-0 mx-auto" />
             </div>
             <div className="p-5">
               <div className="text-base lg:text-2xl">
@@ -30,7 +30,7 @@ const TwoWayCourse = () => {
           </div>
           <div className="lg:w-1/2 flex-col bg-home-color rounded-3xl">
             <div className="flex">
-              <img src={Motion} alt="" className="w-full md:shrink-0" />
+              <img src={Offline} alt="" className="w-1/2 md:shrink-0 mx-auto" />
             </div>
             <div className="p-5">
               <div className="text-base lg:text-2xl">

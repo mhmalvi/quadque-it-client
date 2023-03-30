@@ -4,6 +4,7 @@ import Icons from "../../../Components/Shared/Icons";
 import AnimatedText from "react-animated-text-content";
 import Lottie from "lottie-react";
 import Learning from "../../../Asset/Lottie/learning.json";
+import Banner from "../../../Asset/Image/home-banner.png";
 import './style.css';
 
 const Header = () => {
@@ -31,11 +32,12 @@ const Header = () => {
           </div>
           <div className="lg:w-1/2">
             {/* <img src={World} width={433} className="m-auto" alt="QIT logo" /> */}
-            <Lottie
+            {/* <Lottie
               className="lg:w-1/2 mx-auto"
               animationData={Learning}
               loop={true}
-            />
+            /> */}
+            <img src={Banner} alt="home-banner" />
           </div>
         </div>
         {/* <div className="flex justify-center lg:justify-start">

@@ -1,6 +1,7 @@
 import React from "react";
 import Giphy from "../../../Asset/Image/giphy.png";
 import Image from "../../../Asset/Image/image44.png";
+import Footer from "../../../Asset/Image/footer.png";
 
 const BrowseCourse = () => {
   return (

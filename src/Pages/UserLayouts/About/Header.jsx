@@ -2,6 +2,8 @@ import React from "react";
 //import Rectangle from "../../Asset/Image/rectangle.png";
 //import RectangleTwo from "../../Asset/Image/rectangle2.png";
 import Classroom from "../../../Asset/Image/classroom.png";
+import About1 from "../../../Asset/Image/about-6.png";
+import About2 from "../../../Asset/Image/about-5.png";
 import Students from "../../../Asset/Image/students.png";
 import MobilePic from "../../../Asset/Image/mobile-browse.png";
 import Box from "../../../Asset/Image/box.png";
@@ -38,10 +40,14 @@ const Header = () => {
               </div>
             </div> */}
             <div className="">
-              <img src={Classroom} className="m-auto px-4 lg:px-0" alt="" />
+              <img
+                src={About1}
+                className="w-1/2 m-auto px-4 lg:px-0"
+                alt=""
+              />
             </div>
-            <div className="flex-col lg:flex lg:flex-row m-auto gap-6 py-12 lg:py-20 px-3">
-              <div className="lg:w-1/2 m-auto justify-center">
+            <div className="flex-col lg:flex lg:flex-row items-center mx-auto gap-6 py-12 lg:py-20 px-3">
+              <div className="lg:w-1/2 mx-auto justify-center">
                 <div className="lg:text-3xl text-2xl text-center lg:text-start pb-5">
                   We are a digital marketing and IT training provider.
                 </div>
@@ -57,7 +63,7 @@ const Header = () => {
               </div>
 
               <div>
-                <img src={Students} className="lg:w-full px-4" alt="" />
+                <img src={About2} className="lg:w-full px-4" alt="" />
               </div>
             </div>
           </div>

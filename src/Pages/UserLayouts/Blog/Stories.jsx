@@ -6,6 +6,7 @@ import stories4 from "../../../Asset/Image/stories4.png";
 import stories5 from "../../../Asset/Image/stories5.png";
 import stories6 from "../../../Asset/Image/stories6.png";
 import meeting from "../../../Asset/Image/meeting.png";
+import StudentWorks from "../../../Asset/Image/student-work.png";
 import Pranto from "../../../Asset/Image/pranto.png";
 import InstructorsSlider from "./InstructorsSlider";
 import { Link } from "react-router-dom";
@@ -141,7 +142,7 @@ const Stories = () => {
           <div className="lg:flex justify-evenly px-3">
             <div className="w-full lg:w-1/2 m-auto">
               <img
-                src={meeting}
+                src={StudentWorks}
                 alt=""
                 width={598}
                 className="rounded-xl shrink-0 lg:pl-20 m-auto"

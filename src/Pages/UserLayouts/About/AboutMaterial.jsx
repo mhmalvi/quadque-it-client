@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import Robot from "../../../Asset/Image/Robot.png";
 import MobilePic from "../../../Asset/Image/mobile-browse.png";
+import About3 from "../../../Asset/Image/about-7.png";
+import About4 from "../../../Asset/Image/about-3.png";
 import { Link } from "react-router-dom";
 
 const AboutMaterial = () => {
   return (
     <div className="bg-home-color w-full py-13 lg:py-36 text-white">
       <div className="md:w-3/4 m-auto flex-col md:flex lg:flex-row gap-6 pb-13 lg:pb-36">
-        <div className="flex justify-center m-auto pb-5 lg:pb-0 px-3 lg:px-0">
-          <img src={Robot} alt="" className="shrink-0 rounded-3xl" />
+        <div className="flex justify-between m-auto pb-5 lg:pb-0 px-3 lg:px-0">
+          <img src={About3} alt="" className="w-10/12 shrink-0 rounded-3xl" />
         </div>
         <div className="lg:w-1/2 text-start my-auto">
           <div className="font-semibold text-2xl lg:text-4xl pb-3 px-10 lg:px-0">
@@ -29,16 +31,16 @@ const AboutMaterial = () => {
           </div>
         </div>
       </div>
-      <div className="w-3/4 bg-white flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-6 m-auto">
+      <div className="w-3/4 bg-white flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-10 m-auto">
         <div className="lg:w-1/2 text-black m-auto">
           <div className="text-2xl lg:text-5xl text-center lg:text-start font-bold pb-7 pt-8">
             Get a Free Trial Today!
           </div>
           <div className="flex justify-center lg:justify-start h-16 gap-14 text-white text-base lg:text-xl mb-6">
             <Link to="../course">
-            <div className="bg-[#2F327D] hover:bg-[#3f42a3] rounded-full text-white text-center cursor-pointer px-8 py-4">
-              Browse Courses
-            </div>
+              <div className="bg-[#2F327D] hover:bg-[#3f42a3] rounded-full text-white text-center cursor-pointer px-8 py-4">
+                Browse Courses
+              </div>
             </Link>
           </div>
           <div className="md:text-base pb-8">
@@ -47,8 +49,8 @@ const AboutMaterial = () => {
             disciplines.
           </div>
         </div>
-        <div className="lg:first-letter:w-1/2">
-          <img src={MobilePic} width={433} className="m-auto" alt="QIT logo" />
+        <div className="lg:w-1/2">
+          <img src={About4} width={433} className="m-auto" alt="QIT logo" />
         </div>
       </div>
     </div>

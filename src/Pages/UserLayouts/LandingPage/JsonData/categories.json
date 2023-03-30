@@ -1,18 +1,18 @@
 [
     {
-      "category" : "1",
+      "category" : 1,
       "name" : "Programming"
     },
     {
-      "category" : "2",
+      "category" : 2,
       "name" : "Digital Marketing"
     },
     {
-      "category" : "3",
+      "category" : 3,
       "name" : "Graphics Design"
     },
     {
-      "category" : "4",
+      "category" : 4,
       "name" : "Content Writing"
     }
   ]
