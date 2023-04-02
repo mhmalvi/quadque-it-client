@@ -2,7 +2,7 @@ import React from "react";
 //import Rectangle from "../../Asset/Image/rectangle.png";
 //import RectangleTwo from "../../Asset/Image/rectangle2.png";
 import Classroom from "../../../Asset/Image/classroom.png";
-import About1 from "../../../Asset/Image/about-6.png";
+import About1 from "../../../Asset/Image/about-8.png";
 import About2 from "../../../Asset/Image/about-5.png";
 import Students from "../../../Asset/Image/students.png";
 import MobilePic from "../../../Asset/Image/mobile-browse.png";
@@ -42,11 +42,11 @@ const Header = () => {
             <div className="">
               <img
                 src={About1}
-                className="w-1/2 m-auto px-4 lg:px-0"
+                className="w-11/12 lg:w-2/3 m-auto px-4 lg:px-0"
                 alt=""
               />
             </div>
-            <div className="flex-col lg:flex lg:flex-row items-center mx-auto gap-6 py-12 lg:py-20 px-3">
+            <div className="flex-col lg:flex lg:flex-row lg:justify-between items-center mx-auto gap-6 py-12 lg:py-20 px-3">
               <div className="lg:w-1/2 mx-auto justify-center">
                 <div className="lg:text-3xl text-2xl text-center lg:text-start pb-5">
                   We are a digital marketing and IT training provider.
@@ -63,7 +63,7 @@ const Header = () => {
               </div>
 
               <div>
-                <img src={About2} className="lg:w-full px-4" alt="" />
+                <img src={About2} className="w-full" alt="" />
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ const Header = () => {
             className="invisible lg:visible absolute top-0 left-[10%] w-20"
             alt=""
           /> */}
-          <div className="text-4xl font-bold text-center pt-13 lg:pt-24">
+          <div className="text-2xl lg:text-4xl font-bold text-center pt-13 lg:pt-24">
             Our Core Values
           </div>
           <div className="w-2/3 text-center text-lg py-5 pb-7 m-auto">

@@ -17,26 +17,26 @@ const TwoWayCourse = () => {
         <div className="flex-col lg:flex lg:flex-row justify-center text-white pt-13 gap-6">
           <div className="lg:w-1/2 flex-col bg-home-color rounded-3xl">
             <div className="flex">
-              <img src={Online} alt="" className="w-[400px] h-[400px] md:shrink-0 mx-auto" />
+              <img src={Online} alt="" className="w-7/12 md:shrink-0 mx-auto" />
             </div>
-            <div className="p-5">
+            <div className="p-10">
               <div className="text-base lg:text-2xl">
                 Attend your classes online <br /> from any location
               </div>
-              <div className="w-1/2 border border-white rounded-full mx-auto text-base lg:text-2xl py-2 lg:py-4 my-4">
+              <div className="inline-block px-3 border border-white rounded-full mx-auto text-base lg:text-2xl py-2 lg:py-4 my-4">
                 Online courses
               </div>
             </div>
           </div>
           <div className="lg:w-1/2 flex-col bg-home-color rounded-3xl">
             <div className="flex">
-              <img src={Offline} alt="" className="w-1/2 md:shrink-0 mx-auto" />
+              <img src={Offline} alt="" className="w-7/12 md:shrink-0 mx-auto" />
             </div>
-            <div className="p-5">
+            <div className="p-10">
               <div className="text-base lg:text-2xl">
                 Attend your classes physically <br /> for a personal experience
               </div>
-              <div className="w-1/2 border border-white rounded-full mx-auto text-base lg:text-2xl py-2 lg:py-4 my-4">
+              <div className="inline-block px-3 border border-white rounded-full mx-auto text-base lg:text-2xl py-2 lg:py-4 my-4">
                 Offline courses
               </div>
             </div>

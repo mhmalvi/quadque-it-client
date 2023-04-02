@@ -10,7 +10,7 @@ const AboutMaterial = () => {
     <div className="bg-home-color w-full py-13 lg:py-36 text-white">
       <div className="md:w-3/4 m-auto flex-col md:flex lg:flex-row gap-6 pb-13 lg:pb-36">
         <div className="flex justify-between m-auto pb-5 lg:pb-0 px-3 lg:px-0">
-          <img src={About3} alt="" className="w-10/12 shrink-0 rounded-3xl" />
+          <img src={About3} alt="" className="w-10/12 shrink-0 rounded-3xl mx-auto lg:m-0 pb-10 lg:pb-0" />
         </div>
         <div className="lg:w-1/2 text-start my-auto">
           <div className="font-semibold text-2xl lg:text-4xl pb-3 px-10 lg:px-0">
