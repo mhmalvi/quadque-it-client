@@ -1,13 +1,18 @@
 import React, { useRef } from "react";
-import PersonOne from "../../../Asset/Image/person-1.png";
-import PersonTwo from "../../../Asset/Image/person-2.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Instructor from "./JsonData/student.json";
+import Student from "./JsonData/student.json";
 import RightArrow from "../../../Asset/Image/purple-right-arrow.png";
 import LeftArrow from "../../../Asset/Image/purple-left-arrow.png";
-
+import Stu1 from "../../../Asset/Image/stu1.png";
+import Stu2 from "../../../Asset/Image/stu2.png";
+import Stu3 from "../../../Asset/Image/stu3.png";
+import Stu4 from "../../../Asset/Image/stu4.png";
+import Stu5 from "../../../Asset/Image/stu5.png";
+import Stu6 from "../../../Asset/Image/stu6.png";
+import Stu7 from "../../../Asset/Image/stu7.png";
+import Stu8 from "../../../Asset/Image/stu8.png";
 
 const OurStudents = ()=> {
   const sliderRef = useRef(null);
@@ -59,7 +64,7 @@ const OurStudents = ()=> {
               alt=""
               className="cursor-pointer"
               onClick={() => sliderRef.current.slickNext()}
-            />
+              />
             <img
               src={RightArrow}
               alt=""
@@ -71,16 +76,15 @@ const OurStudents = ()=> {
         <div className="w-full lg:w-2/3 text-start">
           <div className="text-black lg:px-10 gap-8">
           <Slider ref={sliderRef} {...settings}>
-              {Instructor?.map((person) => (
-                <div>
+              {Student?.map((person,i) => (
+                <div key={i}>
                   <div className="max-w-[480px] shadow-md text-center pt-9 px-12 pb-12 mx-3 my-3">
                     <div className="pb-4">
                       <img
-                        src={PersonOne}
+                        src={StudentImg?.find(wtf=>wtf.id===Student?.id)?.stuimage}
                         alt=""
-                        className="m-auto"
-                        width={110}
-                      />
+                        className="w-[10rem] h-[10rem] m-auto"
+                        />
                     </div>
                     <div className="text-xl font-semibold pb-1">
                       {person?.name}
@@ -101,3 +105,13 @@ const OurStudents = ()=> {
   );
 }
 export default OurStudents
+const StudentImg = [
+  {id:1, stuimage:Stu1},
+  {id:2, stuimage:Stu2},
+  {id:3, stuimage:Stu3},
+  {id:4, stuimage:Stu4},
+  {id:5, stuimage:Stu5},
+  {id:6, stuimage:Stu6},
+  {id:7, stuimage:Stu7},
+  {id:8, stuimage:Stu8},
+]

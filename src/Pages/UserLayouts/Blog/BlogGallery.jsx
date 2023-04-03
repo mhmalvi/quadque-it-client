@@ -164,8 +164,8 @@ const BlogGallery = () => {
             {/* row1 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 text-white lg:gap-6">
               {/* card1 */}
-              {blogData?.map((details) => (
-                <Link to={"./blog-detail"}>
+              {blogData?.map((details,i) => (
+                <Link key={i} to={"./blog-detail"}>
                   <div className="flex-col group rounded-xl">
                     <div className="flex-wrap overflow-hidden rounded-xl">
                       <img

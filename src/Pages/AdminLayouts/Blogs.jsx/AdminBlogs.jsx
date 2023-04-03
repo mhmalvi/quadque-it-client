@@ -217,8 +217,8 @@ const AdminBlogs = () => {
             {/* row1 */}
             <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
               {/* card1 */}
-              {blogData?.map((details) => (
-                <div className="relative flex-col rounded-xl p-2 border">
+              {blogData?.map((details,i) => (
+                <div key={i} className="relative flex-col rounded-xl p-2 border">
                   <div className="flex-col justify-end absolute right-4 top-6">
                     <div
                       title="Edit"

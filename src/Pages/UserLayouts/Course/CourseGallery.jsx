@@ -183,9 +183,10 @@ const CourseGallery = () => {
             {/* COURSE Gallery */}
             <div className="grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 text-white gap-6 lg:mx-18 my-6">
               {/* cards */}
-              {courseData?.map((details) =>
+              {courseData?.map((details,i) =>
                 details ? (
-                  <div
+                  <div 
+                  key={i}
                     onClick={navigateToCourseDetails}
                     className="flex-col group bg-home-color border border-white border-opacity-30 rounded-3xl hover:border-2 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300"
                   >

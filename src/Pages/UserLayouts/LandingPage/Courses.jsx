@@ -19,8 +19,8 @@ const Courses = () => {
           Check out the different categories of courses that we are offering
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 3lg:grid-cols-4 text-black md:text-white text-xs md:text-2xl lg:pt-13 gap-6">
-          {Categories?.map((category) => (
-            <div className="w-full shadow-lg flex-col bg-white md:bg-home-color hover:lg:bg-brand-color duration-500 p-4 rounded-2xl">
+          {Categories?.map((category,i) => (
+            <div key={i} className="w-full shadow-lg flex-col bg-white md:bg-home-color hover:lg:bg-brand-color duration-500 p-4 rounded-2xl">
               <div className="flex justify-center items-center my-5">
                 <img src={catagoryImg?.find(f=>f.catid===category.category).image} alt="" className="lg:w-[200px] lg:h-[200px] flex justify-center items-center m-auto" />
               </div>

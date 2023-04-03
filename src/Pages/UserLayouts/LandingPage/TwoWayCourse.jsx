@@ -1,6 +1,7 @@
 import React from "react";
 import Online from "../../../Asset/Image/online-course2.png";
 import Offline from "../../../Asset/Image/offline-course2.png";
+import { Link } from "react-router-dom";
 
 const TwoWayCourse = () => {
   return (
@@ -23,27 +24,35 @@ const TwoWayCourse = () => {
               <div className="text-base lg:text-2xl">
                 Attend your classes online <br /> from any location
               </div>
-              <div className="inline-block px-3 border border-white rounded-full mx-auto text-base lg:text-2xl py-2 lg:py-4 my-4">
-                Online courses
-              </div>
+              <Link to={"./course"}>
+                <div className="inline-block px-5 border border-white rounded-full mx-auto text-base lg:text-2xl cursor-pointer py-2 lg:py-4 my-4">
+                  Online courses
+                </div>
+              </Link>
             </div>
           </div>
           <div className="lg:w-1/2 flex-col bg-home-color rounded-3xl">
             <div className="flex">
-              <img src={Offline} alt="" className="w-7/12 md:shrink-0 mx-auto" />
+              <img
+                src={Offline}
+                alt=""
+                className="w-7/12 md:shrink-0 mx-auto"
+              />
             </div>
             <div className="p-10">
               <div className="text-base lg:text-2xl">
                 Attend your classes physically <br /> for a personal experience
               </div>
-              <div className="inline-block px-3 border border-white rounded-full mx-auto text-base lg:text-2xl py-2 lg:py-4 my-4">
-                Offline courses
-              </div>
+              <Link to={"./course"}>
+                <div className="inline-block px-5 border border-white rounded-full mx-auto text-base lg:text-2xl cursor-pointer py-2 lg:py-4 my-4">
+                  Offline courses
+                </div>
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
-export default TwoWayCourse
+};
+export default TwoWayCourse;

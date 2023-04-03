@@ -1,12 +1,11 @@
 import React, { useRef } from "react";
-import PersonOne from "../../../Asset/Image/person-1.png";
-import Apu from "../../../Asset/Image/apu.png";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Instructor from "./JsonData/student.json";
-import RightArrow from "../../../Asset/Image/right-arrow-black.png";
+import "slick-carousel/slick/slick.css";
+import Apu from "../../../Asset/Image/apu.png";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
+import RightArrow from "../../../Asset/Image/right-arrow-black.png";
+import Instructor from "./JsonData/student.json";
 
 const OurInstructors = () => {
   const sliderRef = useRef(null);
@@ -71,8 +70,8 @@ const OurInstructors = () => {
         <div className="text-start rounded-3xl lg:px-9">
           <div className="text-black gap-8 hidden lg:block">
             <Slider ref={sliderRef} {...settings}>
-              {Instructor?.map((person) => (
-                <div>
+              {Instructor?.map((person,i) => (
+                <div key={i}>
                   <div className="w-[350px] 2xl:w-[420px] flex-wrap group my-5 m-auto">
                     <img
                       src={person?.image}
@@ -100,8 +99,8 @@ const OurInstructors = () => {
 
           <div className="text-black lg:px-10 gap-8 block lg:hidden">
             <Slider {...settings}>
-              {Instructor?.map((person) => (
-                <div>
+              {Instructor?.map((person,i) => (
+                <div key={i}>
                   <div className="w-[350px] 2xl:w-[420px] duration-1000 text-center pt-9 px-12 pb-12 m-auto">
                     <div className="pb-4">
                       <img src={Apu} alt="" className="m-auto" width={110} />

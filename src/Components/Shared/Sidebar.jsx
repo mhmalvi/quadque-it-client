@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../Asset/Image/Logo.svg";
+import Logo from "../../Asset/Image/qit-logo.png";
 import Icons from "./Icons";
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Sidebar = ({active, ToogleTab}) => {
   return (
     <div className="w-66 h-screen bg-black overflow-x-hidden text-white">
       <div>
-        <img src={Logo} alt="" className="m-auto py-10" />
+        <img src={Logo} alt="" className="w-[11rem] m-auto py-10" />
       </div>
       <Link to={"dashboard"}>
         <div

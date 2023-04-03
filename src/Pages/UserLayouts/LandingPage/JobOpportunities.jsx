@@ -1,5 +1,5 @@
 import React from "react";
-import shourav from "../../../Asset/Image/shourav.png";
+import shourav from "../../../Asset/Image/job-op.png";
 import JobIcon from "../../../Asset/Icon/jobopp.svg";
 import Icons from "../../../Components/Shared/Icons";
 
@@ -12,10 +12,10 @@ const JobOpportunities = () => {
           Quality Training to Improve Your Career{" "}
         </div>
       </div>
-      <div className="relative md:w-3/4 m-auto flex-col md:flex lg:flex-row gap-16">
-        <div className="flex justify-center m-auto pb-5 lg:pb-0 lg:px-0 lg:rounded-t-3xl lg:rounded-bt-3xl lg:rounded-br-[5rem] overflow-hidden">
+      <div className="relative mx-auto flex flex-col lg:flex-row gap-16">
+        <div className="m-auto pb-5 lg:pb-0 px-4 lg:px-0 lg:rounded-t-3xl lg:rounded-bt-3xl lg:rounded-br-[5rem] overflow-visible">
           <img src={shourav} alt="" className="shrink-0 lg:rounded-t-3xl lg:rounded-bt-3xl lg:rounded-br-[5rem] lg:hover:scale-110 duration-500" />
-          <img src={JobIcon} alt="" className="absolute hidden lg:block left-[25%] top-40"/>
+          <img src={JobIcon} alt="" className="w-[14rem] absolute hidden lg:block left-[30%] top-30"/>
         </div>
         <div className="lg:w-1/2 text-start my-auto">
           <div className="font-semibold text-xl lg:text-4xl pb-3 px-10 lg:px-0">

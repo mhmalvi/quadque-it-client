@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../../Asset/Image/Logo.svg";
+import Logo from "../../../Asset/Image/qit-logo.png";
 import Icons from "../Icons";
 import NavLinks from "./NavLinks";
 import { Modal } from "antd";
@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="flex items-center font-medium justify-around ">
           <div className="z-50 p-5 lg:w-auto w-full">
             <Link to="/">
-              <img src={Logo} width={83} alt="QIT" className="cursor-pointer" />
+              <img src={Logo} width={83} alt="QIT" className="w-[10rem] cursor-pointer" />
             </Link>
           </div>
           <div onClick={() => setOpen(!open)}>
@@ -79,8 +79,8 @@ const Navbar = () => {
             width="100%"
           >
             <div className="w-full h-full flex flex-col justify-between text-center text-xl py-20">
-              {links?.map((link) => (
-                <>
+              {links?.map((link, i) => (
+                <div key={i}>
                   <div
                     onClick={() => {
                       toogleSubmenu !== link?.name
@@ -97,8 +97,9 @@ const Navbar = () => {
                           toogleSubmenu === link.name ? "" : "hidden"
                         }`}
                       >
-                        {link.submenu?.map((slink) => (
+                        {link.submenu?.map((slink, i) => (
                           <Link
+                          key={i}
                             to={slink.sublink}
                             onClick={() => {setOpen(false); setToogleSubmenu("")}}
                           >
@@ -108,7 +109,7 @@ const Navbar = () => {
                       </div>
                     )}
                   </div>
-                </>
+                </div>
               ))}
             </div>
           </Modal>

@@ -21,6 +21,10 @@ import AdminStudent from "./Pages/AdminLayouts/Student"
 import AdminTeacher from "./Pages/AdminLayouts/Teacher"
 import StudentEnrollment from './Pages/AdminLayouts/StudentEnrollment';
 import Admission from './Pages/UserLayouts/Course/Admission';
+import PrivacyPolicy from './Pages/UserLayouts/PrivacyPolicy';
+import TermsOfUse from './Pages/UserLayouts/TermsOfUse';
+import CopywritePolicy from './Pages/UserLayouts/CopywritePolicy';
+import Footer from './Pages/UserLayouts/LandingPage/Footer';
 import "./App.css";
 
 function App() {
@@ -38,6 +42,9 @@ function App() {
         <Route exact path="stories" element={<><Navbar /><Stories /></>}></Route>
         <Route exact path="stories-detail" element={<><Navbar /><StoriesDetail /></>}></Route>
         <Route exact path="admission" element={<><Navbar /><Admission /></>}></Route>
+        <Route exact path="privacy-policy" element={<><Navbar /><PrivacyPolicy /><Footer /></>}></Route>
+        <Route exact path="terms-of-use" element={<><Navbar /><TermsOfUse /><Footer /></>}></Route>
+        <Route exact path="copywrite-policy" element={<><Navbar /><CopywritePolicy /><Footer /></>}></Route>
         <Route exact path="auth" element={<Login />}></Route>
 
         <Route exact path="user" element={<AdminPanel />}>

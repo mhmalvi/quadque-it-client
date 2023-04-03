@@ -59,8 +59,8 @@ const DigitalMarketing = () => {
         </div>
         <div className="text-white lg:pt-13 gap-6">
           <Slider ref={sliderRef} {...settings}>
-            {Course?.map((course) => (
-              <div>
+            {Course?.map((course,i) => (
+              <div key={i}>
                 <div
                   onClick={navigateToCourseDetails}
                   className="flex-col group shadow-lg rounded-3xl border-2 text-black hover:border-4 hover:bg-black hover:text-white hover:border-[#23BDEE] transition-ease-out duration-300 mx-3 my-4"

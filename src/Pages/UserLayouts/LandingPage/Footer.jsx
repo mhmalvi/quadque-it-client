@@ -1,14 +1,14 @@
 import React from "react";
 import Icons from "../../../Components/Shared/Icons";
-import Logo from "../../../Asset/Image/Logo.svg";
+import Logo from "../../../Asset/Image/qit-logo.png";
 
 const Footer = () => {
   return (
     <div className="w-full text-white">
-      <div className="md:flex justify-evenly items-center bg-black pt-20 px-10 md:px-20 pb-13">
+      <div className="md:flex justify-evenly items-center bg-black pt-10 lg:pt-20 px-10 md:px-20 pb-7 lg:pb-13">
         <div className="md:w-3/12 pb-4">
           <div className="py-4">
-            <img src={Logo} width={120} alt="" />
+            <img src={Logo} alt="" className="w-[10rem]"/>
           </div>
           <div className="text-sm text-justify pb-8">
             This is your opportunity to learn the most demandable IT and digital

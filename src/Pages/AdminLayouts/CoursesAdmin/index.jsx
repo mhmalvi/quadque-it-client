@@ -231,9 +231,10 @@ const AdminCourse = () => {
             {/* COURSE Gallery */}
             <div className="grid grid-col-1 lg:grid-cols-3 2xl:grid-cols-5 text-black gap-6 xl:gap-4 my-6">
               {/* cards */}
-              {courseData?.map((details) =>
+              {courseData?.map((details,i) =>
                 details ? (
                   <div
+                  key={i}
                     /* onClick={navigateToCourseDetails} */
                     className="relative flex-col group border border-black border-opacity-30 rounded-3xl hover:border-2 hover:border-[#23BDEE] ease-in duration-300 shadow-lg"
                   >

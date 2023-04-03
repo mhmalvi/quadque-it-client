@@ -1,11 +1,10 @@
 import { Input, message } from "antd";
 import React, { useEffect, useState } from "react";
-//import { useDispatch, useSelector } from "react-redux";
 //import { useNavigate } from "react-router-dom";
 //import { handleLogin } from "../../../Components/services/auth";
 import Icons from "../../../../Components/Shared/Icons";
 import Psychic from "../../../../Asset/Gif/psychic.gif";
-import Logo from "../../../../Asset/Image/Logo.svg";
+import Logo from "../../../../Asset/Image/qit-logo.png";
 import RightArrow from "../../../../Asset/Image/arrow-left.png";
 import LeftArrow from "../../../../Asset/Image/arrow-right.png";
 import { useLocation } from "react-router-dom";
@@ -181,37 +180,9 @@ const Login = () => {
             <a href="/user/dashboard">Admin Panel</a>
           </div>
         </div>
-        {/* <div
-          className={`absolute z-50 container sm:max-w-sm h-[85%] sm:rounded-tl-lg sm:rounded-bl-lg p-3 bg-[#0D0D2B] shadow-lg ${
-            boxLeft
-              ? "h-[20%] sm:h-[85%] -translate-y-[0%] sm:-translate-x-[50%] sm:rounded-tl-lg sm:rounded-bl-lg duration-500"
-              : "h-[20%] sm:h-[85%] sm:translate-x-[50%] sm:rounded-tl-none sm:rounded-bl-none sm:rounded-tr-lg sm:rounded-br-lg duration-500"
-          }`}
-        >
-          <img src={Psychic} alt="" className="hidden sm:block" />
-          <div className="flex justify-center gap-5 mt-10">
-            <Icons.Facebook />
-            <Icons.Twitter />
-            <Icons.Instagram />
-            <Icons.Youtube />
-          </div>
-          <div className="text-white text-center pt-8">
-            <a href="/">Back to Home</a>
-          </div>
-          <div
-            className="cursor-pointer text-white text-center"
-          >
-            <a href="/user/dashboard">Admin Panel</a>
-          </div>
-        </div> */}
 
         {/* SIGNUP FORM */}
         <div
-          /* className={`container ${
-            boxLeft
-              ? "sm:max-w-sm h-[60%] scale-0 sm:scale-100 opacity-0 duration-700 border border-gray-200 rounded-tl-lg rounded-bl-lg p-3 bg-white shadow-lg"
-              : "absolute top-[20%] sm:static sm:max-w-sm h-[60%] duration-700 border border-gray-200 sm:rounded-tl-lg sm:rounded-bl-lg p-3 bg-white shadow-lg"
-          }`} */
           className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow mt-20 ${
             boxLeft
               ? "hidden"
@@ -229,7 +200,7 @@ const Login = () => {
           </div>
           <div className="pt-8">
             <div className="flex flex-col items-center">
-              <img src={Logo} alt="" />
+              <img src={Logo} alt="" className="w-[10rem]"/>
             </div>
           </div>
           <div className="text-center my-6">
@@ -293,20 +264,6 @@ const Login = () => {
                 />
               </div>
 
-              {/* <div className="mb-6   flex items-center">
-              <input
-                className="cursor-pointer mr-2"
-                type="checkbox"
-                name="remember me"
-                id="remember_me"
-                defaultValue="off"
-                onChange={handleRememberMe}
-              />
-              <label className="cursor-pointer" htmlFor="remember_me">
-                Remember Me
-              </label>
-            </div> */}
-
               <div className="my-6">
                 <button
                   type="submit"
@@ -315,23 +272,12 @@ const Login = () => {
                   Register
                 </button>
               </div>
-              {/* <p className="text-sm text-center text-gray-400">
-                Don't have an account yet?
-                <Link to="/join" className="font-semibold ml-1.5">
-                  Sign up
-                </Link>
-              </p> */}
             </form>
           </div>
         </div>
 
         {/* LOGIN  FORM */}
         <div
-          /* className={`container ${
-            boxLeft
-              ? "absolute top-[20%] sm:static sm:max-w-sm h-[60%] duration-700 border border-gray-200  sm:rounded-tr-lg sm:rounded-br-lg p-3 bg-white shadow-lg"
-              : "scale-0 sm:scale-100 sm:max-w-sm h-[60%] opacity-0 duration-700 border border-gray-200  rounded-tr-lg rounded-br-lg p-3 bg-white shadow-lg"
-          }`} */
           className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow mt-20 ${
             boxLeft
               ? "sm:max-w-sm duration-700 p-3 shadow-lg m-auto md:m-0 rounded-md"
@@ -349,7 +295,7 @@ const Login = () => {
           </div>
           <div className="pt-8">
             <div className="flex flex-col items-center">
-              <img src={Logo} alt="" />
+              <img src={Logo} alt="" className="w-[10rem]"/>
             </div>
           </div>
           <div className="text-center my-6">
@@ -377,14 +323,6 @@ const Login = () => {
                   onChange={userData}
                   required
                 />
-                {/* <input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="Enter Your Username"
-                className="w-full px-3 py-2 placeholder-gray-600 border bg-gray-100 rounded-md focus:outline-none focus:border-brand-color"
-                required
-              /> */}
               </div>
               <div className="mb-4  ">
                 {/* Forgot password */}
@@ -443,13 +381,6 @@ const Login = () => {
                   Log in
                 </button>
               </div>
-
-              {/* <p className="text-sm text-center text-gray-400">
-                Don't have an account yet?
-                <Link to="/join" className="font-semibold ml-1.5">
-                  Sign up
-                </Link>
-              </p> */}
             </form>
           </div>
         </div>
