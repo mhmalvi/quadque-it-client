@@ -5,6 +5,10 @@ import AnimatedText from "react-animated-text-content";
 import Lottie from "lottie-react";
 import Learning from "../../../Asset/Lottie/learning.json";
 import Banner from "../../../Asset/Image/home-banner.png";
+import Soln from "../../../Asset/Image/idea.png";
+import OnlineCourse from "../../../Asset/Image/online-learning.png";
+import LiveChat from "../../../Asset/Image/live-chat.png";
+import CaseStudy from "../../../Asset/Image/file-case.png";
 import './style.css';
 
 const Header = () => {
@@ -68,22 +72,26 @@ const Header = () => {
       </div> */}
 
       <div className="lg:flex lg:justify-evenly lg:visible hidden text-black text-lg pt-30 m-auto">
-        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-2">
-          <Icons.ProblemSol />
+        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
+          {/* <Icons.ProblemSol /> */}
+          <img src={Soln} alt="" className="w-[4rem]"/>
           <span className="px-2 pt-2 text-center">
             Digital Marketing & IT Solutions
           </span>
         </div>
-        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-2">
-          <Icons.Chat />
+        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
+          {/* <Icons.Chat /> */}
+          <img src={LiveChat} alt="" className="w-[4rem]"/>
           <span className="px-2 pt-2 text-center">Live Chat </span>
         </div>
-        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-2">
-          <Icons.People />
+        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
+          {/* <Icons.People /> */}
+          <img src={CaseStudy} alt="" className="w-[4rem]"/>
           <span className="px-2 pt-2 text-center">Case Studies</span>
         </div>
-        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-2">
-          <Icons.Courses />
+        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
+          {/* <Icons.Courses /> */}
+          <img src={OnlineCourse} alt="" className="w-[4rem]"/>
           <span className="px-2 pt-2 text-center">Online Courses</span>
         </div>
       </div>
