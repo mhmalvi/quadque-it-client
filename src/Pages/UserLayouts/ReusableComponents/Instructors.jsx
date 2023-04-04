@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import LeftArrow from "../../../Asset/Image/arrow-left.png";
 import RightArrow from "../../../Asset/Image/arrow-right.png";
-import Instructor from "../LandingPage/JsonData/student.json";
+import Instructor from "../../../Components/Shared/JsonData/instructors.json";
 
 const Instructors = () => {
   const sliderRef = useRef(null);
@@ -39,6 +39,7 @@ const Instructors = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "0px",
         },
       },
     ],
@@ -47,7 +48,7 @@ const Instructors = () => {
     <div className="w-full bg-[#040422] py-13 lg:py-24">
       <div className="lg:flex lg:justify-between lg:px-10">
         <div className="text-white text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-16 px-4 lg:px-0 text-shadow">
-          What our students have to say
+          Get to know our instructors
         </div>
         <div className="hidden lg:block">
           <div className="flex justify-center gap-5 mr-12">

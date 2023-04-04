@@ -2,9 +2,17 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Instructor from "../LandingPage/JsonData/student.json";
+import Instructor from "../../../Components/Shared/JsonData/student.json";
 import RightArrow from "../../../Asset/Image/arrow-right.png";
 import LeftArrow from "../../../Asset/Image/arrow-left.png";
+import Stu1 from "../../../Asset/Image/stu1.png";
+import Stu2 from "../../../Asset/Image/stu2.png";
+import Stu3 from "../../../Asset/Image/stu3.png";
+import Stu4 from "../../../Asset/Image/stu4.png";
+import Stu5 from "../../../Asset/Image/stu5.png";
+import Stu6 from "../../../Asset/Image/stu6.png";
+import Stu7 from "../../../Asset/Image/stu7.png";
+import Stu8 from "../../../Asset/Image/stu8.png";
 
 const Testimonial = () => {
   const sliderRef = useRef(null);
@@ -47,7 +55,7 @@ const Testimonial = () => {
     <div className="w-full bg-[#040422] py-13 lg:py-24">
       <div className="lg:flex lg:justify-between lg:px-10">
         <div className="text-white text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-16 px-4 lg:px-0 text-shadow">
-          Get to know our instructors
+        What our students have to say
         </div>
         <div className="hidden lg:block">
           <div className="flex justify-center gap-5 mr-12">
@@ -74,14 +82,16 @@ const Testimonial = () => {
                 <div key={i}>
                   <div className="w-[350px] 2xl:w-[420px] flex-wrap group my-5 m-auto">
                     <img
-                      src={person?.image}
+                      src={StudentImg?.find((wtf) => wtf.id === person?.id)
+                        ?.stuimage}
                       className="lg:w-[300px] group-hover:opacity-0 group-hover:scale-80 duration-700 m-auto"
                       alt=""
                     />
                     <div className="w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto">
                       <div className="pb-4">
                         <img
-                          src={person?.image}
+                          src={StudentImg?.find((wtf) => wtf.id === person?.id)
+                            ?.stuimage}
                           alt=""
                           className="m-auto"
                           width={110}
@@ -124,3 +134,14 @@ const Testimonial = () => {
   );
 };
 export default Testimonial;
+
+const StudentImg = [
+  {id:1, stuimage:Stu4},
+  {id:2, stuimage:Stu2},
+  {id:3, stuimage:Stu7},
+  {id:4, stuimage:Stu3},
+  {id:5, stuimage:Stu6},
+  {id:6, stuimage:Stu1},
+  {id:7, stuimage:Stu5},
+  {id:8, stuimage:Stu8},
+]

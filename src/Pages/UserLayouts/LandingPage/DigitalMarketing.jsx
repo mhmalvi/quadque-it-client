@@ -2,7 +2,7 @@ import React, {useRef, useState, useEffect} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Course from "../Course/Course.json";
+import Course from "../../../Components/Shared/JsonData/Course.json"
 import { useNavigate } from "react-router-dom";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
@@ -24,7 +24,7 @@ const DigitalMarketing = () => {
   }, [])  
 
   const settings = {
-    infinite: false,
+    infinite: true,
     speed: 600,
     arrows: false,
     slidesToShow: 3,
@@ -73,7 +73,7 @@ const DigitalMarketing = () => {
               <div key={i}>
                 <div
                   onClick={navigateToCourseDetails}
-                  className="bg-white flex-col group shadow-lg rounded-3xl border-2 text-black hover:border-4 hover:bg-black hover:text-white hover:border-[#23BDEE] transition-ease-out duration-300 mx-3 my-4"
+                  className="bg-white flex-col group shadow-lg rounded-3xl border-2 text-black hover:border-4 hover:bg-black hover:text-white hover:border-[#23BDEE] transition-ease-out duration-300 cursor-pointer mx-3 my-4"
                 >
                   <div className="">
                     <img

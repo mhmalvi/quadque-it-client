@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Pranto from "../../../Asset/Image/pranto.png";
+import Story2 from "../../../Asset/Image/story2.jpeg";
+import Story3 from "../../../Asset/Image/story3.jpeg";
 import RightArrow from "../../../Asset/Image/arrow-right.png";
 import LeftArrow from "../../../Asset/Image/arrow-left.png";
 import { Link } from "react-router-dom";
@@ -56,7 +58,7 @@ const InstructorsSlider = () => {
               </div>
               <div className="flex-col justify-start m-auto px-6 py-7">
                 <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                  Pranto Islam1
+                  Pranto Islam
                 </div>
                 <div className="text-sm font-semibold pb-3">UX UI Designer</div>
                 <div className="text-xl text-[#23BDEE] font-semibold pb-5">
@@ -76,13 +78,13 @@ const InstructorsSlider = () => {
           <div>
             <div className="flex-col bg-transparent rounded-2xl px-2">
               <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-                <img src={Pranto} className="w-full" alt="" />
+                <img src={Story2} className="w-full" alt="" />
               </div>
               <div className="flex-col justify-start m-auto px-6 py-7">
                 <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                  Pranto Islam2
+                  David Rodriguez
                 </div>
-                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
+                <div className="text-sm font-semibold pb-3">Marketing Specialist</div>
                 <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                   Quadque
                 </div>
@@ -100,13 +102,13 @@ const InstructorsSlider = () => {
           <div>
             <div className="flex-col bg-transparent rounded-2xl px-2">
               <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-                <img src={Pranto} className="w-full" alt="" />
+                <img src={Story3} className="w-full" alt="" />
               </div>
               <div className="flex-col justify-start m-auto px-6 py-7">
                 <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                  Pranto Islam3
+                Tanvir Hasan
                 </div>
-                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
+                <div className="text-sm font-semibold pb-3">Software Engineer</div>
                 <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                   Quadque
                 </div>
@@ -120,7 +122,7 @@ const InstructorsSlider = () => {
             </div>
           </div>
         </Link>
-        <Link to="../stories-detail">
+        {/* <Link to="../stories-detail">
           <div>
             <div className="flex-col bg-transparent rounded-2xl px-2">
               <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
@@ -167,7 +169,7 @@ const InstructorsSlider = () => {
               </div>
             </div>
           </div>
-        </Link>
+        </Link> */}
 
         {/*     ))} */}
       </Slider>
@@ -175,12 +177,12 @@ const InstructorsSlider = () => {
         <img
           src={LeftArrow}
           alt=""
-          onClick={() => sliderRef.current.slickNext()}
+          onClick={() => sliderRef.current.slickPrev()}
         />
         <img
           src={RightArrow}
           alt=""
-          onClick={() => sliderRef.current.slickPrev()}
+          onClick={() => sliderRef.current.slickNext()}
         />
       </div>
     </>

@@ -4,13 +4,13 @@ import ContentImg from "../../../Asset/Image/content-writing2.png";
 import MktImg from "../../../Asset/Image/digital-marketing2.png";
 import GraphicImg from "../../../Asset/Image/graphic-design2.png";
 import ProgImg from "../../../Asset/Image/programming2.png";
-import Categories from "./JsonData/categories.json";
+import Categories from "../../../Components/Shared/JsonData/categories.json";
 
 const Courses = () => {
   //const [Category] = useCategory();
   return (
     <div className="w-full pb-18 lg:pb-24">
-      <div className="lg:bg-[#5c5bfd10] lg:text-5xl text-center m-auto lg:mx-10 rounded-3xl py-4 lg:py-24 px-4 lg:px-20">
+      <div className="lg:bg-[#5c5bfd10] lg:text-5xl text-center m-auto lg:mx-10 rounded-3xl shadow-lg py-4 lg:py-24 px-4 lg:px-20">
         <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
           Effective courses to develop in-demand skills
         </div>

@@ -9,9 +9,8 @@ import meeting from "../../../Asset/Image/meeting.png";
 import hallway from "../../../Asset/Image/hallway.png";
 import librarytop from "../../../Asset/Image/librarytop.png";
 import confarence from "../../../Asset/Image/confarence.png";
-import Footer from "../LandingPage/Footer";
 import { Modal } from "antd";
-import "./gallery.css";
+import "./More.css";
 
 const Gallery = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -174,7 +173,6 @@ const Gallery = () => {
           <img src={selectedImg?.image} alt="" className="w-full lg:w-2/3 m-auto"/>
           </div>
         </Modal>
-        <Footer />
       </div>
     </>
   );

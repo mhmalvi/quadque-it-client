@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import Graphics from "../../../Asset/Image/graphics.png";
 import Motion from "../../../Asset/Image/motion.png";
 import Uiux from "../../../Asset/Image/uiux.png";
-import Blog from "../../UserLayouts/Blog/blogs.json";
-import BlogCategories from "../../UserLayouts/Blog/blogCategory.json";
+import Blog from "../../../Components/Shared/JsonData/blogs.json"
+import BlogCategories from "../../../Components/Shared/JsonData/blogCategory.json"
 import { Link } from "react-router-dom";
 import Icons from "../../../Components/Shared/Icons";
 import { Select, Modal } from "antd";
 import AddBlog from "./AddBlog";
 
-const AdminBlogs = () => {
+const BlogsPanel = () => {
   const [toogleTab, setToogleTab] = useState("All");
   const [blogData, setBlogData] = useState();
   const [categoryItems, setCategoryItems] = useState([]);
@@ -218,7 +218,7 @@ const AdminBlogs = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
               {/* card1 */}
               {blogData?.map((details,i) => (
-                <div key={i} className="relative flex-col rounded-xl p-2 border">
+                <div key={i} className="relative flex-col rounded-xl p-2 border cursor-pointer">
                   <div className="flex-col justify-end absolute right-4 top-6">
                     <div
                       title="Edit"
@@ -262,4 +262,4 @@ const AdminBlogs = () => {
   );
 };
 
-export default AdminBlogs;
+export default BlogsPanel;

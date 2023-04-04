@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Student from "./JsonData/student.json";
+import Student from "../../../Components/Shared/JsonData/student.json";
 import RightArrow from "../../../Asset/Image/purple-right-arrow.png";
 import LeftArrow from "../../../Asset/Image/purple-left-arrow.png";
 import Stu1 from "../../../Asset/Image/stu1.png";

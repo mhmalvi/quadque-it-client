@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Graphics from "../../../Asset/Image/graphics.png";
 import Motion from "../../../Asset/Image/motion.png";
 import Uiux from "../../../Asset/Image/uiux.png";
-import Blog from "./blogs.json";
+import Blog from "../../../Components/Shared/JsonData/blogs.json";
 import { Link } from "react-router-dom";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Menu, Space } from "antd";

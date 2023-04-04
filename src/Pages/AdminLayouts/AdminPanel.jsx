@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../../Components/Shared/Sidebar";
 import AdminDashboard from "./Dashboard/AdminDashboard";
-import AdminBlogs from "./Blogs.jsx/AdminBlogs";
+import AdminBlogs from "./BlogsAdmin/index.jsx";
 import AdminCourse from "./CoursesAdmin";
 import AdminStudent from "./Student";
 import AdminTeacher from "./Teacher";

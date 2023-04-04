@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
-import Instructor from "./JsonData/instructors.json";
+import Instructor from "../../../Components/Shared/JsonData/instructors.json";
 
 const OurInstructors = () => {
   const sliderRef = useRef(null);

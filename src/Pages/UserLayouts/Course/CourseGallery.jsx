@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../../../Asset/Image/banner.png";
 import Reading from "../../../Asset/Image/reading.png";
-import Course from "./Course.json";
-import Catagories from "../LandingPage/JsonData/categories.json"
+import Course from "../../../Components/Shared/JsonData/Course.json"
+import Catagories from "../../../Components/Shared/JsonData/categories.json"
 import { useNavigate } from "react-router-dom";
 import { Select } from "antd";
-import Testimonial from "../ReusableComponents/Testimonial";
+import Instructors from "../ReusableComponents/Instructors";
 import Footer from "../LandingPage/Footer";
 
 import Motion from "../../../Asset/Image/motion.png";
@@ -64,7 +64,7 @@ const CourseGallery = () => {
     }
   }, [toogleTab, toogleMediumTab]);
 
-  /*   useEffect(() => {
+    useEffect(() => {
     const items = [
       {
         id: "0",
@@ -73,7 +73,7 @@ const CourseGallery = () => {
     ];
 
     (async () => {
-      Category.forEach((category) => {
+      Catagories.forEach((category) => {
         items.push({
           id: `${category?.id}`,
           value: `${category?.name}`,
@@ -81,8 +81,8 @@ const CourseGallery = () => {
       });
       setCategoryItems(items);
     })();
-  }, [Category]);
-  console.log("items,", categoryItems); */
+  }, [Catagories]);
+  console.log("items,", categoryItems);
 
   return (
     <div className="w-full bg-[#040422] h-screen text-white">
@@ -199,20 +199,20 @@ const CourseGallery = () => {
 
           <div className="w-full bg-[#040422]">
             {/* COURSE Gallery */}
-            <div className="grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 text-white gap-6 lg:mx-18 my-6">
+            <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 text-white gap-6 sm:px-5 lg:px-0 my-6">
               {/* cards */}
               {courseData?.map((details, i) =>
                 details ? (
                   <div
                     key={i}
                     onClick={navigateToCourseDetails}
-                    className="flex-col group bg-home-color border border-white border-opacity-30 rounded-3xl hover:border-2 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300"
+                    className="flex-col group bg-home-color border border-white border-opacity-30 rounded-3xl hover:border-2 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300 cursor-pointer"
                   >
                     <div className="flex-wrap overflow-hidden rounded-3xl m-2">
                       <img
                         src={CourseImage?.find(wtf=>wtf.title===details?.title) ? (CourseImage?.find(wtf=>wtf.title===details?.title)?.image):Motion}
                         alt=""
-                        className="w-[335px] h-[225px] rounded-3xl scale-100 group-hover:scale-125 ease-in duration-700"
+                        className="w-full h-[225px] rounded-3xl scale-100 group-hover:scale-125 ease-in duration-700"
                       />
                     </div>
                     <div className="p-4">
@@ -237,7 +237,7 @@ const CourseGallery = () => {
             </div>
           </div>
         </div>
-        <Testimonial />
+        <Instructors />
       </div>
       <Footer />
     </div>

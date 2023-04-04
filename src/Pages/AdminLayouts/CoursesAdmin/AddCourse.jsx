@@ -4,7 +4,7 @@ import { InboxOutlined } from "@ant-design/icons";
 import { Modal, message, Upload, Select } from "antd";
 
 //import useCategory from "../../../Components/Shared/Hooks/useCategory";
-import Categories from "../../UserLayouts/LandingPage/JsonData/categories.json"
+import Categories from "../../../Components/Shared/JsonData/categories.json"
 const { Dragger } = Upload;
 const props = {
   name: "file",

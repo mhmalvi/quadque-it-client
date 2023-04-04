@@ -2,18 +2,18 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import Partnerslogo from "../LandingPage/JsonData/partners.json";
+import Partnerslogo from "../../../Components/Shared/JsonData/partners.json";
 
 const Partners = () => {
   const sliderRef = useRef(null);
   const settings = {
     className: "center",
     centerMode: true,
-    infinite: true,
+    infinite: false,
     speed: 600,
     arrows: false,
     slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {

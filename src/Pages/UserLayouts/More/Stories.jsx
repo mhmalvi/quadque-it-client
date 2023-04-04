@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import stories1 from "../../../Asset/Image/stories1.png";
 import stories2 from "../../../Asset/Image/stories2.png";
 import stories3 from "../../../Asset/Image/stories3.png";
@@ -11,18 +11,33 @@ import Pranto from "../../../Asset/Image/pranto.png";
 import Story2 from "../../../Asset/Image/story2.jpeg";
 import Story3 from "../../../Asset/Image/story3.jpeg";
 import InstructorsSlider from "./InstructorsSlider";
+import useStories from "../../../Components/Shared/JsonData/stories.json";
+import { Pagination } from "antd";
 import { Link } from "react-router-dom";
-import Footer from "../LandingPage/Footer";
+import "./More.css";
 
 const Stories = () => {
+  const [totalPosts, setTotalPosts] = useState();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [PostsPerPage] = useState(3);
+
   useEffect(() => {
     let height = document.getElementById("twinCard")?.clientHeight;
     console.log(height);
-    document.getElementById("soloCard").style.height = height + "px";
+    document.getElementById("soloCard").style.height = height - 8 + "px";
   }, [document.getElementById("twinCard")?.clientHeight]);
+
+  useEffect(() => {
+    setTotalPosts(useStories.length);
+  }, [useStories]);
+
+  const indexOfLastPost = currentPage * PostsPerPage;
+  const indexOfFirstPost = indexOfLastPost - PostsPerPage;
+  const currentPosts = useStories?.slice(indexOfFirstPost, indexOfLastPost);
+
   return (
     <>
-      <div className="w-full bg-home-color pt-32 lg:pb-20 lg:px-30 lg:mt-10">
+      <div className="w-full bg-home-color pt-32 lg:pb-20 lg:px-10 lg:mt-10">
         <div className="text-white">
           <div className="flex-col m-auto pb-18">
             <div className="text-3xl lg:text-5xl font-bold text-center leading-snug px-5 lg:px-0">
@@ -38,99 +53,81 @@ const Stories = () => {
             </div>
           </div>
           <div className="hidden lg:block">
-            <div className="lg:flex justify-center items-stretch gap-5 pb-72">
-              <div id="twinCard" className="flex-col gap-6">
-                {/* card */}
-                <div>
+            <div className="lg:flex justify-center items-stretch gap-5 pb-10">
+              <div id="twinCard" className="">
+                {currentPosts?.splice(0, 2).map((details, i) => (
                   <Link to="../stories-detail">
-                    <div className="lg:flex bg-white rounded-2xl mb-6 h-76">
-                      <div>
-                        <img
-                          src={Pranto}
-                          className="w-full h-full rounded-tl-2xl rounded-bl-2xl"
-                          alt=""
-                        />
-                      </div>
-                      <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
-                        <div className="text-4xl font-semibold">
-                          Pranto Islam
+                    <div className="bg-home-color pb-2">
+                      <div className="lg:flex bg-white rounded-2xl h-76">
+                        <div>
+                          <img
+                            src={Pranto}
+                            className="w-full h-full rounded-tl-2xl rounded-bl-2xl"
+                            alt=""
+                          />
                         </div>
-                        <div className="text-sm font-semibold">
-                          UX UI Designer
+                        <div className="max-w-[70vh] flex-col lg:justify-start text-black m-auto px-6 py-7">
+                          <div className="text-4xl font-semibold">
+                            {details?.name}
+                          </div>
+                          <div className="text-sm font-semibold">
+                            {details?.profession}
+                          </div>
+                          <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                            Quadque
+                          </div>
+                          <div className="text-sm pb-2">{details?.para}</div>
+                          <div className="font-bold">Read More</div>
                         </div>
-                        <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                          Quadque
-                        </div>
-                        <div className="text-sm pb-2">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. <br /> Ut elit tellus, luctus nec ullamcorper
-                          mattis, pulvinar dapibus leo.{" "}
-                        </div>
-                        <div className="font-bold">Read More</div>
                       </div>
                     </div>
                   </Link>
-                </div>
-                {/* card */}
-                <div>
-                  <Link to="../stories-detail">
-                    <div className="flex flex-col-reverse lg:flex lg:flex-row bg-white rounded-2xl mt-6 h-76">
-                      <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
-                        <div className="text-4xl font-semibold">
-                          David Rodriguez
-                        </div>
-                        <div className="text-sm font-semibold">
-                          Marketing Specialist
-                        </div>
-                        <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                          Quadque
-                        </div>
-                        <div className="text-sm pb-2">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. <br /> Ut elit tellus, luctus nec ullamcorper
-                          mattis, pulvinar dapibus leo.{" "}
-                        </div>
-                        <div className="font-bold">Read More</div>
-                      </div>
-                      <div>
-                        <img
-                          src={Story2}
-                          className="w-full h-full rounded-tr-2xl rounded-br-2xl"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </Link>
-                </div>
+                ))}
               </div>
               {/* card */}
-              <div>
+              {currentPosts?.splice(0, 2).map((details, i) => (
                 <Link to="../stories-detail">
-                  <div
-                    id="soloCard"
-                    className="flex-col lg:max-w-xs bg-white rounded-2xl"
-                  >
-                    <div className="h-72 flex-wrap overflow-hidden">
-                      <img src={Story3} className="w-full rounded-2xl" alt="" />
-                    </div>
-                    <div className="flex-col lg:justify-start text-black m-auto px-6 py-8">
-                      <div className="text-4xl font-semibold">Tanvir Hasan</div>
-                      <div className="text-sm font-semibold">
-                        Software Engineer
+                  <div>
+                    <div
+                      id="soloCard"
+                      className="flex-col lg:max-w-xs bg-white rounded-2xl"
+                    >
+                      <div className="h-72 flex-wrap overflow-hidden">
+                        <img
+                          src={Story3}
+                          className="w-full rounded-2xl"
+                          alt=""
+                        />
                       </div>
-                      <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                        Quadque
+                      <div className="flex-col lg:justify-start text-black m-auto px-6 py-8">
+                        <div className="text-4xl font-semibold">
+                          {details?.name}
+                        </div>
+                        <div className="text-sm font-semibold">
+                          {details?.profession}
+                        </div>
+                        <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                          Quadque
+                        </div>
+                        <div className="text-sm pb-2">{details?.para}</div>
+                        <div className="font-bold">Read More</div>
                       </div>
-                      <div className="text-sm pb-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-                        <br /> Ut elit tellus, luctus nec ullamcorper mattis,
-                        pulvinar dapibus leo.{" "}
-                      </div>
-                      <div className="font-bold">Read More</div>
                     </div>
                   </div>
                 </Link>
-              </div>
+              ))}
+            </div>
+            <div className="Stories_Pagination flex justify-center mt-10 mb-20">
+              <Pagination
+                onChange={(value) => {
+                  setCurrentPage(value);
+                  window.scrollTo(0, 0);
+                }}
+                pageSize={PostsPerPage}
+                current={currentPage}
+                total={totalPosts}
+                className="text-xl"
+              />
             </div>
           </div>
 
@@ -220,7 +217,6 @@ const Stories = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
