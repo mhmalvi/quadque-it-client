@@ -1,18 +1,12 @@
 import React from "react";
 //import Rectangle from "../../Asset/Image/rectangle.png";
 //import RectangleTwo from "../../Asset/Image/rectangle2.png";
-import Classroom from "../../../Asset/Image/classroom.png";
-import About1 from "../../../Asset/Image/about-8.png";
 import About2 from "../../../Asset/Image/about-5.png";
-import Students from "../../../Asset/Image/students.png";
-import MobilePic from "../../../Asset/Image/mobile-browse.png";
-import Box from "../../../Asset/Image/box.png";
-import Box2 from "../../../Asset/Image/box2.png";
+import About1 from "../../../Asset/Image/home-banner-bg.jpg";
 import Icons from "../../../Components/Shared/Icons";
-import AboutMaterial from "./AboutMaterial";
-import AnimatedText from "react-animated-text-content";
-import Instructors from "../ReusableComponents/Instructors";
 import Footer from "../LandingPage/Footer";
+import Instructors from "../ReusableComponents/Instructors";
+import AboutMaterial from "./AboutMaterial";
 
 const Header = () => {
   return (
@@ -42,7 +36,7 @@ const Header = () => {
             <div className="">
               <img
                 src={About1}
-                className="w-11/12 lg:w-2/3 m-auto px-4 lg:px-0"
+                className="w-full m-auto px-4 lg:px-0"
                 alt=""
               />
             </div>

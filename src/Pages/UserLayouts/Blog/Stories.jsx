@@ -8,6 +8,8 @@ import stories6 from "../../../Asset/Image/stories6.png";
 import meeting from "../../../Asset/Image/meeting.png";
 import StudentWorks from "../../../Asset/Image/student-work.png";
 import Pranto from "../../../Asset/Image/pranto.png";
+import Story2 from "../../../Asset/Image/story2.jpeg";
+import Story3 from "../../../Asset/Image/story3.jpeg";
 import InstructorsSlider from "./InstructorsSlider";
 import { Link } from "react-router-dom";
 import Footer from "../LandingPage/Footer";
@@ -51,7 +53,7 @@ const Stories = () => {
                       </div>
                       <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
                         <div className="text-4xl font-semibold">
-                          Pranto Islam 1
+                          Pranto Islam
                         </div>
                         <div className="text-sm font-semibold">
                           UX UI Designer
@@ -75,10 +77,10 @@ const Stories = () => {
                     <div className="flex flex-col-reverse lg:flex lg:flex-row bg-white rounded-2xl mt-6 h-76">
                       <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
                         <div className="text-4xl font-semibold">
-                          Pranto Islam 2
+                          David Rodriguez
                         </div>
                         <div className="text-sm font-semibold">
-                          UX UI Designer
+                          Marketing Specialist
                         </div>
                         <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                           Quadque
@@ -92,7 +94,7 @@ const Stories = () => {
                       </div>
                       <div>
                         <img
-                          src={Pranto}
+                          src={Story2}
                           className="w-full h-full rounded-tr-2xl rounded-br-2xl"
                           alt=""
                         />
@@ -109,14 +111,12 @@ const Stories = () => {
                     className="flex-col lg:max-w-xs bg-white rounded-2xl"
                   >
                     <div className="h-72 flex-wrap overflow-hidden">
-                      <img src={Pranto} className="w-full rounded-2xl" alt="" />
+                      <img src={Story3} className="w-full rounded-2xl" alt="" />
                     </div>
                     <div className="flex-col lg:justify-start text-black m-auto px-6 py-8">
-                      <div className="text-4xl font-semibold">
-                        Pranto Islam 3
-                      </div>
+                      <div className="text-4xl font-semibold">Tanvir Hasan</div>
                       <div className="text-sm font-semibold">
-                        UX UI Designer
+                        Software Engineer
                       </div>
                       <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                         Quadque

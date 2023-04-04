@@ -1,5 +1,5 @@
 import React from "react";
-import Building from "../../../Asset/Image/grant-ritchie.png";
+import Building from "../../../Asset/Image/contact-banner.jpg";
 import GoogleMapReact from "google-map-react";
 import GoogleMaps from "./Maps";
 /* 23.752320221204513, 90.38005477684074 */
@@ -15,14 +15,14 @@ const Contact = () => {
     zoom: 11,
   };
   return (
-    <div className="w-full bg-home-color pt-40 pb-20 lg:mt-10">
+    <div className="w-full bg-home-color pt-24 lg:pt-40 pb-20 lg:mt-10">
       <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl">
-        <div className="lg:w-1/2 text-white m-auto pt-20 lg:pt-0">
-          <div className="text-2xl lg:text-4xl font-bold pb-5 px-6 lg:px-0">
+        <div className="lg:w-1/2 text-white m-auto lg:pl-10">
+          <div className="text-xl lg:text-4xl font-bold pb-5 px-6 lg:px-0">
             Level -7, 8/C, F.R Tower, Sukrabad, Panthapath, Dhaka 1207,
             Bangladesh
           </div>
-          <div className="w-2/3 flex lg:flex-row flex-col justify-between text-xl pb-10 px-6 lg:px-0">
+          <div className="w-2/3 flex lg:flex-row flex-col justify-between lg:text-xl pb-10 px-6 lg:px-0">
             <ul>
               <li className="p-2">info@quadque.tech</li>
               <li className="p-2">+61405899496</li>
@@ -66,8 +66,8 @@ const Contact = () => {
           </div>
           {/* <div><GoogleMaps/></div> */}
         </div>
-        <div className="flex justify-center">
-          <img src={Building} className="" alt="QIT logo" />
+        <div className="lg:w-1/2 flex justify-center">
+          <img src={Building} className="hidden lg:block lg:h-[92vh]" alt="QIT logo" />
         </div>
       </div>
     </div>

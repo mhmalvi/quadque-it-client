@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import Course from "../../../Asset/Image/image9.png";
+import React from "react";
 //import useCategory from "../../../Components/Shared/Hooks/useCategory";
-import Categories from "./JsonData/categories.json"
-import ProgImg from "../../../Asset/Image/programming2.png"
-import GraphicImg from "../../../Asset/Image/graphic-design2.png"
-import MktImg from "../../../Asset/Image/digital-marketing2.png"
-import ContentImg from "../../../Asset/Image/content-writing2.png"
+import ContentImg from "../../../Asset/Image/content-writing2.png";
+import MktImg from "../../../Asset/Image/digital-marketing2.png";
+import GraphicImg from "../../../Asset/Image/graphic-design2.png";
+import ProgImg from "../../../Asset/Image/programming2.png";
+import Categories from "./JsonData/categories.json";
 
 const Courses = () => {
   //const [Category] = useCategory();

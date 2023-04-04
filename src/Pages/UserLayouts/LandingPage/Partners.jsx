@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Businesses from "../../../Asset/Image/partners.png";
-import Partnerslogo from "../LandingPage/JsonData/partners.json"
+import "slick-carousel/slick/slick.css";
+import Partnerslogo from "../LandingPage/JsonData/partners.json";
 
 const Partners = () => {
   const sliderRef = useRef(null);
@@ -56,11 +55,7 @@ const Partners = () => {
           <Slider ref={sliderRef} {...settings}>
             {Partnerslogo?.map((partner, i) => (
               <div key={i}>
-                  <img
-                    src={partner?.logo}
-                    alt=""
-                    className="w-[10rem] mx-auto"
-                  />
+                <img src={partner?.logo} alt="" className="w-[8rem] m-auto" />
               </div>
             ))}
           </Slider>

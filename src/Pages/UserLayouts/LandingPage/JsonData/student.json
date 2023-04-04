@@ -2,56 +2,56 @@
   {
     "id": 1,
     "name": "Fahim Fayaz",
-    "job": "Software Developer",
+    "job": "Programming course",
     "comment": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
     "image": "https://www.eclipsegroup.co.uk/wp-content/uploads/2020/03/Round-Profile-Picture-768x768-1-300x300.png"
   },
   {
     "id": 2,
-    "name": "Sheikh Khaleda",
-    "job": "Software Developer",
+    "name": "Junaed Md. Abu Saif",
+    "job": "Graphics Designing course",
     "comment": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
     "image": "https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
   },
   {
     "id": 3,
     "name": "Sourov Sen",
-    "job": "Software Developer",
+    "job": "Programming course",
     "comment": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Paul_Circle.png/767px-Paul_Circle.png"
   },
   {
     "id": 4,
     "name": "Atika Younus",
-    "job": "Software Developer",
+    "job": "Programming course",
     "comment": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
     "image": "https://priceschool.usc.edu/wp-content/uploads/2019/09/christine-beckman-round.png"
   },
   {
     "id": 5,
     "name": "Pranto Islam",
-    "job": "Uiux Designer",
+    "job": "Uiux Designing course",
     "comment": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
     "image": "https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
   },
   {
     "id": 6,
     "name": "Zahid Islam",
-    "job": "Software Developer",
+    "job": "Content Writing course",
     "comment": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Paul_Circle.png/767px-Paul_Circle.png"
   },
   {
     "id": 7,
-    "name": "Md. Sadin",
-    "job": "Visualizer",
+    "name": "Nabila Sultana",
+    "job": "Digital Marketing course",
     "comment": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
     "image": "https://www.eclipsegroup.co.uk/wp-content/uploads/2020/03/Round-Profile-Picture-768x768-1-300x300.png"
   },
   {
     "id": 8,
     "name": "Md. Zeean",
-    "job": "Visualizer",
+    "job": "Digital Marketing course",
     "comment": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
     "image": "https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
   }

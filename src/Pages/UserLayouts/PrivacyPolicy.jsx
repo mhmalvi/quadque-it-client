@@ -9,9 +9,9 @@ const PrivacyPolicy = () => {
           Privacy Policy
         </div>
         <div className="pb-10">
-          Quadque Institute Of Technology is recognized as one of the best IT
+          Quadque Institution of Technology is recognized as one of the best IT
           training institutes in Bangladesh. In addition to the offline
-          facility, Quadque Institute Of Technology also offers online skill
+          facility, Quadque Institution of Technology also offers online skill
           training. Your personal data is protected and secured with us as your
           privacy is our first priority. This Privacy Policy includes our data
           collection activities and describes your right to access, edit, or
@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
           Cookies & Data Collection Tools
         </div>
         <div className="pb-5">
-          Quadque Institute Of Technology uses server log files and automated data collection tools
+          Quadque Institution of Technology uses server log files and automated data collection tools
           like cookies, tags, scripts, device or browser fingerprints, and web
           beacons when you access and use the Services. These Data Collection
           Tools automatically track and collect System Data and Usage Data (as
@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
           Confidentiality & Security of Data
         </div>
         <div className="pb-5">
-        Quadque Institute Of Technology ensures all necessary security and prevention measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal data that we collect and store. These measures vary based on the type and sensitivity of the data. Your password is an important part of our security system, and it is your responsibility to protect it. You should not share your password with any third party, and if you believe your password or account has been compromised, you should change it immediately and contact info@quadque.tech with any concerns.
+        Quadque Institution of Technology ensures all necessary security and prevention measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal data that we collect and store. These measures vary based on the type and sensitivity of the data. Your password is an important part of our security system, and it is your responsibility to protect it. You should not share your password with any third party, and if you believe your password or account has been compromised, you should change it immediately and contact info@quadque.tech with any concerns.
         </div>
 
         <div className="text-lg font-semibold pb-5">

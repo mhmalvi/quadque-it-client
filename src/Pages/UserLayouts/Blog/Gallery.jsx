@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import video from "../../../Asset/Image/video.png";
+import video from "../../../Asset/Image/we.jpg";
 import Icons from "../../../Components/Shared/Icons";
 import classroom2 from "../../../Asset/Image/classroom2.png";
 import library from "../../../Asset/Image/library.png";
@@ -40,7 +40,7 @@ const Gallery = () => {
             <img
               src={video}
               alt=""
-              className="lg:rounded-xl md:shrink-0 px-4 lg:px-0"
+              className="lg:w-2/3 lg:rounded-xl md:shrink-0 px-4 lg:px-0"
             />
           </div>
           <div className="sm:w-2/3 lg:w-full flex-col px-5 lg:justify-start m-auto">

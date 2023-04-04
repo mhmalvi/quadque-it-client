@@ -19,7 +19,7 @@ const TermsOfUse = () => {
           IF YOU DO NOT AGREE WITH THE TERMS OF USE, PLEASE DO NOT ACCESSTHIS PLATFORM FOR ANY SERVICES.
           </li>
           <li className="list-disc pt-2">
-          Acceptance of these terms is a prerequisite for usage of services in the platform. By virtue of using these services, it is deemed that you accept all and any of the terms and conditions specified in the Agreement. The Agreement constitutes the entire agreement between you and Quadque Institute Of Technology and governs your use of the Platform's Service, superseding any prior agreements between you and Quadque Institute Of Technology.
+          Acceptance of these terms is a prerequisite for usage of services in the platform. By virtue of using these services, it is deemed that you accept all and any of the terms and conditions specified in the Agreement. The Agreement constitutes the entire agreement between you and Quadque Institution of Technology and governs your use of the Platform's Service, superseding any prior agreements between you and Quadque Institution of Technology.
           </li>
           <li className="list-disc pt-2">This Platform is entitled to assign this Agreement, and all rights and obligations hereunder, to a successor to all or any of its assets, whether by sale, merger or otherwise. These terms shall be binding upon and shall inure to the benefit of the parties hereto and their respective representatives, heirs, administrators, successors and permitted assigns except as otherwise provided herein.</li>
           <li className="list-disc pt-2">This Platform reserves the right to update, change, modify, add or remove the terms, conditions and notices of the Agreement without any prior notice to you. It is your responsibility to periodically review the most current version of the Agreement as your continued use of this Platform signifies your acceptance of any changed terms. As long as you comply with these Terms & conditions, we grant you a personal, non-exclusive, non-transferable, limited privilege to enter and use the Platform.</li>
@@ -28,7 +28,7 @@ const TermsOfUse = () => {
         <div className="pb-5">
             These terms are in addition to and must be read in consonance with the terms mentioned above under the head 'Accessing & transmitting Platform's Content'.
             <br /><br />
-            Private communication, including email correspondence, is not regulated by this Platform. Quadque Institute Of Technology encourages its Users to be professional, courteous and respectful when communicating by email. However, Quadque Institute Of Technology will investigate and can take action on certain types of unwanted emails that violate this Platform's policies.
+            Private communication, including email correspondence, is not regulated by this Platform. Quadque Institution of Technology encourages its Users to be professional, courteous and respectful when communicating by email. However, Quadque Institution of Technology will investigate and can take action on certain types of unwanted emails that violate this Platform's policies.
             <br /><br />
             Communications may be intercepted for security purposes including but not restricted national interest.
             You should be vary of any phishing filter, spam mails, email soliciting, and exchange of money for inheritance or cross-border access of funds.
@@ -37,7 +37,7 @@ const TermsOfUse = () => {
         <div className="pb-5">
             Threats of bodily harm - this Platform does not permit Users to send explicit threats of bodily harm.
             <br /><br />
-            Misuse of Quadque Institute Of Technology System - This Platform allows Users to facilitate transactions through the Quadque Institute Of Technology system, but will investigate any misuse of this service.
+            Misuse of Quadque Institution of Technology System - This Platform allows Users to facilitate transactions through the Quadque Institution of Technology system, but will investigate any misuse of this service.
             <br /><br />
             Spoof (Fake) email - this Platform will never ask you to provide sensitive information through email. In case you receive any spoof (fake) email, you are requested to report the same to us through 'Contact Us' tab.
             <br /><br />

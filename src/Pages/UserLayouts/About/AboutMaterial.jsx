@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import Robot from "../../../Asset/Image/Robot.png";
-import MobilePic from "../../../Asset/Image/mobile-browse.png";
-import About3 from "../../../Asset/Image/about-7.png";
-import About4 from "../../../Asset/Image/about-3.png";
+import React from "react";
 import { Link } from "react-router-dom";
+import About4 from "../../../Asset/Image/about-3.png";
+import About3 from "../../../Asset/Image/about-7.png";
 
 const AboutMaterial = () => {
   return (

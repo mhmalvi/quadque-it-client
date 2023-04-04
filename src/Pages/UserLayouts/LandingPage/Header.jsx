@@ -1,14 +1,9 @@
 import React from "react";
-import World from "../../../Asset/Image/world.png";
-import Icons from "../../../Components/Shared/Icons";
-import AnimatedText from "react-animated-text-content";
-import Lottie from "lottie-react";
-import Learning from "../../../Asset/Lottie/learning.json";
+import CaseStudy from "../../../Asset/Image/file-case.png";
 import Banner from "../../../Asset/Image/home-banner.png";
 import Soln from "../../../Asset/Image/idea.png";
-import OnlineCourse from "../../../Asset/Image/online-learning.png";
 import LiveChat from "../../../Asset/Image/live-chat.png";
-import CaseStudy from "../../../Asset/Image/file-case.png";
+import OnlineCourse from "../../../Asset/Image/online-learning.png";
 import './style.css';
 
 const Header = () => {
@@ -21,7 +16,7 @@ const Header = () => {
               Welcome to
               <span className="text-[#23BDEE] z-0">&nbsp;QIT</span>
             </div>
-            <div className="md:text-base pb-13">
+            <div className="lg:w-1/2 md:text-base pb-13">
               Take your resume to the next level by developing the most useful
               digital marketing and IT skills with the help of our courses.
             </div>
@@ -72,26 +67,26 @@ const Header = () => {
       </div> */}
 
       <div className="lg:flex lg:justify-evenly lg:visible hidden text-black text-lg pt-30 m-auto">
-        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
+        <div className="bg-white w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
           {/* <Icons.ProblemSol /> */}
-          <img src={Soln} alt="" className="w-[4rem]"/>
+          <img src={Soln} alt="" className="w-[4rem]" />
           <span className="px-2 pt-2 text-center">
             Digital Marketing & IT Solutions
           </span>
         </div>
-        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
+        <div className="bg-white w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
           {/* <Icons.Chat /> */}
-          <img src={LiveChat} alt="" className="w-[4rem]"/>
+          <img src={LiveChat} alt="" className="w-[4rem]" />
           <span className="px-2 pt-2 text-center">Live Chat </span>
         </div>
-        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
+        <div className="bg-white w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
           {/* <Icons.People /> */}
-          <img src={CaseStudy} alt="" className="w-[4rem]"/>
+          <img src={CaseStudy} alt="" className="w-[4rem]" />
           <span className="px-2 pt-2 text-center">Case Studies</span>
         </div>
-        <div className="w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
+        <div className="bg-white w-[15rem] flex flex-col justify-center items-center shadow-md border rounded-lg px-4 py-4">
           {/* <Icons.Courses /> */}
-          <img src={OnlineCourse} alt="" className="w-[4rem]"/>
+          <img src={OnlineCourse} alt="" className="w-[4rem]" />
           <span className="px-2 pt-2 text-center">Online Courses</span>
         </div>
       </div>

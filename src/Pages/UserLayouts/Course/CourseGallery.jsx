@@ -1,14 +1,27 @@
 import React, { useEffect, useState } from "react";
-import Graphics from "../../../Asset/Image/graphics.png";
-import Motion from "../../../Asset/Image/motion.png";
-import Uiux from "../../../Asset/Image/uiux.png";
 import Banner from "../../../Asset/Image/banner.png";
 import Reading from "../../../Asset/Image/reading.png";
 import Course from "./Course.json";
+import Catagories from "../LandingPage/JsonData/categories.json"
 import { useNavigate } from "react-router-dom";
 import { Select } from "antd";
 import Testimonial from "../ReusableComponents/Testimonial";
 import Footer from "../LandingPage/Footer";
+
+import Motion from "../../../Asset/Image/motion.png";
+import Jquery from "../../../Asset/Image/courses/prog-course.jpg";
+import Ai from "../../../Asset/Image/courses/illustrator-course.jpg";
+import APS from "../../../Asset/Image/courses/ps-course.png";
+import Android from "../../../Asset/Image/courses/mobdev-course.png";
+import Content from "../../../Asset/Image/courses/content-course.png";
+import Python from "../../../Asset/Image/courses/python-course.jpg";
+import Blender from "../../../Asset/Image/courses/blender-course.jpg";
+import Digital from "../../../Asset/Image/courses/digi-rs-course.jpg";
+import Grammar from "../../../Asset/Image/courses/digi-2-course.jpg";
+import Writing from "../../../Asset/Image/courses/writing-course.jpg";
+import Writing2 from "../../../Asset/Image/courses/writing-2-course.jpg";
+import Mkt101 from "../../../Asset/Image/courses/mkt-101-course.jpg";
+import DotNet from "../../../Asset/Image/courses/dotnet-course.jpg";
 
 //import useCategory from "../../../Components/Shared/Hooks/useCategory";
 
@@ -47,7 +60,7 @@ const CourseGallery = () => {
       }
       setCourseData(CourseDetail);
     } else {
-      setCourseData(Course);
+      setCourseData(Course.filter((cor) => cor.category !== "Others"));
     }
   }, [toogleTab, toogleMediumTab]);
 
@@ -77,11 +90,7 @@ const CourseGallery = () => {
         <div className="w-full ">
           <div className="flex m-auto justify-between items-center">
             <div className="hidden lg:block -mb-48 ml-20">
-              <img
-                src={Banner}
-                className="w-full"
-                alt=""
-              />
+              <img src={Banner} className="w-full" alt="" />
             </div>
             <div className="w-2/3 sm:w-1/2 lg:w-1/3 text-white text-center mx-auto">
               <div className="text-4xl pb-2 text-shadow-white">Courses</div>
@@ -123,11 +132,7 @@ const CourseGallery = () => {
               </div>
             </div>
             <div className="hidden lg:block -mb-[150px] mr-20">
-              <img
-                src={Reading}
-                className="w-full"
-                alt=""
-              />
+              <img src={Reading} className="w-full" alt="" />
             </div>
           </div>
         </div>
@@ -138,7 +143,7 @@ const CourseGallery = () => {
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
             <ul className="flex-col py-5 text-sm font-thin leading-10">
-              <li key={0} onClick={() => ToogleCategory("All")}>
+              <li onClick={() => ToogleCategory("All")}>
                 <div
                   className={
                     toogleTab === "All"
@@ -149,6 +154,19 @@ const CourseGallery = () => {
                   All
                 </div>
               </li>
+              {Catagories?.map((category, i) => (
+                <li key={i} onClick={() => ToogleCategory(category?.name)}>
+                  <div
+                    className={
+                      toogleTab === category?.name
+                        ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
+                        : "cursor-pointer"
+                    }
+                  >
+                    {category?.name}
+                  </div>
+                </li>
+              ))}
               {/* {Category?.map((category) => (
                 <li
                 key={category.id}
@@ -183,18 +201,18 @@ const CourseGallery = () => {
             {/* COURSE Gallery */}
             <div className="grid grid-col-1 md:grid-cols-2 xl:grid-cols-3 text-white gap-6 lg:mx-18 my-6">
               {/* cards */}
-              {courseData?.map((details,i) =>
+              {courseData?.map((details, i) =>
                 details ? (
-                  <div 
-                  key={i}
+                  <div
+                    key={i}
                     onClick={navigateToCourseDetails}
                     className="flex-col group bg-home-color border border-white border-opacity-30 rounded-3xl hover:border-2 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300"
                   >
                     <div className="flex-wrap overflow-hidden rounded-3xl m-2">
                       <img
-                        src={Motion}
+                        src={CourseImage?.find(wtf=>wtf.title===details?.title) ? (CourseImage?.find(wtf=>wtf.title===details?.title)?.image):Motion}
                         alt=""
-                        className="w-full rounded-3xl scale-100 group-hover:scale-125 ease-in duration-700"
+                        className="w-[335px] h-[225px] rounded-3xl scale-100 group-hover:scale-125 ease-in duration-700"
                       />
                     </div>
                     <div className="p-4">
@@ -225,4 +243,22 @@ const CourseGallery = () => {
     </div>
   );
 };
-export default CourseGallery;
+export default CourseGallery
+
+const CourseImage = [
+  { title: "Jquery", image: Jquery },
+  { title: "Adobe Illustrator", image: Ai },
+  { title: "Adobe Photoshop", image: APS },
+  { title: "Sculpting with Blender (Online)", image: Blender },
+  { title: "Android Development (Online)", image: Android },
+  { title: "Python Programming (Online)", image: Python },
+  { title: "Digital Marketing Research Strategy", image: Digital },
+  { title: "Advanced .NET (Online)", image: Motion },
+  { title: "Content Creation", image: Grammar },
+  { title: "Rhyno (Architecture)", image: Motion },
+  { title: "Writing (Offline)", image: Writing },
+  { title: "Writing (Online)", image: Writing2 },
+  { title: "Writing Strategy", image: Content },
+  { title: ".NET Development", image: DotNet },
+  { title: "Digital Marketing 101", image: Mkt101 },
+];

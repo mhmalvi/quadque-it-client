@@ -55,13 +55,13 @@ const Testimonial = () => {
               src={LeftArrow}
               alt=""
               className="w-10 h-10"
-              onClick={() => sliderRef.current.slickNext()}
+              onClick={() => sliderRef.current.slickPrev()}
             />
             <img
               src={RightArrow}
               alt=""
               className="w-10 h-10"
-              onClick={() => sliderRef.current.slickPrev()}
+              onClick={() => sliderRef.current.slickNext()}
             />
           </div>
         </div>

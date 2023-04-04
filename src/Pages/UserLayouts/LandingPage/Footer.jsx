@@ -1,6 +1,7 @@
 import React from "react";
 import Icons from "../../../Components/Shared/Icons";
 import Logo from "../../../Asset/Image/qit-logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
       <div className="md:flex justify-evenly items-center bg-black pt-10 lg:pt-20 px-10 md:px-20 pb-7 lg:pb-13">
         <div className="md:w-3/12 pb-4">
           <div className="py-4">
-            <img src={Logo} alt="" className="w-[10rem]"/>
+            <img src={Logo} alt="" className="w-[10rem]" />
           </div>
           <div className="text-sm text-justify pb-8">
             This is your opportunity to learn the most demandable IT and digital
@@ -123,10 +124,16 @@ const Footer = () => {
       </div>
       <div className="flex flex-wrap bg-black justify-center text-xs border-t py-5">
         <div className="md:w-1/4">© 2023 Quadque Technologies Pvt Ltd</div>
-        <div className="flex gap-24">
-          <div>Privacy</div>
-          <div>Security</div>
-          <div>Terms</div>
+        <div className="flex justify-between gap-2 ">
+          <Link to={"../privacy-policy"}>
+            <div className="underline">Privacy Policy</div>
+          </Link>
+          <Link to={"../terms-of-use"}>
+            <div className="underline">Terms of Use</div>
+          </Link>
+          <Link to={"../copywrite-policy"}>
+            <div className="underline">Copywrite Policy</div>
+          </Link>
         </div>
       </div>
     </div>

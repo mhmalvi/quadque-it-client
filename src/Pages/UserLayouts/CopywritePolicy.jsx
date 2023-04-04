@@ -9,7 +9,7 @@ const CopywritePolicy = () => {
             Copywrite Policy
         </div>
         <div className="pb-10">
-        Quadque Institute Of Technology ('QIT') respects the Intellectual Property Rights, including but not limited to patent, copyright, design, trademark, service mark, trade names, data and media (images, illustrations, audio clips, and video clips, among others) ("IP") of others, and prohibits users from uploading, posting, distributing or otherwise transmitting any materials on the Platform, or engaging in any activities on the Platform, which violate the copyrights of others.
+        Quadque Institution of Technology ('QIT') respects the Intellectual Property Rights, including but not limited to patent, copyright, design, trademark, service mark, trade names, data and media (images, illustrations, audio clips, and video clips, among others) ("IP") of others, and prohibits users from uploading, posting, distributing or otherwise transmitting any materials on the Platform, or engaging in any activities on the Platform, which violate the copyrights of others.
           <br />
           <br />
           Any and all IP that in any manner forms part of and / or belongs to and / or associated with the Platform, shall vest in and exclusively belong to QIT. All other IP on this Platform belongs to their respective owners.

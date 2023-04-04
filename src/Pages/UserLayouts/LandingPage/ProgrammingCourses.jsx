@@ -1,20 +1,24 @@
-import React, {useRef} from "react";
-import Graphics from "../../../Asset/Image/graphics.png";
-import Motion from "../../../Asset/Image/motion.png";
-import Uiux from "../../../Asset/Image/uiux.png";
+import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Course from "./JsonData/courses.json";
+import Course from "../Course/Course.json";
 import { useNavigate } from "react-router-dom";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
 
+import Uiux from "../../../Asset/Image/uiux.png";
+import Jquery from "../../../Asset/Image/courses/prog-course.jpg";
+import Android from "../../../Asset/Image/courses/mobdev-course.png";
+import Python from "../../../Asset/Image/courses/python-course.jpg";
+import DotNet from "../../../Asset/Image/courses/dotnet-course.jpg";
+
 const ProgrammingCourses = () => {
+  const [courses, setCourses] = useState();
   const sliderRef = useRef(null);
   const navigate = useNavigate();
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 600,
     arrows: false,
     slidesToShow: 3,
@@ -48,6 +52,12 @@ const ProgrammingCourses = () => {
     ],
   };
 
+  useEffect(() => {
+    let grapGcourse;
+    grapGcourse = Course?.filter((wtf) => wtf.category === "Programming");
+    setCourses(grapGcourse);
+  }, []);
+
   const navigateToCourseDetails = () => {
     navigate("./course/course-detail");
   };
@@ -59,17 +69,23 @@ const ProgrammingCourses = () => {
         </div>
         <div className="text-white lg:pt-13 gap-6">
           <Slider ref={sliderRef} {...settings}>
-            {Course?.map((course,i) => (
+            {courses?.map((course, i) => (
               <div key={i}>
                 <div
                   onClick={navigateToCourseDetails}
-                  className="flex-col group shadow-lg rounded-3xl border-2 text-black hover:border-4 hover:bg-black hover:text-white hover:border-[#23BDEE] transition-ease-out duration-300 mx-3 my-4"
+                  className="bg-white flex-col group shadow-lg rounded-3xl border-2 text-black hover:border-4 hover:bg-black hover:text-white hover:border-[#23BDEE] transition-ease-out duration-300 mx-3 my-4"
                 >
                   <div className="">
                     <img
-                      src={Graphics}
+                      src={
+                        CourseImage?.find((wtf) => wtf.title === course?.title)
+                          ? CourseImage?.find(
+                              (wtf) => wtf.title === course?.title
+                            )?.image
+                          : Uiux
+                      }
                       alt=""
-                      className="w-full rounded-3xl scale-90 group-hover:scale-100 ease-in duration-500"
+                      className="w-full h-[250px] lg:h-[350px] rounded-3xl scale-90 group-hover:scale-100 ease-in duration-500"
                     />
                   </div>
                   <div className="p-5">
@@ -98,17 +114,24 @@ const ProgrammingCourses = () => {
             <img
               src={LeftArrow}
               alt=""
-              onClick={() => sliderRef.current.slickNext()}
+              onClick={() => sliderRef.current.slickPrev()}
             />
             <img
               src={RightArrow}
               alt=""
-              onClick={() => sliderRef.current.slickPrev()}
+              onClick={() => sliderRef.current.slickNext()}
             />
           </div>
         </div>
       </div>
     </div>
   );
-}
-export default ProgrammingCourses
+};
+export default ProgrammingCourses;
+
+const CourseImage = [
+  { title: "Jquery", image: Jquery },
+  { title: "Android Development (Online)", image: Android },
+  { title: "Python Programming (Online)", image: Python },
+  { title: ".NET Development", image: DotNet },
+];

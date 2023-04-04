@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import Apu from "../../../Asset/Image/apu.png";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
-import Instructor from "./JsonData/student.json";
+import Instructor from "./JsonData/instructors.json";
 
 const OurInstructors = () => {
   const sliderRef = useRef(null);
@@ -55,13 +54,13 @@ const OurInstructors = () => {
               src={LeftArrow}
               alt=""
               className="w-10 h-10"
-              onClick={() => sliderRef.current.slickNext()}
+              onClick={() => sliderRef.current.slickPrev()}
             />
             <img
               src={RightArrow}
               alt=""
               className="w-10 h-10"
-              onClick={() => sliderRef.current.slickPrev()}
+              onClick={() => sliderRef.current.slickNext()}
             />
           </div>
         </div>
@@ -70,7 +69,7 @@ const OurInstructors = () => {
         <div className="text-start rounded-3xl lg:px-9">
           <div className="text-black gap-8 hidden lg:block">
             <Slider ref={sliderRef} {...settings}>
-              {Instructor?.map((person,i) => (
+              {Instructor?.map((person, i) => (
                 <div key={i}>
                   <div className="w-[350px] 2xl:w-[420px] flex-wrap group my-5 m-auto">
                     <img
@@ -80,7 +79,12 @@ const OurInstructors = () => {
                     />
                     <div className="w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto">
                       <div className="pb-4">
-                        <img src={person?.image} alt="" className="m-auto" width={110} />
+                        <img
+                          src={person?.image}
+                          alt=""
+                          className="m-auto"
+                          width={110}
+                        />
                       </div>
                       <div className="text-xl font-semibold pb-1">
                         {person?.name}
@@ -99,11 +103,16 @@ const OurInstructors = () => {
 
           <div className="text-black lg:px-10 gap-8 block lg:hidden">
             <Slider {...settings}>
-              {Instructor?.map((person,i) => (
+              {Instructor?.map((person, i) => (
                 <div key={i}>
                   <div className="w-[350px] 2xl:w-[420px] duration-1000 text-center pt-9 px-12 pb-12 m-auto">
                     <div className="pb-4">
-                      <img src={Apu} alt="" className="m-auto" width={110} />
+                      <img
+                        src={person?.image}
+                        alt=""
+                        className="m-auto"
+                        width={110}
+                      />
                     </div>
                     <div className="text-xl font-semibold pb-1">
                       {person?.name}

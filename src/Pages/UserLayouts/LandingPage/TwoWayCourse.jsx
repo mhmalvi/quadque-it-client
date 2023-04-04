@@ -8,7 +8,7 @@ const TwoWayCourse = () => {
     <div className="w-full pb-13 lg:pb-40">
       <div className="bg-home-color text-white text-center lg:mx-10 rounded-3xl py-12 px-4 lg:px-20">
         <div className="text-4xl font-semibold pb-5 text-shadow-white">
-          Available Study Options{" "}
+          Available Study Options
         </div>
         <div className="lg:w-1/2 text-base font-thin m-auto">
           We have both online and offline classes for our courses. Therefore,
@@ -20,7 +20,7 @@ const TwoWayCourse = () => {
             <div className="flex">
               <img src={Online} alt="" className="w-7/12 md:shrink-0 mx-auto" />
             </div>
-            <div className="p-10">
+            <div className="px-10 pt-10">
               <div className="text-base lg:text-2xl">
                 Attend your classes online <br /> from any location
               </div>
@@ -39,7 +39,7 @@ const TwoWayCourse = () => {
                 className="w-7/12 md:shrink-0 mx-auto"
               />
             </div>
-            <div className="p-10">
+            <div className="px-10 pt-10">
               <div className="text-base lg:text-2xl">
                 Attend your classes physically <br /> for a personal experience
               </div>
