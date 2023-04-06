@@ -1,73 +1,86 @@
 [
     {
-      "id": "1",
+      "id": 1,
       "name" : "Rabiul Islam",
       "date": "20-20-20",
       "profession": "UIUX Designer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+      "image": "https://www.choosingtherapy.com/wp-content/uploads/2021/11/Dr-Tanveer-Ahmed.jpg"
     },
     {
-      "id": "2",
+      "id": 2,
       "name" : "Tanvir Hasan",
       "date": "20-20-20",
       "profession": "Software Engineer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+      "image": "https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo="
+
     },
     {
-      "id": "3",
-      "name" : "Mahmudullah Shahin",
+      "id": 3,
+      "name" : "Rajin Ahmed",
       "date": "20-20-20",
       "profession": "Graphics Designer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+      "image": "https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg"
+
     },
     {
-      "id": "4",
+      "id": 4,
       "name" : "Sakib Fayaz",
       "date": "20-20-20",
       "profession": "Software Engineer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+      "image": "https://www.thetrevorproject.org/wp-content/uploads/2021/08/AdobeStock_410814393-1440x1440.jpeg"
+
     },
     {
-      "id": "5",
-      "name" : "Sadman Sakib",
+      "id": 5,
+      "name" : "Sadman Bashir",
       "date": "20-20-20",
       "profession": "Content Writer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+    "image": "https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2022/09/image29-4-1024x699.png"
     },
     {
-      "id": "6",
+      "id": 6,
       "name" : "Zabir Misbah",
       "date": "20-20-20",
       "profession": "UIUX Designer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+    "image": "https://images.squarespace-cdn.com/content/627d09aee1a67a6653ce7261/265ec2b5-24c1-4b4a-b585-2caaf1e9203a/1.jpg"
     },
     {
-      "id": "7",
+      "id": 7,
       "name" : "Dewan Rahman",
       "date": "20-20-20",
       "profession": "Software Engineer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+    "image": "https://images.unsplash.com/photo-1617791636474-cad64fefa7f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
     },
     {
-      "id": "8",
+      "id": 8,
       "name" : "Siam Mahboob",
       "date": "20-20-20",
       "profession": "UIUX Designer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+    "image": "https://media.istockphoto.com/id/952862340/photo/young-bearded-man-portrait.jpg?s=170667a&w=0&k=20&c=eJaI5rMH2zgI9lsPN6ODOm_kDSO2Hr_7QVLVmI7u1V8="
     },
     {
-      "id": "9",
+      "id": 9,
       "name" : "Jamirul Shikdar",
       "date": "20-20-20",
       "profession": "Software Engineer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+    "image": "https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8N3x8fGVufDB8fHx8&w=1000&q=80"
     },
     {
-      "id": "10",
+      "id": 10,
       "name" : "Afzal Noor",
       "date": "20-20-20",
       "profession": "UIUX Designer",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic.",
+    "image": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?w=360"
     }
   ]
   

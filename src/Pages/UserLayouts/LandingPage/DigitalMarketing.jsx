@@ -14,6 +14,7 @@ import Mkt101 from "../../../Asset/Image/courses/mkt-101-course.jpg";
 
 const DigitalMarketing = () => {
   const [courses, setCourses] = useState()
+  const [slideSetting, setSlideSetting] = useState();
   const sliderRef = useRef(null);
   const navigate = useNavigate();
 
@@ -23,8 +24,17 @@ const DigitalMarketing = () => {
     setCourses(grapGcourse);
   }, [])  
 
+  useEffect(() => {
+    console.log(window.screen.width);
+    if (window.screen.width > 520) {
+      setSlideSetting({ ...settings });
+    } else {
+      setSlideSetting({ ...mobSettings });
+    }
+  }, [window.screen.width]);
+
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 600,
     arrows: false,
     slidesToShow: 3,
@@ -48,14 +58,16 @@ const DigitalMarketing = () => {
           initialSlide: 1,
         },
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
     ],
+  };
+
+  const mobSettings = {
+    infinite: true,
+    speed: 600,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 1,
   };
 
   const navigateToCourseDetails = () => {
@@ -68,7 +80,7 @@ const DigitalMarketing = () => {
           Digital Marketing course
         </div>
         <div className="text-white lg:pt-13 gap-6">
-          <Slider ref={sliderRef} {...settings}>
+          <Slider ref={sliderRef} {...slideSetting}>
             {courses?.map((course, i) => (
               <div key={i}>
                 <div

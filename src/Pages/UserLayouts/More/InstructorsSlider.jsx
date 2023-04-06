@@ -8,6 +8,7 @@ import Story3 from "../../../Asset/Image/story3.jpeg";
 import RightArrow from "../../../Asset/Image/arrow-right.png";
 import LeftArrow from "../../../Asset/Image/arrow-left.png";
 import { Link } from "react-router-dom";
+import useStories from "../../../Components/Shared/JsonData/stories.json";
 
 const InstructorsSlider = () => {
   const sliderRef = useRef(null);
@@ -49,32 +50,31 @@ const InstructorsSlider = () => {
   return (
     <>
       <Slider ref={sliderRef} {...settings} className="">
-        {/*     {Course?.map((course) => ( */}
-        <Link to="../stories-detail">
-          <div>
-            <div className="flex-col bg-transparent rounded-2xl px-2">
-              <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-                <img src={Pranto} className="w-full" alt="" />
-              </div>
-              <div className="flex-col justify-start m-auto px-6 py-7">
-                <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                  Pranto Islam
+        {useStories?.map((detail) => (
+          <Link to="../stories-detail">
+            <div>
+              <div className="flex-col bg-transparent rounded-2xl px-2">
+                <div className="flex-wrap overflow-hidden rounded-t-2xl">
+                  <img src={detail?.image} className="w-full" alt="" />
                 </div>
-                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
-                <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                  Quadque
+                <div className="flex-col justify-start m-auto px-6 py-7">
+                  <div className="text-2xl font-semibold pb-1">
+                    {detail?.name}
+                  </div>
+                  <div className="text-sm font-semibold pb-3">
+                    {detail?.profession}
+                  </div>
+                  <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                    Quadque
+                  </div>
+                  <div className="font-thin pb-3">{detail?.para}</div>
+                  <div className="font-bold">Read More</div>
                 </div>
-                <div className="font-thin pb-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                  dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
-                </div>
-                <div className="font-bold">Read More</div>
               </div>
             </div>
-          </div>
-        </Link>
-        <Link to="../stories-detail">
+          </Link>
+        ))}
+        {/* <Link to="../stories-detail">
           <div>
             <div className="flex-col bg-transparent rounded-2xl px-2">
               <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
@@ -121,57 +121,7 @@ const InstructorsSlider = () => {
               </div>
             </div>
           </div>
-        </Link>
-        {/* <Link to="../stories-detail">
-          <div>
-            <div className="flex-col bg-transparent rounded-2xl px-2">
-              <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-                <img src={Pranto} className="w-full" alt="" />
-              </div>
-              <div className="flex-col justify-start m-auto px-6 py-7">
-                <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                  Pranto Islam4
-                </div>
-                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
-                <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                  Quadque
-                </div>
-                <div className="font-thin pb-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                  dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
-                </div>
-                <div className="font-bold">Read More</div>
-              </div>
-            </div>
-          </div>
-        </Link>
-        <Link to="../stories-detail">
-          <div>
-            <div className="flex-col bg-transparent rounded-2xl px-2">
-              <div className="h-72 flex-wrap overflow-hidden rounded-t-2xl">
-                <img src={Pranto} className="w-full" alt="" />
-              </div>
-              <div className="flex-col justify-start m-auto px-6 py-7">
-                <div className="text-2xl lg:text-4xl font-semibold pb-1">
-                  Pranto Islam5
-                </div>
-                <div className="text-sm font-semibold pb-3">UX UI Designer</div>
-                <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                  Quadque
-                </div>
-                <div className="font-thin pb-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-                  dolor sit amet, Lorem ipsum dolor sit amet, consectetur.
-                </div>
-                <div className="font-bold">Read More</div>
-              </div>
-            </div>
-          </div>
         </Link> */}
-
-        {/*     ))} */}
       </Slider>
       <div className="flex justify-center gap-5">
         <img

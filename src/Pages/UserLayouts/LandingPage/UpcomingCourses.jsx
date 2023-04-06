@@ -25,17 +25,30 @@ import DotNet from "../../../Asset/Image/courses/dotnet-course.jpg";
 
 const UpcomingCourses = () => {
   const [courses, setCourses] = useState()
+  const [slideSetting, setSlideSetting] = useState()
   const sliderRef = useRef(null);
   const navigate = useNavigate();
 
     useEffect(() => {
+    
     let grapGcourse;
     grapGcourse = Course?.filter((wtf) => wtf.upcoming !== 0);
     setCourses(grapGcourse);
   }, [])
 
+  useEffect(() => {
+    console.log(window.screen.width);
+    if (window.screen.width > 520) {
+      setSlideSetting({ ...settings });
+    } else {
+      setSlideSetting({ ...mobSettings });
+    }
+  }, [window.screen.width]);
+  
+
+
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 600,
     arrows: false,
     slidesToShow: 3,
@@ -58,16 +71,18 @@ const UpcomingCourses = () => {
           slidesToScroll: 2,
           initialSlide: 1,
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
+      }
     ],
   };
+
+    const mobSettings = {
+      infinite: true,
+      speed: 600,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 1,
+    };
 
   const navigateToCourseDetails = () => {
     navigate("./course/course-detail");
@@ -83,7 +98,7 @@ const UpcomingCourses = () => {
           QIT.
         </div>
         <div className="text-white lg:pt-13">
-          <Slider {...settings} ref={sliderRef}>
+          <Slider {...slideSetting} ref={sliderRef}>
             {courses?.map((course, i) => (
               <div key={i}>
                 <div

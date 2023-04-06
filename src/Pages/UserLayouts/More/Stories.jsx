@@ -7,9 +7,6 @@ import stories5 from "../../../Asset/Image/stories5.png";
 import stories6 from "../../../Asset/Image/stories6.png";
 import meeting from "../../../Asset/Image/meeting.png";
 import StudentWorks from "../../../Asset/Image/student-work.png";
-import Pranto from "../../../Asset/Image/pranto.png";
-import Story2 from "../../../Asset/Image/story2.jpeg";
-import Story3 from "../../../Asset/Image/story3.jpeg";
 import InstructorsSlider from "./InstructorsSlider";
 import useStories from "../../../Components/Shared/JsonData/stories.json";
 import { Pagination } from "antd";
@@ -24,7 +21,7 @@ const Stories = () => {
   useEffect(() => {
     let height = document.getElementById("twinCard")?.clientHeight;
     console.log(height);
-    document.getElementById("soloCard").style.height = height - 8 + "px";
+    document.getElementById("soloCard").style.height = height - 20 + "px";
   }, [document.getElementById("twinCard")?.clientHeight]);
 
   useEffect(() => {
@@ -55,37 +52,77 @@ const Stories = () => {
           <div className="hidden lg:block">
             <div className="lg:flex justify-center items-stretch gap-5 pb-10">
               <div id="twinCard" className="">
-                {currentPosts?.splice(0, 2).map((details, i) => (
+                {currentPosts?.[0] ? (
                   <Link to="../stories-detail">
-                    <div className="bg-home-color pb-2">
+                    <div className="bg-home-color pb-5 max-w-[90vh]">
                       <div className="lg:flex bg-white rounded-2xl h-76">
                         <div>
                           <img
-                            src={Pranto}
-                            className="w-full h-full rounded-tl-2xl rounded-bl-2xl"
+                            /* src={
+                              storyImg?.find((wtf) => wtf.id === details?.id)
+                                ?.img
+                            } */
+                            src={currentPosts?.[0]?.image}
+                            className="w-[45rem] h-full rounded-tl-2xl rounded-bl-2xl"
                             alt=""
                           />
                         </div>
-                        <div className="max-w-[70vh] flex-col lg:justify-start text-black m-auto px-6 py-7">
+                        <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
                           <div className="text-4xl font-semibold">
-                            {details?.name}
+                            {currentPosts?.[0]?.name}
                           </div>
                           <div className="text-sm font-semibold">
-                            {details?.profession}
+                            {currentPosts?.[0]?.profession}
                           </div>
                           <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                             Quadque
                           </div>
-                          <div className="text-sm pb-2">{details?.para}</div>
+                          <div className="text-sm pb-2 h-10 overflow-hidden">
+                            {currentPosts?.[0]?.para}
+                          </div>
                           <div className="font-bold">Read More</div>
                         </div>
                       </div>
                     </div>
                   </Link>
-                ))}
+                ) : null}
+                {currentPosts?.[1] ? (
+                  <Link to="../stories-detail">
+                    <div className="bg-home-color pb-5 max-w-[90vh]">
+                      <div className="lg:flex flex-row-reverse bg-white rounded-2xl h-76">
+                        <div>
+                          <img
+                            /* src={
+                              storyImg?.find((wtf) => wtf.id === details?.id)
+                                ?.img
+                            } */
+                            src={currentPosts?.[1]?.image}
+                            className="w-[45rem] h-full rounded-tr-2xl rounded-br-2xl"
+                            alt=""
+                          />
+                        </div>
+                        <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
+                          <div className="text-4xl font-semibold">
+                            {currentPosts?.[1]?.name}
+                          </div>
+                          <div className="text-sm font-semibold">
+                            {currentPosts?.[1]?.profession}
+                          </div>
+                          <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                            Quadque
+                          </div>
+                          <div className="text-sm pb-2 h-10 overflow-hidden">
+                            {currentPosts?.[1]?.para}
+                          </div>
+                          <div className="font-bold">Read More</div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ) : null}
               </div>
               {/* card */}
-              {currentPosts?.splice(0, 2).map((details, i) => (
+              {currentPosts?.[2] ? (
                 <Link to="../stories-detail">
                   <div>
                     <div
@@ -94,28 +131,30 @@ const Stories = () => {
                     >
                       <div className="h-72 flex-wrap overflow-hidden">
                         <img
-                          src={Story3}
+                          src={currentPosts?.[2]?.image}
                           className="w-full rounded-2xl"
                           alt=""
                         />
                       </div>
-                      <div className="flex-col lg:justify-start text-black m-auto px-6 py-8">
+                      <div className="h-[20rem] overflow-hidden flex-col lg:justify-start text-black m-auto px-6 py-8">
                         <div className="text-4xl font-semibold">
-                          {details?.name}
+                          {currentPosts?.[2]?.name}
                         </div>
                         <div className="text-sm font-semibold">
-                          {details?.profession}
+                          {currentPosts?.[2]?.profession}
                         </div>
                         <div className="text-xl text-[#23BDEE] font-semibold pb-5">
                           Quadque
                         </div>
-                        <div className="text-sm pb-2">{details?.para}</div>
-                        <div className="font-bold">Read More</div>
+                        <div className="text-sm pb-2">
+                          {currentPosts?.[2]?.para}
+                        </div>
                       </div>
+                        <div className="px-6 text-black font-bold">Read More</div>
                     </div>
                   </div>
                 </Link>
-              ))}
+              ) : null}
             </div>
             <div className="Stories_Pagination flex justify-center mt-10 mb-20">
               <Pagination
@@ -126,7 +165,7 @@ const Stories = () => {
                 pageSize={PostsPerPage}
                 current={currentPage}
                 total={totalPosts}
-                className="text-xl"
+                className="text-lg"
               />
             </div>
           </div>

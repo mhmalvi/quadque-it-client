@@ -15,42 +15,55 @@ import DotNet from "../../../Asset/Image/courses/dotnet-course.jpg";
 
 const ProgrammingCourses = () => {
   const [courses, setCourses] = useState();
+  const [slideSetting, setSlideSetting] = useState();
   const sliderRef = useRef(null);
   const navigate = useNavigate();
-  const settings = {
-    infinite: true,
-    speed: 600,
-    arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 1,
-          infinite: true,
+
+  useEffect(() => {
+    console.log(window.screen.width);
+    if (window.screen.width > 520) {
+      setSlideSetting({ ...settings });
+    } else {
+      setSlideSetting({ ...mobSettings });
+    }
+  }, [window.screen.width]);
+
+    const settings = {
+      infinite: false,
+      speed: 600,
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 1,
+            infinite: true,
+          },
         },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 1,
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 1,
+          },
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+      ],
+    };
+
+    const mobSettings = {
+      infinite: true,
+      speed: 600,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 1,
+    };
 
   useEffect(() => {
     let grapGcourse;
@@ -68,7 +81,7 @@ const ProgrammingCourses = () => {
           Programming course
         </div>
         <div className="text-white lg:pt-13 gap-6">
-          <Slider ref={sliderRef} {...settings}>
+          <Slider ref={sliderRef} {...slideSetting}>
             {courses?.map((course, i) => (
               <div key={i}>
                 <div

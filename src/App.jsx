@@ -11,7 +11,6 @@ import Blog from './Pages/UserLayouts/More';
 import BlogDetail from './Pages/UserLayouts/More/BlogDetail';
 import Gallery from "./Pages/UserLayouts/More/Gallery";
 import Stories from "./Pages/UserLayouts/More/Stories";
-import Newstory from "./Pages/UserLayouts/More/newstory";
 import StoriesDetail from './Pages/UserLayouts/More/StoriesDetails';
 import Login from "./Pages/UserLayouts/Authentication/Login/Login";
 import AdminPanel from "./Pages/AdminLayouts/AdminPanel";
@@ -42,7 +41,6 @@ function App() {
         <Route exact path="blog/blog-detail" element={<><Navbar /><BlogDetail /></>}></Route>
         <Route exact path="gallery" element={<><Navbar /><Gallery /><Footer/></>}></Route>
         <Route exact path="stories" element={<><Navbar /><Stories /><Footer/></>}></Route>
-        <Route exact path="test" element={<><Navbar /><Newstory /></>}></Route>
         <Route exact path="stories-detail" element={<><Navbar /><StoriesDetail /></>}></Route>
         <Route exact path="admission" element={<><Navbar /><Admission /></>}></Route>
         <Route exact path="privacy-policy" element={<><Navbar /><PrivacyPolicy /><Footer /></>}></Route>

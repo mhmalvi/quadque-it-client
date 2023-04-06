@@ -27,7 +27,35 @@
     text-rendering: auto;
 }
 
+.Stories_Pagination li {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .Stories_Pagination .ant-pagination li {
     color: #ffffff!important;
-    background-color: #ffffff;
+    background-color: transparent!important;
+    border: 1px solid #04c1f0;
+    border-radius: 50%;
+}
+
+.Stories_Pagination .ant-pagination li a{
+    color: #04c1f0 !important;
+    /* color: #04c1f0 !important; */
+}
+
+.Stories_Pagination .ant-pagination .ant-pagination-item-active {
+    color: #ff0505;
+    border: 1px solid #04c1f0;
+    border-radius: 50%;
+    background-color: rgba(223, 223,223,0.3) !important;
+}
+
+.Stories_Pagination .ant-pagination-item-active li a {
+    color: #ff0505 !important;
+}
+
+.Stories_Pagination .anticon-left svg, .anticon-right svg {
+    color: #04c1f0;
+    margin-bottom: 6px;
 }

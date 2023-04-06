@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "upcoming" : 0,
+      "upcoming" : 1,
       "category" : "Programming",
       "platform" : "offline",
       "date": "20-20-20",
@@ -21,7 +21,7 @@
     },
     {
       "id": 3,
-      "upcoming" : 0,
+      "upcoming" : 1,
       "category" : "Graphics & Design",
       "platform" : "offline",
       "date": "20-20-20",
@@ -61,7 +61,7 @@
     },
     {
       "id": 7,
-      "upcoming" : 1,
+      "upcoming" : 0,
       "category" : "Digital Marketing",
       "platform" : "offline",
       "date": "20-20-20",
@@ -91,7 +91,7 @@
     },
     {
       "id": 10,
-      "upcoming" : 1,
+      "upcoming" : 0,
       "category" : "Others",
       "platform" : "offline",
       "date": "20-20-20",
