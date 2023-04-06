@@ -99,3 +99,13 @@ body {
 .custom-white-shadow{
   box-shadow: 4px 4px 15px 0px rgba(255, 255, 255, 0.8);
 }
+
+.slick-slide {
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.slick-active {
+  opacity: 1 !important;
+  transition-duration: 1s;
+}

@@ -14,9 +14,10 @@
         text-shadow: 4px 4px 3px rgba(68, 68, 68, 0.3);
     }
 }
-/* 
-.homeBanner {
-    background-image: url("../../../Asset/Image/home-banner-bg.jpg");
+
+.hero-banner {
+    background-image: url("../../../Asset/Image/herobg.png");
     background-repeat: no-repeat ;
-    background-position: center;    
-} */
+    background-position: center;
+    background-size: cover;
+}

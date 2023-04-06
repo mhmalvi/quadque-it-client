@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
 import Instructor from "../../../Components/Shared/JsonData/instructors.json";
+import Fade from "react-reveal/Fade";
 
 const OurInstructors = () => {
   const sliderRef = useRef(null);
@@ -45,7 +46,7 @@ const OurInstructors = () => {
   return (
     <div className="w-full pb-13 lg:pb-24">
       <div className="lg:flex lg:justify-between lg:px-10">
-        <div className="text-black text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-16 text-shadow">
+        <div className="text-black text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-6 lg:pb-16 text-shadow">
           Meet our instructors
         </div>
         <div className="hidden lg:block">
@@ -67,41 +68,43 @@ const OurInstructors = () => {
       </div>
       <div className="">
         <div className="text-start rounded-3xl lg:px-9">
-          <div className="text-black gap-8 hidden lg:block">
-            <Slider ref={sliderRef} {...settings}>
-              {Instructor?.map((person, i) => (
-                <div key={i}>
-                  <div className="w-[350px] 2xl:w-[420px] flex-wrap group my-5 m-auto">
-                    <img
-                      src={person?.image}
-                      className="lg:w-[300px] group-hover:opacity-0 group-hover:scale-80 duration-700 m-auto"
-                      alt=""
-                    />
-                    <div className="w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto">
-                      <div className="pb-4">
-                        <img
-                          src={person?.image}
-                          alt=""
-                          className="m-auto"
-                          width={110}
-                        />
-                      </div>
-                      <div className="text-xl font-semibold pb-1">
-                        {person?.name}
-                      </div>
-                      <div className="text-brand-color text-base font-semibold pb-9">
-                        {person?.job}
-                      </div>
+          <Fade bottom>
+            <div className="text-black gap-8 ">
+              <Slider ref={sliderRef} {...settings}>
+                {Instructor?.map((person, i) => (
+                  <div key={i}>
+                    <div className="w-[350px] 2xl:w-[420px] flex-wrap group my-5 m-auto">
+                      <img
+                        src={person?.image}
+                        className="lg:w-[300px] group-hover:opacity-0 group-hover:scale-80 duration-700 m-auto"
+                        alt=""
+                      />
+                      <div className="w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto">
+                        <div className="pb-4">
+                          <img
+                            src={person?.image}
+                            alt=""
+                            className="m-auto"
+                            width={110}
+                          />
+                        </div>
+                        <div className="text-xl font-semibold pb-1">
+                          {person?.name}
+                        </div>
+                        <div className="text-brand-color text-base font-semibold pb-9">
+                          {person?.job}
+                        </div>
 
-                      <div className="text-base">“{person?.comment}”</div>
+                        <div className="text-base">“{person?.comment}”</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
+                ))}
+              </Slider>
+            </div>
+          </Fade>
 
-          <div className="text-black lg:px-10 gap-8 block lg:hidden">
+          {/* <div className="text-black lg:px-10 gap-8 hidden">
             <Slider {...settings}>
               {Instructor?.map((person, i) => (
                 <div key={i}>
@@ -126,10 +129,10 @@ const OurInstructors = () => {
                 </div>
               ))}
             </Slider>
-          </div>
+          </div> */}
 
           <div className="block lg:hidden">
-            <div className="flex justify-center gap-5 py-5">
+            <div className="flex justify-center gap-5 lg:py-5">
               <img
                 src={LeftArrow}
                 alt=""

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../../../Asset/Image/banner.png";
 import Reading from "../../../Asset/Image/reading.png";
-import Course from "../../../Components/Shared/JsonData/Course.json"
-import Catagories from "../../../Components/Shared/JsonData/categories.json"
+import Course from "../../../Components/Shared/JsonData/Course.json";
+import Catagories from "../../../Components/Shared/JsonData/categories.json";
 import { useNavigate } from "react-router-dom";
 import { Select } from "antd";
 import Instructors from "../ReusableComponents/Instructors";
 import Footer from "../LandingPage/Footer";
+import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 
 import Motion from "../../../Asset/Image/motion.png";
 import Jquery from "../../../Asset/Image/courses/prog-course.jpg";
@@ -32,6 +34,7 @@ const CourseGallery = () => {
   const [toogleMediumTab, setToogleMediumTab] = useState("all");
   const [categoryItems, setCategoryItems] = useState([]);
   const [courseData, setCourseData] = useState();
+  const [filteredData, setFilteredData] = useState([]);
 
   const ToogleCategory = (index) => {
     setToogleTab(index);
@@ -58,13 +61,35 @@ const CourseGallery = () => {
       } else {
         CourseDetail = Course.filter((cor) => cor.category === toogleTab);
       }
+
       setCourseData(CourseDetail);
     } else {
-      setCourseData(Course.filter((cor) => cor.category !== "Others"));
+      if (toogleMediumTab === "all") {
+        CourseDetail = Course.filter((cor) => cor.category !== "Others");
+      } else {
+        CourseDetail = Course.filter((cor) => cor.platform === toogleMediumTab);
+      }
+      setCourseData(CourseDetail);
     }
   }, [toogleTab, toogleMediumTab]);
 
-    useEffect(() => {
+  /* THIS IS THE LAZY LOADING EFFECT */
+  useEffect(() => {
+    console.log("course data", courseData);
+    setFilteredData([]);
+    let i = 0;
+    const interval = setInterval(() => {
+      if (i >= courseData.length) {
+        clearInterval(interval);
+      } else {
+        setFilteredData((prev) => [...prev, courseData[i]]);
+        i++;
+      }
+    }, 500);
+    return () => clearInterval(interval);
+  }, [courseData]);
+
+  useEffect(() => {
     const items = [
       {
         id: "0",
@@ -82,7 +107,7 @@ const CourseGallery = () => {
       setCategoryItems(items);
     })();
   }, [Catagories]);
-  console.log("items,", categoryItems);
+  // console.log("items,", categoryItems);
 
   return (
     <div className="w-full bg-[#040422] h-screen text-white">
@@ -90,7 +115,9 @@ const CourseGallery = () => {
         <div className="w-full ">
           <div className="flex m-auto justify-between items-center">
             <div className="hidden lg:block -mb-48 ml-20">
-              <img src={Banner} className="w-full" alt="" />
+              <Fade left>
+                <img src={Banner} className="w-full" alt="" />
+              </Fade>
             </div>
             <div className="w-2/3 sm:w-1/2 lg:w-1/3 text-white text-center mx-auto">
               <div className="text-4xl pb-2 text-shadow-white">Courses</div>
@@ -132,7 +159,9 @@ const CourseGallery = () => {
               </div>
             </div>
             <div className="hidden lg:block -mb-[150px] mr-20">
-              <img src={Reading} className="w-full" alt="" />
+              <Fade right>
+                <img src={Reading} className="w-full" alt="" />
+              </Fade>
             </div>
           </div>
         </div>
@@ -147,11 +176,11 @@ const CourseGallery = () => {
                 <div
                   className={
                     toogleTab === "All"
-                      ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                      : "cursor-pointer"
+                      ? "text-[#23BDEE] text-lg duration-200 cursor-pointer py-2"
+                      : "cursor-pointer py-2"
                   }
                 >
-                  All
+                  <Fade bottom>All</Fade>
                 </div>
               </li>
               {Catagories?.map((category, i) => (
@@ -159,30 +188,14 @@ const CourseGallery = () => {
                   <div
                     className={
                       toogleTab === category?.name
-                        ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                        : "cursor-pointer"
+                        ? "text-[#23BDEE] text-lg duration-200 cursor-pointer py-2"
+                        : "cursor-pointer py-2"
                     }
                   >
-                    {category?.name}
+                    <Fade bottom>{category?.name}</Fade>
                   </div>
                 </li>
               ))}
-              {/* {Category?.map((category) => (
-                <li
-                key={category.id}
-                onClick={() => ToogleCategory(category.name)}
-                >
-                <div
-                className={
-                  toogleTab === category.name
-                  ? "text-[#23BDEE] scale-105 duration-200 cursor-pointer"
-                  : "cursor-pointer"
-                }
-                >
-                {category.name}
-                  </div>
-                </li>
-              ))} */}
             </ul>
           </div>
 
@@ -199,18 +212,26 @@ const CourseGallery = () => {
 
           <div className="w-full bg-[#040422]">
             {/* COURSE Gallery */}
-            <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 text-white gap-6 sm:px-5 lg:px-0 my-6">
-              {/* cards */}
-              {courseData?.map((details, i) =>
-                details ? (
+            <Fade right cascade>
+              <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 text-white gap-6 sm:px-5 lg:px-0 my-6">
+                {/* cards */}
+                {filteredData?.map((details) => (
                   <div
-                    key={i}
+                    key={details?.id}
                     onClick={navigateToCourseDetails}
                     className="flex-col group bg-home-color border border-white border-opacity-30 rounded-3xl hover:border-2 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300 cursor-pointer"
                   >
                     <div className="flex-wrap overflow-hidden rounded-3xl m-2">
                       <img
-                        src={CourseImage?.find(wtf=>wtf.title===details?.title) ? (CourseImage?.find(wtf=>wtf.title===details?.title)?.image):Motion}
+                        src={
+                          CourseImage?.find(
+                            (wtf) => wtf.title === details?.title
+                          )
+                            ? CourseImage?.find(
+                                (wtf) => wtf.title === details?.title
+                              )?.image
+                            : Motion
+                        }
                         alt=""
                         className="w-full h-[225px] rounded-3xl scale-100 group-hover:scale-125 ease-in duration-700"
                       />
@@ -230,11 +251,9 @@ const CourseGallery = () => {
                       <div className="py-2">{details?.para}</div>
                     </div>
                   </div>
-                ) : (
-                  "No Courses to show."
-                )
-              )}
-            </div>
+                ))}
+              </div>
+            </Fade>
           </div>
         </div>
         <Instructors />
@@ -243,7 +262,7 @@ const CourseGallery = () => {
     </div>
   );
 };
-export default CourseGallery
+export default CourseGallery;
 
 const CourseImage = [
   { title: "Jquery", image: Jquery },

@@ -85,7 +85,7 @@ const DigitalMarketing = () => {
               <div key={i}>
                 <div
                   onClick={navigateToCourseDetails}
-                  className="bg-white flex-col group shadow-lg rounded-3xl border-2 text-black hover:border-4 hover:bg-black hover:text-white hover:border-[#23BDEE] transition-ease-out duration-300 cursor-pointer mx-3 my-4"
+                  className="bg-white flex-col group shadow-lg rounded-3xl text-black hover:border-2 hover:bg-black hover:text-white hover:border-[#23BDEE] hover:shadow-sky-200 transition-ease-out duration-300 cursor-pointer mx-3 my-4"
                 >
                   <div className="">
                     <img

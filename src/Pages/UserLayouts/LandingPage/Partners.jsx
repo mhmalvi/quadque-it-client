@@ -3,17 +3,18 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Partnerslogo from "../../../Components/Shared/JsonData/partners.json";
+import Fade from "react-reveal/Fade";
 
 const Partners = () => {
   const sliderRef = useRef(null);
   const settings = {
     className: "center",
     centerMode: true,
-    infinite: false,
+    infinite: true,
     speed: 600,
     arrows: false,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 5,
     initialSlide: 0,
     responsive: [
       {
@@ -51,15 +52,17 @@ const Partners = () => {
         <div className="lg:w-1/3 text-black text-lg m-auto pb-14">
           Take a look at some of our reputed industry partners.
         </div>
-        <div className="w-full text-white">
-          <Slider ref={sliderRef} {...settings}>
-            {Partnerslogo?.map((partner, i) => (
-              <div key={i}>
-                <img src={partner?.logo} alt="" className="w-[8rem] m-auto" />
-              </div>
-            ))}
-          </Slider>
-        </div>
+        <Fade bottom>
+          <div className="w-full text-white">
+            <Slider ref={sliderRef} {...settings}>
+              {Partnerslogo?.map((partner, i) => (
+                <div key={i}>
+                  <img src={partner?.logo} alt="" className="w-[8rem] m-auto" />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </Fade>
       </div>
     </div>
   );
