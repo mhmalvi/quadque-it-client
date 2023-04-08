@@ -12,6 +12,8 @@ import useStories from "../../../Components/Shared/JsonData/stories.json";
 import { Pagination } from "antd";
 import { Link } from "react-router-dom";
 import "./More.css";
+import Fade from "react-reveal/Fade";
+
 
 const Stories = () => {
   const [totalPosts, setTotalPosts] = useState();
@@ -50,124 +52,132 @@ const Stories = () => {
             </div>
           </div>
           <div className="hidden lg:block">
-            <div className="lg:flex justify-center items-stretch gap-5 pb-10">
+            <div className="lg:flex justify-center items-stretch gap-5">
               <div id="twinCard" className="">
                 {currentPosts?.[0] ? (
-                  <Link to="../stories-detail">
-                    <div className="bg-home-color pb-5 max-w-[90vh]">
-                      <div className="lg:flex bg-white rounded-2xl h-76">
-                        <div>
-                          <img
-                            /* src={
+                  <Fade top duration={1500}>
+                    <Link to="../stories-detail">
+                      <div className="bg-home-color pb-5 max-w-[90vh]">
+                        <div className="lg:flex bg-white rounded-2xl h-76">
+                          <div>
+                            <img
+                              /* src={
                               storyImg?.find((wtf) => wtf.id === details?.id)
                                 ?.img
                             } */
-                            src={currentPosts?.[0]?.image}
-                            className="w-[45rem] h-full rounded-tl-2xl rounded-bl-2xl"
-                            alt=""
-                          />
-                        </div>
-                        <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
-                          <div className="text-4xl font-semibold">
-                            {currentPosts?.[0]?.name}
+                              src={currentPosts?.[0]?.image}
+                              className="w-[45rem] h-full rounded-tl-2xl rounded-bl-2xl"
+                              alt=""
+                            />
                           </div>
-                          <div className="text-sm font-semibold">
-                            {currentPosts?.[0]?.profession}
+                          <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
+                            <div className="text-4xl font-semibold">
+                              {currentPosts?.[0]?.name}
+                            </div>
+                            <div className="text-sm font-semibold">
+                              {currentPosts?.[0]?.profession}
+                            </div>
+                            <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                              Quadque
+                            </div>
+                            <div className="text-sm pb-2 h-10 overflow-hidden">
+                              {currentPosts?.[0]?.para}
+                            </div>
+                            <div className="font-bold">Read More</div>
                           </div>
-                          <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                            Quadque
-                          </div>
-                          <div className="text-sm pb-2 h-10 overflow-hidden">
-                            {currentPosts?.[0]?.para}
-                          </div>
-                          <div className="font-bold">Read More</div>
                         </div>
                       </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  </Fade>
                 ) : null}
                 {currentPosts?.[1] ? (
-                  <Link to="../stories-detail">
-                    <div className="bg-home-color pb-5 max-w-[90vh]">
-                      <div className="lg:flex flex-row-reverse bg-white rounded-2xl h-76">
-                        <div>
-                          <img
-                            /* src={
+                  <Fade bottom duration={1500}>
+                    <Link to="../stories-detail">
+                      <div className="bg-home-color pb-5 max-w-[90vh]">
+                        <div className="lg:flex flex-row-reverse bg-white rounded-2xl h-76">
+                          <div>
+                            <img
+                              /* src={
                               storyImg?.find((wtf) => wtf.id === details?.id)
                                 ?.img
                             } */
-                            src={currentPosts?.[1]?.image}
-                            className="w-[45rem] h-full rounded-tr-2xl rounded-br-2xl"
-                            alt=""
-                          />
-                        </div>
-                        <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
-                          <div className="text-4xl font-semibold">
-                            {currentPosts?.[1]?.name}
+                              src={currentPosts?.[1]?.image}
+                              className="w-[45rem] h-full rounded-tr-2xl rounded-br-2xl"
+                              alt=""
+                            />
                           </div>
-                          <div className="text-sm font-semibold">
-                            {currentPosts?.[1]?.profession}
+                          <div className="flex-col lg:justify-start text-black m-auto px-6 py-7">
+                            <div className="text-4xl font-semibold">
+                              {currentPosts?.[1]?.name}
+                            </div>
+                            <div className="text-sm font-semibold">
+                              {currentPosts?.[1]?.profession}
+                            </div>
+                            <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                              Quadque
+                            </div>
+                            <div className="text-sm pb-2 h-10 overflow-hidden">
+                              {currentPosts?.[1]?.para}
+                            </div>
+                            <div className="font-bold">Read More</div>
                           </div>
-                          <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                            Quadque
-                          </div>
-                          <div className="text-sm pb-2 h-10 overflow-hidden">
-                            {currentPosts?.[1]?.para}
-                          </div>
-                          <div className="font-bold">Read More</div>
                         </div>
                       </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  </Fade>
                 ) : null}
               </div>
               {/* card */}
               {currentPosts?.[2] ? (
-                <Link to="../stories-detail">
-                  <div>
-                    <div
-                      id="soloCard"
-                      className="flex-col lg:max-w-xs bg-white rounded-2xl"
-                    >
-                      <div className="h-72 flex-wrap overflow-hidden">
-                        <img
-                          src={currentPosts?.[2]?.image}
-                          className="w-full rounded-2xl"
-                          alt=""
-                        />
+                <Fade right duration={1500}>
+                  <Link to="../stories-detail">
+                    <div>
+                      <div
+                        id="soloCard"
+                        className="flex-col lg:max-w-xs bg-white rounded-2xl"
+                      >
+                        <div className="h-72 flex-wrap overflow-hidden">
+                          <img
+                            src={currentPosts?.[2]?.image}
+                            className="w-full rounded-2xl"
+                            alt=""
+                          />
+                        </div>
+                        <div className="h-[20rem] overflow-hidden flex-col lg:justify-start text-black m-auto px-6 py-8">
+                          <div className="text-4xl font-semibold">
+                            {currentPosts?.[2]?.name}
+                          </div>
+                          <div className="text-sm font-semibold">
+                            {currentPosts?.[2]?.profession}
+                          </div>
+                          <div className="text-xl text-[#23BDEE] font-semibold pb-5">
+                            Quadque
+                          </div>
+                          <div className="text-sm pb-2">
+                            {currentPosts?.[2]?.para}
+                          </div>
+                        </div>
+                        <div className="px-6 text-black font-bold">
+                          Read More
+                        </div>
                       </div>
-                      <div className="h-[20rem] overflow-hidden flex-col lg:justify-start text-black m-auto px-6 py-8">
-                        <div className="text-4xl font-semibold">
-                          {currentPosts?.[2]?.name}
-                        </div>
-                        <div className="text-sm font-semibold">
-                          {currentPosts?.[2]?.profession}
-                        </div>
-                        <div className="text-xl text-[#23BDEE] font-semibold pb-5">
-                          Quadque
-                        </div>
-                        <div className="text-sm pb-2">
-                          {currentPosts?.[2]?.para}
-                        </div>
-                      </div>
-                        <div className="px-6 text-black font-bold">Read More</div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </Fade>
               ) : null}
             </div>
-            <div className="Stories_Pagination flex justify-center mt-10 mb-20">
-              <Pagination
-                onChange={(value) => {
-                  setCurrentPage(value);
-                  window.scrollTo(0, 0);
-                }}
-                pageSize={PostsPerPage}
-                current={currentPage}
-                total={totalPosts}
-                className="text-lg"
-              />
-            </div>
+          </div>
+          <div className="Stories_Pagination flex justify-center mt-10 mb-20">
+            <Pagination
+              onChange={(value) => {
+                setCurrentPage(value);
+                window.scrollTo(0, 0);
+              }}
+              pageSize={PostsPerPage}
+              current={currentPage}
+              total={totalPosts}
+              className="text-lg"
+            />
           </div>
 
           {/* instructor MOBILE SLIDER */}
@@ -176,82 +186,90 @@ const Stories = () => {
           </div>
 
           <div className="lg:flex justify-evenly px-3">
-            <div className="w-full lg:w-1/2 m-auto">
-              <img
-                src={StudentWorks}
-                alt=""
-                width={598}
-                className="rounded-xl shrink-0 lg:pl-20 m-auto"
-              />
-            </div>
-            <div className="w-full lg:w-1/2 flex-col lg:justify-start text-start m-auto pt-10 lg:pt-0 lg:px-10">
-              <div className="text-2xl lg:text-4xl font-semibold pb-5">
-                Some work of our students
+            <Fade left>
+              <div className="w-full lg:w-1/2 m-auto">
+                <img
+                  src={StudentWorks}
+                  alt=""
+                  width={598}
+                  className="rounded-xl shrink-0 lg:pl-20 m-auto"
+                />
               </div>
-              <div className="lg:text-xl font-semibold pb-5">
-                It’s a matter of great honour for us to say that a large number
-                of our students are making a huge contribution to the digital
-                marketing and IT industry.{" "}
+            </Fade>
+            <Fade right>
+              <div className="w-full lg:w-1/2 flex-col lg:justify-start text-start m-auto pt-10 lg:pt-0 lg:px-10">
+                <div className="text-2xl lg:text-4xl font-semibold pb-5">
+                  Some work of our students
+                </div>
+                <div className="lg:text-xl font-semibold pb-5">
+                  It’s a matter of great honour for us to say that a large
+                  number of our students are making a huge contribution to the
+                  digital marketing and IT industry.{" "}
+                </div>
+                <div className="lg:text-xl font-light pb-5">
+                  Our students are reputed to have amazing skills and a great
+                  work ethic. It’s a huge opportunity for us to showcase some of
+                  their works. These works show their creativity and talent. We
+                  are extremely happy to guide them throughout their journey.{" "}
+                </div>
               </div>
-              <div className="lg:text-xl font-light pb-5">
-                Our students are reputed to have amazing skills and a great work
-                ethic. It’s a huge opportunity for us to showcase some of their
-                works. These works show their creativity and talent. We are
-                extremely happy to guide them throughout their journey.{" "}
-              </div>
-            </div>
+            </Fade>
           </div>
           <div className="m-auto pt-10 lg:pt-32 lg:pb-18">
             <div className="text-4xl text-center leading-snug pb-12">
               Art Works
             </div>
             <div className="flex flex-wrap justify-center lg:gap-2">
-              <div className="flex-col">
-                <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
-                  <img
-                    src={stories1}
-                    alt=""
-                    className="lg:rounded-xl hover:scale-110 duration-1000"
-                  />
+              <Fade left duration={2000}>
+                <div className="flex-col">
+                  <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
+                    <img
+                      src={stories1}
+                      alt=""
+                      className="lg:rounded-xl hover:scale-110 duration-1000"
+                    />
+                  </div>
+                  <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
+                    <img
+                      src={stories2}
+                      alt=""
+                      className="lg:rounded-xl hover:scale-110 duration-1000"
+                    />
+                  </div>
+                  <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
+                    <img
+                      src={stories3}
+                      alt=""
+                      className="lg:rounded-xl hover:scale-110 duration-1000"
+                    />
+                  </div>
                 </div>
-                <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
-                  <img
-                    src={stories2}
-                    alt=""
-                    className="lg:rounded-xl hover:scale-110 duration-1000"
-                  />
+              </Fade>
+              <Fade right duration={2000}>
+                <div className="flex-col">
+                  <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
+                    <img
+                      src={stories4}
+                      alt=""
+                      className="lg:rounded-xl hover:scale-110 duration-1000"
+                    />
+                  </div>
+                  <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
+                    <img
+                      src={stories5}
+                      alt=""
+                      className="lg:rounded-xl hover:scale-110 duration-1000"
+                    />
+                  </div>
+                  <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
+                    <img
+                      src={stories6}
+                      alt=""
+                      className="lg:rounded-xl hover:scale-110 duration-1000"
+                    />
+                  </div>
                 </div>
-                <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
-                  <img
-                    src={stories3}
-                    alt=""
-                    className="lg:rounded-xl hover:scale-110 duration-1000"
-                  />
-                </div>
-              </div>
-              <div className="flex-col">
-                <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
-                  <img
-                    src={stories4}
-                    alt=""
-                    className="lg:rounded-xl hover:scale-110 duration-1000"
-                  />
-                </div>
-                <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
-                  <img
-                    src={stories5}
-                    alt=""
-                    className="lg:rounded-xl hover:scale-110 duration-1000"
-                  />
-                </div>
-                <div className="flex-wrap overflow-hidden lg:rounded-xl lg:my-2">
-                  <img
-                    src={stories6}
-                    alt=""
-                    className="lg:rounded-xl hover:scale-110 duration-1000"
-                  />
-                </div>
-              </div>
+              </Fade>
             </div>
           </div>
         </div>

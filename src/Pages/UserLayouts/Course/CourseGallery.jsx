@@ -85,7 +85,7 @@ const CourseGallery = () => {
         setFilteredData((prev) => [...prev, courseData[i]]);
         i++;
       }
-    }, 500);
+    }, 200);
     return () => clearInterval(interval);
   }, [courseData]);
 

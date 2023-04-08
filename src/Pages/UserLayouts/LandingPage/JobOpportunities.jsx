@@ -20,7 +20,7 @@ const JobOpportunities = () => {
             <img
               src={shourav}
               alt=""
-              className="w-2/3 mx-auto shrink-0 lg:rounded-t-3xl lg:rounded-bt-3xl lg:rounded-br-[5rem] lg:hover:scale-110 duration-500"
+              className="lg:w-2/3 mx-auto shrink-0 lg:rounded-t-3xl lg:rounded-bt-3xl lg:rounded-br-[5rem] lg:hover:scale-110 duration-500"
             />
             {/* <img src={JobIcon} alt="" className="w-[14rem] absolute hidden lg:block left-[30%] top-30"/> */}
           </div>

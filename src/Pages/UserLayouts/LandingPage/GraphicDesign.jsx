@@ -6,6 +6,7 @@ import Course from "../../../Components/Shared/JsonData/Course.json"
 import { useNavigate } from "react-router-dom";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
+import Fade from "react-reveal/Fade";
 
 import Graphics from "../../../Asset/Image/graphics.png";
 import Motion from "../../../Asset/Image/motion.png";
@@ -80,6 +81,7 @@ const GraphicDesign = () => {
           Graphic & Design course
         </div>
         <div className="text-white lg:pt-13">
+          <Fade right>
           <Slider ref={sliderRef} {...slideSetting}>
             {courses?.map((course, i) => (
               <div key={i}>
@@ -122,6 +124,7 @@ const GraphicDesign = () => {
               </div>
             ))}
           </Slider>
+          </Fade>
           <div className="flex justify-center gap-5 py-3">
             <img
               src={LeftArrow}

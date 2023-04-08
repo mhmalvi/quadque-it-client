@@ -7,7 +7,8 @@ import CountUp from "react-countup";
 import CourseMaterial from "./CourseMaterial";
 import { Link } from "react-router-dom";
 import Hiring from "../../../Asset/pdf/hiring.pdf"
-/* absolute top-64 left-1/4 */
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 const Header = () => {
   return (
@@ -58,6 +59,7 @@ const Header = () => {
             </div>
             {/* countup section */}
             <div className="flex flex-wrap justify-center gap-6 pb-8 lg:pb-24 mx-10 lg:mx-0">
+              <Zoom>
               <div className="flex-col flex-wrap text-center">
                 <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 flex justify-center items-center">
                   <span className="text-2xl lg:text-5xl font-bold">
@@ -66,6 +68,8 @@ const Header = () => {
                 </div>
                 <div className="pt-5">Duration (months)</div>
               </div>
+              </Zoom>
+              <Zoom>
               <div className="flex-col flex-wrap text-center">
                 <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 flex justify-center items-center">
                   <span className="text-2xl lg:text-5xl font-bold">
@@ -74,6 +78,8 @@ const Header = () => {
                 </div>
                 <div className="pt-5">Lectures</div>
               </div>
+              </Zoom>
+              <Zoom>
               <div className="flex-col flex-wrap text-center">
                 <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 flex justify-center items-center">
                   <span className="text-2xl lg:text-5xl font-bold">
@@ -82,6 +88,7 @@ const Header = () => {
                 </div>
                 <div className="pt-5">Projects</div>
               </div>
+              </Zoom>
             </div>
             {/* Overview sectioon */}
             <div className="lg:w-2/3 m-auto px-6">
@@ -103,6 +110,7 @@ const Header = () => {
                 Special services
               </div>
               <div className="flex-col lg:flex lg:flex-row text-center gap-6 lg:pb-6">
+                <Fade left>
                 <div className="lg:w-1/2 flex-col bg-[#2F327D20] lg:rounded-lg p-7">
                   <div className="">
                     <Icons.Support className="m-auto" />
@@ -115,6 +123,8 @@ const Header = () => {
                     completing the course. Career Guidance
                   </div>
                 </div>
+                </Fade>
+                <Fade right>
                 <div className="lg:w-1/2 flex-col bg-[#2F327D40] lg:rounded-lg p-7">
                   <div>
                     <Icons.Guidance className="m-auto" />
@@ -127,8 +137,10 @@ const Header = () => {
                     the best decisions for your career.
                   </div>
                 </div>
+                </Fade>
               </div>
               <div className="flex-col lg:flex lg:flex-row text-center bg-home-color gap-6">
+                <Fade left>
                 <div className="lg:w-1/2 flex-col bg-[#2F327D60] lg:rounded-lg p-7">
                   <div className="">
                     <Icons.Certificate className="m-auto" />
@@ -141,6 +153,8 @@ const Header = () => {
                     you’ve completed the course.
                   </div>
                 </div>
+                </Fade>
+                <Fade right>
                 <div className="lg:w-1/2 flex-col bg-[#2F327D80] lg:rounded-lg p-7">
                   <div>
                     <Icons.Briefcase className="m-auto" />
@@ -153,6 +167,7 @@ const Header = () => {
                     and provided you with your certification.
                   </div>
                 </div>
+                </Fade>
               </div>
             </div>
           </div>

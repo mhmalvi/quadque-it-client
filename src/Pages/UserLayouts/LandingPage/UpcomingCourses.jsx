@@ -6,6 +6,7 @@ import Course from "../../../Components/Shared/JsonData/Course.json"
 import { useNavigate } from "react-router-dom";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
+import Fade from "react-reveal/Fade";
 
 import Graphics from "../../../Asset/Image/graphics.png";
 import Jquery from "../../../Asset/Image/courses/prog-course.jpg";
@@ -97,6 +98,7 @@ const UpcomingCourses = () => {
           QIT.
         </div>
         <div className="text-white lg:pt-13">
+          <Fade right>
           <Slider {...slideSetting} ref={sliderRef}>
             {courses?.map((course, i) => (
               <div key={i}>
@@ -139,6 +141,7 @@ const UpcomingCourses = () => {
               </div>
             ))}
           </Slider>
+          </Fade>
           <div className="flex justify-center gap-5 py-3">
             <img
               src={LeftArrow}

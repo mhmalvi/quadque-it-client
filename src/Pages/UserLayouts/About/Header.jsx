@@ -7,6 +7,8 @@ import Icons from "../../../Components/Shared/Icons";
 import Footer from "../LandingPage/Footer";
 import Instructors from "../ReusableComponents/Instructors";
 import AboutMaterial from "./AboutMaterial";
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 const Header = () => {
   return (
@@ -14,6 +16,7 @@ const Header = () => {
       <div className="w-full">
         <div className="lg:mt-10">
           <div className="lg:w-2/3 flex-col justify-center text-white m-auto pt-32">
+            <Zoom>
             <div className="lg:text-4xl text-2xl font-bold text-center leading-12">
               Delve into the World of Digital Marketing and IT with QIT.
             </div>
@@ -21,6 +24,7 @@ const Header = () => {
               Let Us Help You to Develop the Skills You Need to Stand Out in the
               Fast-Paced World of Digital Marketing and IT.
             </div>
+            </Zoom>
             {/* <div className="flex justify-center gap-2 lg:gap-6 pb-8">
               <div>
                 <button className="bg-[#2F327D] text-xs lg:text-sm rounded-lg py-2 px-6">
@@ -34,31 +38,36 @@ const Header = () => {
               </div>
             </div> */}
             <div className="">
-              <img
-                src={About1}
-                className="w-full m-auto px-4 lg:px-0"
-                alt=""
-              />
+              <Zoom>
+                <img
+                  src={About1}
+                  className="w-full m-auto px-4 lg:px-0"
+                  alt=""
+                  />
+              </Zoom>
             </div>
             <div className="flex-col lg:flex lg:flex-row lg:justify-between items-center mx-auto gap-6 py-12 lg:py-20 px-3">
-              <div className="lg:w-1/2 mx-auto justify-center">
-                <div className="lg:text-3xl text-2xl text-center lg:text-start pb-5">
-                  We are a digital marketing and IT training provider.
+              <Fade left>
+                <div className="lg:w-1/2 mx-auto justify-center">
+                  <div className="lg:text-3xl text-2xl text-center lg:text-start pb-5">
+                    We are a digital marketing and IT training provider.
+                  </div>
+                  <div className="pb-4 text-center lg:text-start ">
+                    We are here to mentor you and help you grow a sustainable and
+                    solid career in the digital marketing and IT industry.
+                  </div>
+                  <div className="text-center lg:text-start pb-10 ">
+                    Our training courses combine the most innovative technological
+                    methods and a personalised approach to deliver in-demand
+                    skills for your portfolio.
+                  </div>
                 </div>
-                <div className="pb-4 text-center lg:text-start ">
-                  We are here to mentor you and help you grow a sustainable and
-                  solid career in the digital marketing and IT industry.
+              </Fade>
+              <Fade right>
+                <div>
+                  <img src={About2} className="w-full" alt="" />
                 </div>
-                <div className="text-center lg:text-start pb-10 ">
-                  Our training courses combine the most innovative technological
-                  methods and a personalised approach to deliver in-demand
-                  skills for your portfolio.
-                </div>
-              </div>
-
-              <div>
-                <img src={About2} className="w-full" alt="" />
-              </div>
+              </Fade>
             </div>
           </div>
         </div>
@@ -68,6 +77,7 @@ const Header = () => {
             className="invisible lg:visible absolute top-0 left-[10%] w-20"
             alt=""
           /> */}
+          <Fade bottom>
           <div className="text-2xl lg:text-4xl font-bold text-center pt-13 lg:pt-24">
             Our Core Values
           </div>
@@ -117,6 +127,7 @@ const Header = () => {
               </div>
             </div>
           </div>
+          </Fade>
           {/* <img
             src={Box2}
             className="invisible lg:visible absolute float-right -bottom-0 right-[25%] w-60"
@@ -124,6 +135,7 @@ const Header = () => {
           /> */}
         </div>
         <div className="text-white relative">
+          <Fade bottom>
           <div className="text-4xl font-bold text-center pt-13 lg:pt-36">
             Why Choose Us
           </div>
@@ -233,6 +245,7 @@ const Header = () => {
               </div>
             </div>
           </div>
+          </Fade>
           <AboutMaterial />
           <Instructors />
           <Footer />

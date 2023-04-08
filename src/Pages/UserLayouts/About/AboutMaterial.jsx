@@ -2,14 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import About4 from "../../../Asset/Image/about-3.png";
 import About3 from "../../../Asset/Image/about-7.png";
+import Fade from "react-reveal/Fade";
+
 
 const AboutMaterial = () => {
   return (
     <div className="bg-home-color w-full py-13 lg:py-36 text-white">
       <div className="md:w-3/4 m-auto flex-col md:flex lg:flex-row gap-6 pb-13 lg:pb-36">
+        <Fade left>
         <div className="flex justify-between m-auto pb-5 lg:pb-0 px-3 lg:px-0">
           <img src={About3} alt="" className="w-10/12 shrink-0 rounded-3xl mx-auto lg:m-0 pb-10 lg:pb-0" />
         </div>
+        </Fade>
+        <Fade right>
         <div className="lg:w-1/2 text-start my-auto">
           <div className="font-semibold text-2xl lg:text-4xl pb-3 px-10 lg:px-0">
             {" "}
@@ -28,6 +33,7 @@ const AboutMaterial = () => {
             having.
           </div>
         </div>
+        </Fade>
       </div>
       <div className="w-3/4 bg-white flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-10 m-auto">
         <div className="lg:w-1/2 text-black m-auto">

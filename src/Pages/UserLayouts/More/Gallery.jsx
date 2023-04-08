@@ -11,6 +11,8 @@ import librarytop from "../../../Asset/Image/librarytop.png";
 import confarence from "../../../Asset/Image/confarence.png";
 import { Modal } from "antd";
 import "./More.css";
+import Fade from "react-reveal/Fade";
+
 
 const Gallery = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,13 +37,16 @@ const Gallery = () => {
     <>
       <div className="bg-home-color text-white pt-36 lg:mt-10 m-auto">
         <div className="lg:w-3/4 lg:flex lg:justify-center m-auto">
+          <Fade left>
           <div className="w-full flex justify-center m-auto">
             <img
               src={video}
               alt=""
               className="lg:w-2/3 lg:rounded-xl md:shrink-0 px-4 lg:px-0"
-            />
+              />
           </div>
+          </Fade>
+          <Fade right>
           <div className="sm:w-2/3 lg:w-full flex-col px-5 lg:justify-start m-auto">
             <div className="text-start text-2xl font-semibold pb-2 pt-8 lg:pt-0">
               Our Institute
@@ -66,6 +71,7 @@ const Gallery = () => {
               </div>
             </div>
           </div>
+          </Fade>
         </div>
         <div className="2xl:w-10/12 flex flex-wrap justify-evenly items-start py-14 leading-10 px-4 lg:px-30 mx-auto">
           <div
@@ -139,6 +145,7 @@ const Gallery = () => {
             News
           </div>
         </div>
+        <Fade bottom>
         <div className="flex justify-center pb-10">
           {/* <div className="grid lg:grid-cols-12 gap-2 lg:gap-6 m-auto"> */}
           <div className="flex flex-wrap gap-2 lg:gap-6 m-auto justify-center">
@@ -160,6 +167,7 @@ const Gallery = () => {
             ))}
           </div>
         </div>
+        </Fade>
         <Modal
           title={false}
           open={isModalOpen}

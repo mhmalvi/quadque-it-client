@@ -3,6 +3,7 @@ import Giphy from "../../../Asset/Image/giphy.png";
 import Image from "../../../Asset/Image/image44.png";
 import Footer from "../../../Asset/Image/footer.png";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 
 const BrowseCourse = () => {
   return (
@@ -19,9 +20,11 @@ const BrowseCourse = () => {
               <div className="text-base sm:text-xl md:text-2xl font-bold pb-5 px-4 text-shadow">
                 Choose a Course Suited to Your Career Goals{" "}
               </div>
+              <Link to={"./course"}>
               <button className="bg-[#2F327D] hover:bg-[#484cc5] rounded-full text-sm sm:text-base lg:text-xl text-white text-center m-auto leading-tight sm:m-0 px-8 py-3">
                 Browse courses
               </button>
+              </Link>
             </div>
           </Fade>
         </div>

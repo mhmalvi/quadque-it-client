@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Icons from "../../../Components/Shared/Icons";
 import Materials from "./materials.json";
 import Tools from "../../../Asset/Image/group555.png";
+import Fade from "react-reveal/Fade";
 
 const CourseMaterial = () => {
   const [toogleTab, setToogleTab] = useState(1);
@@ -19,6 +20,7 @@ const CourseMaterial = () => {
   return (
     <div>
       {/* tools section */}
+      <Fade right duration={2000}>
       <div className="w-full lg:bg-gradient-to-l from-transparent to-[#ffffff10] rounded-3xl text-white lg:py-12 lg:px-12 mb-18">
         <div className="lg:flex justify-evenly  gap-10">
           <div className="w-full lg:w-2/3 flex-col justify-evenly">
@@ -78,8 +80,10 @@ const CourseMaterial = () => {
           </div>
         </div>
       </div>
+      </Fade>
 
       {/* job opportunity section */}
+      <Fade left duration={2000}>
       <div className="w-full lg:bg-gradient-to-r from-transparent to-[#ffffff10] rounded-3xl text-white lg:py-12 mb-24">
         <div className="lg:flex justify-evenly">
           <div className="w-2/3 lg:w-1/2 flex flex-wrap justify-center mx-auto gap-12 pb-16 lg:py-8">
@@ -129,6 +133,7 @@ const CourseMaterial = () => {
           </div>
         </div>
       </div>
+      </Fade>
     </div>
   );
 };

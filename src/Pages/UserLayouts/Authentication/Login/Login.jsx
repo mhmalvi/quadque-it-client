@@ -13,6 +13,8 @@ import { useLocation } from "react-router-dom";
 //import { addUserDetails, setLoader } from "../../../features/user/userSlice";
 //import ForgotPassword from "./ForgotModal";
 import { useNavigate } from "react-router-dom";
+import Fade from "react-reveal/Fade";
+
 
 const Login = () => {
   const location = useLocation();
@@ -165,23 +167,28 @@ const Login = () => {
   return (
     <>
       <div className="md:flex justify-evenly items-center h-auto lg:h-screen bg-home-color">
+        <Fade left>
         <div>
           <img src={Psychic} alt="" className="m-auto" />
-          <div className="flex justify-center gap-5 pt-10">
-            <Icons.Facebook className="cursor-pointer" />
-            <Icons.Twitter className="cursor-pointer" />
-            <Icons.Instagram className="cursor-pointer" />
-            <Icons.Youtube className="cursor-pointer" />
-          </div>
-          <div className="text-white text-center pt-8">
-            <a href="/">Back to Home</a>
-          </div>
-          <div className="cursor-pointer text-white text-center">
-            <a href="/user/dashboard">Admin Panel</a>
+          <div className="hidden lg:block">
+            <div className="flex justify-center gap-5 pt-10">
+              <Icons.Facebook className="cursor-pointer" />
+              <Icons.Twitter className="cursor-pointer" />
+              <Icons.Instagram className="cursor-pointer" />
+              <Icons.Youtube className="cursor-pointer" />
+            </div>
+            <div className="text-white text-center pt-8">
+              <a href="/">Back to Home</a>
+            </div>
+            <div className="cursor-pointer text-white text-center">
+              <a href="/user/dashboard">Admin Panel</a>
+            </div>
           </div>
         </div>
+        </Fade>
 
         {/* SIGNUP FORM */}
+        <Fade right>
         <div
           className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow mt-20 ${
             boxLeft
@@ -275,8 +282,10 @@ const Login = () => {
             </form>
           </div>
         </div>
+        </Fade>
 
         {/* LOGIN  FORM */}
+        <Fade right>
         <div
           className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow mt-20 ${
             boxLeft
@@ -284,13 +293,13 @@ const Login = () => {
               : "hidden"
           }`}
         >
-          <div className="flex justify-start">
+          <div className="flex justify-end">
             <div
               onClick={toogleSignupLogin}
-              className="flex justify-start cursor-pointer px-3"
+              className="flex justify-end cursor-pointer px-3"
               >
-              <img src={RightArrow} alt="" />
               <span className="text-sm text-white my-auto px-2">Signup</span>
+              <img src={LeftArrow} alt="" />
             </div>
           </div>
           <div className="pt-8">
@@ -384,6 +393,21 @@ const Login = () => {
             </form>
           </div>
         </div>
+        </Fade>
+      </div>
+      <div className="bg-home-color lg:hidden">
+          <div className="text-white text-center pt-8">
+            <a href="/">Back to Home</a>
+          </div>
+          <div className="cursor-pointer text-white text-center">
+            <a href="/user/dashboard">Admin Panel</a>
+          </div>
+          <div className="flex justify-center gap-5 py-10">
+            <Icons.Facebook className="cursor-pointer" />
+            <Icons.Twitter className="cursor-pointer" />
+            <Icons.Instagram className="cursor-pointer" />
+            <Icons.Youtube className="cursor-pointer" />
+          </div>
       </div>
     </>
   );

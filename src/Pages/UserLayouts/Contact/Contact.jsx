@@ -2,6 +2,7 @@ import React from "react";
 import Building from "../../../Asset/Image/contact-banner.jpg";
 import GoogleMapReact from "google-map-react";
 import GoogleMaps from "./Maps";
+import Fade from "react-reveal/Fade";
 /* 23.752320221204513, 90.38005477684074 */
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -18,6 +19,7 @@ const Contact = () => {
     <div className="w-full bg-home-color pt-24 lg:pt-40 pb-20 lg:mt-10">
       <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl">
         <div className="lg:w-1/2 text-white m-auto lg:pl-10">
+          <Fade left>
           <div className="text-xl lg:text-4xl font-bold pb-5 px-6 lg:px-0">
             Level -7, 8/C, F.R Tower, Sukrabad, Panthapath, Dhaka 1207,
             Bangladesh
@@ -51,6 +53,8 @@ const Contact = () => {
               LinkedIn
             </a>
           </div>
+          </Fade>
+          <Fade left>
           <div style={{ height: "50vh", width: "100%", margin: "auto" }}>
             <GoogleMapReact
               bootstrapURLKeys={{ key: "" }}
@@ -64,11 +68,14 @@ const Contact = () => {
               />
             </GoogleMapReact>
           </div>
+          </Fade>
           {/* <div><GoogleMaps/></div> */}
         </div>
+        <Fade right>
         <div className="lg:w-1/2 flex justify-center">
           <img src={Building} className="hidden lg:block lg:h-[92vh]" alt="QIT logo" />
         </div>
+        </Fade>
       </div>
     </div>
   );
