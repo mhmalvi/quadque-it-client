@@ -7,6 +7,7 @@ import { Modal } from "antd";
 import "../../../App.css";
 import "./Navbar.css";
 import { links } from "./MyLinks";
+import Fade from "react-reveal/Fade";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -38,7 +39,12 @@ const Navbar = () => {
         <div className="flex items-center font-medium justify-around ">
           <div className="z-50 p-5 lg:w-auto w-full">
             <Link to="/">
-              <img src={Logo} width={83} alt="QIT" className="w-[10rem] cursor-pointer" />
+              <img
+                src={Logo}
+                width={83}
+                alt="QIT"
+                className="w-[10rem] cursor-pointer"
+              />
             </Link>
           </div>
           <div onClick={() => setOpen(!open)}>
@@ -46,7 +52,7 @@ const Navbar = () => {
             <div
               className={`${genericHamburgerLine} ${
                 open
-                  ? "-translate-y-2 group-hover:opacity-100"
+                  ? "-translate-y-2 opacity-0"
                   : "opacity-100 group-hover:opacity-100"
               }`}
             />
@@ -58,7 +64,7 @@ const Navbar = () => {
             <div
               className={`${genericHamburgerLine} ${
                 open
-                  ? "translate-y-2  group-hover:opacity-100"
+                  ? "translate-y-2 opacity-0"
                   : "opacity-100 group-hover:opacity-100"
               }`}
             />
@@ -78,17 +84,72 @@ const Navbar = () => {
             footer={false}
             width="100%"
           >
-            <div className="w-full h-full flex flex-col justify-between text-center text-xl py-20">
+            {/* <div className="w-full h-full flex flex-col justify-between text-center text-xl py-28">
+              {links?.map((link, i) => (
+                <div key={i}>
+                  <Fade top>
+                    <div
+                      onClick={() => {
+                        toogleSubmenu !== link?.name
+                          ? setToogleSubmenu(link?.name)
+                          : setToogleSubmenu("");
+                      }}
+                    >
+                      <a href={link?.link}>{link.name}</a>
+                    </div>
+                  </Fade>
+                  <Fade right delay={0} spy={toogleSubmenu}>
+                    <div>
+                      {link?.submenu !== "" && (
+                        <div
+                          className={`${
+                            toogleSubmenu === link.name ? "" : "hidden"
+                          }`}
+                        >
+                          {link.submenu?.map((slink, i) => (
+                            <Link
+                              key={i}
+                              to={slink.sublink}
+                              onClick={() => {
+                                setOpen(false);
+                                setToogleSubmenu("");
+                              }}
+                            >
+                              <div className="py-6 pl-10">{slink.name}</div>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </Fade>
+                </div>
+              ))}
+            </div> */}
+            <div className="w-full h-[95vh] flex flex-col text-white text-xl py-10 pl-10">
               {links?.map((link, i) => (
                 <div key={i}>
                   <div
+                    key={i}
+                    className="flex justify-between items-center py-6"
                     onClick={() => {
                       toogleSubmenu !== link?.name
                         ? setToogleSubmenu(link?.name)
                         : setToogleSubmenu("");
                     }}
                   >
-                    <a href={link?.link}>{link.name}</a>
+                    <a
+                      className="text-white hover:text-zinc-500"
+                      href={link?.link}
+                    >
+                      {link.name}
+                    </a>
+                    <div className={`${link?.submenu ? "block" : "hidden"}`}>
+                      <Icons.Down
+                        className={`text-white text-lg w-3 h-3 duration-200 ${
+                          toogleSubmenu === "" && "-rotate-90"
+                        }`}
+                      />
+                    </div>
                   </div>
                   <div>
                     {link?.submenu !== "" && (
@@ -99,9 +160,12 @@ const Navbar = () => {
                       >
                         {link.submenu?.map((slink, i) => (
                           <Link
-                          key={i}
+                            key={i}
                             to={slink.sublink}
-                            onClick={() => {setOpen(false); setToogleSubmenu("")}}
+                            onClick={() => {
+                              setOpen(false);
+                              setToogleSubmenu("");
+                            }}
                           >
                             <div className="py-6 pl-10">{slink.name}</div>
                           </Link>

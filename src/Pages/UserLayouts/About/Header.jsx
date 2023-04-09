@@ -17,13 +17,13 @@ const Header = () => {
         <div className="lg:mt-10">
           <div className="lg:w-2/3 flex-col justify-center text-white m-auto pt-32">
             <Zoom>
-            <div className="lg:text-4xl text-2xl font-bold text-center leading-12">
-              Delve into the World of Digital Marketing and IT with QIT.
-            </div>
-            <div className="w-2/3 lg:text-base text-xs text-center py-5 pb-7 m-auto">
-              Let Us Help You to Develop the Skills You Need to Stand Out in the
-              Fast-Paced World of Digital Marketing and IT.
-            </div>
+              <div className="lg:text-4xl text-2xl font-bold text-center leading-12">
+                Delve into the World of Digital Marketing and IT with QIT.
+              </div>
+              <div className="w-2/3 lg:text-base text-xs text-center py-5 pb-7 m-auto">
+                Let Us Help You to Develop the Skills You Need to Stand Out in
+                the Fast-Paced World of Digital Marketing and IT.
+              </div>
             </Zoom>
             {/* <div className="flex justify-center gap-2 lg:gap-6 pb-8">
               <div>
@@ -43,7 +43,7 @@ const Header = () => {
                   src={About1}
                   className="w-full m-auto px-4 lg:px-0"
                   alt=""
-                  />
+                />
               </Zoom>
             </div>
             <div className="flex-col lg:flex lg:flex-row lg:justify-between items-center mx-auto gap-6 py-12 lg:py-20 px-3">
@@ -53,13 +53,13 @@ const Header = () => {
                     We are a digital marketing and IT training provider.
                   </div>
                   <div className="pb-4 text-center lg:text-start ">
-                    We are here to mentor you and help you grow a sustainable and
-                    solid career in the digital marketing and IT industry.
+                    We are here to mentor you and help you grow a sustainable
+                    and solid career in the digital marketing and IT industry.
                   </div>
                   <div className="text-center lg:text-start pb-10 ">
-                    Our training courses combine the most innovative technological
-                    methods and a personalised approach to deliver in-demand
-                    skills for your portfolio.
+                    Our training courses combine the most innovative
+                    technological methods and a personalised approach to deliver
+                    in-demand skills for your portfolio.
                   </div>
                 </div>
               </Fade>
@@ -78,55 +78,55 @@ const Header = () => {
             alt=""
           /> */}
           <Fade bottom>
-          <div className="text-2xl lg:text-4xl font-bold text-center pt-13 lg:pt-24">
-            Our Core Values
-          </div>
-          <div className="w-2/3 text-center text-lg py-5 pb-7 m-auto">
-            We strongly believe in training our students according to <br />{" "}
-            their strengths and weaknesses while ensuring a high-quality
-            standard.
-          </div>
-          <div className="flex-col lg:w-3/4 lg:flex lg:flex-row text-center gap-6 pb-8 lg:pb-30 m-auto">
-            <div className="flex-col p-7">
-              <div className="">
-                <Icons.Instructor className="h-25 m-auto" />
+            <div className="text-2xl lg:text-4xl font-bold text-center pt-13 lg:pt-24">
+              Our Core Values
+            </div>
+            <div className="w-2/3 text-center text-lg py-5 pb-7 m-auto">
+              We strongly believe in training our students according to <br />{" "}
+              their strengths and weaknesses while ensuring a high-quality
+              standard.
+            </div>
+            <div className="flex-col lg:w-3/4 lg:flex lg:flex-row text-center gap-6 pb-8 lg:pb-30 m-auto">
+              <div className="flex-col p-7">
+                <div className="">
+                  <Icons.Instructor className="h-25 m-auto" />
+                </div>
+                <div className="text-xl font-semibold py-2">
+                  Effective Lessons
+                </div>
+                <div className="text-base">
+                  We aim to enhance the expertise of our trainees through our
+                  experienced team of instructors with years of industry
+                  experience.
+                </div>
               </div>
-              <div className="text-xl font-semibold py-2">
-                Effective Lessons
+              <div className="flex-col p-7">
+                <div>
+                  <Icons.Bachelor className="h-25 m-auto" />
+                </div>
+                <div className="text-xl font-semibold py-2">
+                  Personalised Training
+                </div>
+                <div className="text-base">
+                  We uniquely approach every student to identify their training
+                  requirements and develop practical solutions for effective
+                  training.
+                </div>
               </div>
-              <div className="text-base">
-                We aim to enhance the expertise of our trainees through our
-                experienced team of instructors with years of industry
-                experience.
+              <div className="flex-col p-7">
+                <div>
+                  <Icons.Ribbon className="h-25 m-auto" />
+                </div>
+                <div className="text-xl font-semibold py-2">
+                  High-Quality Courses
+                </div>
+                <div className="text-base">
+                  We do not compromise on quality; our expert team strives to
+                  improve the resumes of our students through high-quality and
+                  impactful courses.
+                </div>
               </div>
             </div>
-            <div className="flex-col p-7">
-              <div>
-                <Icons.Bachelor className="h-25 m-auto" />
-              </div>
-              <div className="text-xl font-semibold py-2">
-                Personalised Training
-              </div>
-              <div className="text-base">
-                We uniquely approach every student to identify their training
-                requirements and develop practical solutions for effective
-                training.
-              </div>
-            </div>
-            <div className="flex-col p-7">
-              <div>
-                <Icons.Ribbon className="h-25 m-auto" />
-              </div>
-              <div className="text-xl font-semibold py-2">
-                High-Quality Courses
-              </div>
-              <div className="text-base">
-                We do not compromise on quality; our expert team strives to
-                improve the resumes of our students through high-quality and
-                impactful courses.
-              </div>
-            </div>
-          </div>
           </Fade>
           {/* <img
             src={Box2}
@@ -136,115 +136,116 @@ const Header = () => {
         </div>
         <div className="text-white relative">
           <Fade bottom>
-          <div className="text-4xl font-bold text-center pt-13 lg:pt-36">
-            Why Choose Us
-          </div>
-          <div className="w-2/3 text-center text-lg pt-5 pb-16 m-auto">
-            We have collaborated with some of the most reputed names in the
-            digital marketing and IT scene. Therefore, we have a good idea of
-            what works and what doesn’t. Take a look at some of the main reasons
-            you should enrol in one of our courses.
-          </div>
-          <div className="w-11/12 lg:w-8/12 flex flex-wrap justify-center m-auto pb-7 gap-10">
-            <div className="w-full sm:w-66 flex-col p-5">
-              <div className="flex pb-4">
-                <Icons.AInstructor className="w-12 h-12 shrink-0 mr-4" />
-                <div className="text-lg text-start font-semibold my-auto">
-                  Expert Instructors
+            <div className="text-4xl font-bold text-center pt-13 lg:pt-36">
+              Why Choose Us
+            </div>
+            <div className="w-2/3 text-center text-lg pt-5 pb-16 m-auto">
+              We have collaborated with some of the most reputed names in the
+              digital marketing and IT scene. Therefore, we have a good idea of
+              what works and what doesn’t. Take a look at some of the main
+              reasons you should enrol in one of our courses.
+            </div>
+            <div className="w-11/12 lg:w-8/12 flex flex-wrap justify-center m-auto pb-7 gap-10">
+              <div className="w-full sm:w-66 flex-col p-5">
+                <div className="flex pb-4">
+                  <Icons.AInstructor className="w-12 h-12 shrink-0 mr-4" />
+                  <div className="text-lg text-start font-semibold my-auto">
+                    Expert Instructors
+                  </div>
+                </div>
+                <div className="">
+                  Build a vast array of digital marketing and IT skills with the
+                  assistance of our qualified instructors.
                 </div>
               </div>
-              <div className="">
-                Build a vast array of digital marketing and IT skills with the
-                assistance of our qualified instructors.
-              </div>
-            </div>
-            <div className="w-full sm:w-66 flex-col p-5">
-              <div className="flex pb-4">
-                <Icons.ABook className="w-12 h-12 shrink-0 mr-4" />
-                <div className="text-lg text-start font-semibold my-auto">
-                  Learn from Scratch
+              <div className="w-full sm:w-66 flex-col p-5">
+                <div className="flex pb-4">
+                  <Icons.ABook className="w-12 h-12 shrink-0 mr-4" />
+                  <div className="text-lg text-start font-semibold my-auto">
+                    Learn from Scratch
+                  </div>
+                </div>
+                <div className="">
+                  It doesn’t matter if you’re a beginner or have a more advanced
+                  industry knowledge. Our courses are designed for different
+                  levels of difficulty.
                 </div>
               </div>
-              <div className="">
-                It doesn’t matter if you’re a beginner or have a more advanced
-                industry knowledge. Our courses are designed for different
-                levels of difficulty.
-              </div>
-            </div>
-            <div className="w-full sm:w-66 flex-col p-5">
-              <div className="flex pb-4">
-                <Icons.ACertificate className="w-12 h-12 shrink-0 mr-4" />
-                <div className="text-lg text-start font-semibold my-auto">
-                  Recognised Certification
+              <div className="w-full sm:w-66 flex-col p-5">
+                <div className="flex pb-4">
+                  <Icons.ACertificate className="w-12 h-12 shrink-0 mr-4" />
+                  <div className="text-lg text-start font-semibold my-auto">
+                    Recognised Certification
+                  </div>
+                </div>
+                <div className="">
+                  Obtain a recognised and Accredited Australian Certificate to
+                  take your portfolio to another level.
                 </div>
               </div>
-              <div className="">
-                Obtain a recognised and Accredited Australian Certificate to
-                take your portfolio to another level.
-              </div>
-            </div>
-            <div className="w-full sm:w-66 flex-col p-5">
-              <div className="flex pb-4">
-                <Icons.ACareer className="w-12 h-12 shrink-0 mr-4" />
-                <div className="text-lg text-start font-semibold my-auto">
-                  Amazing Career Prospects
+              <div className="w-full sm:w-66 flex-col p-5">
+                <div className="flex pb-4">
+                  <Icons.ACareer className="w-12 h-12 shrink-0 mr-4" />
+                  <div className="text-lg text-start font-semibold my-auto">
+                    Amazing Career Prospects
+                  </div>
+                </div>
+                <div className="">
+                  Grow your career and find exciting opportunities by developing
+                  the most valuable skills for the competitive job market.
                 </div>
               </div>
-              <div className="">
-                Grow your career and find exciting opportunities by developing
-                the most valuable skills for the competitive job market.
-              </div>
-            </div>
-            <div className="w-full sm:w-66 flex-col p-5">
-              <div className="flex pb-4">
-                <Icons.ATechnology className="w-12 h-12 shrink-0 mr-4" />
-                <div className="text-lg text-start font-semibold my-auto">
-                  Advanced Technological Applications
+              <div className="w-full sm:w-66 flex-col p-5">
+                <div className="flex pb-4">
+                  <Icons.ATechnology className="w-12 h-12 shrink-0 mr-4" />
+                  <div className="text-lg text-start font-semibold my-auto">
+                    Advanced Technological Applications
+                  </div>
+                </div>
+                <div className="">
+                  Get to learn deeply about the most trending applications and
+                  know how to use them effectively and efficiently.
                 </div>
               </div>
-              <div className="">
-                Get to learn deeply about the most trending applications and
-                know how to use them effectively and efficiently.
-              </div>
-            </div>
-            <div className="w-full sm:w-66 flex-col p-5">
-              <div className="flex pb-4">
-                <Icons.ATraining className="w-12 h-12 shrink-0 mr-4" />
-                <div className="text-lg text-start font-semibold my-auto">
-                  Customised Training
+              <div className="w-full sm:w-66 flex-col p-5">
+                <div className="flex pb-4">
+                  <Icons.ATraining className="w-12 h-12 shrink-0 mr-4" />
+                  <div className="text-lg text-start font-semibold my-auto">
+                    Customised Training
+                  </div>
+                </div>
+                <div className="">
+                  Our classes are customised for every student to ensure
+                  fantastic results and an enjoyable training experience.
                 </div>
               </div>
-              <div className="">
-                Our classes are customised for every student to ensure fantastic
-                results and an enjoyable training experience.
-              </div>
-            </div>
-            <div className="w-full sm:w-66 flex-col p-5">
-              <div className="flex pb-4">
-                <Icons.AEarth className="w-12 h-12 shrink-0 mr-4" />
-                <div className="text-lg text-start font-semibold my-auto">
-                  Real-life Applications
+              <div className="w-full sm:w-66 flex-col p-5">
+                <div className="flex pb-4">
+                  <Icons.AEarth className="w-12 h-12 shrink-0 mr-4" />
+                  <div className="text-lg text-start font-semibold my-auto">
+                    Real-life Applications
+                  </div>
+                </div>
+                <div className="">
+                  Learn from actual examples, special freelancing classes and
+                  case studies to get a solid idea of industry standards and
+                  trends.
                 </div>
               </div>
-              <div className="">
-                Learn from actual examples, special freelancing classes and case
-                studies to get a solid idea of industry standards and trends.
-              </div>
-            </div>
-            <div className="w-full sm:w-66 flex-col p-5">
-              <div className="flex pb-4">
-                <Icons.ASupport className="w-12 h-12 shrink-0 mr-4" />
-                <div className="text-lg text-start font-semibold my-auto">
-                  24/7 Support
+              <div className="w-full sm:w-66 flex-col p-5">
+                <div className="flex pb-4">
+                  <Icons.ASupport className="w-12 h-12 shrink-0 mr-4" />
+                  <div className="text-lg text-start font-semibold my-auto">
+                    24/7 Support
+                  </div>
+                </div>
+                <div className="">
+                  Our dedicated team will support you at all times during the
+                  course and after its completion. We also provide free
+                  consultancy support for everyone.
                 </div>
               </div>
-              <div className="">
-                Our dedicated team will support you at all times during the
-                course and after its completion. We also provide free
-                consultancy support for everyone.
-              </div>
             </div>
-          </div>
           </Fade>
           <AboutMaterial />
           <Instructors />

@@ -61,7 +61,7 @@ const CourseGallery = () => {
       } else {
         CourseDetail = Course.filter((cor) => cor.category === toogleTab);
       }
-
+      console.log(CourseDetail);
       setCourseData(CourseDetail);
     } else {
       if (toogleMediumTab === "all") {
@@ -77,13 +77,13 @@ const CourseGallery = () => {
   useEffect(() => {
     console.log("course data", courseData);
     setFilteredData([]);
-    let i = 0;
+    let i = -1;
     const interval = setInterval(() => {
-      if (i >= courseData.length) {
+      if (i >= courseData.length-1) {
         clearInterval(interval);
-      } else {
-        setFilteredData((prev) => [...prev, courseData[i]]);
+      } else { 
         i++;
+        setFilteredData((prev) => [...prev, courseData[i]]);
       }
     }, 200);
     return () => clearInterval(interval);
@@ -106,7 +106,7 @@ const CourseGallery = () => {
       });
       setCategoryItems(items);
     })();
-  }, [Catagories]);
+  }, []);
   // console.log("items,", categoryItems);
 
   return (
@@ -212,7 +212,7 @@ const CourseGallery = () => {
 
           <div className="w-full bg-[#040422]">
             {/* COURSE Gallery */}
-            <Fade right cascade>
+            <Zoom cascade>
               <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 text-white gap-6 sm:px-5 lg:px-0 my-6">
                 {/* cards */}
                 {filteredData?.map((details) => (
@@ -239,7 +239,7 @@ const CourseGallery = () => {
                     <div className="p-4">
                       <div className="flex-col">
                         <div className="flex justify-between">
-                          <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full py-2 px-4">
+                          <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full text-sm py-2 px-4">
                             {details?.date}
                           </div>
                           <div className="py-2">{details?.price} tk</div>
@@ -253,7 +253,7 @@ const CourseGallery = () => {
                   </div>
                 ))}
               </div>
-            </Fade>
+            </Zoom>
           </div>
         </div>
         <Instructors />

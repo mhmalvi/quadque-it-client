@@ -13,7 +13,7 @@ const CourseMaterial = () => {
   };
   useEffect(() => {
     let CourseDetail;
-    CourseDetail = Materials?.filter((cor) => cor.category == toogleTab);
+    CourseDetail = Materials?.filter((cor) => cor.category === toogleTab);
     setCourseData(CourseDetail);
   }, [Materials, toogleTab]);
 

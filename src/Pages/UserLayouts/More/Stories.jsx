@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { Pagination } from "antd";
+import React, { useEffect, useState } from "react";
+import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 import stories1 from "../../../Asset/Image/stories1.png";
 import stories2 from "../../../Asset/Image/stories2.png";
 import stories3 from "../../../Asset/Image/stories3.png";
 import stories4 from "../../../Asset/Image/stories4.png";
 import stories5 from "../../../Asset/Image/stories5.png";
 import stories6 from "../../../Asset/Image/stories6.png";
-import meeting from "../../../Asset/Image/meeting.png";
 import StudentWorks from "../../../Asset/Image/student-work.png";
-import InstructorsSlider from "./InstructorsSlider";
 import useStories from "../../../Components/Shared/JsonData/stories.json";
-import { Pagination } from "antd";
-import { Link } from "react-router-dom";
+import InstructorsSlider from "./InstructorsSlider";
 import "./More.css";
-import Fade from "react-reveal/Fade";
 
 
 const Stories = () => {
@@ -20,15 +19,16 @@ const Stories = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [PostsPerPage] = useState(3);
 
+  let heightLandmark = document.getElementById("twinCard")?.clientHeight;
   useEffect(() => {
     let height = document.getElementById("twinCard")?.clientHeight;
     console.log(height);
     document.getElementById("soloCard").style.height = height - 20 + "px";
-  }, [document.getElementById("twinCard")?.clientHeight]);
+  }, [heightLandmark]);
 
   useEffect(() => {
     setTotalPosts(useStories.length);
-  }, [useStories]);
+  }, []);
 
   const indexOfLastPost = currentPage * PostsPerPage;
   const indexOfFirstPost = indexOfLastPost - PostsPerPage;
@@ -55,7 +55,7 @@ const Stories = () => {
             <div className="lg:flex justify-center items-stretch gap-5">
               <div id="twinCard" className="">
                 {currentPosts?.[0] ? (
-                  <Fade top duration={1500}>
+                  <Fade left duration={1500} spy={currentPosts}>
                     <Link to="../stories-detail">
                       <div className="bg-home-color pb-5 max-w-[90vh]">
                         <div className="lg:flex bg-white rounded-2xl h-76">
@@ -91,7 +91,7 @@ const Stories = () => {
                   </Fade>
                 ) : null}
                 {currentPosts?.[1] ? (
-                  <Fade bottom duration={1500}>
+                  <Fade left duration={1500} spy={currentPosts}>
                     <Link to="../stories-detail">
                       <div className="bg-home-color pb-5 max-w-[90vh]">
                         <div className="lg:flex flex-row-reverse bg-white rounded-2xl h-76">
@@ -129,14 +129,14 @@ const Stories = () => {
               </div>
               {/* card */}
               {currentPosts?.[2] ? (
-                <Fade right duration={1500}>
+                <Fade right duration={1500} spy={currentPosts}>
                   <Link to="../stories-detail">
                     <div>
                       <div
                         id="soloCard"
                         className="flex-col lg:max-w-xs bg-white rounded-2xl"
                       >
-                        <div className="h-72 flex-wrap overflow-hidden">
+                        <div className="flex-wrap overflow-hidden">
                           <img
                             src={currentPosts?.[2]?.image}
                             className="w-full rounded-2xl"
@@ -167,6 +167,7 @@ const Stories = () => {
               ) : null}
             </div>
           </div>
+          <div className="hidden lg:block">
           <div className="Stories_Pagination flex justify-center mt-10 mb-20">
             <Pagination
               onChange={(value) => {
@@ -177,7 +178,8 @@ const Stories = () => {
               current={currentPage}
               total={totalPosts}
               className="text-lg"
-            />
+              />
+          </div>
           </div>
 
           {/* instructor MOBILE SLIDER */}

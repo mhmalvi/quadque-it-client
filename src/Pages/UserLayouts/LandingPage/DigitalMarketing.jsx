@@ -26,13 +26,13 @@ const DigitalMarketing = () => {
   }, [])  
 
   useEffect(() => {
-    console.log(window.screen.width);
+    // console.log(window.screen.width);
     if (window.screen.width > 520) {
       setSlideSetting({ ...settings });
     } else {
       setSlideSetting({ ...mobSettings });
     }
-  }, [window.screen.width]);
+  }, []);
 
   const settings = {
     infinite: false,
@@ -82,59 +82,63 @@ const DigitalMarketing = () => {
         </div>
         <div className="text-white lg:pt-13 gap-6">
           <Fade right>
-          <Slider ref={sliderRef} {...slideSetting}>
-            {courses?.map((course, i) => (
-              <div key={i}>
-                <div
-                  onClick={navigateToCourseDetails}
-                  className="bg-white flex-col group shadow-lg rounded-3xl text-black hover:border-2 hover:bg-black hover:text-white hover:border-[#23BDEE] hover:shadow-sky-200 transition-ease-out duration-300 cursor-pointer mx-3 my-4"
-                >
-                  <div className="">
-                    <img
-                      src={
-                        CourseImage?.find((wtf) => wtf.title === course?.title)
-                          ? CourseImage?.find(
-                              (wtf) => wtf.title === course?.title
-                            ).image
-                          : Digit
-                      }
-                      alt=""
-                      className="w-full h-[250px] lg:h-[350px] rounded-3xl scale-90 group-hover:scale-100 ease-in duration-500"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <div className="flex-col">
-                      <div className="flex justify-between">
-                        <div className="bg-[#23BDEE] text-[#23BDEE] text-sm md:text-base bg-opacity-20 rounded-full py-2 px-4">
-                          {course?.date}
-                        </div>
-                        <div className="text-sm md:text-xl py-2">
-                          {course?.price} tk
+            <Slider ref={sliderRef} {...slideSetting}>
+              {courses?.map((course, i) => (
+                <div key={i}>
+                  <div
+                    onClick={navigateToCourseDetails}
+                    className="bg-white flex-col group shadow-lg rounded-3xl text-black hover:border-2 hover:bg-black hover:text-white hover:border-[#23BDEE] hover:shadow-sky-200 transition-ease-out duration-300 cursor-pointer mx-3 my-4"
+                  >
+                    <div className="">
+                      <img
+                        src={
+                          CourseImage?.find(
+                            (wtf) => wtf.title === course?.title
+                          )
+                            ? CourseImage?.find(
+                                (wtf) => wtf.title === course?.title
+                              ).image
+                            : Digit
+                        }
+                        alt=""
+                        className="w-full h-[250px] lg:h-[350px] rounded-3xl scale-90 group-hover:scale-100 ease-in duration-500"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <div className="flex-col">
+                        <div className="flex justify-between">
+                          <div className="bg-[#23BDEE] text-[#23BDEE] text-sm md:text-base bg-opacity-20 rounded-full py-2 px-4">
+                            {course?.date}
+                          </div>
+                          <div className="text-sm md:text-xl py-2">
+                            {course?.price} tk
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="text-base md:text-2xl text-start font-semibold pt-2 left-0">
-                      {course?.title}
-                    </div>
-                    <div className="text-xs md:text-base text-start py-2">
-                      {course?.para}
+                      <div className="text-base md:text-2xl text-start font-semibold pt-2 left-0">
+                        {course?.title}
+                      </div>
+                      <div className="text-xs md:text-base text-start py-2">
+                        {course?.para}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
           </Fade>
           <div className="flex justify-center gap-5 py-3">
             <img
               src={LeftArrow}
               alt=""
               onClick={() => sliderRef.current.slickPrev()}
+              className="cursor-pointer"
             />
             <img
               src={RightArrow}
               alt=""
               onClick={() => sliderRef.current.slickNext()}
+              className="cursor-pointer"
             />
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import Giphy from "../../../Asset/Image/giphy.png";
 import Image from "../../../Asset/Image/image44.png";
 import Footer from "../../../Asset/Image/footer.png";
 import Fade from "react-reveal/Fade";
@@ -8,11 +7,11 @@ import { Link } from "react-router-dom";
 const BrowseCourse = () => {
   return (
     <div className="w-full mb-18 lg:mb-0 sm:pb-0">
-      <div className=" sm:bg-gradient-to-t from-[#000000] to-[#2F327D]">
+      <div className="sm:bg-gradient-to-t from-[#000000] to-[#2F327D]">
         <div className="sm:flex sm:justify-center sm:px-6">
           <div className="w-full flex justify-center items-center shrink-0 sm:w-1/2 sm:relative sm:-top-20 p-4">
             <Fade left big>
-            <img src={Image} width={411} alt="" />
+              <img src={Image} width={411} alt="" />
             </Fade>
           </div>
           <Fade right big>
@@ -21,9 +20,9 @@ const BrowseCourse = () => {
                 Choose a Course Suited to Your Career Goals{" "}
               </div>
               <Link to={"./course"}>
-              <button className="bg-[#2F327D] hover:bg-[#484cc5] rounded-full text-sm sm:text-base lg:text-xl text-white text-center m-auto leading-tight sm:m-0 px-8 py-3">
-                Browse courses
-              </button>
+                <button className="bg-[#2F327D] hover:bg-[#484cc5] rounded-full text-sm sm:text-base lg:text-xl text-white text-center m-auto leading-tight sm:m-0 px-8 py-3">
+                  Browse courses
+                </button>
               </Link>
             </div>
           </Fade>

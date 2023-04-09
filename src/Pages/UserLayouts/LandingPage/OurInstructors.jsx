@@ -54,13 +54,13 @@ const OurInstructors = () => {
             <img
               src={LeftArrow}
               alt=""
-              className="w-10 h-10"
+              className="w-10 h-10 cursor-pointer"
               onClick={() => sliderRef.current.slickPrev()}
             />
             <img
               src={RightArrow}
               alt=""
-              className="w-10 h-10"
+              className="w-10 h-10 cursor-pointer"
               onClick={() => sliderRef.current.slickNext()}
             />
           </div>

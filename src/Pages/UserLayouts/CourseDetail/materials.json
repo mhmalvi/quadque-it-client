@@ -1,112 +1,112 @@
 [
     {
-      "id": "1",
-      "category" : "1",
+      "id": 1,
+      "category" : 1,
       "icon": "20-20-20",
       "title": "Adobe Photoshop",
       "image": "https://i.ibb.co/4MNR5n7/logos-adobe-photoshop.png"
     },
     {
-      "id": "2",
-      "category" : "2",
+      "id": 2,
+      "category" : 2,
       "icon": "20-20-20",
       "title": "Adobe Illustrator",
       "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
     },
     {
-      "id": "3",
-      "category" : "2",
+      "id": 3,
+      "category" : 2,
       "icon": "20-20-20",
       "title": "Adobe After Effects",
       "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
     },
     {
-      "id": "4",
-      "category" : "3",
+      "id": 4,
+      "category" : 3,
       "icon": "20-20-20",
       "title": "Graphics Design 101",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"
     },
     {
-      "id": "5",
-      "category" : "3",
+      "id": 5,
+      "category" : 3,
       "icon": "20-20-20",
       "title": "Sculpting 101",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"
     },
     {
-      "id": "6",
-      "category" : "4",
+      "id": 6,
+      "category" : 4,
       "icon": "20-20-20",
       "title": "Adobe Illustrator - Vector Graphics - A2Z, Branding, Stationary, Banner, Flyer etc. Design",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"
     },
     {
-      "id": "7",
-      "category" : "4",
+      "id": 7,
+      "category" : 4,
       "icon": "20-20-20",
       "title": "Short Video Advertisement",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"
     },
     {
-      "id": "8",
-      "category" : "2",
+      "id": 8,
+      "category" : 2,
       "icon": "20-20-20",
       "title": "Adobe XD",
       "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
     },
     {
-      "id": "9",
-      "category" : "2",
+      "id": 9,
+      "category" : 2,
       "icon": "20-20-20",
       "title": "Adobe Figma",
       "image": "https://i.ibb.co/4MNR5n7/logos-adobe-photoshop.png"
     },
     {
-      "id": "10",
-      "category" : "1",
+      "id": 10,
+      "category" : 1,
       "icon": "20-20-20",
       "title": "Jquery",
       "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
     },
     {
-      "id": "11",
-      "category" : "2",
+      "id": 11,
+      "category" : 2,
       "icon": "20-20-20",
       "title": "Adobe Figma",
       "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
     },
     {
-      "id": "12",
-      "category" : "2",
+      "id": 12,
+      "category" : 2,
       "icon": "20-20-20",
       "title": "Adobe Figma",
       "image": "https://i.ibb.co/4MNR5n7/logos-adobe-photoshop.png"
     },
     {
-      "id": "13",
-      "category" : "2",
+      "id": 13,
+      "category" : 2,
       "icon": "20-20-20",
       "title": "Adobe Figma",
       "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
     },
     {
-      "id": "14",
-      "category" : "2",
+      "id": 14,
+      "category" : 2,
       "icon": "20-20-20",
       "title": "Adobe Figma",
       "image": "https://i.ibb.co/4MNR5n7/logos-adobe-photoshop.png"
     },
     {
-      "id": "15",
-      "category" : "2",
+      "id": 15,
+      "category" : 2,
       "icon": "20-20-20",
       "title": "Adobe Figma",
       "image": "https://i.ibb.co/yQKchVw/logos-adobe-illustrator.png"
     },
     {
-      "id": "16",
-      "category" : "4",
+      "id": 16,
+      "category" : 4,
       "icon": "20-20-20",
       "title": " Lower Third animation based",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/White_dot.svg/120px-White_dot.svg.png"

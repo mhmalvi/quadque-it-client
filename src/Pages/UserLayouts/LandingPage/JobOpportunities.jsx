@@ -1,6 +1,6 @@
 import React from "react";
 import shourav from "../../../Asset/Image/job-op2.png";
-import JobIcon from "../../../Asset/Icon/jobopp.svg";
+// import JobIcon from "../../../Asset/Icon/jobopp.svg";
 import Icons from "../../../Components/Shared/Icons";
 import Fade from "react-reveal/Fade";
 
@@ -56,7 +56,7 @@ const JobOpportunities = () => {
               </div>
               <div className="flex gap-4 py-4">
                 <div>
-                  <Icons.instructors />
+                  <Icons.Instructors />
                 </div>
                 <span className="my-auto">
                   Learn from our expert trainers with years of industry

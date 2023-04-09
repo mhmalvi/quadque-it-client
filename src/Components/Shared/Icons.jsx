@@ -14,7 +14,7 @@ import { ReactComponent as Location } from "../../Asset/Icon/location.svg";
 import { ReactComponent as Telephone } from "../../Asset/Icon/telephone.svg";
 import { ReactComponent as EBook } from "../../Asset/Icon/Frame6541.svg";
 import { ReactComponent as Learning } from "../../Asset/Icon/Frame6542.svg";
-import { ReactComponent as instructors } from "../../Asset/Icon/Frame6543.svg";
+import { ReactComponent as Instructors } from "../../Asset/Icon/Frame6543.svg";
 import { ReactComponent as Colab } from "../../Asset/Icon/Frame6544.svg";
 import { ReactComponent as JobOpportunities } from "../../Asset/Icon/jobopp.svg";
 import { ReactComponent as Support } from "../../Asset/Icon/user-friends.svg";
@@ -45,6 +45,7 @@ import { ReactComponent as AEarth } from "../../Asset/Icon/about/earth.svg";
 import { ReactComponent as ASupport } from "../../Asset/Icon/about/support.svg";
 import { ReactComponent as ATechnology } from "../../Asset/Icon/about/technology.svg";
 import { ReactComponent as ATraining } from "../../Asset/Icon/about/training.svg";
+import { ReactComponent as Down } from "../../Asset/Icon/down.svg";
 
 const Icons = {
   PlayBtn,
@@ -63,7 +64,7 @@ const Icons = {
   Telephone,
   EBook,
   Learning,
-  instructors,
+  Instructors,
   Colab,
   JobOpportunities,
   Support,
@@ -94,6 +95,7 @@ const Icons = {
   ASupport,
   ATechnology,
   ATraining,
+  Down,
 };
 
 export default Icons;
