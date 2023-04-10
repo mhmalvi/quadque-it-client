@@ -16,7 +16,7 @@
     },
     {
       "id": 2,
-      "upcoming" : 0,
+      "upcoming" : 1,
       "category" : "Graphics & Design",
       "platform" : "offline",
       "date": "21-04-23",
@@ -46,7 +46,7 @@
     },
     {
       "id": 4,
-      "upcoming" : 1,
+      "upcoming" : 0,
       "category" : "Others",
       "platform" : "offline",
       "date": "23-03-23",
@@ -91,7 +91,7 @@
     },
     {
       "id": 7,
-      "upcoming" : 0,
+      "upcoming" : 1,
       "category" : "Digital Marketing",
       "platform" : "offline",
       "date": "13-09-23",
@@ -106,7 +106,7 @@
     },
     {
       "id": 8,
-      "upcoming" : 1,
+      "upcoming" : 0,
       "category" : "Others",
       "platform" : "online",
       "date": "12-01-23",
@@ -136,7 +136,7 @@
     },
     {
       "id": 10,
-      "upcoming" : 1,
+      "upcoming" : 0,
       "category" : "Others",
       "platform" : "offline",
       "date": "12-01-23",
@@ -151,7 +151,7 @@
     },
     {
       "id": 11,
-      "upcoming" : 0,
+      "upcoming" : 1,
       "category" : "Content Writing and Development",
       "platform" : "online",
       "date": "12-01-23",
@@ -226,7 +226,7 @@
     },
     {
       "id": 16,
-      "upcoming" : 0,
+      "upcoming" : 1,
       "category" : "Graphics & Design",
       "platform" : "offline",
       "date": "12-01-23",
