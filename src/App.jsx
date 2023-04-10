@@ -34,7 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<><Navbar /><LandingPage /></>}/>
         <Route exact path="course" element={<><Navbar /><Course /></>}></Route>
-        <Route exact path="/course/course-detail" element={<><Navbar /><CourseDetail /></>}></Route>
+        <Route exact path="/course/course-detail/:id" element={<><Navbar /><CourseDetail /></>}></Route>
         <Route exact path="about-us" element={<><Navbar /><AboutUs /></>}></Route>
         <Route exact path="contact" element={<><Navbar /><Contact /></>}></Route>
         <Route exact path="blog" element={<><Navbar /><Blog /></>}></Route>
@@ -46,7 +46,7 @@ function App() {
         <Route exact path="privacy-policy" element={<><Navbar /><PrivacyPolicy /><Footer /></>}></Route>
         <Route exact path="terms-of-use" element={<><Navbar /><TermsOfUse /><Footer /></>}></Route>
         <Route exact path="copywrite-policy" element={<><Navbar /><CopywritePolicy /><Footer /></>}></Route>
-        <Route exact path="404" element={<><Error404 /></>}></Route>
+        {/* <Route exact path="404" element={<><Error404 /></>}></Route> */}
         <Route exact path="auth" element={<Login />}></Route>
 
         <Route exact path="user" element={<AdminPanel />}>
@@ -57,7 +57,7 @@ function App() {
           <Route path="teachers" element={<AdminTeacher />} />
           <Route path={"blogs"} element={<AdminBlogs />} />
         </Route>
-        <Route path="*" element={<Navigate to="/404" replace />} />
+        {/* <Route path="*" element={<Navigate to="/404" replace />} /> */}
       </Routes>
     </div>
   );

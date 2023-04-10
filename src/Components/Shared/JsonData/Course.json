@@ -7,7 +7,11 @@
       "date": "20-02-23",
       "price": "12000",
       "title": "Jquery",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Take your web development skills to the next level with our comprehensive jQuery course.",
+      "overview": "The jQuery course is designed to teach students how to use the popular JavaScript library to create dynamic and interactive web pages. Through a series of modules, students will learn the basics of jQuery syntax, including selecting elements, manipulating HTML and CSS, and handling events. The course covers advanced topics such as AJAX, JSON, and plugin development. By the end of the course, students will have gained a thorough understanding of jQuery and be able to apply it to their own web development projects. This course is ideal for web developers who want to improve their front-end development skills and create more engaging and dynamic websites.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 2,
@@ -17,7 +21,11 @@
       "date": "21-04-23",
       "price": "12000",
       "title": "Adobe Illustrator",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Learn to create stunning graphics, logos, and illustrations using the industry-standard vector graphics software at our educational institute.",
+      "overview": "The Adobe Illustrator course is designed to teach students how to use the industry-standard vector graphics software to create stunning graphics, logos, and illustrations. Through a series of modules, students will learn to use Illustrator's tools and techniques to create vector art, manipulate shapes and colors, and work with typography. The course covers advanced topics such as creating and editing complex paths, using brushes and patterns, and working with 3D objects. By the end of the course, students will have gained a solid understanding of Illustrator's capabilities and be able to create their own high-quality vector graphics. This course is ideal for graphic designers, artists, and anyone who wants to create professional-quality artwork.Learn to create stunning graphics, logos, and illustrations using the industry-standard vector graphics software at our educational institute.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 3,
@@ -27,7 +35,11 @@
       "date": "22-05-23",
       "price": "12000",
       "title": "Adobe Photoshop",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Learn to edit and enhance images, create digital art, and master the world's leading image editing software at our educational institute.",
+      "overview": "The Adobe Photoshop course is designed to teach students how to use the industry-standard image editing software to create and manipulate digital images. Through a series of modules, students will learn to use Photoshop's tools and techniques to retouch photos, enhance colors and contrast, create digital art, and design graphics for web and print. The course covers advanced topics such as layers, masks, and filters. By the end of the course, students will have gained a thorough understanding of Photoshop's capabilities and be able to create their own high-quality digital images. This course is ideal for photographers, graphic designers, artists, and anyone who wants to improve their digital imaging skills.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 4,
@@ -37,7 +49,11 @@
       "date": "23-03-23",
       "price": "12000",
       "title": "Sculpting with Blender (Online)",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Learn to create stunning visual effects, games, and architectural designs using the powerful and versatile open-source software at our educational institute.",
+      "overview": "The Blender course is designed to teach students how to use the open-source 3D graphics software to create and animate 3D models, scenes, and characters. Through a series of modules, students will learn to use Blender's tools and techniques to create models, textures, and animations. The course covers advanced topics such as rigging, particle systems, and physics simulations. By the end of the course, students will have gained a solid understanding of Blender's capabilities and be able to create their own 3D projects. This course is ideal for animators, game developers, architects, and anyone who wants to learn 3D graphics and animation.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 5,
@@ -47,7 +63,11 @@
       "price": "12000",
       "date": "12-01-23",
       "title": "Android Development (Online)",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Develop your skills in Java, XML, and Android Studio and become a proficient app developer at our educational institute.",
+      "overview": "The Android development course is designed to teach students how to develop mobile applications for Android devices using Java and XML programming languages. Through a series of modules, students will learn to use Android Studio, the integrated development environment for Android, to create, test, and deploy their applications. The course covers the fundamentals of Android application development, including user interfaces, data storage, network connectivity, and multimedia features. By the end of the course, students will have gained the skills necessary to create their own functional Android applications, and be prepared for a career in mobile app development.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 6,
@@ -57,7 +77,11 @@
       "date": "12-01-23",
       "price": "10000",
       "title": "Python Programming (Online)",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Master Python's powerful libraries and frameworks, and develop your skills in data analysis, machine learning, and web development at our educational institute.",
+      "overview": "The Python course is designed to teach students how to use the popular programming language for various applications, including data analysis, web development, and machine learning. Through a series of modules, students will learn Python syntax, control flow, functions, and data structures. The course covers advanced topics such as object-oriented programming, modules, and libraries. By the end of the course, students will have gained a solid understanding of Python's capabilities and be able to create their own Python applications. This course is ideal for programmers, data analysts, web developers, and anyone who wants to learn a versatile and in-demand programming language.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 7,
@@ -67,7 +91,11 @@
       "date": "13-09-23",
       "price": "12000",
       "title": "Digital Marketing Research Strategy",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Learn to conduct market research, analyze consumer behavior, and develop effective digital marketing strategies at our educational institute.",
+      "overview": "The Digital Marketing Research Strategy course is designed to teach students how to conduct research to inform digital marketing strategies. Through a series of modules, students will learn how to gather data from a variety of sources, including social media, online surveys, and web analytics tools. The course covers topics such as market segmentation, targeting, and positioning, as well as analyzing and interpreting data to inform marketing decisions. By the end of the course, students will have gained the skills necessary to develop effective digital marketing strategies that are grounded in research and data. This course is ideal for marketing professionals, business owners, and anyone who wants to learn how to use data to inform marketing decisions in a digital age.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 8,
@@ -77,7 +105,11 @@
       "date": "12-01-23",
       "price": "12000",
       "title": "Advanced .NET (Online)",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Join our .NET course and develop your skills in one of the most popular frameworks for building Windows and web applications.",
+      "overview": "The .NET course is designed to teach students the Microsoft .NET framework, including the C# programming language, ASP.NET web development, and desktop application development using Windows Forms. Through a series of modules, students will learn to develop software applications using the .NET platform, including data access, web services, and security. The course covers advanced topics such as debugging, deployment, and performance optimization. By the end of the course, students will have gained a solid understanding of the .NET framework and be able to develop their own .NET applications. This course is ideal for software developers, web developers, and anyone interested in building applications using Microsoft technologies.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 9,
@@ -87,7 +119,11 @@
       "price": "12000",
       "date": "12-01-23",
       "title": "Content Creation",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Learn to create engaging and effective content for social media, blogs, websites, and other digital platforms at our educational institute.",
+      "overview": "The Content Creation course is designed to teach students how to create compelling visual and multimedia content for various mediums such as social media, websites, blogs, and other digital platforms. Through a series of modules, students will learn to identify the target audience, develop a content strategy, and create high-quality visual content such as images, videos, and animations. The course covers advanced topics such as storytelling, branding, and design principles. By the end of the course, students will have gained a solid understanding of content creation techniques and be able to create their own multimedia content that drives engagement and conversions. This course is ideal for aspiring content creators, digital marketers, social media managers, and anyone interested in creating visual and multimedia content.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 10,
@@ -97,7 +133,11 @@
       "date": "12-01-23",
       "price": "12000",
       "title": "Rhyno (Architecture)",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Develop your skills in creating precise and complex shapes, curves, and surfaces with Rhino's powerful and versatile software at our educational institute.",
+      "overview": "The Rhino course is designed to teach students how to use the Rhino 3D modeling software for industrial design, architecture, and engineering applications. Through a series of modules, students will learn to create 3D models and digital prototypes, perform analysis and visualization, and prepare models for 3D printing. The course covers advanced topics such as surface modeling, mesh editing, and plugin development. By the end of the course, students will have gained a solid understanding of Rhino's capabilities and be able to create their own 3D models for a variety of applications. This course is ideal for product designers, architects, engineers, and anyone who wants to learn 3D modeling and visualization.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 11,
@@ -107,7 +147,11 @@
       "date": "12-01-23",
       "price": "17000",
       "title": "Writing (Adv)",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Unlock your writing potential with our comprehensive writing course that covers various genres, styles, and techniques.",
+      "overview": "The Writing course is designed to teach students the fundamentals of effective writing, including grammar, syntax, style, and structure. Through a series of modules, students will learn to develop clear and concise written communication for various purposes, such as business writing, academic writing, and creative writing. The course covers advanced topics such as research methods, editing and revision, and publishing. By the end of the course, students will have gained a solid understanding of the writing process and be able to produce high-quality written work. This course is ideal for writers of all levels, including professionals, students, and anyone who wants to improve their writing skills.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 12,
@@ -117,7 +161,11 @@
       "date": "12-01-23",
       "price": "14000",
       "title": "Writing (Online)",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Learn to write compelling stories, essays, articles, and more at our educational institute and take the first step towards becoming a successful writer.",
+      "overview": "The Writing course is designed to teach students the fundamentals of effective writing, including grammar, syntax, style, and structure. Through a series of modules, students will learn to develop clear and concise written communication for various purposes, such as business writing, academic writing, and creative writing. The course covers advanced topics such as research methods, editing and revision, and publishing. By the end of the course, students will have gained a solid understanding of the writing process and be able to produce high-quality written work. This course is ideal for writers of all levels, including professionals, students, and anyone who wants to improve their writing skills.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 13,
@@ -127,7 +175,11 @@
       "date": "12-01-23",
       "price": "11000",
       "title": "Writing Strategy",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Learn to write engaging and persuasive content for various genres, including fiction, non-fiction, academic writing, and business communication at our educational institute.",
+      "overview": "The Writing course is designed to teach students the fundamentals of effective writing, including grammar, syntax, style, and structure. Through a series of modules, students will learn to develop clear and concise written communication for various purposes, such as business writing, academic writing, and creative writing. The course covers advanced topics such as research methods, editing and revision, and publishing. By the end of the course, students will have gained a solid understanding of the writing process and be able to produce high-quality written work. This course is ideal for writers of all levels, including professionals, students, and anyone who wants to improve their writing skills.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 14,
@@ -137,7 +189,11 @@
       "date": "12-01-23",
       "price": "14000",
       "title": ".NET Development",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Learn to create robust and scalable software solutions using C#, ASP.NET, and Visual Studio at our educational institute.",
+      "overview": "The .NET course is designed to teach students the Microsoft .NET framework, including the C# programming language, ASP.NET web development, and desktop application development using Windows Forms. Through a series of modules, students will learn to develop software applications using the .NET platform, including data access, web services, and security. The course covers advanced topics such as debugging, deployment, and performance optimization. By the end of the course, students will have gained a solid understanding of the .NET framework and be able to develop their own .NET applications. This course is ideal for software developers, web developers, and anyone interested in building applications using Microsoft technologies.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 15,
@@ -147,7 +203,11 @@
       "date": "12-01-23",
       "price": "13000",
       "title": "Digital Marketing 101",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Learn to create effective marketing campaigns, analyze data, and develop strategies for various digital channels at our educational institute.",
+      "overview": "The Digital Marketing course is designed to teach students the principles and techniques of digital marketing, including search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, email marketing, and content marketing. Through a series of modules, students will learn to develop and execute effective digital marketing campaigns across various platforms. The course covers advanced topics such as analytics, conversion rate optimization, and marketing automation. By the end of the course, students will have gained a solid understanding of digital marketing strategies and be able to apply them to real-world marketing scenarios. This course is ideal for marketing professionals, business owners, and anyone interested in a career in digital marketing.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     },
     {
       "id": 16,
@@ -157,7 +217,11 @@
       "date": "12-01-23",
       "price": "12000",
       "title": "Adobe Animate",
-      "para": "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic."
+      "para": "Join our Adobe Animate course and learn to create stunning animations, interactive content, and games for various platforms.",
+      "overview": "The Content Creation course is designed to teach students how to create compelling visual and multimedia content for various mediums such as social media, websites, blogs, and other digital platforms. Through a series of modules, students will learn to identify the target audience, develop a content strategy, and create high-quality visual content such as images, videos, and animations. The course covers advanced topics such as storytelling, branding, and design principles. By the end of the course, students will have gained a solid understanding of content creation techniques and be able to create their own multimedia content that drives engagement and conversions. This course is ideal for aspiring content creators, digital marketers, social media managers, and anyone interested in creating visual and multimedia content.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10
     }
   ]
   

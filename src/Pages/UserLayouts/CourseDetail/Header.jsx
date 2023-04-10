@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom"
 //import Rectangle from "../../Asset/Image/rectangle.png";
 //import RectangleTwo from "../../Asset/Image/rectangle2.png";
 import Rectangle from "../../../Asset/Image/graphictools.png";
@@ -10,7 +11,24 @@ import Hiring from "../../../Asset/pdf/hiring.pdf"
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 
+import Courses from "../../../Components/Shared/JsonData/Course.json"
+
 const Header = () => {
+  const {id} = useParams();
+  const [course, setCourse] = useState()
+  // console.log("url parameter", id);
+
+  useEffect(() => {
+    let courseid = id;
+    const courseData = Courses?.find(wtf=> wtf.id == courseid);
+    setCourse(courseData);
+  }, [])
+  console.log("detailsss", course);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="w-full min-h-screen bg-home-color text-white lg:mt-10">
       <div className="">
@@ -21,11 +39,10 @@ const Header = () => {
         <div className="lg:mt-10">
           <div className="lg:w-3/4 flex-col justify-center m-auto pt-32">
             <div className="text-2xl lg:text-5xl font-bold text-center">
-              Motion Graphics
+              {course?.title}
             </div>
             <div className="lg:w-2/3 text-center lg:text-lg py-5 pb-7 m-auto px-5 lg:px-0">
-              Learn how to use Adobe After Effects, Illustrator and Photoshop
-              effectively to create visually stunning motion graphics.
+              {course?.para}
             </div>
             <div className="flex justify-center gap-6 pb-14">
               <div>
@@ -63,7 +80,7 @@ const Header = () => {
               <div className="flex-col flex-wrap text-center">
                 <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 flex justify-center items-center">
                   <span className="text-2xl lg:text-5xl font-bold">
-                    <CountUp duration={2.75} end={6} />
+                    <CountUp duration={2.75} end={course?.duration} />
                   </span>
                 </div>
                 <div className="pt-5">Duration (months)</div>
@@ -73,7 +90,7 @@ const Header = () => {
               <div className="flex-col flex-wrap text-center">
                 <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 flex justify-center items-center">
                   <span className="text-2xl lg:text-5xl font-bold">
-                    <CountUp duration={2.75} end={48} />
+                    <CountUp duration={2.75} end={course?.lecture} />
                   </span>
                 </div>
                 <div className="pt-5">Lectures</div>
@@ -83,7 +100,7 @@ const Header = () => {
               <div className="flex-col flex-wrap text-center">
                 <div className="w-22 lg:w-38 h-19 lg:h-29 border-2 rounded-lg p-4 flex justify-center items-center">
                   <span className="text-2xl lg:text-5xl font-bold">
-                    <CountUp duration={2.75} end={30} suffix="+" />
+                    <CountUp duration={2.75} end={course?.project} suffix="+" />
                   </span>
                 </div>
                 <div className="pt-5">Projects</div>
@@ -96,10 +113,7 @@ const Header = () => {
                 Course Overview
               </div>
               <div className="text-center pb-18">
-                Become a well-rounded graphic designer by learning about the
-                core concepts of motion graphic design. We will teach you how to
-                apply the most useful effects and presets using different tools
-                from the Adobe Creative Cloud.
+              {course?.overview}
               </div>
             </div>
             {/* tools and Career outcomes */}

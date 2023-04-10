@@ -71,8 +71,8 @@ const GraphicDesign = () => {
     setCourses(grapGcourse);
   }, [])
 
-  const navigateToCourseDetails = () => {
-    navigate("./course/course-detail");
+  const navigateToCourseDetails = (id) => {
+    navigate(`./course/course-detail/${id}`);
   };
   return (
     <div className="w-full pb-13 lg:pb-24">
@@ -86,7 +86,7 @@ const GraphicDesign = () => {
               {courses?.map((course, i) => (
                 <div key={i}>
                   <div
-                    onClick={navigateToCourseDetails}
+                    onClick={()=>{navigateToCourseDetails(course?.id)}}
                     className="bg-white flex-col group shadow-lg rounded-3xl text-black hover:border-2 hover:bg-black hover:text-white hover:border-[#23BDEE] hover:shadow-sky-200 transition-ease-out duration-300 cursor-pointer mx-3 my-4"
                   >
                     <div className="">
@@ -108,7 +108,7 @@ const GraphicDesign = () => {
                       <div className="flex-col">
                         <div className="flex justify-between">
                           <div className="bg-[#23BDEE] text-[#23BDEE] text-sm md:text-base bg-opacity-20 rounded-full py-2 px-4">
-                            {course?.date}
+                            starts:&nbsp;{course?.date}
                           </div>
                           <div className="text-sm md:text-xl py-2">
                             {course?.price} tk
@@ -118,7 +118,7 @@ const GraphicDesign = () => {
                       <div className="text-base md:text-2xl text-start font-semibold pt-2 left-0">
                         {course?.title}
                       </div>
-                      <div className="text-xs md:text-base text-start py-2">
+                      <div className="h-25 overflow-hidden text-xs md:text-base text-start py-2">
                         {course?.para}
                       </div>
                     </div>

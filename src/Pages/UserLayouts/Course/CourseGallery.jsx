@@ -46,8 +46,8 @@ const CourseGallery = () => {
     console.log("medium", toogleMediumTab);
   };
 
-  const navigateToCourseDetails = () => {
-    navigate("./course-detail");
+  const navigateToCourseDetails = (id) => {
+    navigate(`./course-detail/${id}`);
   };
 
   useEffect(() => {
@@ -218,7 +218,7 @@ const CourseGallery = () => {
                 {filteredData?.map((details) => (
                   <div
                     key={details?.id}
-                    onClick={navigateToCourseDetails}
+                    onClick={()=>{navigateToCourseDetails(details?.id)}}
                     className="flex-col group bg-home-color border border-white border-opacity-30 rounded-3xl hover:border-2 hover:bg-[#050042] hover:border-[#23BDEE] ease-in duration-300 cursor-pointer"
                   >
                     <div className="flex-wrap overflow-hidden rounded-3xl m-2">
@@ -240,7 +240,7 @@ const CourseGallery = () => {
                       <div className="flex-col">
                         <div className="flex justify-between">
                           <div className="bg-[#1483a4] text-[#23BDEE] bg-opacity-50 rounded-full text-sm py-2 px-4">
-                            {details?.date}
+                            starts:&nbsp;{details?.date}
                           </div>
                           <div className="py-2">{details?.price} tk</div>
                         </div>
@@ -248,7 +248,7 @@ const CourseGallery = () => {
                       <div className="text-xl pt-2 left-0">
                         {details?.title}
                       </div>
-                      <div className="py-2">{details?.para}</div>
+                      <div className="h-25 overflow-hidden py-2">{details?.para}</div>
                     </div>
                   </div>
                 ))}
