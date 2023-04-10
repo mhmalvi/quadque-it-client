@@ -117,7 +117,7 @@ const Header = () => {
               </div>
             </div>
             {/* tools and Career outcomes */}
-            <CourseMaterial />
+            <CourseMaterial course={course} />
             {/* Special Services */}
             <div className="">
               <div className="text-center text-2xl lg:text-4xl pb-13">

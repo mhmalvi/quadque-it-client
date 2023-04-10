@@ -65,6 +65,7 @@ const CourseGallery = () => {
       setCourseData(CourseDetail);
     } else {
       if (toogleMediumTab === "all") {
+        // CourseDetail = Course;
         CourseDetail = Course.filter((cor) => cor.category !== "Others");
       } else {
         CourseDetail = Course.filter((cor) => cor.platform === toogleMediumTab);

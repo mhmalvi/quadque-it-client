@@ -4,7 +4,7 @@ import Materials from "./materials.json";
 import Tools from "../../../Asset/Image/group555.png";
 import Fade from "react-reveal/Fade";
 
-const CourseMaterial = () => {
+const CourseMaterial = ({course}) => {
   const [toogleTab, setToogleTab] = useState(1);
   const [courseData, setCourseData] = useState();
 
@@ -126,9 +126,8 @@ const CourseMaterial = () => {
           </div>
           <div className="lg:w-1/3 text-center lg:text-start m-auto px-6 lg:px-0">
             <div className="text-2xl lg:text-4xl pb-9">Career Outcomes</div>
-            <div className="lg:text-xl">
-              With the right motion graphic design skills, you can build an
-              amazing career in various sectors.
+            <div className="text-sm lg:text-base text-justify">
+              {course?.outcome}
             </div>
           </div>
         </div>

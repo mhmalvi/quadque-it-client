@@ -1,21 +1,22 @@
 [
     {
       "id": 1,
-      "upcoming" : 1,
+      "upcoming" : 0,
       "category" : "Programming",
-      "platform" : "offline",
+      "platform" : "online",
       "date": "20-02-23",
       "price": "12000",
-      "title": "Jquery",
-      "para": "Take your web development skills to the next level with our comprehensive jQuery course.",
-      "overview": "The jQuery course is designed to teach students how to use the popular JavaScript library to create dynamic and interactive web pages. Through a series of modules, students will learn the basics of jQuery syntax, including selecting elements, manipulating HTML and CSS, and handling events. The course covers advanced topics such as AJAX, JSON, and plugin development. By the end of the course, students will have gained a thorough understanding of jQuery and be able to apply it to their own web development projects. This course is ideal for web developers who want to improve their front-end development skills and create more engaging and dynamic websites.",
+      "title": "HTML CSS",
+      "para": "Take your web development skills to the next level with our comprehensive HTML CSS course.",
+      "overview": "The HTML CSS course is designed to teach students the fundamentals of web development, specifically HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets). Through a series of modules, students will learn to create and style web pages, use HTML tags to structure content, and apply CSS rules to customize the design and layout of web pages. The course covers advanced topics such as responsive design, web accessibility, and cross-browser compatibility. By the end of the course, students will have gained a solid understanding of HTML and CSS and be able to create their own static web pages. This course is ideal for beginners who want to learn web development, including aspiring web developers, designers, and anyone interested in building their own website.",
       "duration": 3,
       "lecture": 25,
-      "project": 10
+      "project": 10,
+      "outcome": "Completing an HTML CSS course can lead to several career outcomes in the field of web development, such as becoming a front-end web developer, web designer, or user experience (UX) designer. Front-end web developers create the visual and interactive elements of websites using HTML, CSS, and JavaScript, while web designers use their knowledge of HTML and CSS to design visually appealing web pages. UX designers create user-centric designs that are easy to navigate and use. These careers offer opportunities for growth and advancement in the fast-paced world of web development, making an HTML CSS course a great starting point for anyone looking to break into this field."
     },
     {
       "id": 2,
-      "upcoming" : 1,
+      "upcoming" : 0,
       "category" : "Graphics & Design",
       "platform" : "offline",
       "date": "21-04-23",
@@ -25,11 +26,12 @@
       "overview": "The Adobe Illustrator course is designed to teach students how to use the industry-standard vector graphics software to create stunning graphics, logos, and illustrations. Through a series of modules, students will learn to use Illustrator's tools and techniques to create vector art, manipulate shapes and colors, and work with typography. The course covers advanced topics such as creating and editing complex paths, using brushes and patterns, and working with 3D objects. By the end of the course, students will have gained a solid understanding of Illustrator's capabilities and be able to create their own high-quality vector graphics. This course is ideal for graphic designers, artists, and anyone who wants to create professional-quality artwork.Learn to create stunning graphics, logos, and illustrations using the industry-standard vector graphics software at our educational institute.",
       "duration": 3,
       "lecture": 25,
-      "project": 10
+      "project": 10,
+      "outcome": "Completing an Adobe Illustrator course can lead to several career outcomes in the field of graphic design and illustration. Illustrator is a popular vector graphics software used to create logos, illustrations, icons, and other types of artwork. Career opportunities for those with Illustrator skills include graphic designer, illustrator, brand identity designer, and user experience (UX) designer. These careers offer opportunities for growth and advancement in the creative industry, making an Adobe Illustrator course a great starting point for anyone looking to break into this field or expand their existing design skills."
     },
     {
       "id": 3,
-      "upcoming" : 1,
+      "upcoming" : 0,
       "category" : "Graphics & Design",
       "platform" : "offline",
       "date": "22-05-23",
@@ -39,35 +41,38 @@
       "overview": "The Adobe Photoshop course is designed to teach students how to use the industry-standard image editing software to create and manipulate digital images. Through a series of modules, students will learn to use Photoshop's tools and techniques to retouch photos, enhance colors and contrast, create digital art, and design graphics for web and print. The course covers advanced topics such as layers, masks, and filters. By the end of the course, students will have gained a thorough understanding of Photoshop's capabilities and be able to create their own high-quality digital images. This course is ideal for photographers, graphic designers, artists, and anyone who wants to improve their digital imaging skills.",
       "duration": 3,
       "lecture": 25,
-      "project": 10
+      "project": 10,
+      "outcome": "Completing an Adobe Photoshop course can lead to several career outcomes in the field of graphic design and digital imaging. Photoshop is a popular image editing software used to create and edit graphics, photos, and other types of digital artwork. Career opportunities for those with Photoshop skills include graphic designer, photo editor, digital artist, web designer, and marketing specialist. These careers offer opportunities for growth and advancement in the creative industry, making an Adobe Photoshop course a great starting point for anyone looking to break into this field or expand their existing design skills."
     },
     {
       "id": 4,
       "upcoming" : 1,
       "category" : "Others",
-      "platform" : "online",
+      "platform" : "offline",
       "date": "23-03-23",
       "price": "12000",
-      "title": "Sculpting with Blender (Online)",
+      "title": "Blender",
       "para": "Learn to create stunning visual effects, games, and architectural designs using the powerful and versatile open-source software at our educational institute.",
       "overview": "The Blender course is designed to teach students how to use the open-source 3D graphics software to create and animate 3D models, scenes, and characters. Through a series of modules, students will learn to use Blender's tools and techniques to create models, textures, and animations. The course covers advanced topics such as rigging, particle systems, and physics simulations. By the end of the course, students will have gained a solid understanding of Blender's capabilities and be able to create their own 3D projects. This course is ideal for animators, game developers, architects, and anyone who wants to learn 3D graphics and animation.",
       "duration": 3,
       "lecture": 25,
-      "project": 10
+      "project": 10,
+      "outcome": "Completing a Blender course can lead to several career outcomes in the field of 3D modeling and animation. Blender is a popular open-source 3D software used to create 3D models, animations, visual effects, and more. Career opportunities for those with Blender skills include 3D artist, animator, visual effects (VFX) artist, game designer, and architectural visualization artist. These careers offer opportunities for growth and advancement in the creative industry, making a Blender course a great starting point for anyone looking to break into this field or expand their existing design skills."
     },
     {
       "id": 5,
       "upcoming" : 0,
       "category" : "Programming",
-      "platform" : "online",
+      "platform" : "offline",
       "price": "12000",
       "date": "12-01-23",
-      "title": "Android Development (Online)",
+      "title": "Android Development",
       "para": "Develop your skills in Java, XML, and Android Studio and become a proficient app developer at our educational institute.",
       "overview": "The Android development course is designed to teach students how to develop mobile applications for Android devices using Java and XML programming languages. Through a series of modules, students will learn to use Android Studio, the integrated development environment for Android, to create, test, and deploy their applications. The course covers the fundamentals of Android application development, including user interfaces, data storage, network connectivity, and multimedia features. By the end of the course, students will have gained the skills necessary to create their own functional Android applications, and be prepared for a career in mobile app development.",
-      "duration": 3,
-      "lecture": 25,
-      "project": 10
+      "duration": 4,
+      "lecture": 35,
+      "project": 15,
+      "outcome": "Completing an Android Development course can lead to a variety of career outcomes, including becoming an Android Developer, Mobile App Developer, Software Developer, or even a Technology Entrepreneur. As an Android Developer, you would be responsible for creating and maintaining Android applications for smartphones and tablets, using programming languages such as Java and Kotlin. This role typically involves collaborating with other developers, designers, and product managers to ensure the app meets user needs and is functional and visually appealing. Mobile App Developers create apps for a variety of platforms, including Android, iOS, and web, while Software Developers design and build software applications for a range of industries."
     },
     {
       "id": 6,
@@ -76,12 +81,13 @@
       "platform" : "online",
       "date": "12-01-23",
       "price": "10000",
-      "title": "Python Programming (Online)",
+      "title": "Python Programming",
       "para": "Master Python's powerful libraries and frameworks, and develop your skills in data analysis, machine learning, and web development at our educational institute.",
       "overview": "The Python course is designed to teach students how to use the popular programming language for various applications, including data analysis, web development, and machine learning. Through a series of modules, students will learn Python syntax, control flow, functions, and data structures. The course covers advanced topics such as object-oriented programming, modules, and libraries. By the end of the course, students will have gained a solid understanding of Python's capabilities and be able to create their own Python applications. This course is ideal for programmers, data analysts, web developers, and anyone who wants to learn a versatile and in-demand programming language.",
-      "duration": 3,
-      "lecture": 25,
-      "project": 10
+      "duration": 4,
+      "lecture": 35,
+      "project": 15,
+      "outcome": "Completing a Python course can lead to a variety of career outcomes, including becoming a Data Analyst, Data Scientist, Software Developer, or even a Machine Learning Engineer. As a Data Analyst, you would use Python to clean, process, and analyze data, providing insights and recommendations to businesses and organizations. Data Scientists use Python to build machine learning models that can make predictions and automate decision-making processes. As a Software Developer, you would use Python to build and maintain software applications, while Machine Learning Engineers develop and deploy complex machine learning systems using Python."
     },
     {
       "id": 7,
@@ -93,13 +99,14 @@
       "title": "Digital Marketing Research Strategy",
       "para": "Learn to conduct market research, analyze consumer behavior, and develop effective digital marketing strategies at our educational institute.",
       "overview": "The Digital Marketing Research Strategy course is designed to teach students how to conduct research to inform digital marketing strategies. Through a series of modules, students will learn how to gather data from a variety of sources, including social media, online surveys, and web analytics tools. The course covers topics such as market segmentation, targeting, and positioning, as well as analyzing and interpreting data to inform marketing decisions. By the end of the course, students will have gained the skills necessary to develop effective digital marketing strategies that are grounded in research and data. This course is ideal for marketing professionals, business owners, and anyone who wants to learn how to use data to inform marketing decisions in a digital age.",
-      "duration": 3,
-      "lecture": 25,
-      "project": 10
+      "duration": 2,
+      "lecture": 20,
+      "project": 40,
+      "outcome": "Completing a Digital Marketing course can lead to a variety of career outcomes, including becoming a Digital Marketer, Social Media Manager, Search Engine Optimization (SEO) Specialist, or even a Content Marketing Manager. As a Digital Marketer, you would be responsible for developing and implementing digital marketing strategies, such as email marketing, social media advertising, and pay-per-click advertising. Social Media Managers create and manage social media content for businesses and organizations, while SEO Specialists optimize websites to improve search engine rankings. Content Marketing Managers develop and implement content marketing strategies, including creating and publishing blog posts, videos, and other content."
     },
     {
       "id": 8,
-      "upcoming" : 0,
+      "upcoming" : 1,
       "category" : "Others",
       "platform" : "online",
       "date": "12-01-23",
@@ -109,7 +116,8 @@
       "overview": "The .NET course is designed to teach students the Microsoft .NET framework, including the C# programming language, ASP.NET web development, and desktop application development using Windows Forms. Through a series of modules, students will learn to develop software applications using the .NET platform, including data access, web services, and security. The course covers advanced topics such as debugging, deployment, and performance optimization. By the end of the course, students will have gained a solid understanding of the .NET framework and be able to develop their own .NET applications. This course is ideal for software developers, web developers, and anyone interested in building applications using Microsoft technologies.",
       "duration": 3,
       "lecture": 25,
-      "project": 10
+      "project": 20,
+      "outcome": "Completing a .NET course can lead to a variety of career outcomes, including becoming a .NET Developer, Software Engineer, Web Developer, or even an Application Developer. As a .NET Developer, you would use the .NET framework to build and maintain software applications for desktop, web, and mobile devices. Software Engineers design and develop software applications using various programming languages and frameworks, including .NET. Web Developers create and maintain websites using .NET, while Application Developers design and develop custom software applications for businesses and organizations."
     },
     {
       "id": 9,
@@ -121,13 +129,14 @@
       "title": "Content Creation",
       "para": "Learn to create engaging and effective content for social media, blogs, websites, and other digital platforms at our educational institute.",
       "overview": "The Content Creation course is designed to teach students how to create compelling visual and multimedia content for various mediums such as social media, websites, blogs, and other digital platforms. Through a series of modules, students will learn to identify the target audience, develop a content strategy, and create high-quality visual content such as images, videos, and animations. The course covers advanced topics such as storytelling, branding, and design principles. By the end of the course, students will have gained a solid understanding of content creation techniques and be able to create their own multimedia content that drives engagement and conversions. This course is ideal for aspiring content creators, digital marketers, social media managers, and anyone interested in creating visual and multimedia content.",
-      "duration": 3,
-      "lecture": 25,
-      "project": 10
+      "duration": 4,
+      "lecture": 30,
+      "project": 20,
+      "outcome": "Completing a Content Creation course can lead to a variety of career outcomes, including becoming a Content Creator, Copywriter, Content Strategist, or even a Social Media Manager. As a Content Creator, you would be responsible for developing and producing engaging and informative content, such as blog posts, videos, podcasts, and social media content. Copywriters create compelling copy for advertising campaigns, websites, and other marketing materials. Content Strategists develop and implement content marketing strategies, including defining target audiences, creating content calendars, and measuring performance. Social Media Managers create and manage social media content for businesses and organizations, including developing content calendars and analyzing performance metrics."
     },
     {
       "id": 10,
-      "upcoming" : 0,
+      "upcoming" : 1,
       "category" : "Others",
       "platform" : "offline",
       "date": "12-01-23",
@@ -135,9 +144,10 @@
       "title": "Rhyno (Architecture)",
       "para": "Develop your skills in creating precise and complex shapes, curves, and surfaces with Rhino's powerful and versatile software at our educational institute.",
       "overview": "The Rhino course is designed to teach students how to use the Rhino 3D modeling software for industrial design, architecture, and engineering applications. Through a series of modules, students will learn to create 3D models and digital prototypes, perform analysis and visualization, and prepare models for 3D printing. The course covers advanced topics such as surface modeling, mesh editing, and plugin development. By the end of the course, students will have gained a solid understanding of Rhino's capabilities and be able to create their own 3D models for a variety of applications. This course is ideal for product designers, architects, engineers, and anyone who wants to learn 3D modeling and visualization.",
-      "duration": 3,
-      "lecture": 25,
-      "project": 10
+      "duration": 6,
+      "lecture": 45,
+      "project": 10,
+      "outcome": "Taking a Rhyno course can lead to career outcomes such as becoming a 3D modeler, industrial designer, product designer, architect, or engineer. These professions involve using Rhyno to create 3D models and designs, which are then used for visualization, prototyping, or manufacturing. Additionally, Rhyno skills are valuable for careers in gaming, animation, film, and special effects, where 3D modeling is often used to create visual effects and virtual environments. Overall, a Rhyno course can provide valuable skills and experiences that can open up many career opportunities in the creative industries."
     },
     {
       "id": 11,
@@ -149,9 +159,10 @@
       "title": "Writing (Adv)",
       "para": "Unlock your writing potential with our comprehensive writing course that covers various genres, styles, and techniques.",
       "overview": "The Writing course is designed to teach students the fundamentals of effective writing, including grammar, syntax, style, and structure. Through a series of modules, students will learn to develop clear and concise written communication for various purposes, such as business writing, academic writing, and creative writing. The course covers advanced topics such as research methods, editing and revision, and publishing. By the end of the course, students will have gained a solid understanding of the writing process and be able to produce high-quality written work. This course is ideal for writers of all levels, including professionals, students, and anyone who wants to improve their writing skills.",
-      "duration": 3,
-      "lecture": 25,
-      "project": 10
+      "duration": 6,
+      "lecture": 45,
+      "project": 10,
+      "outcome": "Taking a writing course can lead to a wide range of career outcomes, depending on the type of course and the individual's interests and goals. A writing course can improve one's writing skills, including grammar, structure, and style, which can be applied to a variety of professions, such as journalism, marketing, public relations, and advertising. Writing skills can also be useful for careers in law, education, and business, where clear and effective communication is essential."
     },
     {
       "id": 12,
@@ -165,7 +176,8 @@
       "overview": "The Writing course is designed to teach students the fundamentals of effective writing, including grammar, syntax, style, and structure. Through a series of modules, students will learn to develop clear and concise written communication for various purposes, such as business writing, academic writing, and creative writing. The course covers advanced topics such as research methods, editing and revision, and publishing. By the end of the course, students will have gained a solid understanding of the writing process and be able to produce high-quality written work. This course is ideal for writers of all levels, including professionals, students, and anyone who wants to improve their writing skills.",
       "duration": 3,
       "lecture": 25,
-      "project": 10
+      "project": 10,
+      "outcome": "Taking a writing course can lead to a wide range of career outcomes, depending on the type of course and the individual's interests and goals. A writing course can improve one's writing skills, including grammar, structure, and style, which can be applied to a variety of professions, such as journalism, marketing, public relations, and advertising. Writing skills can also be useful for careers in law, education, and business, where clear and effective communication is essential."
     },
     {
       "id": 13,
@@ -177,9 +189,10 @@
       "title": "Writing Strategy",
       "para": "Learn to write engaging and persuasive content for various genres, including fiction, non-fiction, academic writing, and business communication at our educational institute.",
       "overview": "The Writing course is designed to teach students the fundamentals of effective writing, including grammar, syntax, style, and structure. Through a series of modules, students will learn to develop clear and concise written communication for various purposes, such as business writing, academic writing, and creative writing. The course covers advanced topics such as research methods, editing and revision, and publishing. By the end of the course, students will have gained a solid understanding of the writing process and be able to produce high-quality written work. This course is ideal for writers of all levels, including professionals, students, and anyone who wants to improve their writing skills.",
-      "duration": 3,
-      "lecture": 25,
-      "project": 10
+      "duration": 4,
+      "lecture": 30,
+      "project": 10,
+      "outcome": "Taking a writing course can lead to a wide range of career outcomes, depending on the type of course and the individual's interests and goals. A writing course can improve one's writing skills, including grammar, structure, and style, which can be applied to a variety of professions, such as journalism, marketing, public relations, and advertising. Writing skills can also be useful for careers in law, education, and business, where clear and effective communication is essential."
     },
     {
       "id": 14,
@@ -193,7 +206,8 @@
       "overview": "The .NET course is designed to teach students the Microsoft .NET framework, including the C# programming language, ASP.NET web development, and desktop application development using Windows Forms. Through a series of modules, students will learn to develop software applications using the .NET platform, including data access, web services, and security. The course covers advanced topics such as debugging, deployment, and performance optimization. By the end of the course, students will have gained a solid understanding of the .NET framework and be able to develop their own .NET applications. This course is ideal for software developers, web developers, and anyone interested in building applications using Microsoft technologies.",
       "duration": 3,
       "lecture": 25,
-      "project": 10
+      "project": 8,
+      "outcome": "Completing a .NET course can lead to a variety of career outcomes, including becoming a .NET Developer, Software Engineer, Web Developer, or even an Application Developer. As a .NET Developer, you would use the .NET framework to build and maintain software applications for desktop, web, and mobile devices. Software Engineers design and develop software applications using various programming languages and frameworks, including .NET. Web Developers create and maintain websites using .NET, while Application Developers design and develop custom software applications for businesses and organizations."
     },
     {
       "id": 15,
@@ -207,7 +221,8 @@
       "overview": "The Digital Marketing course is designed to teach students the principles and techniques of digital marketing, including search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, email marketing, and content marketing. Through a series of modules, students will learn to develop and execute effective digital marketing campaigns across various platforms. The course covers advanced topics such as analytics, conversion rate optimization, and marketing automation. By the end of the course, students will have gained a solid understanding of digital marketing strategies and be able to apply them to real-world marketing scenarios. This course is ideal for marketing professionals, business owners, and anyone interested in a career in digital marketing.",
       "duration": 3,
       "lecture": 25,
-      "project": 10
+      "project": 7,
+      "outcome": "Completing a Digital Marketing course can lead to a variety of career outcomes, including becoming a Digital Marketer, Social Media Manager, Search Engine Optimization (SEO) Specialist, or even a Content Marketing Manager. As a Digital Marketer, you would be responsible for developing and implementing digital marketing strategies, such as email marketing, social media advertising, and pay-per-click advertising. Social Media Managers create and manage social media content for businesses and organizations, while SEO Specialists optimize websites to improve search engine rankings. Content Marketing Managers develop and implement content marketing strategies, including creating and publishing blog posts, videos, and other content."
     },
     {
       "id": 16,
@@ -219,9 +234,10 @@
       "title": "Adobe Animate",
       "para": "Join our Adobe Animate course and learn to create stunning animations, interactive content, and games for various platforms.",
       "overview": "The Content Creation course is designed to teach students how to create compelling visual and multimedia content for various mediums such as social media, websites, blogs, and other digital platforms. Through a series of modules, students will learn to identify the target audience, develop a content strategy, and create high-quality visual content such as images, videos, and animations. The course covers advanced topics such as storytelling, branding, and design principles. By the end of the course, students will have gained a solid understanding of content creation techniques and be able to create their own multimedia content that drives engagement and conversions. This course is ideal for aspiring content creators, digital marketers, social media managers, and anyone interested in creating visual and multimedia content.",
-      "duration": 3,
-      "lecture": 25,
-      "project": 10
+      "duration": 4,
+      "lecture": 30,
+      "project": 6,
+      "outcome": "After completing an Adobe Animate course, individuals can pursue careers as animators, multimedia artists, graphic designers, or web developers. They may also find work in the gaming industry, where Adobe Animate is used for designing and animating game characters, environments, and user interfaces. Additionally, skills learned in an Adobe Animate course can be applied to other Adobe Creative Cloud applications, such as Photoshop and Illustrator, further expanding career opportunities in the digital arts."
     }
   ]
   
