@@ -83,7 +83,7 @@ const Header = () => {
                     <CountUp duration={2.75} end={course?.duration} />
                   </span>
                 </div>
-                <div className="pt-5">Duration (months)</div>
+                <div className="pt-5">Duration <br /><span className="text-xs">(months)</span></div>
               </div>
               </Zoom>
               <Zoom>

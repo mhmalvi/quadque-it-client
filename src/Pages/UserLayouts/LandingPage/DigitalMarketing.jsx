@@ -35,12 +35,14 @@ const DigitalMarketing = () => {
   }, []);
 
   const settings = {
-    infinite: false,
+    infinite: true,
     speed: 600,
     arrows: false,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 1024,
@@ -69,13 +71,15 @@ const DigitalMarketing = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
 
   const navigateToCourseDetails = (id) => {
     navigate(`./course/course-detail/${id}`);
   };
   return (
-    <div className="w-full pb-18 lg:pb-36">
+    <div className="w-full pb-18 lg:pb-36 overflow-x-hidden">
       <div className="text-center rounded-3xl lg:px-20">
         <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
           Digital Marketing course
@@ -86,7 +90,9 @@ const DigitalMarketing = () => {
               {courses?.map((course, i) => (
                 <div key={i}>
                   <div
-                    onClick={()=>{navigateToCourseDetails(course?.id)}}
+                    onClick={() => {
+                      navigateToCourseDetails(course?.id);
+                    }}
                     className="bg-white flex-col group shadow-lg rounded-3xl text-black hover:border-2 hover:bg-black hover:text-white hover:border-[#23BDEE] hover:shadow-sky-200 transition-ease-out duration-300 cursor-pointer mx-3 my-4"
                   >
                     <div className="">

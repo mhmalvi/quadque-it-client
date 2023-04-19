@@ -53,7 +53,7 @@ const OurStudents = ()=> {
     ],
   };
   return (
-    <div className="w-full pb-13 lg:pb-36 lg:visible">
+    <div className="w-full pb-13 lg:pb-36 lg:hidden overflow-x-hidden">
       <div className="lg:flex">
         <Fade left>
           <div className="text-center lg:text-start rounded-3xl mx-9">

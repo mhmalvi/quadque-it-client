@@ -44,7 +44,7 @@ const Partners = () => {
     ],
   };
   return (
-    <div className="w-full pb-18 lg:pb-56">
+    <div className="w-full pb-18 lg:pb-28">
       <div className="text-center rounded-3xl">
         <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
           Our Partners
@@ -56,7 +56,7 @@ const Partners = () => {
           <div className="w-full text-white">
             <Slider ref={sliderRef} {...settings}>
               {Partnerslogo?.map((partner, i) => (
-                <div key={i}>
+                <div key={i} className="outline-none">
                   <img src={partner?.logo} alt="" className="w-[8rem] m-auto" />
                 </div>
               ))}

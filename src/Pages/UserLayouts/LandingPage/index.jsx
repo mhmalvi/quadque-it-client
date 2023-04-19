@@ -8,6 +8,7 @@ import GraphicDesign from './GraphicDesign'
 import ProgrammingCourses from './ProgrammingCourses'
 import DigitalMarketing from './DigitalMarketing'
 import OurStudents from './OurStudents'
+import OurStudentsDragable from './OurStudentsDragable'
 import OurInstructors from './OurInstructors'
 import Partners from './Partners'
 import BrowseCourse from './BrowseCourse'
@@ -18,21 +19,22 @@ function LandingPageSections() {
   return (
     <div>
       {/* <Navbar/> */}
-      <Header/>
-      <Courses/>
-      <UpcomingCourses/>
-      <TwoWayCourse/>
-      <GraphicDesign/>
-      <ProgrammingCourses/>
-      <DigitalMarketing/>
-      <JobOpportunities/>
-      <OurStudents/>
-      <OurInstructors/>
-      <Partners/>
-      <BrowseCourse/>
-      <Footer/>
+      <Header />
+      <Courses />
+      <UpcomingCourses />
+      <TwoWayCourse />
+      <GraphicDesign />
+      <ProgrammingCourses />
+      <DigitalMarketing />
+      <JobOpportunities />
+      <OurStudents />
+      <OurStudentsDragable />
+      <OurInstructors />
+      <Partners />
+      <BrowseCourse />
+      <Footer />
     </div>
-  )
+  );
 
   
 }

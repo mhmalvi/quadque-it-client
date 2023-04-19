@@ -21,4 +21,125 @@
     background-position: center;
     background-size: cover;
 }
+.hero-banner2 {
+    background-image: url("../../../Asset/Image/hero-banner2.png");
+    background-repeat: no-repeat ;
+    background-position: center;
+    background-size: cover;
+}
+.hero-banner3 {
+    background-image: url("../../../Asset/Image/hero-banner3.png");
+    background-repeat: no-repeat ;
+    background-position: center;
+    background-size: cover;
+}
+.twoway-banner {
+    background-image: url("../../../Asset/Image/twoway-banner3.png");
+    background-repeat: no-repeat ;
+    background-position: center;
+    background-size: cover;
+}
 
+.spirit-bomb:hover {
+    box-shadow: 0 0 30px #fff, -5px 0 30px rgb(87, 80, 184), 5px 0 30px rgb(112, 106, 204);
+    animation: spirit 4s ease-in-out infinite;
+}
+
+@keyframes spirit {
+    0% {
+        box-shadow: 0 0 5px #fff, -5px 0 30px rgb(87, 80, 184), 5px 0 30px rgb(112, 106, 204);
+        transition: all;
+    }
+
+    25% {
+        box-shadow: 0 0 5px #fff, 5px 0 30px rgb(87, 80, 184), -5px 0 30px rgb(112, 106, 204);
+        transition: all;
+    }
+
+    50% {
+        box-shadow: 0 0 5px #fff, -5px 0 30px rgb(87, 80, 184), 5px 0 30px rgb(112, 106, 204);
+        transition: all;
+    }
+
+    75% {
+        box-shadow: 0 0 5px #fff, 5px 0 30px rgb(87, 80, 184), -5px 0 30px rgb(112, 106, 204);
+        transition: all;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #fff, -5px 0 30px rgb(87, 80, 184), 5px 0 30px rgb(112, 106, 204);
+        transition: all;
+    }
+}
+
+/*--------------------------------
+				ICON SHINE
+---------------------------------*/
+/*---
+  icon
+---*/
+
+.iconShine {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* .iconShine:nth-child(1) {
+    background: cornflowerblue;
+}
+
+.iconShine:nth-child(2) {
+    background: salmon;
+}
+
+.iconShine:nth-child(3) {
+    background: gray;
+} */
+
+/*---
+  shine animation
+---*/
+
+.iconShine:after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 92%,
+            rgba(255, 255, 255, 0.0) 100%);
+}
+
+/*---
+  hover trigger
+---*/
+
+.iconShine:hover:after {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+}
+
+/*---
+  active state
+---*/
+
+.iconShine:active:after {
+    opacity: 0;
+}
+
+/*--------------------------------
+				END ICON SHINE
+---------------------------------*/

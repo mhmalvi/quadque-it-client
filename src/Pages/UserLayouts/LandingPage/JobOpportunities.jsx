@@ -3,18 +3,19 @@ import shourav from "../../../Asset/Image/job-op2.png";
 // import JobIcon from "../../../Asset/Icon/jobopp.svg";
 import Icons from "../../../Components/Shared/Icons";
 import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
 
 
 const JobOpportunities = () => {
   return (
-    <div className="w-full pb-18 lg:pb-44">
+    <div className="w-full pb-18 lg:pb-44 overflow-x-hidden">
       <div className="">
         <div className="w-4/5 font-bold text-2xl lg:text-4xl text-center lg:text-start m-auto pb-8 lg:pb-16 text-shadow">
           {" "}
           Quality Training to Improve Your Career{" "}
         </div>
       </div>
-      <div className="relative mx-auto flex flex-col lg:flex-row gap-6 lg:gap-16">
+      <div className="mx-auto flex flex-col lg:flex-row gap-6 lg:gap-16">
         <Fade left big>
           <div className="m-auto pb-5 lg:pb-0 px-4 lg:px-0 lg:rounded-t-3xl lg:rounded-bt-3xl lg:rounded-br-[5rem] overflow-visible">
             <img

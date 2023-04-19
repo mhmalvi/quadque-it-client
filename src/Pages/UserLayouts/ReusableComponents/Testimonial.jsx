@@ -88,7 +88,7 @@ const Testimonial = () => {
                           StudentImg?.find((wtf) => wtf.id === person?.id)
                             ?.stuimage
                         }
-                        className="lg:w-[300px] group-hover:opacity-0 group-hover:scale-80 duration-700 m-auto"
+                        className="lg:w-[300px] group-hover:opacity-0 group-hover:scale-0 group-hover:-translate-y-32 duration-700 m-auto"
                         alt=""
                       />
                       <div className="w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto">

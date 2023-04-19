@@ -168,7 +168,7 @@ const CourseGallery = () => {
         </div>
       </div>
 
-      <div className="bg-home-color lg:py-13 px-5 py-10 lg:px-30 lg:relative">
+      <div className="bg-home-color lg:py-13 px-5 py-10 lg:px-30 lg:relative overflow-x-hidden">
         <div className="lg:flex">
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
@@ -213,7 +213,7 @@ const CourseGallery = () => {
 
           <div className="w-full bg-[#040422]">
             {/* COURSE Gallery */}
-            <Zoom cascade>
+            <Fade right cascade>
               <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 text-white gap-6 sm:px-5 lg:px-0 my-6">
                 {/* cards */}
                 {filteredData?.map((details) => (
@@ -254,7 +254,7 @@ const CourseGallery = () => {
                   </div>
                 ))}
               </div>
-            </Zoom>
+            </Fade>
           </div>
         </div>
         <Instructors />

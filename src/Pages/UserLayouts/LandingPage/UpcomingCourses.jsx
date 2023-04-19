@@ -37,12 +37,14 @@ const UpcomingCourses = () => {
   }, [])
   
   const settings = {
-    infinite: false,
+    infinite: true,
     speed: 600,
     arrows: false,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 1024,
@@ -71,6 +73,8 @@ const UpcomingCourses = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
 
   useEffect(() => {
@@ -87,7 +91,7 @@ const UpcomingCourses = () => {
     navigate(`./course/course-detail/${id}`);
   };
   return (
-    <div className="pb-18 lg:pb-24">
+    <div className="pb-18 lg:pb-24 overflow-x-hidden">
       <div className="text-center rounded-3xl lg:px-20">
         <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
           Our Upcoming Courses
@@ -102,7 +106,9 @@ const UpcomingCourses = () => {
               {courses?.map((course, i) => (
                 <div key={i}>
                   <div
-                    onClick={()=>{navigateToCourseDetails(course?.id)}}
+                    onClick={() => {
+                      navigateToCourseDetails(course?.id);
+                    }}
                     className="bg-white flex-col group shadow-lg rounded-3xl text-black hover:border-2 hover:bg-black hover:text-white hover:border-[#23BDEE] hover:shadow-sky-200 ease-in duration-300 cursor-pointer mx-3 my-4"
                   >
                     <div className="">

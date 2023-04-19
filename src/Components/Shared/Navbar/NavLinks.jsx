@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { links } from "./MyLinks";
 
 const NavLinks = () => {
+  const pathname = window.location.pathname;
   const [toogleSubmenu, setToogleSubmenu] = useState("");
+  console.log("pathname", pathname);
   return (
     <>
       <div className="lg:flex z-[999] bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg lg:backdrop-filter-none lg:bg-transparent border border-white border-opacity-30 lg:border-none shadow-2xl shadow-[#ffffff20] lg:shadow-none lg:text-white text-center text-xl lg:text-base rounded-md cursor-pointer mx-2">
@@ -20,6 +22,7 @@ const NavLinks = () => {
                   className="hover:-translate-y-2 duration-300 px-7 py-10"
                 >
                   {link.name}
+                  <div className={`${link?.link===pathname? "w-full":"w-0"} duration-500 h-1 bg-white rounded-full`}></div>
                 </div>
               </Link>
               {link?.submenu !== "" && (

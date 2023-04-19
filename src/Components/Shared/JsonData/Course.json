@@ -238,6 +238,36 @@
       "lecture": 30,
       "project": 6,
       "outcome": "After completing an Adobe Animate course, individuals can pursue careers as animators, multimedia artists, graphic designers, or web developers. They may also find work in the gaming industry, where Adobe Animate is used for designing and animating game characters, environments, and user interfaces. Additionally, skills learned in an Adobe Animate course can be applied to other Adobe Creative Cloud applications, such as Photoshop and Illustrator, further expanding career opportunities in the digital arts."
+    },
+    {
+      "id": 17,
+      "upcoming" : 0,
+      "category" : "Digital Marketing",
+      "platform" : "offline",
+      "date": "12-01-23",
+      "price": "13000",
+      "title": "Digital Marketing 201",
+      "para": "Learn to create effective marketing campaigns, analyze data, and develop strategies for various digital channels at our educational institute.",
+      "overview": "The Digital Marketing course is designed to teach students the principles and techniques of digital marketing, including search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, email marketing, and content marketing. Through a series of modules, students will learn to develop and execute effective digital marketing campaigns across various platforms. The course covers advanced topics such as analytics, conversion rate optimization, and marketing automation. By the end of the course, students will have gained a solid understanding of digital marketing strategies and be able to apply them to real-world marketing scenarios. This course is ideal for marketing professionals, business owners, and anyone interested in a career in digital marketing.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 7,
+      "outcome": "Completing a Digital Marketing course can lead to a variety of career outcomes, including becoming a Digital Marketer, Social Media Manager, Search Engine Optimization (SEO) Specialist, or even a Content Marketing Manager. As a Digital Marketer, you would be responsible for developing and implementing digital marketing strategies, such as email marketing, social media advertising, and pay-per-click advertising. Social Media Managers create and manage social media content for businesses and organizations, while SEO Specialists optimize websites to improve search engine rankings. Content Marketing Managers develop and implement content marketing strategies, including creating and publishing blog posts, videos, and other content."
+    },
+    {
+      "id": 18,
+      "upcoming" : 1,
+      "category" : "Graphics & Design",
+      "platform" : "online",
+      "date": "21-04-23",
+      "price": "12000",
+      "title": "Adobe Illustrator (Online)",
+      "para": "Learn to create stunning graphics, logos, and illustrations using the industry-standard vector graphics software at our educational institute.",
+      "overview": "The Adobe Illustrator course is designed to teach students how to use the industry-standard vector graphics software to create stunning graphics, logos, and illustrations. Through a series of modules, students will learn to use Illustrator's tools and techniques to create vector art, manipulate shapes and colors, and work with typography. The course covers advanced topics such as creating and editing complex paths, using brushes and patterns, and working with 3D objects. By the end of the course, students will have gained a solid understanding of Illustrator's capabilities and be able to create their own high-quality vector graphics. This course is ideal for graphic designers, artists, and anyone who wants to create professional-quality artwork.Learn to create stunning graphics, logos, and illustrations using the industry-standard vector graphics software at our educational institute.",
+      "duration": 3,
+      "lecture": 25,
+      "project": 10,
+      "outcome": "Completing an Adobe Illustrator course can lead to several career outcomes in the field of graphic design and illustration. Illustrator is a popular vector graphics software used to create logos, illustrations, icons, and other types of artwork. Career opportunities for those with Illustrator skills include graphic designer, illustrator, brand identity designer, and user experience (UX) designer. These careers offer opportunities for growth and advancement in the creative industry, making an Adobe Illustrator course a great starting point for anyone looking to break into this field or expand their existing design skills."
     }
   ]
   

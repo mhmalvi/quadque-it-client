@@ -8,7 +8,7 @@ import "../../../App.css";
 import "./Navbar.css";
 import { links } from "./MyLinks";
 import Fade from "react-reveal/Fade";
-
+import "../../../Pages/UserLayouts/LandingPage/style.css"
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [toogleSubmenu, setToogleSubmenu] = useState("");

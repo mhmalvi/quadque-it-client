@@ -29,32 +29,36 @@ const GraphicDesign = () => {
   }, []);
 
     const settings = {
-    infinite: false,
-    speed: 600,
-    arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 1,
-          infinite: true,
+      infinite: true,
+      speed: 600,
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 1,
+            infinite: true,
+          },
         },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 1,
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+          },
         },
-      }
-    ],
-  };
+      ],
+    };
 
     const mobSettings = {
       infinite: true,
@@ -75,7 +79,7 @@ const GraphicDesign = () => {
     navigate(`./course/course-detail/${id}`);
   };
   return (
-    <div className="w-full pb-13 lg:pb-24">
+    <div className="w-full pb-13 lg:pb-24 overflow-x-hidden">
       <div className="text-center rounded-3xl lg:px-20">
         <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
           Graphic & Design course
@@ -86,7 +90,9 @@ const GraphicDesign = () => {
               {courses?.map((course, i) => (
                 <div key={i}>
                   <div
-                    onClick={()=>{navigateToCourseDetails(course?.id)}}
+                    onClick={() => {
+                      navigateToCourseDetails(course?.id);
+                    }}
                     className="bg-white flex-col group shadow-lg rounded-3xl text-black hover:border-2 hover:bg-black hover:text-white hover:border-[#23BDEE] hover:shadow-sky-200 transition-ease-out duration-300 cursor-pointer mx-3 my-4"
                   >
                     <div className="">
