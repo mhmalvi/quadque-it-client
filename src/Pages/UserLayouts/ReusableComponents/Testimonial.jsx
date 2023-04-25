@@ -53,7 +53,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    <div className="w-full bg-[#040422] py-13 lg:py-24">
+    <div className="w-full bg-[#040422] py-13 lg:py-24 overflow-x-hidden">
       <div className="lg:flex lg:justify-between lg:px-10">
         <div className="text-white text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-16 px-4 lg:px-0 text-shadow">
           What our students have to say

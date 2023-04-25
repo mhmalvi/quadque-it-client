@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-const Contact = () => {
+const Contact = ({theme}) => {
   const defaultProps = {
     center: {
       lat: 10.99835602,
@@ -16,9 +16,9 @@ const Contact = () => {
     zoom: 11,
   };
   return (
-    <div className="w-full bg-home-color pt-24 lg:pt-40 pb-20 lg:mt-10">
+    <div className={`w-full ${theme==="dark"? "bg-home-color text-white":"bg-[#F3F3F3] text-black"} duration-700 pt-24 lg:pt-40 pb-20 lg:mt-10`}>
       <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl">
-        <div className="lg:w-1/2 text-white m-auto lg:pl-10">
+        <div className="lg:w-1/2 m-auto lg:pl-10">
           <Fade left>
           <div className="text-xl lg:text-4xl font-bold pb-5 px-6 lg:px-0">
             Level -7, 8/C, F.R Tower, Sukrabad, Panthapath, Dhaka 1207,
@@ -36,7 +36,7 @@ const Contact = () => {
               <li className="p-2">8:00 am - 5:30 pm</li>
             </ul>
           </div>
-          <div className="text-white text-base lg:text-xl mb-6 px-6 lg:px-0">
+          <div className="text-base lg:text-xl mb-6 px-6 lg:px-0">
             <div className="font-semibold">social channels</div>
           </div>
           <div className="flex text-sm font-thin pb-16 px-6 lg:px-0">

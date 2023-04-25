@@ -3,11 +3,11 @@ import Contact from './Contact'
 import Footer from '../LandingPage/Footer'
 
 
-const index = () =>
+const index = ({theme}) =>
 {
   return (
     <div>
-        <Contact/>
+        <Contact theme={theme}/>
         <Footer/>
     </div>
   )

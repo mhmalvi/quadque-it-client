@@ -10,12 +10,12 @@ import AboutMaterial from "./AboutMaterial";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 
-const Header = () => {
+const Header = ({theme}) => {
   return (
-    <div className="w-full bg-home-color">
+    <div className={`w-full duration-700 ${theme==="dark"? "bg-home-color":"bg-[#F3F3F3]"}`}>
       <div className="w-full">
         <div className="lg:mt-10">
-          <div className="lg:w-2/3 flex-col justify-center text-white m-auto pt-32">
+          <div className={`lg:w-2/3 flex-col justify-center ${theme==="dark" ? "text-white":"text-black"} m-auto pt-32`}>
             <Zoom>
               <div className="lg:text-4xl text-2xl font-bold text-center leading-12">
                 Delve into the World of Digital Marketing and IT with QIT.
@@ -89,7 +89,7 @@ const Header = () => {
             <div className="flex-col lg:w-3/4 lg:flex lg:flex-row text-center gap-6 pb-8 lg:pb-30 m-auto">
               <div className="flex-col p-7">
                 <div className="">
-                  <Icons.Instructor className="h-25 m-auto" />
+                  <Icons.Instructor className={`${theme==="dark" && "text-white"} h-25 m-auto`} />
                 </div>
                 <div className="text-xl font-semibold py-2">
                   Effective Lessons
@@ -134,12 +134,12 @@ const Header = () => {
             alt=""
           /> */}
         </div>
-        <div className="text-white relative">
+        <div className={`${theme==="dark" ? "text-white":"text-black"} relative`}>
           <Fade bottom>
-            <div className="text-4xl font-bold text-center pt-13 lg:pt-36">
+            <div className="text-2xl lg:text-4xl font-bold text-center pt-13 lg:pt-36">
               Why Choose Us
             </div>
-            <div className="w-2/3 text-center text-lg pt-5 pb-16 m-auto">
+            <div className="w-2/3 text-center lg:text-lg pt-5 pb-16 m-auto">
               We have collaborated with some of the most reputed names in the
               digital marketing and IT scene. Therefore, we have a good idea of
               what works and what doesn’t. Take a look at some of the main
@@ -247,7 +247,7 @@ const Header = () => {
               </div>
             </div>
           </Fade>
-          <AboutMaterial />
+          <AboutMaterial theme={theme}/>
           <Instructors />
           <Footer />
         </div>

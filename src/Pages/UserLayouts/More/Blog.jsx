@@ -2,12 +2,12 @@ import React from "react";
 import BlogGallery from "./BlogGallery";
 import AnimatedText from "react-animated-text-content";
 
-const Blog = () => {
+const Blog = ({theme}) => {
   return (
-    <div className="w-full bg-home-color pb-20">
+    <div className={`w-full ${theme==="dark"? "bg-home-color":"bg-[#F3F3F3]"} duration-700 pb-20`}>
       <div className="">
         <div className="lg:mt-10">
-          <div className="flex-col text-white m-auto pt-32">
+          <div className={`flex-col ${theme==="dark"? "text-white":"text-black"} m-auto pt-32`}>
             <div className="text-5xl font-bold text-center leading-snug">
               Blog Articles
             </div>
@@ -18,7 +18,7 @@ const Blog = () => {
               Learn more about the newest IT tools, digital strategies and
               upcoming trends <br /> from our informative articles.
             </div>
-            <BlogGallery />
+            <BlogGallery theme={theme}/>
           </div>
         </div>
       </div>

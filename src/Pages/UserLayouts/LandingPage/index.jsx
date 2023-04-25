@@ -15,24 +15,24 @@ import BrowseCourse from './BrowseCourse'
 import Footer from './Footer'
 import JobOpportunities from './JobOpportunities'
 
-function LandingPageSections() {
+function LandingPageSections({theme}) {
   return (
     <div>
       {/* <Navbar/> */}
-      <Header />
-      <Courses />
-      <UpcomingCourses />
-      <TwoWayCourse />
-      <GraphicDesign />
-      <ProgrammingCourses />
-      <DigitalMarketing />
-      <JobOpportunities />
-      <OurStudents />
-      <OurStudentsDragable />
-      <OurInstructors />
-      <Partners />
-      <BrowseCourse />
-      <Footer />
+      <Header theme={theme}/>
+      <Courses theme={theme}/>
+      <UpcomingCourses theme={theme}/>
+      <TwoWayCourse theme={theme}/>
+      <GraphicDesign theme={theme}/>
+      <ProgrammingCourses theme={theme}/>
+      <DigitalMarketing theme={theme}/>
+      <JobOpportunities theme={theme}/>
+      <OurStudents theme={theme}/>
+      <OurStudentsDragable theme={theme}/>
+      <OurInstructors theme={theme}/>
+      <Partners theme={theme}/>
+      <BrowseCourse theme={theme}/>
+      <Footer theme={theme}/>
     </div>
   );
 

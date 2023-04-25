@@ -4,9 +4,9 @@ import Offline from "../../../Asset/Image/offline-course2.png";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 
-const TwoWayCourse = () => {
+const TwoWayCourse = ({theme}) => {
   return (
-    <div className="w-full pb-13 lg:pb-40 overflow-x-hidden">
+    <div className={`${theme==="dark" && "bg-home-color"} duration-700 w-full pb-13 lg:pb-40 overflow-x-hidden`}>
       <div className="twoway-banner bg-home-color text-white text-center lg:mx-10 lg:rounded-3xl py-12 px-4 lg:px-20">
         <div className="text-4xl font-semibold pb-5 text-shadow-white">
           Available Study Options

@@ -1,10 +1,7 @@
-import React, { useRef } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Student from "../../../Components/Shared/JsonData/student.json";
-import RightArrow from "../../../Asset/Image/purple-right-arrow.png";
-import LeftArrow from "../../../Asset/Image/purple-left-arrow.png";
+import { motion } from "framer-motion";
+import React from "react";
+import { Zoom } from "react-reveal";
+import Fade from "react-reveal/Fade";
 import Stu1 from "../../../Asset/Image/stu1.png";
 import Stu2 from "../../../Asset/Image/stu2.png";
 import Stu3 from "../../../Asset/Image/stu3.png";
@@ -13,54 +10,16 @@ import Stu5 from "../../../Asset/Image/stu5.png";
 import Stu6 from "../../../Asset/Image/stu6.png";
 import Stu7 from "../../../Asset/Image/stu7.png";
 import Stu8 from "../../../Asset/Image/stu8.png";
-import { motion } from "framer-motion";
+import Student from "../../../Components/Shared/JsonData/student.json";
 
-import Fade from "react-reveal/Fade";
-import { Zoom } from "react-reveal";
-
-const OurStudentsDragable = ()=> {
-  const sliderRef = useRef(null);
-  const settings = {
-    infinite: true,
-    speed: 600,
-    arrows: false,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+const OurStudentsDragable = ({theme}) => {
 
   return (
-    <div className="hidden lg:block w-full pb-13 lg:pb-36 lg:visible overflow-x-hidden dragableScroller">
+    <div className={`${theme==="dark" && "bg-home-color"} hidden lg:block w-full pb-13 lg:pb-36 lg:visible overflow-x-hidden dragableScroller`}>
       <Fade left>
         <div className="2xl:hidden text-center lg:text-start rounded-3xl mx-9">
-          <div className="w-full text-black text-3xl lg:text-5xl font-bold lg:mx-12 pb-18 text-shadow">
-            What our <span className="text-brand-color">Students</span> say{" "}
+          <div className={`w-full ${theme==="dark" ? "text-white text-shadow-white":"text-black text-shadow"} text-3xl lg:text-5xl font-bold lg:mx-12 pb-18`}>
+            What our <span className="text-brand-color">Students</span> say
             <br />
             about us
           </div>
@@ -78,7 +37,7 @@ const OurStudentsDragable = ()=> {
                   right: 0,
                   bottom: 0,
                 }}
-                className="hidden 2xl:block absolute top-[400px] left-[550px] w-full text-black text-3xl lg:text-[60px] leading-[60px] font-bold lg:mx-12 pb-18 text-shadow"
+                className={`${theme==="dark" ? "text-white text-shadow-white":"text-black text-shadow"} hidden 2xl:block absolute top-[400px] left-[550px] w-full text-3xl lg:text-[60px] leading-[60px] font-bold lg:mx-12 pb-18`}
               >
                 What our <span className="text-brand-color">Students</span>{" "}
                 <br />
@@ -89,6 +48,7 @@ const OurStudentsDragable = ()=> {
               </div>
               {Student?.map((person, i) => (
                 <motion.div
+                key={i}
                   className={reviewClasses[i]}
                   drag
                   dragConstraints={{

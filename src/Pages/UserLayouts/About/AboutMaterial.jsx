@@ -5,9 +5,9 @@ import About3 from "../../../Asset/Image/about-7.png";
 import Fade from "react-reveal/Fade";
 
 
-const AboutMaterial = () => {
+const AboutMaterial = ({theme}) => {
   return (
-    <div className="bg-home-color w-full py-13 lg:py-36 text-white">
+    <div className={`${theme==="dark" ? "text-white bg-home-color":"text-black bg-[#F3F3F3]"} w-full py-13 lg:py-36 text-white`}>
       <div className="md:w-3/4 m-auto flex-col md:flex lg:flex-row gap-6 pb-13 lg:pb-36">
         <Fade left>
         <div className="flex justify-between m-auto pb-5 lg:pb-0 px-3 lg:px-0">
@@ -35,8 +35,8 @@ const AboutMaterial = () => {
         </div>
         </Fade>
       </div>
-      <div className="w-3/4 bg-white flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-10 m-auto">
-        <div className="lg:w-1/2 text-black m-auto">
+      <div className={`w-3/4 ${theme==="dark"? "bg-white text-black":"bg-home-color text-white"} flex flex-col-reverse lg:flex lg:flex-row justify-evenly rounded-3xl p-10 m-auto`}>
+        <div className="lg:w-1/2 m-auto">
           <div className="text-2xl lg:text-5xl text-center lg:text-start font-bold pb-7 pt-8">
             Get a Free Trial Today!
           </div>

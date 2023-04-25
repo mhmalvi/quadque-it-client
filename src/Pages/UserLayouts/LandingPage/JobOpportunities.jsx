@@ -3,14 +3,13 @@ import shourav from "../../../Asset/Image/job-op2.png";
 // import JobIcon from "../../../Asset/Icon/jobopp.svg";
 import Icons from "../../../Components/Shared/Icons";
 import Fade from "react-reveal/Fade";
-import { motion } from "framer-motion";
 
 
-const JobOpportunities = () => {
+const JobOpportunities = ({theme}) => {
   return (
-    <div className="w-full pb-18 lg:pb-44 overflow-x-hidden">
+    <div className={`${theme==="dark" && "bg-home-color"} duration-700 w-full pb-18 lg:pb-44 overflow-x-hidden`}>
       <div className="">
-        <div className="w-4/5 font-bold text-2xl lg:text-4xl text-center lg:text-start m-auto pb-8 lg:pb-16 text-shadow">
+        <div className={`${theme==="dark" ? "text-white":"text-black"} duration-700 w-4/5 font-bold text-2xl lg:text-4xl text-center lg:text-start m-auto pb-8 lg:pb-16 text-shadow`}>
           {" "}
           Quality Training to Improve Your Career{" "}
         </div>
@@ -27,7 +26,7 @@ const JobOpportunities = () => {
           </div>
         </Fade>
         <Fade right big>
-          <div className="lg:w-1/2 text-start my-auto">
+          <div className={`${theme==="dark" ? "text-white":"text-black"} duration-700 lg:w-1/2 text-start my-auto`}>
             <div className="font-semibold text-xl lg:text-4xl pb-3 px-10 lg:px-0">
               {" "}
               Develop Your Expertise through Our Amazing Facilities

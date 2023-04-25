@@ -4,10 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
+import WhiteLeftArrow from "../../../Asset/Image/arrow-left.png";
+import WhiteRightArrow from "../../../Asset/Image/arrow-right.png";
 import Instructor from "../../../Components/Shared/JsonData/instructors.json";
 import Fade from "react-reveal/Fade";
 
-const OurInstructors = () => {
+const OurInstructors = ({theme}) => {
   const sliderRef = useRef(null);
   const settings = {
     infinite: true,
@@ -44,11 +46,29 @@ const OurInstructors = () => {
     ],
   };
   return (
-    <div className="w-full pb-13 lg:pb-24 overflow-x-hidden">
+    <div className={`${theme==="dark" && "bg-home-color"} w-full pb-13 lg:pb-24 overflow-x-hidden`}>
       <div className="lg:flex lg:justify-between lg:px-10">
-        <div className="text-black text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-6 lg:pb-16 text-shadow">
+        <div className={`${theme==="dark"? "text-white":"text-black" } text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-6 lg:pb-16 text-shadow`}>
           Meet our instructors
         </div>
+        {theme==="dark"? 
+        <div className="hidden lg:block">
+          <div className="flex justify-center gap-5 mr-12">
+            <img
+              src={WhiteLeftArrow}
+              alt=""
+              className="w-10 h-10 cursor-pointer"
+              onClick={() => sliderRef.current.slickPrev()}
+              />
+            <img
+              src={WhiteRightArrow}
+              alt=""
+              className="w-10 h-10 cursor-pointer"
+              onClick={() => sliderRef.current.slickNext()}
+              />
+          </div>
+        </div>
+        :
         <div className="hidden lg:block">
           <div className="flex justify-center gap-5 mr-12">
             <img
@@ -56,20 +76,21 @@ const OurInstructors = () => {
               alt=""
               className="w-10 h-10 cursor-pointer"
               onClick={() => sliderRef.current.slickPrev()}
-            />
+              />
             <img
               src={RightArrow}
               alt=""
               className="w-10 h-10 cursor-pointer"
               onClick={() => sliderRef.current.slickNext()}
-            />
+              />
           </div>
         </div>
+        }
       </div>
       <div className="">
         <div className="text-start rounded-3xl lg:px-9">
           <Fade bottom>
-            <div className="text-black gap-8 ">
+            <div className="gap-8 ">
               <Slider ref={sliderRef} {...settings}>
                 {Instructor?.map((person, i) => (
                   <div key={i}>
@@ -79,7 +100,7 @@ const OurInstructors = () => {
                         className="lg:w-[300px] group-hover:opacity-0 group-hover:scale-0 group-hover:-translate-y-32 duration-700 m-auto"
                         alt=""
                       />
-                      <div className="w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto">
+                      <div className={`${theme==="dark"? "text-white":"text-black"} w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto`}>
                         <div className="pb-4">
                           <img
                             src={person?.image}

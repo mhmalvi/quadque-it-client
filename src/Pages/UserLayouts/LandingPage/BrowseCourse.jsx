@@ -4,10 +4,10 @@ import Footer from "../../../Asset/Image/footer.png";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 
-const BrowseCourse = () => {
+const BrowseCourse = ({theme}) => {
   return (
-    <div className="w-full mb-18 lg:mb-0 sm:pb-0 lg:pt-28 overflow-x-hidden">
-      <div className="sm:bg-gradient-to-t from-[#000000] to-[#2F327D]">
+    <div className={`${theme==="dark" && "bg-home-color"} w-full mb-18 lg:mb-0 sm:pb-0 lg:pt-28 overflow-x-hidden`}>
+      <div className={`${theme==="dark"? "sm:bg-gradient-to-t from-[#000000] via-[#2F327D] to-home-color":"sm:bg-gradient-to-t from-[#000000] to-[#2F327D]"}`}>
         <div className="sm:flex sm:justify-center sm:px-6">
           <div className="w-full flex justify-center items-center shrink-0 sm:w-1/2 sm:relative sm:-top-20 p-4">
             <Fade left big>

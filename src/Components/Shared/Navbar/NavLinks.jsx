@@ -1,14 +1,29 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { links } from "./MyLinks";
+import { motion } from "framer-motion";
+import Icons from "../Icons"
 
-const NavLinks = () => {
+
+const NavLinks = ({theme, setTheme}) => {
   const pathname = window.location.pathname;
   const [toogleSubmenu, setToogleSubmenu] = useState("");
-  console.log("pathname", pathname);
+  const [isChecked, setIsChecked] = useState(`${theme==="dark"? true:false}`)
+
+  const toggleSwitch = () => {
+    setIsChecked(!isChecked)
+    if (!isChecked) {     
+      setTheme("dark")
+    } else{
+      setTheme("light")
+    }
+  }
+  // console.log("pathname", pathname);
+
+  // console.log("rherherhh",links[3]?.submenu?.map(sub=> sub.sublink));
   return (
     <>
-      <div className="lg:flex z-[999] bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg lg:backdrop-filter-none lg:bg-transparent border border-white border-opacity-30 lg:border-none shadow-2xl shadow-[#ffffff20] lg:shadow-none lg:text-white text-center text-xl lg:text-base rounded-md cursor-pointer mx-2">
+      <div className={`lg:flex z-[999] bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg lg:backdrop-filter-none lg:bg-transparent border border-white border-opacity-30 lg:border-none shadow-2xl shadow-[#ffffff20] lg:shadow-none ${theme==="light" && pathname!=="/" ? "text-black":"text-white"} text-center text-xl lg:text-base rounded-md cursor-pointer mx-2`}>
         {links?.map((link,i) => (
           <div key={i} className="lg:rounded-3xl">
             <div className="group">
@@ -22,7 +37,8 @@ const NavLinks = () => {
                   className="hover:-translate-y-2 duration-300 px-7 py-10"
                 >
                   {link.name}
-                  <div className={`${link?.link===pathname? "w-full":"w-0"} duration-500 h-1 bg-white rounded-full`}></div>
+                  <div className={`${link?.link===pathname ? "w-full":"w-0"} duration-500 h-1 ${theme==="light" && pathname!=="/" ? "bg-black":"bg-white"} rounded-full`}></div>
+                  <div className={`${pathname===links[3]?.submenu?.map(sub=> sub?.sublink) ? "w-full":"w-0"} duration-500 h-1 bg-white rounded-full`}></div>
                 </div>
               </Link>
               {link?.submenu !== "" && (
@@ -62,9 +78,26 @@ const NavLinks = () => {
             </div>
           </div>
         ))}
+        {/* <div className="flex">
+        {theme==="dark" && <Icons.Moon className="w-[1rem] mb-2 mr-2 duration-700"/>}
+        <Switch checkedChildren="Dark" unCheckedChildren="Light" onChange={onChange} checked={isChecked} className="mt-10"/>
+        {theme==="light" && <Icons.Sun className="w-[1.5rem] mb-1 ml-2 duration-700"/>}
+      </div> */}
+      <div className="flex">
+        {theme==="dark" && <Icons.Moon title="Dark" className="w-[1.2rem] mb-3 mr-2 duration-700"/>}
+        {theme==="light" && <Icons.Sun title="Light" className="w-[1.5rem] mb-3 mr-2 duration-700"/>}
+          <div className="switch mt-10" title={`${theme==="dark"? "Dark":"Light"}`} data-isOn={isChecked} onClick={toggleSwitch}>
+            <motion.div className="handle" layout transition={spring} />
+          </div>
+      </div>
       </div>
     </>
   );
 };
 
 export default NavLinks;
+const spring = {
+  type: "spring",
+  stiffness: 700,
+  damping: 30
+};

@@ -16,7 +16,7 @@ import Stu8 from "../../../Asset/Image/stu8.png";
 
 import Fade from "react-reveal/Fade";
 
-const OurStudents = ()=> {
+const OurStudents = ({theme}) => {
   const sliderRef = useRef(null);
   const settings = {
     infinite: true,
@@ -53,11 +53,11 @@ const OurStudents = ()=> {
     ],
   };
   return (
-    <div className="w-full pb-13 lg:pb-36 lg:hidden overflow-x-hidden">
+    <div className={`${theme==="dark" && "bg-home-color"} duration-700 w-full pb-13 lg:pb-36 lg:hidden overflow-x-hidden`}>
       <div className="lg:flex">
         <Fade left>
           <div className="text-center lg:text-start rounded-3xl mx-9">
-            <div className="w-full text-black text-3xl lg:text-5xl font-bold lg:mx-12 pb-18 text-shadow">
+            <div className={`w-full ${theme==="dark" ? "text-white":"text-black"} duration-700 text-3xl lg:text-5xl font-bold lg:mx-12 pb-18 text-shadow`}>
               What our <span className="text-brand-color">Students</span> say{" "}
               <br />
               about us

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import Partnerslogo from "../../../Components/Shared/JsonData/partners.json";
 import Fade from "react-reveal/Fade";
 
-const Partners = () => {
+const Partners = ({theme}) => {
   const sliderRef = useRef(null);
   const settings = {
     className: "center",
@@ -14,7 +14,7 @@ const Partners = () => {
     speed: 600,
     arrows: false,
     slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
@@ -44,12 +44,12 @@ const Partners = () => {
     ],
   };
   return (
-    <div className="w-full pb-18 lg:pb-28">
+    <div className={`${theme === "dark" && "bg-home-color"} w-full pb-18 lg:pb-28`}>
       <div className="text-center rounded-3xl">
-        <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
+        <div className={`${theme==="dark"?"text-white":"text-black"} text-2xl md:text-4xl font-bold pb-5 text-shadow`}>
           Our Partners
         </div>
-        <div className="lg:w-1/3 text-black text-lg m-auto pb-14">
+        <div className={`${theme==="dark"?"text-white":"text-black"} lg:w-1/3 text-lg m-auto pb-14`}>
           Take a look at some of our reputed industry partners.
         </div>
         <Fade bottom>

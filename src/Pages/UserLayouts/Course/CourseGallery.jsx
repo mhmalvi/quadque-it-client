@@ -27,7 +27,7 @@ import DotNet from "../../../Asset/Image/courses/dotnet-course.jpg";
 
 //import useCategory from "../../../Components/Shared/Hooks/useCategory";
 
-const CourseGallery = () => {
+const CourseGallery = ({theme}) => {
   //const [Category] = useCategory();
   const navigate = useNavigate();
   const [toogleTab, setToogleTab] = useState("All");
@@ -111,7 +111,7 @@ const CourseGallery = () => {
   // console.log("items,", categoryItems);
 
   return (
-    <div className="w-full bg-[#040422] h-screen text-white">
+    <div className={`w-full h-screen ${theme==="light"? "bg-[#f3f3f3] text-black":"bg-[#040422] text-white"} duration-700`}>
       <div className="flex lg:mt-10 pt-44 lg:pb-20">
         <div className="w-full ">
           <div className="flex m-auto justify-between items-center">
@@ -120,7 +120,7 @@ const CourseGallery = () => {
                 <img src={Banner} className="w-full" alt="" />
               </Fade>
             </div>
-            <div className="w-2/3 sm:w-1/2 lg:w-1/3 text-white text-center mx-auto">
+            <div className={`${theme==="dark"?"text-white":"text-black"} w-2/3 sm:w-1/2 lg:w-1/3 text-white text-center mx-auto`}>
               <div className="text-4xl pb-2 text-shadow-white">Courses</div>
               <div className="m-auto pb-8">
                 Browse through our extensive collection of courses to choose one
@@ -129,9 +129,9 @@ const CourseGallery = () => {
               <div className="flex justify-center">
                 <div
                   onClick={() => ToogleMedium("all")}
-                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
+                  className={`px-4 rounded-2xl shadow-xl m-2 cursor-pointer ${
                     toogleMediumTab === "all"
-                      ? "bg-white text-black duration-500"
+                      ? "bg-white text-black duration-500 scale-105"
                       : "bg-black text-white duration-500"
                   }`}
                 >
@@ -139,9 +139,9 @@ const CourseGallery = () => {
                 </div>
                 <div
                   onClick={() => ToogleMedium("offline")}
-                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
+                  className={`px-4 rounded-2xl shadow-xl m-2 cursor-pointer ${
                     toogleMediumTab === "offline"
-                      ? "bg-white text-black duration-500"
+                      ? "bg-white text-black duration-500 scale-105"
                       : "bg-black text-white duration-500"
                   }`}
                 >
@@ -149,9 +149,9 @@ const CourseGallery = () => {
                 </div>
                 <div
                   onClick={() => ToogleMedium("online")}
-                  className={`px-4 rounded-2xl m-2 cursor-pointer ${
+                  className={`px-4 rounded-2xl shadow-xl m-2 cursor-pointer ${
                     toogleMediumTab === "online"
-                      ? "bg-white text-black duration-500"
+                      ? "bg-white text-black duration-500 scale-105"
                       : "bg-black text-white duration-500"
                   }`}
                 >
@@ -168,7 +168,7 @@ const CourseGallery = () => {
         </div>
       </div>
 
-      <div className="bg-home-color lg:py-13 px-5 py-10 lg:px-30 lg:relative overflow-x-hidden">
+      <div className={`${theme==="light"? "bg-[#f3f3f3] text-black":"bg-home-color text-white"} duration-700 lg:py-13 px-5 py-10 lg:px-30 lg:relative overflow-x-hidden`}>
         <div className="lg:flex">
           <div className="w-1/3 hidden lg:block">
             <div className="text-xl">Course Category</div>
@@ -211,7 +211,7 @@ const CourseGallery = () => {
             />
           </div>
 
-          <div className="w-full bg-[#040422]">
+          <div className="w-full">
             {/* COURSE Gallery */}
             <Fade right cascade>
               <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 text-white gap-6 sm:px-5 lg:px-0 my-6">
@@ -257,7 +257,7 @@ const CourseGallery = () => {
             </Fade>
           </div>
         </div>
-        <Instructors />
+        <Instructors theme={theme}/>
       </div>
       <Footer />
     </div>

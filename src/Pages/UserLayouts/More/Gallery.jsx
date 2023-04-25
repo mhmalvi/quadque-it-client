@@ -14,7 +14,7 @@ import "./More.css";
 import Fade from "react-reveal/Fade";
 
 
-const Gallery = () => {
+const Gallery = ({theme}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [toogleTab, setToogleTab] = useState(1);
   const [selectedImg, setSelectedImg] = useState();
@@ -35,7 +35,7 @@ const Gallery = () => {
   };
   return (
     <>
-      <div className="bg-home-color text-white pt-36 lg:mt-10 m-auto">
+      <div className={`${theme==="dark"? "bg-home-color text-white":"bg-[#F3F3F3] text-black"} duration-700 pt-36 lg:mt-10 m-auto`}>
         <div className="lg:w-3/4 lg:flex lg:justify-center m-auto">
           <Fade left>
           <div className="w-full flex justify-center m-auto">
@@ -59,15 +59,15 @@ const Gallery = () => {
             </div>
             <div className="flex flex-wrap lg:flex-col">
               <div className="flex flex-wrap justify-start pr-10">
-                <Icons.Tick width={20} />
+                <Icons.Tick width={20} className="mr-3" />
                 Effective Lessons
               </div>
               <div className="flex flex-wrap justify-start pr-10">
-                <Icons.Tick width={20} />
+                <Icons.Tick width={20} className="mr-3" />
                 Personalised Training
               </div>
               <div className="flex flex-wrap justify-start pr-10">
-                <Icons.Tick width={20} /> High-Quality Courses
+                <Icons.Tick width={20} className="mr-3" /> High-Quality Courses
               </div>
             </div>
           </div>

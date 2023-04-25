@@ -7,12 +7,24 @@ import { Modal } from "antd";
 import "../../../App.css";
 import "./Navbar.css";
 import { links } from "./MyLinks";
-import Fade from "react-reveal/Fade";
 import "../../../Pages/UserLayouts/LandingPage/style.css"
-const Navbar = () => {
+import { motion } from "framer-motion";
+
+const Navbar = ({theme, setTheme, options}) => {
   const [open, setOpen] = useState(false);
   const [toogleSubmenu, setToogleSubmenu] = useState("");
   const genericHamburgerLine = `h-1 w-7 my-1 rounded-full bg-white transition ease transform duration-500 lg:hidden m-4`;
+  const [isChecked, setIsChecked] = useState(`${theme==="dark"? true:false}`)
+
+  const toggleSwitch = () => {
+    setIsChecked(!isChecked)
+    if (!isChecked) {     
+      setTheme("dark")
+    } else{
+      setTheme("light")
+    }
+  }
+
 
   return (
     <div id="Navbar" className="w-full absolute top-0 bg-transparent">
@@ -71,7 +83,7 @@ const Navbar = () => {
           </div>
           {/* Hamburger Animation end*/}
           <ul className="hidden lg:visible lg:flex items-center gap-8">
-            <NavLinks />
+            <NavLinks theme={theme} setTheme={setTheme} options={options}/>
           </ul>
           {/* Mobile View */}
           <Modal
@@ -175,6 +187,17 @@ const Navbar = () => {
                   </div>
                 </div>
               ))}
+              <div className="flex items-center justify-between mt-5">
+                <div> Dark Mode: <span className={`${isChecked?"text-green-500":"text-white"} text-sm`}>{isChecked ? "On" : "Off"}</span></div>
+                <div className="flex items-center">
+                {/* {theme==="dark" && <Icons.Moon className="w-[1.2rem] mr-2 duration-700"/>} */}
+                {/* {theme==="light" && <Icons.Sun className="w-[1.5rem] ml-2 duration-700"/>} */}
+                {theme==="light" ? <Icons.Sun className="w-[1.5rem] mr-2 duration-700"/>:<Icons.Moon className="w-[1.2rem] mr-2 duration-700"/>}
+                <div className="switch" data-isOn={isChecked} onClick={toggleSwitch}>
+                  <motion.div className="handle" layout transition={spring} />
+                </div>
+                </div>
+              </div>
             </div>
           </Modal>
         </div>
@@ -184,3 +207,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+const spring = {
+  type: "spring",
+  stiffness: 700,
+  damping: 30
+};

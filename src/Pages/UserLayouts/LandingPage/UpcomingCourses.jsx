@@ -6,6 +6,8 @@ import Course from "../../../Components/Shared/JsonData/Course.json"
 import { useNavigate } from "react-router-dom";
 import RightArrow from "../../../Asset/Image/right-arrow-black.png";
 import LeftArrow from "../../../Asset/Image/left-arrow-black.png";
+import WhiteLeftArrow from "../../../Asset/Image/arrow-left.png";
+import WhiteRightArrow from "../../../Asset/Image/arrow-right.png";
 import Fade from "react-reveal/Fade";
 
 import Graphics from "../../../Asset/Image/graphics.png";
@@ -23,7 +25,7 @@ import Writing2 from "../../../Asset/Image/courses/writing-2-course.jpg";
 import Mkt101 from "../../../Asset/Image/courses/mkt-101-course.jpg";
 import DotNet from "../../../Asset/Image/courses/dotnet-course.jpg";
 
-const UpcomingCourses = () => {
+const UpcomingCourses = ({theme}) => {
   const [courses, setCourses] = useState()
   const [slideSetting, setSlideSetting] = useState()
   const sliderRef = useRef(null);
@@ -91,12 +93,12 @@ const UpcomingCourses = () => {
     navigate(`./course/course-detail/${id}`);
   };
   return (
-    <div className="pb-18 lg:pb-24 overflow-x-hidden">
+    <div className={`${theme==="dark" && "bg-home-color"} duration-700 pb-18 lg:pb-24 overflow-x-hidden`}>
       <div className="text-center rounded-3xl lg:px-20">
-        <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
+        <div className={`${theme==="dark" ? "text-white":"text-black"} duration-700 text-2xl md:text-4xl font-bold pb-5 text-shadow`}>
           Our Upcoming Courses
         </div>
-        <div className="text-lg px-5 lg:px-0">
+        <div className={`${theme==="dark" ? "text-white":"text-black"} text-lg px-5 lg:px-0`}>
           Catch a glimpse of the awesome courses that will soon be available at
           QIT.
         </div>
@@ -149,20 +151,37 @@ const UpcomingCourses = () => {
               ))}
             </Slider>
           </Fade>
-          <div className="flex justify-center gap-5 py-3">
-            <img
-              src={LeftArrow}
-              alt=""
-              onClick={() => sliderRef.current.slickPrev()}
-              className="cursor-pointer"
-            />
-            <img
-              src={RightArrow}
-              alt=""
-              onClick={() => sliderRef.current.slickNext()}
-              className="cursor-pointer"
-            />
-          </div>
+          {theme==="dark"?       
+            <div className="flex justify-center gap-5 py-3">
+              <img
+                src={WhiteLeftArrow}
+                alt=""
+                onClick={() => sliderRef.current.slickPrev()}
+                className="cursor-pointer"
+              />
+              <img
+                src={WhiteRightArrow}
+                alt=""
+                onClick={() => sliderRef.current.slickNext()}
+                className="cursor-pointer"
+              />
+            </div>
+            :
+            <div className="flex justify-center gap-5 py-3">
+              <img
+                src={LeftArrow}
+                alt=""
+                onClick={() => sliderRef.current.slickPrev()}
+                className="cursor-pointer"
+              />
+              <img
+                src={RightArrow}
+                alt=""
+                onClick={() => sliderRef.current.slickNext()}
+                className="cursor-pointer"
+              />
+            </div>
+          }
         </div>
       </div>
     </div>

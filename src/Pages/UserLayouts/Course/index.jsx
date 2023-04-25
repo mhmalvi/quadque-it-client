@@ -2,11 +2,11 @@ import React from 'react'
 import CourseGallery from './CourseGallery'
 import Admission from './Admission'
 
-const index = () =>
+const index = ({theme}) =>
 {
   return (
     <div>
-        <CourseGallery/>
+        <CourseGallery theme={theme}/>
     </div>
   )
 }

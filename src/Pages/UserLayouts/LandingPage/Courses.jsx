@@ -8,22 +8,21 @@ import Categories from "../../../Components/Shared/JsonData/categories.json";
 import Zoom from "react-reveal/Zoom";
 import "./style.css"
 
-const Courses = () => {
+const Courses = ({theme}) => {
   //const [Category] = useCategory();
   return (
-    <div className="w-full pb-14 lg:pb-24 overflow-x-hidden">
-      <div className="lg:bg-[#5c5bfd10] lg:text-5xl text-center m-auto lg:mx-10 rounded-3xl lg:shadow-lg py-4 lg:py-24 px-4 lg:px-20">
-        <div className="text-black text-2xl md:text-4xl font-bold pb-5 text-shadow">
+    <div className={`${theme==="dark" && "bg-home-color"} duration-700 w-full pb-14 lg:pb-24 overflow-x-hidden`}>
+      <div className={`${theme==="dark"? "lg:bg-[#5c5bfd10]":"lg:bg-[#5c5bfd10]"} lg:text-5xl text-center m-auto lg:mx-10 rounded-3xl lg:shadow-lg py-4 lg:py-24 px-4 lg:px-20`}>
+        <div className={`${theme==="dark" ? "text-white": "text-black"} duration-700 text-2xl md:text-4xl font-bold pb-5 text-shadow`}>
           Effective courses to develop in-demand skills
         </div>
-        <div className="text-black text-sm md:text-base font-thin pb-5">
+        <div className={`${theme==="dark" ? "text-white": "text-black"} duration-700 text-sm md:text-base font-thin pb-5`}>
           Check out the different categories of courses that we are offering
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 3lg:grid-cols-4 text-black md:text-white text-xs md:text-2xl lg:pt-13 gap-6">
           {Categories?.map((category, i) => (
-            <Zoom delay={500 * i}>
+            <Zoom delay={500 * i} key={i}>
               <div
-                key={i}
                 className="w-full shadow-lg flex-col bg-white md:bg-home-color hover:lg:bg-brand-color duration-500 p-4 rounded-2xl spirit-bomb iconShine"
               >
                 <div className="flex justify-center items-center my-5">

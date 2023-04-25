@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 
-const Header = () => {
+const Header = ({theme}) => {
   const [bannerClass, setBannerClass] = useState("hero-banner");
   const [index, setIndex] = useState(0);
 
@@ -27,8 +27,8 @@ const Header = () => {
   }, [index]);
 
   return (
-    <div className="w-full lg:mt-10 pb-14 lg:pb-20 overflow-x-hidden">
-      <div className={`${bannerClass} duration-1000 bg-home-color text-center lg:text-start m-auto lg:mx-10 lg:rounded-3xl pt-32 pb-8 px-10 lg:px-20`}>
+    <div className={`${theme === "dark" && "bg-home-color"} duration-700 w-full lg:mt-10 pb-14 lg:pb-20 overflow-x-hidden`}>
+      <div className={`${bannerClass} duration-1000 bg-home-color text-center lg:text-start m-auto lg:mx-10 lg:rounded-3xl pt-32 pb-8 px-10 lg:px-20 lg:mt-5`}>
         <div className="flex flex-col-reverse lg:flex lg:flex-row justify-evenly m-auto">
           <div className="flex justify-center items-center text-white pt-13 lg:pt-0">
             <div className="lg:w-10/12">

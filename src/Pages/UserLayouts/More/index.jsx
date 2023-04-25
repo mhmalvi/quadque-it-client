@@ -2,11 +2,11 @@ import React from 'react'
 import Blog from './Blog'
 
 
-const index = () => 
+const index = ({theme}) => 
 {
   return (
     <div>
-        <Blog/>
+        <Blog theme={theme}/>
     </div>
   )
 }

@@ -14,7 +14,7 @@ import InstructorsSlider from "./InstructorsSlider";
 import "./More.css";
 
 
-const Stories = () => {
+const Stories = ({theme}) => {
   const [totalPosts, setTotalPosts] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   const [PostsPerPage] = useState(3);
@@ -36,8 +36,8 @@ const Stories = () => {
 
   return (
     <>
-      <div className="w-full bg-home-color pt-32 lg:pb-20 lg:px-10 lg:mt-10">
-        <div className="text-white">
+      <div className={`w-full ${theme === "dark" ? "bg-home-color text-white":"bg-[#F3F3F3] text-black"} duration-700 pt-32 lg:pb-20 lg:px-10 lg:mt-10`}>
+        <div className="">
           <div className="flex-col m-auto pb-18">
             <div className="text-3xl lg:text-5xl font-bold text-center leading-snug px-5 lg:px-0">
               Our Success Stories
@@ -57,8 +57,8 @@ const Stories = () => {
                 {currentPosts?.[0] ? (
                   <Fade left duration={1500} spy={currentPosts}>
                     <Link to="../stories-detail">
-                      <div className="bg-home-color pb-5 max-w-[90vh]">
-                        <div className="lg:flex bg-white rounded-2xl h-76">
+                      <div className="pb-5 max-w-[90vh]">
+                        <div className="lg:flex bg-white rounded-2xl shadow-lg h-76">
                           <div>
                             <img
                               /* src={
@@ -93,8 +93,8 @@ const Stories = () => {
                 {currentPosts?.[1] ? (
                   <Fade left duration={1500} spy={currentPosts}>
                     <Link to="../stories-detail">
-                      <div className="bg-home-color pb-5 max-w-[90vh]">
-                        <div className="lg:flex flex-row-reverse bg-white rounded-2xl h-76">
+                      <div className="pb-5 max-w-[90vh]">
+                        <div className="lg:flex flex-row-reverse bg-white rounded-2xl shadow-lg h-76">
                           <div>
                             <img
                               /* src={
@@ -134,7 +134,7 @@ const Stories = () => {
                     <div>
                       <div
                         id="soloCard"
-                        className="flex-col lg:max-w-xs bg-white rounded-2xl"
+                        className="flex-col lg:max-w-xs bg-white rounded-2xl shadow-lg"
                       >
                         <div className="flex-wrap overflow-hidden">
                           <img
@@ -143,7 +143,7 @@ const Stories = () => {
                             alt=""
                           />
                         </div>
-                        <div className="h-[20rem] overflow-hidden flex-col lg:justify-start text-black m-auto px-6 py-8">
+                        <div className="h-[16rem] overflow-hidden flex-col lg:justify-start text-black m-auto px-6 py-8">
                           <div className="text-4xl font-semibold">
                             {currentPosts?.[2]?.name}
                           </div>

@@ -8,7 +8,7 @@ import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Menu, Space } from "antd";
 import Footer from "../LandingPage/Footer";
 
-const BlogGallery = () => {
+const BlogGallery = ({theme}) => {
   const [toogleTab, setToogleTab] = useState(1);
   const [blogData, setBlogData] = useState();
   const menu = (
@@ -64,8 +64,8 @@ const BlogGallery = () => {
   }, [Blog, toogleTab]);
 
   return (
-    <div className="w-full h-screen text-white">
-      <div className="bg-home-color py-13">
+    <div className="w-full h-screen">
+      <div className={`${theme==="dark"? "bg-home-color text-white":"bg-[#F3F3F3] text-black"} duration-700 py-13`}>
         <div className="flex-col lg:w-2/3 m-auto px-5">
           <div className="hidden lg:block">
             <div className="flex justify-evenly py-5 leading-10">
@@ -162,7 +162,7 @@ const BlogGallery = () => {
           <div className="w-full pt-8 lg:pt-2">
             {/* Gallery */}
             {/* row1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 text-white lg:gap-6">
+            <div className={`grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ${theme==="dark" ? "text-white":"tect-black"} lg:gap-6`}>
               {/* card1 */}
               {blogData?.map((details,i) => (
                 <Link key={i} to={"./blog-detail"}>

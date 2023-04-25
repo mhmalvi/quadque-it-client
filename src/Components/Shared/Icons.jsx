@@ -46,6 +46,8 @@ import { ReactComponent as ASupport } from "../../Asset/Icon/about/support.svg";
 import { ReactComponent as ATechnology } from "../../Asset/Icon/about/technology.svg";
 import { ReactComponent as ATraining } from "../../Asset/Icon/about/training.svg";
 import { ReactComponent as Down } from "../../Asset/Icon/down.svg";
+import { ReactComponent as Sun } from "../../Asset/Icon/sun.svg";
+import { ReactComponent as Moon } from "../../Asset/Icon/moon.svg";
 
 const Icons = {
   PlayBtn,
@@ -96,6 +98,8 @@ const Icons = {
   ATechnology,
   ATraining,
   Down,
+  Sun,
+  Moon,
 };
 
 export default Icons;
