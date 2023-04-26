@@ -53,34 +53,28 @@ const OurStudents = ({theme}) => {
     ],
   };
   return (
-    <div className={`${theme==="dark" && "bg-home-color"} duration-700 w-full pb-13 lg:pb-36 lg:hidden overflow-x-hidden`}>
+    <div
+      className={`${
+        theme === "dark" && "bg-home-color"
+      } duration-700 w-full pb-13 lg:pb-36 lg:hidden overflow-x-hidden`}
+    >
       <div className="lg:flex">
         <Fade left>
           <div className="text-center lg:text-start rounded-3xl mx-9">
-            <div className={`w-full ${theme==="dark" ? "text-white":"text-black"} duration-700 text-3xl lg:text-5xl font-bold lg:mx-12 pb-18 text-shadow`}>
+            <div
+              className={`w-full ${
+                theme === "dark" ? "text-white" : "text-black"
+              } duration-700 text-3xl lg:text-5xl font-bold lg:mx-12 pb-5 lg:pb-18 text-shadow`}
+            >
               What our <span className="text-brand-color">Students</span> say{" "}
               <br />
               about us
-            </div>
-            <div className="flex justify-center gap-5 m-auto">
-              <img
-                src={LeftArrow}
-                alt=""
-                className="cursor-pointer"
-                onClick={() => sliderRef.current.slickPrev()}
-              />
-              <img
-                src={RightArrow}
-                alt=""
-                className="cursor-pointer"
-                onClick={() => sliderRef.current.slickNext()}
-              />
             </div>
           </div>
         </Fade>
         <div className="w-full lg:w-2/3 text-start">
           <Fade right>
-            <div className="text-black lg:px-10 gap-8">
+            <div className="text-black lg:px-10 gap-8 pb-5">
               <Slider ref={sliderRef} {...settings}>
                 {Student?.map((person, i) => (
                   <div key={i}>
@@ -109,6 +103,20 @@ const OurStudents = ({theme}) => {
                   </div>
                 ))}
               </Slider>
+            </div>
+            <div className="flex justify-center gap-5 m-auto">
+              <img
+                src={LeftArrow}
+                alt=""
+                className="cursor-pointer"
+                onClick={() => sliderRef.current.slickPrev()}
+              />
+              <img
+                src={RightArrow}
+                alt=""
+                className="cursor-pointer"
+                onClick={() => sliderRef.current.slickNext()}
+              />
             </div>
           </Fade>
         </div>

@@ -11,9 +11,10 @@ import "../../../Pages/UserLayouts/LandingPage/style.css"
 import { motion } from "framer-motion";
 
 const Navbar = ({theme, setTheme, options}) => {
+  const pathname = window.location.pathname;
   const [open, setOpen] = useState(false);
   const [toogleSubmenu, setToogleSubmenu] = useState("");
-  const genericHamburgerLine = `h-1 w-7 my-1 rounded-full bg-white transition ease transform duration-500 lg:hidden m-4`;
+  const genericHamburgerLine = `h-1 w-7 my-1 rounded-full ${pathname==="/"? "bg-white":"bg-black"} transition ease transform duration-500 lg:hidden m-4`;
   const [isChecked, setIsChecked] = useState(`${theme==="dark"? true:false}`)
 
   const toggleSwitch = () => {

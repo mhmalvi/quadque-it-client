@@ -16,7 +16,7 @@ import Fade from "react-reveal/Fade";
 import { useNavigate } from "react-router-dom";
 
 
-const Login = () => {
+const Login = ({theme}) => {
   // const location = useLocation();
   const navigate = useNavigate();
   // const [tooglePasswordForget, setTooglePasswordForget] = useState(false);
@@ -168,21 +168,21 @@ const Login = () => {
   
   return (
     <>
-      <div className="md:flex justify-evenly items-center h-auto lg:h-screen bg-home-color">
+      <div className={`md:flex justify-evenly items-center h-auto lg:h-screen overflow-x-hidden duration-700 ${theme==="dark"? "bg-home-color text-white":"bg-[#F3F3F3] text-black"}`}>
         <Fade left>
           <div>
             <img src={Psychic} alt="" className="m-auto" />
             <div className="hidden lg:block">
               <div className="flex justify-center gap-5 pt-10">
-                <Icons.Facebook className="cursor-pointer" />
-                <Icons.Twitter className="cursor-pointer" />
-                <Icons.Instagram className="cursor-pointer" />
-                <Icons.Youtube className="cursor-pointer" />
+                <Icons.Facebook className={`${theme==="dark"? "lg:text-white":"lg:text-home-color"} cursor-pointer`} />
+                <Icons.Twitter className={`${theme==="dark"? "lg:text-white":"lg:text-home-color"} cursor-pointer`} />
+                <Icons.Instagram className={`${theme==="dark"? "lg:text-white":"lg:text-home-color"} cursor-pointer`} />
+                <Icons.Youtube className={`${theme==="dark"? "lg:text-white":"lg:text-home-color"} cursor-pointer`} />
               </div>
-              <div className="text-white text-center pt-8">
+              <div className="text-center pt-8">
                 <a href="/">Back to Home</a>
               </div>
-              <div className="cursor-pointer text-white text-center">
+              <div className="cursor-pointer text-center">
                 <a href="/user/dashboard">Admin Panel</a>
               </div>
             </div>
@@ -192,7 +192,7 @@ const Login = () => {
         {/* SIGNUP FORM */}
         <Fade right>
           <div
-            className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow mt-20 ${
+            className={`container ${theme==="dark"? "bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm custom-white-shadow":"bg-home-color shadow-xl"} border border-white border-opacity-20 mt-20 ${
               isLogin
                 ? "hidden"
                 : "sm:max-w-sm duration-700 p-3 shadow-lg m-auto md:m-0 rounded-md"
@@ -291,7 +291,7 @@ const Login = () => {
         {/* LOGIN  FORM */}
         <Fade right>
           <div
-            className={`container bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm border border-white border-opacity-20 custom-white-shadow mt-20 ${
+            className={`container ${theme==="dark"? "bg-white bg-opacity-10 backdrop:filter backdrop-blur-sm custom-white-shadow":"bg-home-color shadow-xl"} border border-white border-opacity-20 mt-20 ${
               isLogin
                 ? "sm:max-w-sm duration-700 p-3 shadow-lg m-auto md:m-0 rounded-md"
                 : "hidden"
@@ -409,10 +409,10 @@ const Login = () => {
           <a href="/user/dashboard">Admin Panel</a>
         </div>
         <div className="flex justify-center gap-5 py-10">
-          <Icons.Facebook className="cursor-pointer" />
-          <Icons.Twitter className="cursor-pointer" />
-          <Icons.Instagram className="cursor-pointer" />
-          <Icons.Youtube className="cursor-pointer" />
+          <Icons.Facebook className="cursor-pointer text-white" />
+          <Icons.Twitter className="cursor-pointer text-white" />
+          <Icons.Instagram className="cursor-pointer text-white" />
+          <Icons.Youtube className="cursor-pointer text-white" />
         </div>
       </div>
     </>

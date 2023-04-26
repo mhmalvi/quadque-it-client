@@ -16,7 +16,7 @@ const Contact = ({theme}) => {
     zoom: 11,
   };
   return (
-    <div className={`w-full ${theme==="dark"? "bg-home-color text-white":"bg-[#F3F3F3] text-black"} duration-700 pt-24 lg:pt-40 pb-20 lg:mt-10`}>
+    <div className={`w-full ${theme==="dark"? "bg-home-color text-white":"bg-[#F3F3F3] text-black"} duration-700 pt-24 lg:pt-40 lg:pb-20 lg:mt-10`}>
       <div className="flex flex-col-reverse lg:flex lg:flex-row rounded-3xl">
         <div className="lg:w-1/2 m-auto lg:pl-10">
           <Fade left>

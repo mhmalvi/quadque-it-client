@@ -15,10 +15,20 @@ import Student from "../../../Components/Shared/JsonData/student.json";
 const OurStudentsDragable = ({theme}) => {
 
   return (
-    <div className={`${theme==="dark" && "bg-home-color"} hidden lg:block w-full pb-13 lg:pb-36 lg:visible overflow-x-hidden dragableScroller`}>
+    <div
+      className={`${
+        theme === "dark" && "bg-home-color"
+      } hidden lg:block w-full pb-13 lg:pb-36 lg:visible overflow-x-hidden dragableScroller`}
+    >
       <Fade left>
         <div className="2xl:hidden text-center lg:text-start rounded-3xl mx-9">
-          <div className={`w-full ${theme==="dark" ? "text-white text-shadow-white":"text-black text-shadow"} text-3xl lg:text-5xl font-bold lg:mx-12 pb-18`}>
+          <div
+            className={`w-full ${
+              theme === "dark"
+                ? "text-white text-shadow-white"
+                : "text-black text-shadow"
+            } text-3xl lg:text-5xl font-bold lg:mx-12 pb-18`}
+          >
             What our <span className="text-brand-color">Students</span> say
             <br />
             about us
@@ -37,7 +47,11 @@ const OurStudentsDragable = ({theme}) => {
                   right: 0,
                   bottom: 0,
                 }}
-                className={`${theme==="dark" ? "text-white text-shadow-white":"text-black text-shadow"} hidden 2xl:block absolute top-[400px] left-[550px] w-full text-3xl lg:text-[60px] leading-[60px] font-bold lg:mx-12 pb-18`}
+                className={`${
+                  theme === "dark"
+                    ? "text-white text-shadow-white"
+                    : "text-black text-shadow"
+                } hidden 2xl:block absolute top-[400px] left-[550px] w-full text-3xl lg:text-[60px] leading-[60px] font-bold lg:mx-12 pb-18`}
               >
                 What our <span className="text-brand-color">Students</span>{" "}
                 <br />
@@ -48,7 +62,7 @@ const OurStudentsDragable = ({theme}) => {
               </div>
               {Student?.map((person, i) => (
                 <motion.div
-                key={i}
+                  key={i}
                   className={reviewClasses[i]}
                   drag
                   dragConstraints={{
@@ -61,9 +75,15 @@ const OurStudentsDragable = ({theme}) => {
                   right: person?.right,
                   bottom: person?.bottom, */
                   }}
+                  whileHover={{
+                    scale: 1.03,
+                  }}
+                  whileTap={{
+                    scale: 1.12,
+                  }}
                 >
                   <Zoom delay={400 * i}>
-                    <div className="bg-white max-w-[480px] shadow-md text-center rounded-md pt-7 px-8 pb-8 mx-3 my-3">
+                    <div className="bg-white max-w-[480px] shadow-md text-center rounded-md pt-7 px-8 pb-8 mx-3 my-3 cursor-pointer">
                       <div className="pb-4">
                         <img
                           src={

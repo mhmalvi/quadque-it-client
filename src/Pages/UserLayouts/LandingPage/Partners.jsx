@@ -46,7 +46,7 @@ const Partners = ({theme}) => {
   return (
     <div className={`${theme === "dark" && "bg-home-color"} w-full pb-18 lg:pb-28`}>
       <div className="text-center rounded-3xl">
-        <div className={`${theme==="dark"?"text-white":"text-black"} text-2xl md:text-4xl font-bold pb-5 text-shadow`}>
+        <div className={`${theme==="dark"?"text-white":"text-black"} text-3xl md:text-4xl font-bold pb-5 text-shadow`}>
           Our Partners
         </div>
         <div className={`${theme==="dark"?"text-white":"text-black"} lg:w-1/3 text-lg m-auto pb-14`}>

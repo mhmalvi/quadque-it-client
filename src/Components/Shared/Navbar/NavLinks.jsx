@@ -37,8 +37,7 @@ const NavLinks = ({theme, setTheme}) => {
                   className="hover:-translate-y-2 duration-300 px-7 py-10"
                 >
                   {link.name}
-                  <div className={`${link?.link===pathname ? "w-full":"w-0"} duration-500 h-1 ${theme==="light" && pathname!=="/" ? "bg-black":"bg-white"} rounded-full`}></div>
-                  <div className={`${pathname===links[3]?.submenu?.map(sub=> sub?.sublink) ? "w-full":"w-0"} duration-500 h-1 bg-white rounded-full`}></div>
+                  <div className={`${(link?.link===pathname || link?.submenu?.find(sub=> sub?.sublink===pathname)) ? "w-full":"w-0"} duration-500 h-1 ${theme==="light" && pathname!=="/" ? "bg-black":"bg-white"} rounded-full`}></div>
                 </div>
               </Link>
               {link?.submenu !== "" && (
@@ -86,7 +85,7 @@ const NavLinks = ({theme, setTheme}) => {
       <div className="flex">
         {theme==="dark" && <Icons.Moon title="Dark" className="w-[1.2rem] mb-3 mr-2 duration-700"/>}
         {theme==="light" && <Icons.Sun title="Light" className="w-[1.5rem] mb-3 mr-2 duration-700"/>}
-          <div className="switch mt-10" title={`${theme==="dark"? "Dark":"Light"}`} data-isOn={isChecked} onClick={toggleSwitch}>
+          <div className="switch mt-10" title={`${theme==="dark"? "Go light":"Go dark"}`} data-isOn={isChecked} onClick={toggleSwitch}>
             <motion.div className="handle" layout transition={spring} />
           </div>
       </div>

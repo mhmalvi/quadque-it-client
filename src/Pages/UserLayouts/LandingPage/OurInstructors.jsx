@@ -46,46 +46,54 @@ const OurInstructors = ({theme}) => {
     ],
   };
   return (
-    <div className={`${theme==="dark" && "bg-home-color"} w-full pb-13 lg:pb-24 overflow-x-hidden`}>
+    <div
+      className={`${
+        theme === "dark" && "bg-home-color"
+      } w-full pb-13 lg:pb-24 overflow-x-hidden`}
+    >
       <div className="lg:flex lg:justify-between lg:px-10">
-        <div className={`${theme==="dark"? "text-white":"text-black" } text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-6 lg:pb-16 text-shadow`}>
+        <div
+          className={`${
+            theme === "dark" ? "text-white" : "text-black"
+          } text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-6 lg:pb-16 text-shadow`}
+        >
           Meet our instructors
         </div>
-        {theme==="dark"? 
-        <div className="hidden lg:block">
-          <div className="flex justify-center gap-5 mr-12">
-            <img
-              src={WhiteLeftArrow}
-              alt=""
-              className="w-10 h-10 cursor-pointer"
-              onClick={() => sliderRef.current.slickPrev()}
+        {theme === "dark" ? (
+          <div className="hidden lg:block">
+            <div className="flex justify-center gap-5 mr-12">
+              <img
+                src={WhiteLeftArrow}
+                alt=""
+                className="w-10 h-10 cursor-pointer"
+                onClick={() => sliderRef.current.slickPrev()}
               />
-            <img
-              src={WhiteRightArrow}
-              alt=""
-              className="w-10 h-10 cursor-pointer"
-              onClick={() => sliderRef.current.slickNext()}
+              <img
+                src={WhiteRightArrow}
+                alt=""
+                className="w-10 h-10 cursor-pointer"
+                onClick={() => sliderRef.current.slickNext()}
               />
+            </div>
           </div>
-        </div>
-        :
-        <div className="hidden lg:block">
-          <div className="flex justify-center gap-5 mr-12">
-            <img
-              src={LeftArrow}
-              alt=""
-              className="w-10 h-10 cursor-pointer"
-              onClick={() => sliderRef.current.slickPrev()}
+        ) : (
+          <div className="hidden lg:block">
+            <div className="flex justify-center gap-5 mr-12">
+              <img
+                src={LeftArrow}
+                alt=""
+                className="w-10 h-10 cursor-pointer"
+                onClick={() => sliderRef.current.slickPrev()}
               />
-            <img
-              src={RightArrow}
-              alt=""
-              className="w-10 h-10 cursor-pointer"
-              onClick={() => sliderRef.current.slickNext()}
+              <img
+                src={RightArrow}
+                alt=""
+                className="w-10 h-10 cursor-pointer"
+                onClick={() => sliderRef.current.slickNext()}
               />
+            </div>
           </div>
-        </div>
-        }
+        )}
       </div>
       <div className="">
         <div className="text-start rounded-3xl lg:px-9">
@@ -100,7 +108,11 @@ const OurInstructors = ({theme}) => {
                         className="lg:w-[300px] group-hover:opacity-0 group-hover:scale-0 group-hover:-translate-y-32 duration-700 m-auto"
                         alt=""
                       />
-                      <div className={`${theme==="dark"? "text-white":"text-black"} w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto`}>
+                      <div
+                        className={`${
+                          theme === "dark" ? "text-white" : "text-black"
+                        } w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto`}
+                      >
                         <div className="pb-4">
                           <img
                             src={person?.image}
@@ -125,48 +137,38 @@ const OurInstructors = ({theme}) => {
             </div>
           </Fade>
 
-          {/* <div className="text-black lg:px-10 gap-8 hidden">
-            <Slider {...settings}>
-              {Instructor?.map((person, i) => (
-                <div key={i}>
-                  <div className="w-[350px] 2xl:w-[420px] duration-1000 text-center pt-9 px-12 pb-12 m-auto">
-                    <div className="pb-4">
-                      <img
-                        src={person?.image}
-                        alt=""
-                        className="m-auto"
-                        width={110}
-                      />
-                    </div>
-                    <div className="text-xl font-semibold pb-1">
-                      {person?.name}
-                    </div>
-                    <div className="text-brand-color text-base font-semibold pb-9">
-                      {person?.job}
-                    </div>
-
-                    <div className="text-base">“{person?.comment}”</div>
-                  </div>
+          <div className="lg:hidden">
+            {theme === "dark" ? (
+                <div className="flex justify-center gap-5">
+                  <img
+                    src={WhiteLeftArrow}
+                    alt=""
+                    className="w-10 h-10 cursor-pointer"
+                    onClick={() => sliderRef.current.slickPrev()}
+                  />
+                  <img
+                    src={WhiteRightArrow}
+                    alt=""
+                    className="w-10 h-10 cursor-pointer"
+                    onClick={() => sliderRef.current.slickNext()}
+                  />
                 </div>
-              ))}
-            </Slider>
-          </div> */}
-
-          <div className="block lg:hidden">
-            <div className="flex justify-center gap-5 lg:py-5">
-              <img
-                src={LeftArrow}
-                alt=""
-                className="w-10 h-10"
-                onClick={() => sliderRef.current.slickNext()}
-              />
-              <img
-                src={RightArrow}
-                alt=""
-                className="w-10 h-10"
-                onClick={() => sliderRef.current.slickPrev()}
-              />
-            </div>
+            ) : (
+                <div className="flex justify-center gap-5">
+                  <img
+                    src={LeftArrow}
+                    alt=""
+                    className="w-10 h-10 cursor-pointer"
+                    onClick={() => sliderRef.current.slickPrev()}
+                  />
+                  <img
+                    src={RightArrow}
+                    alt=""
+                    className="w-10 h-10 cursor-pointer"
+                    onClick={() => sliderRef.current.slickNext()}
+                  />
+                </div>
+            )}
           </div>
         </div>
       </div>

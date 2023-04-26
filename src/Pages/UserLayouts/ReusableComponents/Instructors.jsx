@@ -53,7 +53,7 @@ const Instructors = ({theme}) => {
         <div className="text-3xl font-semibold text-center lg:text-start lg:ml-12 pb-16 px-4 lg:px-0 text-shadow">
           Get to know our instructors
         </div>
-        {theme==="dark"?
+        {theme === "dark" ? (
           <div className="hidden lg:block">
             <div className="flex justify-center gap-5 mr-12">
               <img
@@ -70,7 +70,7 @@ const Instructors = ({theme}) => {
               />
             </div>
           </div>
-          :
+        ) : (
           <div className="hidden lg:block">
             <div className="flex justify-center gap-5 mr-12">
               <img
@@ -87,7 +87,7 @@ const Instructors = ({theme}) => {
               />
             </div>
           </div>
-        }
+        )}
       </div>
       <div className="">
         <div className="text-start rounded-3xl lg:px-9">
@@ -102,7 +102,11 @@ const Instructors = ({theme}) => {
                         className="lg:w-[300px] group-hover:opacity-0 group-hover:scale-0 group-hover:-translate-y-32 duration-700 m-auto"
                         alt=""
                       />
-                      <div className={`${theme==="dark"?"text-white":"text-black"} w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto`}>
+                      <div
+                        className={`${
+                          theme === "dark" ? "text-white" : "text-black"
+                        } w-[350px] 2xl:w-[420px] opacity-0 absolute -top-4 group-hover:opacity-100 group-hover:visible duration-1000 group-hover:top-0 text-center pt-9 pb-12 m-auto`}
+                      >
                         <div className="pb-4">
                           <img
                             src={person?.image}
@@ -127,21 +131,38 @@ const Instructors = ({theme}) => {
             </Fade>
           </div>
 
-          <div className="block lg:hidden">
-            <div className="flex justify-center gap-5 py-5">
-              <img
-                src={LeftArrow}
-                alt=""
-                className="w-10 h-10"
-                onClick={() => sliderRef.current.slickNext()}
-              />
-              <img
-                src={RightArrow}
-                alt=""
-                className="w-10 h-10"
-                onClick={() => sliderRef.current.slickPrev()}
-              />
-            </div>
+          <div className="lg:hidden">
+            {theme === "dark" ? (
+                <div className="flex justify-center gap-5">
+                  <img
+                    src={WhiteLeftArrow}
+                    alt=""
+                    className="w-10 h-10 cursor-pointer"
+                    onClick={() => sliderRef.current.slickPrev()}
+                  />
+                  <img
+                    src={WhiteRightArrow}
+                    alt=""
+                    className="w-10 h-10 cursor-pointer"
+                    onClick={() => sliderRef.current.slickNext()}
+                  />
+                </div>
+            ) : (
+                <div className="flex justify-center gap-5">
+                  <img
+                    src={LeftArrow}
+                    alt=""
+                    className="w-10 h-10 cursor-pointer"
+                    onClick={() => sliderRef.current.slickPrev()}
+                  />
+                  <img
+                    src={RightArrow}
+                    alt=""
+                    className="w-10 h-10 cursor-pointer"
+                    onClick={() => sliderRef.current.slickNext()}
+                  />
+                </div>
+            )}
           </div>
         </div>
       </div>
