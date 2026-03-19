@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Quadque IT Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The QIT (Quadque IT) client application — a React-based web app for **Quadque Technologies** IT services division. This application provides clients with access to IT consulting, project management, scheduling, and location-based service features through an interactive, modern interface.
 
-## Available Scripts
+Part of the **Quadque digital platform ecosystem**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Interactive client portal for IT service management
+- Google Maps integration for office locations and service areas
+- Calendar and scheduling with React Big Calendar
+- Animated UI with Framer Motion transitions and reveal effects
+- State management with Redux for predictable data flow
+- Multi-carousel product and service showcases
+- Ant Design and Bootstrap component libraries for polished interfaces
+- Tailwind CSS utility-first responsive styling
+- Lottie animations for engaging visual feedback
+- Animated text and counter components for dynamic content
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+| Layer           | Technology                                        |
+|-----------------|---------------------------------------------------|
+| Framework       | React 18 (Create React App)                      |
+| Routing         | React Router DOM v6                               |
+| State Mgmt      | Redux                                            |
+| Styling         | Tailwind CSS 3, Bootstrap 5, Ant Design 5         |
+| Animations      | Framer Motion, React Reveal, Lottie React         |
+| Maps            | Google Maps API (react-google-maps, google-map-react) |
+| Calendar        | React Big Calendar                                |
+| HTTP Client     | Axios                                             |
+| Components      | React Slick, React Multi Carousel                 |
+| Testing         | Jest, React Testing Library                       |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js >= 16
+- npm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/mhmalvi/quadque-it-client.git
+cd quadque-it-client
+npm install
+```
 
-### `npm run eject`
+### Development
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Production Build
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+```
+quadque-it-client/
+├── public/              # Static assets and HTML template
+├── src/
+│   ├── Asset/           # Images and static resources
+│   ├── Components/      # Reusable UI components
+│   ├── Font/            # Custom typography
+│   ├── Pages/           # Page-level components
+│   ├── App.jsx          # Root application component
+│   └── index.js         # Entry point
+├── tailwind.config.js   # Tailwind CSS configuration
+└── postcss.config.js    # PostCSS plugins
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Proprietary — Quadque Technologies. All rights reserved.
