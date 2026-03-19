@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# Security
+.env
+.env.*
+credentials.json
+serviceAccountKey.json
+.claude/
