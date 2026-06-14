@@ -1,6 +1,8 @@
 <!-- repo-card -->
 ![quadque-it-client](docs/assets/social-card.png)
 
+![quadque-it-client — architecture](docs/assets/architecture.png)
+
 # Quadque IT Client
 
 The QIT (Quadque IT) client application — a React-based web app for **Quadque Technologies** IT services division. This application provides clients with access to IT consulting, project management, scheduling, and location-based service features through an interactive, modern interface.
